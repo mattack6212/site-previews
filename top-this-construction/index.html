@@ -6,14 +6,61 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Top This Construction | Roofing in East Ridge &amp; Chattanooga, TN</title>
 <meta name="description" content="Top This Construction — roof repair and roof replacement for homes and businesses in East Ridge, Chattanooga and North Georgia. 4.7 stars across 64 Google reviews. Call (423) 432-4490.">
-<meta name="theme-color" content="#14202E">
+<meta name="theme-color" content="#0C1C2E">
 <!--
   ====================================================================
-  DEMO SITE (v2) — prepared for Top This Construction, East Ridge, TN.
+  DEMO SITE (v2.1) — prepared for Top This Construction, East Ridge, TN.
   Not affiliated with the business. Not live. Not commissioned.
   Website by ________________
   Built only from the business's own public profiles + Google listing.
   Full source trail: research.md (same folder). No contact was made.
+
+  --------------------------------------------------------------------
+  v2.1 — 2026-10-02. Real logo, real brand colours and real job photos.
+  Still zero third-party requests: every image is a local file in
+  images/ served alongside this page.
+
+  LOGO AND PHOTOS ARE SOURCED FROM THE BUSINESS'S OWN PUBLIC GOOGLE
+  LISTING, FOR THIS PITCH DEMO ONLY. The page is noindex. OWNER
+  PERMISSION IS REQUIRED BEFORE ANY REAL PUBLIC LAUNCH.
+
+  Image provenance — all pulled from the Google Business Profile at
+  maps.google.com/?cid=13827812526414500026 via the Places API:
+   - images/logo.png, images/logo-light.png — the company logo, from the
+     listing photo uploaded by the profile owner ("Top This Construction",
+     2215x1134). Background keyed out to transparent; logo-light.png is
+     the same artwork recoloured for the dark footer. Shapes unaltered.
+   - images/hero.jpg, images/hero-mobile.jpg — owner upload
+     ("Top This Roofer"): a house mid-replacement, underlayment down and
+     shingle bundles staged on the slope.
+   - images/work-crew.jpg — owner upload (Juan Florez): the company van
+     at a two-storey home with crew on the roof.
+   - images/work-commercial.jpg — owner upload (Juan Florez): crew on a
+     commercial roof deck with new rooftop units set.
+   - images/work-lowslope.jpg — owner upload (Juan Florez): a finished
+     low-slope membrane roof meeting a shingled slope.
+   - images/work-rooftop.jpg — owner upload (Juan Florez): panorama
+     across a large white flat roof with rooftop units.
+   NOT USED: the two customer-uploaded photos (not the business's own),
+   the "Best of the Best" award-backdrop photo (faces are the subject and
+   the award is unverified), and the "GOT LEAKS?" marketing graphic (it
+   carries the dead topthisonline.com domain).
+   Captions state only what the frame plainly shows. No photo carries a
+   claim the frame does not support, and none is dated or located.
+
+  BRAND COLOURS — taken from the real logo, not invented:
+   logo blue #26599B, logo near-black #1D1916. The deep navy #0C1C2E is
+   their own marketing navy (#011426) lifted to a usable surface tone.
+   Blue is structure only; the CTA accent stays the warm orange, which
+   is the same family as the orange in their own marketing graphic.
+   All text/background pairs on this page meet WCAG AA.
+
+  NOTED FOR THE CALL, NOT PUT ON THE PAGE: their van is lettered
+  "COULD GET A FREE ROOF — ASK ME HOW" (visible in work-crew.jpg). That
+  is a storm / insurance-claim pitch, which is research.md item 6 — the
+  thing they advertise nowhere online. Worth asking about. It is still
+  NOT treated as a source; the storm card below stays flagged.
+  --------------------------------------------------------------------
 
   UNVERIFIED — CONFIRM WITH OWNER BEFORE THIS EVER GOES LIVE:
    1. "Free roof inspection" (final CTA) — no source confirms free
@@ -39,15 +86,20 @@
 -->
 <style>
 :root{
-  /* 60 paper / 30 ink / 10 accent — accent is reserved for CTAs */
-  --paper:#F6F6F3;
+  /* 60 paper / 30 ink / 10 accent — accent is reserved for CTAs.
+     Palette derived from the real logo: blue #26599B, near-black #1D1916. */
+  --paper:#F5F6F8;
   --white:#FFFFFF;
-  --ink:#14202E;
-  --ink-2:#1D2B3C;
+  --ink:#0C1C2E;          /* their own marketing navy, lifted for surfaces */
+  --ink-2:#14293F;
+  --foot:#071320;
+  --brand:#26599B;        /* THE logo blue — structure, never a CTA */
+  --brand-soft:#E7EFF9;
+  --brand-lt:#7FB1F0;     /* logo blue lightened for dark surfaces (7.7:1) */
   --ink-line:rgba(255,255,255,.12);
-  --text:#28313C;
-  --muted:#58626F;
-  --line:#E2E4E8;
+  --text:#273240;
+  --muted:#596573;
+  --line:#E1E5EA;
   --accent:#C2410C;
   --accent-hover:#9A3412;
   --focus:#4C7DF0;
@@ -91,11 +143,9 @@ h3{font-size:1.1875rem;line-height:1.3;font-weight:600;letter-spacing:-.01em}
 /* ---------- header ---------- */
 .hdr{position:sticky;top:0;z-index:50;height:var(--hdr);background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px)}
 .hdr .wrap{height:100%;display:flex;align-items:center;gap:var(--s4)}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-right:auto;min-width:0}
-.mark{width:34px;height:34px;border-radius:9px;background:var(--ink);position:relative;flex:0 0 auto}
-.mark::before{content:"";position:absolute;left:9px;top:12px;width:16px;height:16px;border-top:3px solid #fff;border-left:3px solid #fff;transform:rotate(45deg)}
-.logo b{display:block;font-size:1rem;line-height:1.15;font-weight:700;letter-spacing:-.01em}
-.logo small{display:block;font-size:.75rem;line-height:1.2;color:var(--muted)}
+.logo{display:flex;align-items:center;gap:var(--s3);text-decoration:none;color:var(--ink);margin-right:auto;min-width:0}
+.mark{display:block;height:34px;width:auto;flex:0 0 auto}
+.logo small{display:none;font-size:.75rem;line-height:1.25;color:var(--muted);padding-left:var(--s3);border-left:1px solid var(--line)}
 .nav{display:none}
 .nav a{font-size:.9375rem;font-weight:500;color:var(--text);text-decoration:none;padding:var(--s2) 0}
 .nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:6px}
@@ -103,23 +153,22 @@ h3{font-size:1.1875rem;line-height:1.3;font-weight:600;letter-spacing:-.01em}
 .hdr .num{display:none}
 
 /* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;background:var(--ink);color:#fff}
+/* Background photo: the business's own Google-listing upload of a roof
+   replacement in progress. Overlay is heavy enough that the headline,
+   sub and CTA all clear WCAG AA against the darkest pixel beneath them. */
+.hero{position:relative;overflow:hidden;color:#fff;
+  background-color:var(--ink);
+  background-image:linear-gradient(180deg,rgba(12,28,46,.94) 0%,rgba(12,28,46,.91) 50%,rgba(12,28,46,.84) 80%,rgba(12,28,46,.72) 100%),url("images/hero-mobile.jpg");
+  background-size:cover;background-position:50% 30%;background-repeat:no-repeat}
 .hero .wrap{position:relative;z-index:1;padding-top:var(--s8);padding-bottom:var(--s8)}
 .hero h1{color:#fff;max-width:14ch}
-.hero .sub{margin-top:var(--s4);font-size:1.125rem;line-height:1.55;color:rgba(255,255,255,.78);max-width:46ch}
+.hero .sub{margin-top:var(--s4);font-size:1.125rem;line-height:1.55;color:rgba(255,255,255,.88);max-width:46ch}
 .hero .actions{margin-top:var(--s6);display:flex;flex-direction:column;align-items:flex-start;gap:var(--s4)}
 .hero .btn-cta{width:100%;max-width:360px;min-height:56px;font-size:1.125rem;box-shadow:none}
-.trust{display:inline-flex;align-items:center;gap:var(--s2);font-size:.9375rem;color:rgba(255,255,255,.82);text-decoration:none}
+.trust{display:inline-flex;align-items:center;gap:var(--s2);font-size:.9375rem;color:rgba(255,255,255,.90);text-decoration:none}
 .trust .stars{color:#fff;letter-spacing:2px;font-size:.9375rem}
 .trust strong{color:#fff;font-weight:600}
 .trust:hover span:last-child{text-decoration:underline;text-underline-offset:3px}
-/* CSS-only roof-pitch linework */
-.pitch{display:none;position:absolute;right:-160px;bottom:-250px;width:560px;height:560px;pointer-events:none;opacity:.6}
-.pitch i{position:absolute;left:50%;top:50%;border-top:1.5px solid rgba(255,255,255,.14);border-left:1.5px solid rgba(255,255,255,.14);transform:translate(-50%,-50%) rotate(45deg)}
-.pitch i:nth-child(1){width:240px;height:240px;margin-top:-10px}
-.pitch i:nth-child(2){width:330px;height:330px;margin-top:50px}
-.pitch i:nth-child(3){width:420px;height:420px;margin-top:110px}
-.pitch i:nth-child(1)::after{content:"";position:absolute;inset:14px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 1px,transparent 1px 16px)}
 
 /* ---------- proof strip ---------- */
 .proof{background:var(--white);border-bottom:1px solid var(--line)}
@@ -145,15 +194,24 @@ h3{font-size:1.1875rem;line-height:1.3;font-weight:600;letter-spacing:-.01em}
 .svc{display:grid;gap:var(--s4)}
 .card{position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:var(--s6) var(--s5);box-shadow:var(--shadow)}
 .card p{margin-top:var(--s2);font-size:1rem;color:var(--muted)}
-.ico{width:44px;height:44px;border-radius:10px;background:#EEF0F3;color:var(--ink);display:grid;place-items:center;margin-bottom:var(--s4)}
+.ico{width:44px;height:44px;border-radius:10px;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;margin-bottom:var(--s4)}
 .card.feature{background:var(--ink);border-color:var(--ink)}
 .card.feature h3{color:#fff}
 .card.feature p{color:rgba(255,255,255,.76)}
-.card.feature .ico{background:rgba(255,255,255,.10);color:#fff}
+.card.feature .ico{background:rgba(127,177,240,.16);color:var(--brand-lt)}
 .tag{position:absolute;top:var(--s6);right:var(--s5);font-size:.8125rem;font-weight:600;color:var(--ink);background:#fff;border-radius:6px;padding:3px 8px}
 .also{margin-top:var(--s5);display:flex;flex-wrap:wrap;gap:var(--s2) var(--s5);font-size:.9375rem;color:var(--muted)}
 .also span{display:inline-flex;align-items:center;gap:6px}
-.also svg{color:var(--ink)}
+.also svg{color:var(--brand)}
+
+/* ---------- our work (real photos from the business's Google listing) ---------- */
+.work{display:grid;gap:var(--s4)}
+figure{margin:0;background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+figure img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#DCE1E7}
+figure.wide{grid-column:1/-1}
+figure.wide img{aspect-ratio:16/7}
+figcaption{padding:var(--s3) var(--s4);font-size:.9375rem;font-weight:500;color:var(--ink)}
+.src{margin-top:var(--s5);font-size:.9375rem;color:var(--muted)}
 
 /* inline CTA band */
 .band{margin-top:var(--s7);display:flex;flex-direction:column;gap:var(--s4);align-items:flex-start;padding:var(--s5);border-radius:var(--r);background:var(--white);border:1px solid var(--line)}
@@ -168,14 +226,14 @@ h3{font-size:1.1875rem;line-height:1.3;font-weight:600;letter-spacing:-.01em}
 .pt .ico{margin:0;width:40px;height:40px;flex:0 0 40px}
 .pt p{margin-top:var(--s1);font-size:1rem;color:var(--muted)}
 .pt .tlink{font-size:.9375rem}
-blockquote{margin:0;padding:var(--s6) var(--s5);background:var(--paper);border-radius:var(--r);border-left:3px solid var(--ink)}
+blockquote{margin:0;padding:var(--s6) var(--s5);background:var(--white);border:1px solid var(--line);border-radius:var(--r);border-left:3px solid var(--brand)}
 blockquote p{font-size:1.1875rem;line-height:1.55;color:var(--ink);font-weight:500;letter-spacing:-.005em}
 blockquote footer{margin-top:var(--s4);font-size:.875rem;color:var(--muted)}
 
 /* process */
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:var(--s6);counter-reset:s}
 .steps li{position:relative;padding-left:64px;counter-increment:s}
-.steps li::before{content:counter(s);position:absolute;left:0;top:-4px;width:44px;height:44px;border-radius:50%;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4);display:grid;place-items:center;font-weight:600;font-size:1.0625rem;color:#fff}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-4px;width:44px;height:44px;border-radius:50%;box-shadow:inset 0 0 0 1.5px rgba(127,177,240,.55);background:rgba(127,177,240,.10);display:grid;place-items:center;font-weight:600;font-size:1.0625rem;color:var(--brand-lt)}
 .steps p{margin-top:var(--s2);font-size:1rem;color:rgba(255,255,255,.72)}
 .steps a{color:#fff;white-space:nowrap}
 .after{margin-top:var(--s7);display:flex;flex-direction:column;gap:var(--s3);align-items:flex-start}
@@ -213,8 +271,9 @@ input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(76,12
 .form .fine{margin-top:var(--s4);font-size:.875rem;color:var(--muted)}
 
 /* footer */
-.foot{background:#0E1721;color:rgba(255,255,255,.62);padding:var(--s7) 0;font-size:.9375rem}
+.foot{background:var(--foot);color:rgba(255,255,255,.70);padding:var(--s7) 0;font-size:.9375rem}
 .foot .wrap{display:flex;flex-direction:column;gap:var(--s4)}
+.foot .flogo{display:block;height:46px;width:auto;margin-bottom:var(--s3)}
 .foot b{display:block;color:#fff;font-size:1.0625rem}
 .foot a{color:#fff;text-decoration:none}
 .foot a:hover{text-decoration:underline;text-underline-offset:3px}
@@ -225,13 +284,21 @@ input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(76,12
   .hdr .num{display:inline}
   .hdr .lbl{display:none}
 }
+/* ---------- >= 560px ---------- */
+@media(min-width:560px){
+  .mark{height:38px}
+  .logo small{display:block}
+}
 /* ---------- >= 700px ---------- */
 @media(min-width:700px){
   body{font-size:18px}
   .wrap{padding:0 var(--s6)}
+  .hero{background-image:linear-gradient(100deg,rgba(12,28,46,.95) 0%,rgba(12,28,46,.90) 36%,rgba(12,28,46,.70) 64%,rgba(12,28,46,.52) 100%),url("images/hero.jpg");background-position:50% 42%}
   .hero .wrap{padding-top:var(--s9);padding-bottom:var(--s9)}
-  .pitch{display:block}
   .hero .actions{flex-direction:row;align-items:center;gap:var(--s5)}
+  .work{grid-template-columns:1fr 1fr}
+  figure.wide img{aspect-ratio:16/5}
+  .foot .flogo{height:54px}
   .hero .btn-cta{width:auto}
   .proof ul{grid-template-columns:repeat(4,1fr);padding:0 var(--s6);max-width:var(--max)}
   .proof li{border-bottom:0!important;border-right:1px solid var(--line);padding:var(--s5)}
@@ -258,7 +325,7 @@ input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(76,12
   :root{--hdr:72px}
   .nav{display:flex;gap:var(--s5);margin-right:var(--s3)}
   .hero .wrap{padding-top:120px;padding-bottom:128px}
-  .pitch{right:0;bottom:-170px;width:640px;height:640px;opacity:1}
+  .work{grid-template-columns:repeat(3,1fr)}
   .svc{grid-template-columns:repeat(3,1fr)}
   .svc .feature{grid-column:auto}
   .points{column-gap:var(--s8);row-gap:var(--s6)}
@@ -289,11 +356,12 @@ input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(76,12
 <header class="hdr">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="Top This Construction, back to top">
-      <span class="mark" aria-hidden="true"></span>
-      <span><b>Top This Construction</b><small>Roofing &middot; East Ridge, TN</small></span>
+      <img class="mark" src="images/logo.png" width="760" height="392" alt="Top This Construction" fetchpriority="high">
+      <small>Roofing &middot; East Ridge, TN</small>
     </a>
     <nav class="nav" aria-label="Sections">
       <a href="#services">Services</a>
+      <a href="#work">Our work</a>
       <a href="#why">Why us</a>
       <a href="#process">How it works</a>
       <a href="#area">Service area</a>
@@ -309,7 +377,6 @@ input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(76,12
 
 <!-- ============================ HERO ============================ -->
 <section class="hero">
-  <div class="pitch" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap">
     <h1>A roof you can stop worrying about.</h1>
     <p class="sub">Roof repair and replacement for homes and businesses across Chattanooga, East Ridge and North Georgia.</p>
@@ -379,8 +446,42 @@ input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(76,12
   </div>
 </section>
 
+<!-- ============================ OUR WORK ============================ -->
+<!-- Photos are the business's own uploads to its own Google Business Profile,
+     used here for this pitch demo only. Captions describe only what is
+     visible in each frame — no job is dated, located or costed, and no photo
+     is tied to a service claim research.md has not verified. -->
+<section class="sec sec-white" id="work">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Our work</p>
+      <h2>Roofs we&rsquo;ve been on.</h2>
+      <p class="lead">Houses and commercial buildings, shingle and low-slope. Here&rsquo;s a look at the kind of work that goes out the door.</p>
+    </div>
+    <div class="work">
+      <figure class="wide">
+        <img src="images/work-rooftop.jpg" width="1600" height="470" loading="lazy" decoding="async" alt="Panoramic view across a large white flat commercial roof with rooftop fans and HVAC units.">
+        <figcaption>Commercial flat roof</figcaption>
+      </figure>
+      <figure>
+        <img src="images/work-crew.jpg" width="900" height="675" loading="lazy" decoding="async" alt="The company van parked at the curb of a two-storey brick home while crew work on the roof above.">
+        <figcaption>On the job</figcaption>
+      </figure>
+      <figure>
+        <img src="images/work-commercial.jpg" width="900" height="675" loading="lazy" decoding="async" alt="Crew on a commercial roof deck with new rooftop units set and wrapped in place.">
+        <figcaption>Commercial project</figcaption>
+      </figure>
+      <figure>
+        <img src="images/work-lowslope.jpg" width="900" height="675" loading="lazy" decoding="async" alt="A finished low-slope membrane roof running alongside a shingled slope.">
+        <figcaption>Low-slope roof</figcaption>
+      </figure>
+    </div>
+    <p class="src">Photos from our own Google listing. <a class="tlink" href="https://maps.google.com/?cid=13827812526414500026" target="_blank" rel="noopener">See more on Google</a></p>
+  </div>
+</section>
+
 <!-- ============================ WHY US ============================ -->
-<section class="sec sec-white" id="why">
+<section class="sec" id="why">
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">Why Top This</p>
@@ -530,6 +631,7 @@ input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(76,12
 <footer class="foot">
   <div class="wrap">
     <div>
+      <img class="flogo" src="images/logo-light.png" width="760" height="392" loading="lazy" decoding="async" alt="Top This Construction">
       <b>Top This Construction</b>
       Roofing &middot; 5319 Spriggs St, East Ridge, TN 37412
     </div>
