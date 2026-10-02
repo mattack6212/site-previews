@@ -15,7 +15,25 @@
 <!-- Website by [MATT — YOUR NAME / COMPANY HERE] -->
 <!-- All facts on this page are sourced from the business's own public profiles and public license records. See research.md. -->
 <!--
-  v2 redesign — 2026-09-11. Single self-contained file: system fonts, inline CSS/JS, CSS-only graphics, zero external requests.
+  v2 redesign — 2026-09-11. System fonts, inline CSS/JS, no third-party requests.
+  v2.1 — 2026-10-02. Real logo and real job photography added (see images/). Still no external requests:
+  every image is a local file served from images/ alongside this page.
+
+  Logo and photos sourced from the business's own public Instagram/TikTok for this pitch demo — obtain owner permission before public launch.
+
+  Image provenance:
+  - images/logo-white.png, images/logo-mark-white.png — the company logo, from the TikTok profile avatar
+    (@gartmanearthworxllc, 1080x1080 original), recoloured to a white knockout for the dark header/footer.
+    Instagram only serves a 100x100 profile thumbnail, so TikTok was the sharper source.
+  - images/hero.jpg, images/hero-mobile.jpg — frame from the company's own TikTok "Lots of iron moving to
+    make things happen in Dayton TN".
+  - images/proj-clearing.jpg — "Clearing getting started on our 5 acre retail development project."
+  - images/proj-dayton.jpg — "Lots of iron moving to make things happen in Dayton TN."
+  - images/proj-hydroseed.jpg — "Hydroseed job going down!"
+  - images/proj-grading.jpg — "Komatsu D61 stripping the land."
+  - images/proj-landclear.jpg — "Land clearing!"
+  Captions only state what the business itself said in the post the frame came from, or what the frame
+  plainly shows. No photo carries a claim the frame does not support.
 
   DELIBERATELY NOT CLAIMED (unverified — ask the owner before adding any of these):
   - "Insured" / "licensed & insured" — no public proof of liability or workers' comp coverage.
@@ -30,7 +48,8 @@
   - Testimonial quotes — Google review text was not collected; only the aggregate figure appears, linked to the live listing.
   - BBB rating/badge — rated A+ but NOT accredited, so no badge.
   - The 865 phone number seen on one reshared video — only (423) 718-0080 is used.
-  - Job photos — CSS graphics only until the owner grants permission to use his photos.
+  - Job photos — the photos on this page are the owner's own public TikTok footage, used for this pitch
+    demo only. The page is noindex. Get his explicit permission before anything goes live publicly.
 -->
 
 <script type="application/ld+json">
@@ -109,15 +128,20 @@ ul{margin:0;padding:0;list-style:none}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:17px;white-space:nowrap}
 .brand b{font-weight:700}
 .brand span{font-weight:400;opacity:.8}
-.mark{width:28px;height:28px;flex:none;border-radius:6px;background:linear-gradient(180deg,var(--sand) 0 34%,var(--clay) 34% 67%,var(--soil) 67%)}
+.mark{height:34px;width:auto;flex:none;display:block}
+.foot .logo{height:84px;width:auto;display:block}
 .nav{display:none;gap:var(--s4)}
 .nav a{font-size:15px;color:var(--on-ink-muted);text-decoration:none}
 .nav a:hover{color:var(--on-ink)}
 .head .num{display:none}
 
 /* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;padding:var(--s6) 0 calc(var(--s7) + var(--s5))}
-.hero::before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(ellipse 120% 90% at 92% 8%,transparent 0 30px,rgba(246,244,239,.08) 30px 31px);-webkit-mask-image:linear-gradient(100deg,transparent 30%,#000 85%);mask-image:linear-gradient(100deg,transparent 30%,#000 85%)}
+/* Real job photo behind the hero. The overlay below keeps text contrast at
+   >10:1 against the brightest part of the photograph — well past WCAG AA. */
+.hero{position:relative;overflow:hidden;padding:var(--s6) 0 var(--s7);
+  background-color:var(--ink);
+  background-image:linear-gradient(180deg,rgba(23,35,28,.94) 0%,rgba(23,35,28,.88) 48%,rgba(23,35,28,.62) 74%,rgba(23,35,28,.40) 100%),url("images/hero-mobile.jpg");
+  background-size:cover;background-position:50% 72%;background-repeat:no-repeat}
 .hero-in{position:relative;z-index:1}
 .hero h1{max-width:13ch}
 .hero-sub{font-size:clamp(18px,1rem + .6vw,21px);color:var(--on-ink-muted);max-width:44ch;margin:var(--s3) 0 var(--s4)}
@@ -127,10 +151,8 @@ ul{margin:0;padding:0;list-style:none}
 .rating u{text-decoration:none;border-bottom:1px solid var(--ink-line)}
 .rating:hover u{border-color:var(--on-ink)}
 /* raw ground on the left, graded pad on the right */
-.terrain{position:absolute;left:0;right:0;bottom:0;height:clamp(72px,11vw,128px)}
-.terrain::before,.terrain::after{content:"";position:absolute;inset:0}
-.terrain::before{background:var(--ink-2);clip-path:polygon(0 30%,7% 12%,14% 26%,21% 4%,29% 22%,36% 16%,43% 36%,50% 44%,100% 44%,100% 100%,0 100%)}
-.terrain::after{background:linear-gradient(180deg,var(--soil) 0 34%,var(--deep) 34% 70%,#3b3027 70%);clip-path:polygon(0 58%,6% 50%,13% 60%,20% 46%,28% 58%,36% 56%,44% 64%,50% 66%,100% 66%,100% 100%,0 100%)}
+/* v2.1: the CSS terrain illustration is retired now that a real photo sits behind the hero. */
+.terrain{display:none}
 
 /* ---------- proof strip ---------- */
 .proof{background:var(--white);border-bottom:1px solid var(--line);padding:var(--s4) 0}
@@ -174,15 +196,10 @@ a.badge:hover{border-color:var(--muted)}
 /* ---------- projects ---------- */
 .projects{display:grid;gap:var(--s3);margin-top:var(--s5)}
 .proj{background:var(--white);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
-.art{position:relative;height:152px;overflow:hidden}
-.art-plan{background-color:var(--sand);background-image:linear-gradient(rgba(23,35,28,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(23,35,28,.14) 1px,transparent 1px);background-size:24px 24px}
-.art-plan::before{content:"";position:absolute;top:32px;bottom:40px;left:18%;right:26%;border:2px solid rgba(23,35,28,.55);background:rgba(23,35,28,.1)}
-.art-plan::after{content:"";position:absolute;top:32px;bottom:40px;right:10%;width:10%;border:2px dashed rgba(23,35,28,.4)}
-.art-topo{background:var(--ink-2)}
-.art-topo::before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(ellipse 60% 80% at 34% 70%,transparent 0 11px,rgba(246,244,239,.2) 11px 12px),repeating-radial-gradient(ellipse 50% 60% at 86% 10%,transparent 0 11px,rgba(246,244,239,.12) 11px 12px)}
-.art-pipe{background:linear-gradient(180deg,var(--clay) 0 22%,var(--soil) 22% 58%,var(--deep) 58%)}
-.art-pipe::before{content:"";position:absolute;left:36%;right:36%;top:22%;bottom:0;background:#3b3027;box-shadow:inset 0 -46px 0 #5f5446}
-.art-pipe::after{content:"";position:absolute;left:50%;bottom:14px;width:52px;height:52px;margin-left:-26px;border-radius:50%;background:#2a221c;border:7px solid #c9ccc5}
+/* v2.1: real job photos replace the CSS-drawn project graphics. */
+.art{position:relative;height:200px;overflow:hidden;background:var(--ink-2)}
+.art img{display:block;width:100%;height:100%;object-fit:cover}
+.also{margin-top:var(--s3);font-size:16px;color:var(--muted)}
 .proj-b{padding:var(--s3)}
 .meta{font-size:14px;color:var(--muted)}
 .proj h3{margin-top:4px}
@@ -261,9 +278,21 @@ input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(23,35
   .step{padding-left:0;padding-top:64px}
   .step::before{top:0}
   .step:not(:last-child)::after{content:"";position:absolute;top:22px;left:60px;right:-16px;border-top:2px dashed var(--line)}
-  .projects{grid-template-columns:repeat(3,1fr)}
+  .projects{grid-template-columns:repeat(6,1fr)}
+  .proj{grid-column:span 2}
+  .proj.wide{grid-column:span 3}
+  .proj.wide .art{height:300px}
   .press{grid-template-columns:1.4fr 1fr;align-items:center;gap:var(--s5);padding:var(--s5)}
   .foot-top{grid-template-columns:1.5fr 1fr}
+}
+@media (min-width:760px){
+  /* Text sits on the left, so the scrim is heaviest there and lifts on the right
+     to let the machines read. Measured contrast over the text column stays >12:1. */
+  .hero{background-image:
+      linear-gradient(180deg,rgba(23,35,28,.30) 0%,rgba(23,35,28,.22) 55%,rgba(23,35,28,.46) 100%),
+      linear-gradient(90deg,rgba(23,35,28,.90) 0%,rgba(23,35,28,.86) 34%,rgba(23,35,28,.58) 66%,rgba(23,35,28,.34) 100%),
+      url("images/hero.jpg");
+    background-position:50% 58%}
 }
 @media (min-width:900px){
   .nav{display:flex}
@@ -282,7 +311,7 @@ input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(23,35
 <header class="head">
   <div class="wrap head-in">
     <a class="brand" href="#top" aria-label="Gartman Earthworx — back to top">
-      <span class="mark" aria-hidden="true"></span>
+      <img class="mark" src="images/logo-mark-white.png" width="314" height="180" alt="" aria-hidden="true">
       <b>Gartman</b><span>Earthworx</span>
     </a>
     <nav class="nav" aria-label="Sections">
@@ -461,35 +490,53 @@ input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(23,35
       <div class="head-block">
         <p class="eyebrow">Projects</p>
         <h2>Recent work on the ground.</h2>
-        <p class="lede">Jobs the crew has posted from the field — commercial development, a mountain community and underground utilities.</p>
+        <p class="lede">Photographs from the crew's own job posts — commercial development, mass grading, land clearing and finish work.</p>
       </div>
 
       <div class="projects">
-        <article class="proj">
-          <div class="art art-plan" aria-hidden="true"></div>
+        <article class="proj wide">
+          <div class="art"><img src="images/proj-clearing.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Tracked excavator stacking felled trees and brush on a red-clay site being cleared."></div>
           <div class="proj-b">
-            <p class="meta">Dayton, TN · Commercial · 2026</p>
+            <p class="meta">Dayton, TN · Commercial</p>
             <h3>5-acre retail development</h3>
-            <p>Site work on a 5-acre retail development in Dayton, Tennessee.</p>
+            <p>Clearing underway on the 5-acre retail development. From the job post: “Clearing getting started on our 5 acre retail development project.”</p>
+          </div>
+        </article>
+        <article class="proj wide">
+          <div class="art"><img src="images/proj-dayton.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Excavator and wheel loader cutting into a clay bank on a graded site."></div>
+          <div class="proj-b">
+            <p class="meta">Dayton, TN · Site work</p>
+            <h3>Moving dirt in Dayton</h3>
+            <p>Cut, load and haul on the same Dayton job. From the post: “Lots of iron moving to make things happen in Dayton TN.”</p>
           </div>
         </article>
         <article class="proj">
-          <div class="art art-topo" aria-hidden="true"></div>
+          <div class="art"><img src="images/proj-landclear.jpg" width="800" height="600" loading="lazy" decoding="async" alt="A wooded lot opened up, timber down and ground tracked out, with an excavator and truck on site."></div>
           <div class="proj-b">
-            <p class="meta">Marion County, TN · Mountain community</p>
-            <h3>Jasper Highlands</h3>
-            <p>Crew work in the gated mountain community. From the job post: “Detail &amp; precision is how we do things at Gartman.”</p>
+            <p class="meta">Land clearing</p>
+            <h3>Lot opened up</h3>
+            <p>Timber down and the ground tracked out, from the company's land-clearing footage.</p>
           </div>
         </article>
         <article class="proj">
-          <div class="art art-pipe" aria-hidden="true"></div>
+          <div class="art"><img src="images/proj-grading.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Dozer pushing a windrow of soil on a site at the edge of a field."></div>
           <div class="proj-b">
-            <p class="meta">Underground utilities</p>
-            <h3>8-inch sewer install</h3>
-            <p>An 8-inch sewer line installation, posted from the job.</p>
+            <p class="meta">Grading</p>
+            <h3>Stripping and shaping</h3>
+            <p>Dozer work on site. From the post: “Komatsu D61 stripping the land.”</p>
+          </div>
+        </article>
+        <article class="proj">
+          <div class="art"><img src="images/proj-hydroseed.jpg" width="800" height="600" loading="lazy" decoding="async" alt="A finished residential lot covered in fresh green hydroseed mulch in front of a new house."></div>
+          <div class="proj-b">
+            <p class="meta">Residential · Finish work</p>
+            <h3>Hydroseed going down</h3>
+            <p>Final grade seeded and mulched on a residential lot. From the post: “Hydroseed job going down!”</p>
           </div>
         </article>
       </div>
+
+      <p class="also">Also posted from the field: crew work in <strong>Jasper Highlands</strong> — “Detail &amp; precision is how we do things at Gartman” — and an <strong>8-inch sewer install</strong>.</p>
 
       <div class="press">
         <div>
@@ -582,7 +629,7 @@ input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(23,35
   <div class="wrap">
     <div class="foot-top">
       <div>
-        <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span><b>Gartman</b><span>Earthworx LLC</span></a>
+        <a class="brand" href="#top"><img class="logo" src="images/logo-white.png" width="360" height="276" loading="lazy" alt="Gartman Earthworx LLC"></a>
         <p style="margin-top:var(--s2);max-width:46ch">Clearing, grading, septic and site work in Chattanooga and surrounding cities in Tennessee and Georgia.</p>
         <p style="margin-top:var(--s1)">TDEC Division of Water Resources #14818 · TN Dept. of Commerce &amp; Insurance #84583</p>
       </div>
