@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+===============================================================================
+  WELSH PAINTING COMPANY - UNSOLICITED DEMONSTRATION REBUILD
+  Built 2026-10-25 by Matt McFarlane.  NOT an official Welsh Painting site.
+===============================================================================
+
+  WHAT THIS IS
+  ------------
+  A speculative, private rebuild of the Welsh Painting Company homepage, made
+  to demonstrate one specific thing: what their own content looks like when
+  the page is built for a phone.
+
+  Welsh Painting has NOT been contacted, has NOT commissioned this, and has
+  NOT approved it. This page is noindex/nofollow and unlisted.
+
+  WHY IT EXISTS - the measurement
+  -------------------------------
+  Google PageSpeed Insights, run 5x against https://jonwelshpainting.com/
+  on 2026-10-25 (Lighthouse 13.5.0, mobile):
+
+      performance   17, 19, 38, 38, 39     median 38  - never once above 39
+      FCP           3.5 s  (5 of 5 runs)
+      LCP           9.6 s  median           Google's "good" threshold is 2.5 s
+      TTI           25.1 s median
+      CLS           0.385  median           "good" is under 0.1
+      page weight   5.16 MB median
+      requests      103, of which 68 are third-party (3,591 KB / 64%)
+
+  Their DESKTOP score is 84 and their server responds in 10 ms. Their hosting
+  is excellent and their SEO (92) and Best Practices (96) are good. This is
+  not a hosting problem and it is not an SEO problem. It is a mobile payload
+  problem, and it is concentrated in one place:
+
+      ~930 KB of JavaScript - four reCAPTCHA bundles plus a JotForm embed -
+      loads on the homepage for the sole purpose of rendering the
+      "Free Estimate Request" form. 1,268 KB of the page's JS is never used.
+
+  Their contact form is the slowest thing on their website.
+
+  HOW THIS PAGE IS DIFFERENT
+  --------------------------
+    * ZERO external requests. No CDN, no web fonts, no analytics, no embeds,
+      no reCAPTCHA, no form service. Every byte is same-origin.
+    * ZERO JavaScript frameworks. The only script is ~15 lines that toggles
+      the FAQ and smooth-scrolls. The page is fully functional without it.
+    * System font stack. Their site ships 215 KB of fonts; this ships none.
+    * All CSS inline in one <style>. No render-blocking stylesheet.
+    * Images sized to their actual display box, ~600 KB total on mobile.
+    * The estimate form is a plain <form> - instant, no third-party JS.
+    * Pinch-to-zoom is NOT disabled. Theirs sets user-scalable=0, which is
+      an accessibility failure Lighthouse flags on their live site.
+
+  SOURCES - every claim on this page is one Welsh Painting already makes
+  ---------------------------------------------------------------------
+    * All body copy, services, prep descriptions, price bands, warranty terms,
+      paint brands, insurer, and service-area list: jonwelshpainting.com
+      (home, /paint-company-chattanooga, /service-area, /faq), 2026-10-25.
+    * 5.0 stars / 50 reviews, hours, address, phone: Google Places API (New),
+      live pull 2026-10-25. Place ID ChIJNVDrqbtnYIgRb_aQeTjQbvM.
+    * Logo, favicon, badges, and all photographs: Welsh Painting's own
+      WordPress media library and their own Google Business Profile.
+    * Brand colours #054577 and #0C72B9: pixel-sampled from their own logo
+      file. Those are the only two colours in it.
+
+  DELIBERATELY NOT CLAIMED HERE
+  -----------------------------
+    * No pressure washing, drywall repair, or epoxy flooring. Those appear
+      only on van lettering in a photo and in one customer review - never in
+      their own written service copy.
+    * No "founded in Chattanooga" - their homepage and About page contradict
+      each other (About says founded 1987 in New Jersey). Only the claim both
+      pages support is used: "Serving Chattanooga since 1987."
+    * No Google hours grid - the listed Sunday hours are almost certainly an
+      answering window, not crews working. Their own wording is used instead.
+    * No invented reviews, counts, guarantees, or years-in-business maths.
+
+  *** PERMISSION GATE - see research.md ***
+  Before this page is ever indexed, linked publicly, or used as a live site,
+  written permission is required from Jon Welsh for: the team photograph
+  (it shows five identifiable employees), the nine portfolio photographs of
+  private homes, the logo, and the supplier badges. Fair use for a private
+  demonstration is not a licence to publish.
+
+===============================================================================
+-->
+<title>Welsh Painting Company | Painting Contractor in Chattanooga, TN</title>
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="description" content="Welsh Painting Company - family-owned, veteran-owned painting contractor serving Chattanooga since 1987. Interior, exterior, cabinets, decks, commercial and industrial. Licensed and insured. Free estimates. (423) 321-2256">
+<meta property="og:title" content="Welsh Painting Company | Chattanooga, TN">
+<meta property="og:description" content="Serving Chattanooga since 1987. 5.0 stars from 50 Google reviews. Licensed and insured. Free estimates.">
+<meta property="og:image" content="images/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#054577">
+<link rel="icon" href="images/favicon.png" type="image/png">
+<style>
+/* ============================================================
+   Palette: both blues sampled directly from Welsh Painting's
+   own logo file. Nothing here is invented.
+   ============================================================ */
+:root{
+  --navy:#054577;          /* 68.9% of their logo's opaque pixels */
+  --blue:#0C72B9;          /* 31.1% */
+  --navy-dk:#03314f;
+  --blue-lt:#e8f2fa;
+  --ink:#16202b;
+  --body:#424f5e;
+  --line:#dde4ec;
+  --bg:#ffffff;
+  --bg-alt:#f5f8fb;
+  --gold:#f0a515;
+  --radius:12px;
+  --wrap:1120px;
+  --shadow:0 2px 10px rgba(5,69,119,.07);
+  --shadow-lg:0 10px 34px rgba(5,69,119,.13);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  /* System stack - no web font request. Their site loads 215 KB of fonts. */
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color:var(--body);background:var(--bg);
+  font-size:17px;line-height:1.65;
+  overflow-x:hidden;                /* belt-and-braces against 320px overflow */
+}
+img{max-width:100%;height:auto;display:block;border:0}
+a{color:var(--blue);text-decoration:none}
+h1,h2,h3{color:var(--ink);line-height:1.2;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(1.85rem,5.2vw,3.1rem);font-weight:800}
+h2{font-size:clamp(1.5rem,3.6vw,2.2rem);font-weight:800}
+h3{font-size:1.12rem;font-weight:700}
+p{margin:0 0 1em}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.sect{padding:clamp(48px,7vw,86px) 0}
+.sect--alt{background:var(--bg-alt)}
+.eyebrow{
+  display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--blue);margin-bottom:.7em
+}
+.lede{font-size:clamp(1rem,2vw,1.14rem);max-width:65ch}
+.center{text-align:center}
+.center .lede{margin-left:auto;margin-right:auto}
+
+/* ---------- buttons: the phone number is the primary action ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55em;
+  font-size:1.06rem;font-weight:700;line-height:1.2;
+  padding:17px 30px;border-radius:var(--radius);border:2px solid transparent;
+  cursor:pointer;text-align:center;
+  min-height:56px;                   /* comfortable tap target */
+  transition:transform .12s ease, box-shadow .12s ease, background .12s ease
+}
+.btn:active{transform:translateY(1px)}
+.btn--call{background:var(--gold);color:#3a2600;box-shadow:0 4px 14px rgba(240,165,21,.36)}
+.btn--call:hover{background:#ffb524}
+.btn--ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn--ghost:hover{background:rgba(255,255,255,.13)}
+.btn--navy{background:var(--navy);color:#fff}
+.btn--navy:hover{background:var(--navy-dk)}
+.btn--wide{width:100%}
+
+/* ---------- header ---------- */
+.hdr{background:#fff;border-bottom:1px solid var(--line);position:relative;z-index:30}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;
+  max-width:var(--wrap);margin:0 auto}
+.hdr__logo img{width:200px}
+.hdr__call{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15}
+.hdr__call small{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--body);font-weight:700}
+.hdr__call b{font-size:1.3rem;color:var(--navy);font-weight:800;white-space:nowrap}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--navy-dk);color:#fff;overflow:hidden}
+.hero__bg{position:absolute;inset:0}
+.hero__bg img{width:100%;height:100%;object-fit:cover}
+.hero__bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(105deg,rgba(3,49,79,.95) 0%,rgba(5,69,119,.88) 45%,rgba(5,69,119,.55) 100%)
+}
+.hero__in{position:relative;z-index:2;padding:clamp(52px,8vw,104px) 0}
+.hero h1{color:#fff;max-width:17ch}
+.hero__sub{font-size:clamp(1.02rem,2.1vw,1.22rem);color:#d9e8f5;max-width:52ch;margin-bottom:1.6em}
+.hero__cta{display:flex;flex-wrap:wrap;gap:13px;margin-bottom:28px}
+.hero__cta .btn{flex:1 1 auto;min-width:215px}
+.hero__note{font-size:.9rem;color:#b9d2e8;margin:0}
+
+/* star rating block */
+.stars{display:flex;align-items:center;gap:11px;margin-bottom:22px;flex-wrap:wrap}
+.stars__glyphs{color:#ffc53d;font-size:1.22rem;letter-spacing:2px;line-height:1}
+.stars__txt{font-size:.95rem;color:#e4eff8}
+.stars__txt b{color:#fff}
+
+/* ---------- trust bar ---------- */
+.trust{background:var(--navy);color:#fff;border-top:1px solid rgba(255,255,255,.1)}
+.trust__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:var(--wrap);margin:0 auto}
+.trust__item{padding:22px 16px;text-align:center;border-right:1px solid rgba(255,255,255,.14)}
+.trust__item:last-child{border-right:0}
+.trust__item b{display:block;font-size:1.32rem;font-weight:800;color:#fff;line-height:1.1}
+.trust__item span{display:block;font-size:.76rem;letter-spacing:.07em;text-transform:uppercase;
+  color:#a9c8e2;margin-top:5px;font-weight:600}
+
+/* ---------- generic grids ---------- */
+.grid{display:grid;gap:22px}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+.grid--2{grid-template-columns:repeat(2,1fr)}
+
+/* ---------- "why" cards ---------- */
+.why{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;
+  box-shadow:var(--shadow)}
+.why__n{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;
+  border-radius:10px;background:var(--blue-lt);color:var(--navy);font-weight:800;font-size:1.1rem;
+  margin-bottom:14px}
+.why p{margin:0;font-size:.98rem}
+.why q{display:block;margin-top:12px;padding-left:13px;border-left:3px solid var(--blue);
+  font-style:italic;color:var(--body);font-size:.92rem;quotes:none}
+.why cite{display:block;margin-top:6px;font-style:normal;font-size:.8rem;color:#78889a;font-weight:600}
+
+/* ---------- service cards ---------- */
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);display:flex;flex-direction:column}
+.svc img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.svc__b{padding:20px 21px 23px;flex:1;display:flex;flex-direction:column}
+.svc h3{margin-bottom:.45em}
+.svc p{font-size:.95rem;margin:0;flex:1}
+
+/* ---------- pricing ---------- */
+.price{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:32px 0 20px}
+.price__c{background:#fff;border:1px solid var(--line);border-top:4px solid var(--blue);
+  border-radius:var(--radius);padding:24px 20px;text-align:center;box-shadow:var(--shadow)}
+.price__c b{display:block;font-size:1.62rem;color:var(--navy);font-weight:800;line-height:1.15;
+  letter-spacing:-.02em}
+.price__c span{display:block;font-size:.82rem;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--body);font-weight:700;margin-bottom:9px}
+.price__c small{display:block;font-size:.84rem;color:#78889a;margin-top:7px}
+.price__note{font-size:.9rem;color:#78889a;text-align:center;max-width:60ch;margin:0 auto}
+
+/* ---------- reviews ---------- */
+.rev{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 23px;
+  box-shadow:var(--shadow);display:flex;flex-direction:column}
+.rev__s{color:#ffc53d;letter-spacing:2px;font-size:1rem;margin-bottom:11px;line-height:1}
+.rev p{font-size:.95rem;margin:0 0 15px;flex:1}
+.rev__w{font-weight:700;color:var(--ink);font-size:.93rem}
+.rev__m{font-size:.8rem;color:#78889a;margin-top:2px}
+
+/* ---------- areas ---------- */
+.areas{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.areas span{background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:7px 15px;font-size:.88rem;font-weight:600;color:var(--navy)}
+.areas span.is-ga{background:var(--blue-lt);border-color:#c3ddf1}
+
+/* ---------- faq ---------- */
+.faq{max-width:780px;margin:0 auto}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  margin-bottom:11px;overflow:hidden}
+.faq summary{padding:17px 20px;font-weight:700;color:var(--ink);cursor:pointer;
+  list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;
+  min-height:56px;font-size:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.5rem;color:var(--blue);font-weight:400;line-height:1;flex:0 0 auto}
+.faq details[open] summary::after{content:"\2212"}
+.faq__a{padding:0 20px 18px;font-size:.96rem}
+.faq__a p:last-child{margin-bottom:0}
+
+/* ---------- estimate / contact ---------- */
+.est{background:var(--navy);color:#fff}
+.est h2{color:#fff}
+.est__grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:start}
+.est__p{color:#cfe2f1}
+.est__list{list-style:none;padding:0;margin:22px 0 0}
+.est__list li{padding:9px 0 9px 30px;position:relative;color:#e2eef8;font-size:.98rem}
+.est__list li::before{content:"";position:absolute;left:4px;top:17px;width:10px;height:10px;
+  border-radius:50%;background:var(--gold)}
+/* Plain same-origin form. No JotForm, no reCAPTCHA, no third-party JS. */
+.form{background:#fff;border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow-lg)}
+.form h3{margin-bottom:.3em}
+.form__hint{font-size:.87rem;color:#78889a;margin-bottom:18px}
+.form label{display:block;font-size:.83rem;font-weight:700;color:var(--ink);
+  margin-bottom:5px;letter-spacing:.02em}
+.form input,.form select,.form textarea{
+  width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:9px;
+  font:inherit;font-size:1rem;color:var(--ink);background:#fff;margin-bottom:14px;
+  min-height:50px;-webkit-appearance:none;appearance:none
+}
+.form select{background-image:linear-gradient(45deg,transparent 50%,var(--blue) 50%),
+  linear-gradient(135deg,var(--blue) 50%,transparent 50%);
+  background-position:calc(100% - 20px) 21px,calc(100% - 14px) 21px;
+  background-size:6px 6px,6px 6px;background-repeat:no-repeat;padding-right:42px}
+.form textarea{min-height:92px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{
+  outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(12,114,185,.15)}
+.form__alt{text-align:center;font-size:.89rem;color:#78889a;margin:15px 0 0}
+.form__alt a{font-weight:700}
+
+/* ---------- work strip ---------- */
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.work img{border-radius:var(--radius);aspect-ratio:1/1;object-fit:cover;box-shadow:var(--shadow)}
+
+/* ---------- badges ---------- */
+.badges{display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:center;
+  margin-top:34px;padding-top:30px;border-top:1px solid var(--line)}
+.badges img{height:52px;width:auto;opacity:.9}
+
+/* ---------- team ---------- */
+.team{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.team img{border-radius:var(--radius);box-shadow:var(--shadow-lg)}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--navy-dk);color:#9fbcd4;padding:48px 0 0;font-size:.93rem}
+.ftr__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;padding-bottom:34px}
+.ftr img{width:190px;margin-bottom:15px}
+.ftr h4{color:#fff;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 13px}
+.ftr a{color:#cfe2f1}
+.ftr a:hover{color:#fff}
+.ftr ul{list-style:none;padding:0;margin:0}
+.ftr li{margin-bottom:8px}
+.ftr__bar{border-top:1px solid rgba(255,255,255,.12);padding:17px 0 24px;font-size:.82rem;color:#7fa0bd}
+/* The demo disclosure. This must never be removed while the page is unlisted. */
+.disclose{background:#02243a;color:#7fa3c0;font-size:.79rem;line-height:1.6;padding:17px 0;
+  border-top:1px solid rgba(255,255,255,.1)}
+.disclose b{color:#c3dcf0}
+
+/* ---------- sticky mobile call bar ---------- */
+.callbar{display:none}
+
+/* ===================== responsive ===================== */
+@media (max-width:980px){
+  .est__grid,.team{grid-template-columns:1fr;gap:30px}
+  .grid--3{grid-template-columns:repeat(2,1fr)}
+  .ftr__grid{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .trust__grid{grid-template-columns:repeat(2,1fr)}
+  .trust__item:nth-child(2){border-right:0}
+  .trust__item:nth-child(1),.trust__item:nth-child(2){border-bottom:1px solid rgba(255,255,255,.14)}
+  .price{grid-template-columns:1fr;gap:14px}
+  .hdr__call small{display:none}
+  .hdr__logo img{width:160px}
+  .hdr__call b{font-size:1.12rem}
+  /* Sticky tap-to-call. The single most important element on a phone. */
+  .callbar{
+    display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;
+    background:var(--gold);box-shadow:0 -3px 16px rgba(0,0,0,.22)
+  }
+  .callbar a{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    padding:16px 14px;color:#3a2600;font-weight:800;font-size:1.1rem;
+    min-height:60px;letter-spacing:.01em
+  }
+  body{padding-bottom:62px}   /* never let the bar cover the footer */
+}
+@media (max-width:620px){
+  .grid--3,.grid--2{grid-template-columns:1fr}
+  .work{grid-template-columns:repeat(3,1fr);gap:9px}
+  .ftr__grid{grid-template-columns:1fr;gap:26px}
+  .hero__cta .btn{min-width:0;width:100%}
+  .badges{gap:18px}
+  .badges img{height:42px}
+}
+@media (max-width:360px){
+  .wrap{padding:0 15px}
+  .hdr__logo img{width:138px}
+  .hdr__call b{font-size:1rem}
+  .trust__item b{font-size:1.14rem}
+  .trust__item span{font-size:.68rem}
+  .btn{font-size:.99rem;padding:15px 18px}
+  .callbar a{font-size:1.02rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ======================= HEADER ======================= -->
+<header class="hdr">
+  <div class="hdr__in">
+    <a class="hdr__logo" href="#top" aria-label="Welsh Painting Company home">
+      <img src="images/logo.png" alt="Welsh Painting Company" width="440" height="113">
+    </a>
+    <a class="hdr__call" href="tel:+14233212256">
+      <small>Call us anytime</small>
+      <b>(423)&nbsp;321-2256</b>
+    </a>
+  </div>
+</header>
+
+<!-- ======================= HERO =======================
+     Conversion order starts here: who they are, the proof (5.0/50),
+     the single action (call), then everything else.
+-->
+<section class="hero" id="top">
+  <div class="hero__bg">
+    <picture>
+      <source media="(max-width:760px)" srcset="images/hero-mobile.jpg">
+      <img src="images/hero.jpg" alt="A Chattanooga home with freshly painted light-blue siding and white trim, completed by Welsh Painting Company" width="1100" height="619" fetchpriority="high" decoding="async">
+    </picture>
+  </div>
+  <div class="hero__in">
+    <div class="wrap">
+      <div class="stars">
+        <span class="stars__glyphs" aria-hidden="true">★★★★★</span>
+        <span class="stars__txt"><b>5.0 out of 5</b> &middot; 50 Google reviews</span>
+      </div>
+      <h1>Chattanooga painters, serving this city since 1987.</h1>
+      <p class="hero__sub">
+        Family-owned and veteran-owned. Interior, exterior, cabinets, decks,
+        commercial and industrial &mdash; licensed, insured, and finished by the
+        same crews every time.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--call" href="tel:+14233212256">
+          <span aria-hidden="true">&#9742;</span> Call (423) 321-2256
+        </a>
+        <a class="btn btn--ghost" href="#estimate">Request a free estimate</a>
+      </div>
+      <p class="hero__note">Free, itemized estimates &mdash; before any work begins.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TRUST BAR ======================= -->
+<section class="trust" aria-label="At a glance">
+  <div class="trust__grid">
+    <div class="trust__item"><b>5.0&#9733;</b><span>50 Google reviews</span></div>
+    <div class="trust__item"><b>1987</b><span>Serving Chattanooga</span></div>
+    <div class="trust__item"><b>Licensed</b><span>&amp; fully insured</span></div>
+    <div class="trust__item"><b>Veteran</b><span>Owned business</span></div>
+  </div>
+</section>
+
+<!-- ======================= WHY =======================
+     This section is the reason the rebuild exists. Across a decade of their
+     own reviews the same three things recur - prep, communication, and
+     showing up - and their live site never says any of it. Each card carries
+     a real quote from a real review they already publish.
+-->
+<section class="sect">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Why people keep calling back</span>
+      <h2>The paint is the easy part.</h2>
+      <p class="lede">
+        Read ten years of Welsh Painting reviews and the same three things come
+        up over and over &mdash; and none of them is the colour.
+      </p>
+    </div>
+    <div class="grid grid--3" style="margin-top:38px">
+
+      <div class="why">
+        <div class="why__n" aria-hidden="true">1</div>
+        <h3>Prep nobody else does</h3>
+        <p>
+          Dust containment and floor protection before anything is opened.
+          Degreasing and deglossing before cabinets. Cleaning and brightening
+          before stain. Surface repair and carpentry before a single coat.
+        </p>
+        <q>The prep work mentioned in meetings was not understood until experienced.</q>
+        <cite>Jamie Romero &middot; Google, 5&#9733;</cite>
+      </div>
+
+      <div class="why">
+        <div class="why__n" aria-hidden="true">2</div>
+        <h3>You always know what&rsquo;s happening</h3>
+        <p>
+          Estimates spelled out line by line. Regular updates while crews are
+          in the house. A straight answer if we&rsquo;re not the right crew for
+          the job.
+        </p>
+        <q>He communicates better than any person or company I have ever hired.</q>
+        <cite>Rachel Hughes &middot; Google, 5&#9733;</cite>
+      </div>
+
+      <div class="why">
+        <div class="why__n" aria-hidden="true">3</div>
+        <h3>We show up, and we come back</h3>
+        <p>
+          Crews arrive when we say they will, the job finishes in the time
+          quoted, and we return to check the work &mdash; including touch-ups
+          at no extra charge.
+        </p>
+        <q>Of all the contractors we worked with, John was one of, if not the best.</q>
+        <cite>Brian Burrage &middot; Google, 5&#9733;</cite>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SERVICES =======================
+     Six cards. Every description is lifted from their own Service Area page,
+     which is by some distance the best-written page on their live site and is
+     currently buried three clicks deep.
+-->
+<section class="sect sect--alt">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">What we do</span>
+      <h2>Residential, commercial, industrial.</h2>
+      <p class="lede">
+        We price every job off the same walkthrough: what is on the surface
+        now, what has to come off, and what goes back on.
+      </p>
+    </div>
+
+    <div class="grid grid--3" style="margin-top:38px">
+
+      <article class="svc">
+        <img src="images/svc-interior.jpg" alt="Freshly painted bright interior living room with white trim and crown moulding" width="560" height="420" loading="lazy" decoding="async">
+        <div class="svc__b">
+          <h3>Interior painting</h3>
+          <p>Walls, ceilings, trim and doors &mdash; with dust containment and floor protection in place before anything gets opened.</p>
+        </div>
+      </article>
+
+      <article class="svc">
+        <img src="images/svc-exterior.jpg" alt="Blue craftsman bungalow with freshly painted siding, white trim and columns" width="560" height="420" loading="lazy" decoding="async">
+        <div class="svc__b">
+          <h3>Exterior painting</h3>
+          <p>Siding, soffits, fascia and porches, scheduled around the weather so the coatings actually cure properly.</p>
+        </div>
+      </article>
+
+      <article class="svc">
+        <img src="images/svc-cabinets.jpg" alt="White shaker kitchen cabinets refinished by Welsh Painting Company" width="560" height="420" loading="lazy" decoding="async">
+        <div class="svc__b">
+          <h3>Cabinet painting</h3>
+          <p>Starts with degreasing and deglossing &mdash; because cabinet finishes fail at the prep stage far more often than at the paint stage.</p>
+        </div>
+      </article>
+
+      <article class="svc">
+        <img src="images/svc-deck.jpg" alt="Freshly stained wooden deck with railings" width="560" height="420" loading="lazy" decoding="async">
+        <div class="svc__b">
+          <h3>Deck staining</h3>
+          <p>Cleaning, brightening and sealing before the stain ever goes down, so the colour holds instead of lifting in a season.</p>
+        </div>
+      </article>
+
+      <article class="svc">
+        <img src="images/svc-commercial.jpg" alt="Commercial retail interior painted and fitted out" width="560" height="420" loading="lazy" decoding="async">
+        <div class="svc__b">
+          <h3>Commercial painting</h3>
+          <p>Offices, retail space, multi-family properties and churches &mdash; often worked after hours so you don&rsquo;t lose a trading day.</p>
+        </div>
+      </article>
+
+      <article class="svc">
+        <img src="images/svc-industrial.jpg" alt="Industrial piping and tanks finished in grey protective coating" width="560" height="420" loading="lazy" decoding="async">
+        <div class="svc__b">
+          <h3>Industrial coatings</h3>
+          <p>Protective coatings for warehouses, plants and structural steel, specified for the environment they have to survive.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PRICING =======================
+     Welsh Painting publishes real price bands on their FAQ page. A painting
+     contractor doing that is genuinely unusual and it is a real competitive
+     asset - so it comes up here, near the top, instead of being buried.
+     Figures are theirs, quoted exactly.
+-->
+<section class="sect">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Straight answers</span>
+      <h2>What does it cost to paint a house?</h2>
+      <p class="lede">
+        Most contractors won&rsquo;t put a number on a website. Here are ours.
+        Every home is different, so the estimate is always free and always
+        itemized &mdash; but you deserve a ballpark before you pick up the phone.
+      </p>
+    </div>
+
+    <div class="price">
+      <div class="price__c">
+        <span>Interior</span>
+        <b>$2,000&ndash;$6,000</b>
+        <small>typical project</small>
+      </div>
+      <div class="price__c">
+        <span>Exterior</span>
+        <b>$3,000&ndash;$8,000</b>
+        <small>typical project</small>
+      </div>
+      <div class="price__c">
+        <span>Whole house</span>
+        <b>$2,500&ndash;$8,000</b>
+        <small>what most homeowners pay</small>
+      </div>
+    </div>
+    <p class="price__note">
+      Depends on size, condition and scope of work. We provide a free,
+      itemized estimate before any work begins.
+    </p>
+  </div>
+</section>
+
+<!-- ======================= TEAM ======================= -->
+<section class="sect sect--alt">
+  <div class="wrap">
+    <div class="team">
+      <div>
+        <span class="eyebrow">Who turns up</span>
+        <h2>The same crews, every job.</h2>
+        <p>
+          Welsh Painting Company was founded in 1987 by Matthew Welsh and is
+          run today by his son, Jonathan Welsh. It is still family-owned, and
+          still veteran-owned.
+        </p>
+        <p>
+          We carry full contractor liability insurance through State Farm and
+          are licensed with the city, county and state. We use Benjamin Moore
+          and Sherwin-Williams premium paints, and premium-grade brushes,
+          rollers and caulk on every job we take.
+        </p>
+        <p style="margin-bottom:0">
+          Ask us which products we plan to use on your project. We&rsquo;ll
+          tell you, and we&rsquo;ll tell you why.
+        </p>
+      </div>
+      <div>
+        <img src="images/team.jpg" alt="The Welsh Painting Company crew in branded shirts in front of their work vans" width="880" height="587" loading="lazy" decoding="async">
+      </div>
+    </div>
+
+    <div class="badges">
+      <img src="images/badge-veteran.png" alt="Veteran Owned Business" width="170" height="60" loading="lazy" decoding="async">
+      <img src="images/badge-benmoore.png" alt="Benjamin Moore paints" width="170" height="86" loading="lazy" decoding="async">
+      <img src="images/badge-sherwin.png" alt="Sherwin-Williams paints" width="170" height="84" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ======================= REVIEWS ======================= -->
+<section class="sect">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">5.0 stars &middot; 50 reviews</span>
+      <h2>Fifty reviews. Not one below five stars.</h2>
+    </div>
+
+    <div class="grid grid--3" style="margin-top:38px">
+
+      <div class="rev">
+        <div class="rev__s" aria-hidden="true">★★★★★</div>
+        <p>
+          &ldquo;Their estimate was clearly spelled out and very fair. They showed
+          up on time and left my house clean after they finished for the day
+          &hellip; and came back at no extra charge to do a little touch-up work
+          afterwards.&rdquo;
+        </p>
+        <div class="rev__w">Charlotte Olson</div>
+        <div class="rev__m">Google review &middot; interior, whole first floor</div>
+      </div>
+
+      <div class="rev">
+        <div class="rev__s" aria-hidden="true">★★★★★</div>
+        <p>
+          &ldquo;The most refreshing aspect was the attention to detail and the
+          amount of preparation and carpentry that was done to restore my
+          20&nbsp;year old home to looking brand new. The quote came in on budget
+          and was completed in the time quoted.&rdquo;
+        </p>
+        <div class="rev__w">Stephanie Pfaffle</div>
+        <div class="rev__m">Google review &middot; exterior repaint</div>
+      </div>
+
+      <div class="rev">
+        <div class="rev__s" aria-hidden="true">★★★★★</div>
+        <p>
+          &ldquo;No need to research any further, you&rsquo;ve found the right guy
+          &hellip; They sanded out all the old imperfections, and the new paint is
+          beautiful and durable. He even fixed my broken storm door the day he
+          came over to provide the quote!&rdquo;
+        </p>
+        <div class="rev__w">Blakely Phillips</div>
+        <div class="rev__m">Google review &middot; kitchen cabinets</div>
+      </div>
+
+    </div>
+
+    <div class="work">
+      <img src="images/work-1.jpg" alt="Pale blue two-storey home with white trim, repainted exterior" width="360" height="360" loading="lazy" decoding="async">
+      <img src="images/work-2.jpg" alt="Refinished kitchen cabinetry" width="360" height="360" loading="lazy" decoding="async">
+      <img src="images/work-3.jpg" alt="Log cabin exterior with freshly stained timber and railings" width="360" height="360" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SERVICE AREA ======================= -->
+<section class="sect sect--alt">
+  <div class="wrap">
+    <span class="eyebrow">Where we work</span>
+    <h2>Chattanooga, Hamilton County, and North Georgia.</h2>
+    <p class="lede">
+      Chattanooga is home base and most of our work stays inside Hamilton
+      County &mdash; but we cross the state line regularly. Same crews, same
+      materials, same process.
+    </p>
+    <div class="areas">
+      <span>Chattanooga</span>
+      <span>East Brainerd</span>
+      <span>Hixson</span>
+      <span>Red Bank</span>
+      <span>Signal Mountain</span>
+      <span>Lookout Mountain</span>
+      <span>Soddy-Daisy</span>
+      <span>Collegedale</span>
+      <span>Ooltewah</span>
+      <span>McDonald</span>
+      <span class="is-ga">Rossville, GA</span>
+      <span class="is-ga">Fort Oglethorpe, GA</span>
+      <span class="is-ga">Ringgold, GA</span>
+    </div>
+    <p style="margin-top:22px;font-size:.96rem">
+      Not sure whether you&rsquo;re in range? Call anyway. We take work outside
+      this radius when the schedule allows, and we&rsquo;ll tell you straight if
+      we&rsquo;re not the right crew for the job.
+    </p>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section class="sect">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Before you call</span>
+      <h2>Questions we get asked most.</h2>
+    </div>
+    <div class="faq" style="margin-top:34px">
+
+      <details>
+        <summary>Are you licensed and insured?</summary>
+        <div class="faq__a"><p>Yes. We carry full contractor liability insurance through State Farm and are licensed with the city, state and county.</p></div>
+      </details>
+
+      <details>
+        <summary>What paint do you use?</summary>
+        <div class="faq__a"><p>Benjamin Moore and Sherwin-Williams premium paints, plus premium-grade brushes, rollers, caulk and other products on every project. Ask us which ones we&rsquo;ll use on yours &mdash; we&rsquo;re happy to talk it through.</p></div>
+      </details>
+
+      <details>
+        <summary>Do you offer a warranty?</summary>
+        <div class="faq__a"><p>Yes &mdash; a guarantee in accordance with the manufacturer&rsquo;s warranty, which is normally 2&ndash;3 years. In practice you should expect a great paint job to last somewhere between 12 and 15 years, as long as routine home maintenance is kept up.</p></div>
+      </details>
+
+      <details>
+        <summary>How much does it cost to paint a house?</summary>
+        <div class="faq__a"><p>Most homeowners pay between $2,500 and $8,000, depending on size, condition and scope. Interior projects typically run $2,000&ndash;$6,000 and exteriors $3,000&ndash;$8,000. Every home is different, so we provide a free, itemized estimate before any work begins.</p></div>
+      </details>
+
+      <details>
+        <summary>Can I pay by card?</summary>
+        <div class="faq__a"><p>Yes. We securely process card transactions through Payroc, with a 3% service fee.</p></div>
+      </details>
+
+      <details>
+        <summary>How long have you been doing this?</summary>
+        <div class="faq__a"><p>Since 1987. We&rsquo;ve completed hundreds of paint and home enhancement jobs for homeowners and businesses around Chattanooga, and you can read what those customers say on Google &mdash; 5.0 stars across 50 reviews.</p></div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ESTIMATE =======================
+     A plain, same-origin form. Their live site loads ~930 KB of JavaScript
+     (four reCAPTCHA bundles + a JotForm embed) to render the equivalent of
+     this. That is the single biggest reason their mobile score is what it is.
+     This form is instant and the phone number sits right beside it.
+-->
+<section class="sect est" id="estimate">
+  <div class="wrap">
+    <div class="est__grid">
+      <div>
+        <span class="eyebrow" style="color:#7fc0f0">Free estimate</span>
+        <h2>Tell us about the project.</h2>
+        <p class="est__p">
+          We&rsquo;ll walk the job, tell you what we see, and put it in writing
+          &mdash; itemized, with no obligation and no pressure.
+        </p>
+        <ul class="est__list">
+          <li>Free, itemized estimate before any work begins</li>
+          <li>We price off a walkthrough, not a phone guess</li>
+          <li>Licensed, insured, and veteran-owned since 1987</li>
+          <li>If we&rsquo;re not the right crew, we&rsquo;ll say so</li>
+        </ul>
+        <p style="margin-top:26px">
+          <a class="btn btn--call" href="tel:+14233212256">
+            <span aria-hidden="true">&#9742;</span> Call (423) 321-2256
+          </a>
+        </p>
+      </div>
+
+      <div class="form">
+        <h3>Request your estimate</h3>
+        <p class="form__hint">We usually reply the same day.</p>
+        <form method="post" action="#" novalidate>
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email">
+
+          <label for="f-type">What needs painting?</label>
+          <select id="f-type" name="type">
+            <option>Interior</option>
+            <option>Exterior</option>
+            <option>Cabinets</option>
+            <option>Deck staining</option>
+            <option>Commercial</option>
+            <option>Industrial</option>
+            <option>Something else</option>
+          </select>
+
+          <label for="f-msg">Anything we should know?</label>
+          <textarea id="f-msg" name="message" rows="3"></textarea>
+
+          <button class="btn btn--navy btn--wide" type="submit">Request free estimate</button>
+        </form>
+        <p class="form__alt">
+          Or just call &mdash; <a href="tel:+14233212256">(423)&nbsp;321-2256</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <img src="images/logo-white.png" alt="Welsh Painting Company" width="400" height="123" loading="lazy" decoding="async">
+        <p style="margin:0">
+          Family-owned and veteran-owned painting contractor, serving
+          Chattanooga and North Georgia since 1987.<br>Licensed &amp; insured.
+        </p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+14233212256">(423) 321-2256</a></li>
+          <li><a href="mailto:welshpaintingllc@gmail.com">welshpaintingllc@gmail.com</a></li>
+          <li>3221 Wilcox Blvd<br>Chattanooga, TN 37411</li>
+          <li style="margin-top:12px">Call us anytime</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li>Interior painting</li>
+          <li>Exterior painting</li>
+          <li>Cabinet painting</li>
+          <li>Deck staining</li>
+          <li>Commercial painting</li>
+          <li>Industrial coatings</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__bar">
+      &copy; 2026 Welsh Painting Company &middot; 3221 Wilcox Blvd, Chattanooga, TN 37411 &middot; (423) 321-2256 &middot; Licensed &amp; Insured
+    </div>
+  </div>
+  <!-- Demo disclosure. Do not remove while this page is unlisted. -->
+  <div class="disclose">
+    <div class="wrap">
+      <b>Unofficial demonstration page.</b> This is a speculative redesign built
+      from Welsh Painting Company&rsquo;s own publicly published content, photographs
+      and branding. It is not affiliated with, commissioned by, or endorsed by
+      Welsh Painting Company, and it is not their official website &mdash; that is
+      <a href="https://jonwelshpainting.com/" rel="nofollow noopener">jonwelshpainting.com</a>.
+      The page is set to noindex and is not publicly listed. Built 2026-10-25.
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky tap-to-call: phones only, always one thumb away. -->
+<div class="callbar">
+  <a href="tel:+14233212256"><span aria-hidden="true">&#9742;</span> Call (423) 321-2256</a>
+</div>
+
+<script>
+/* The only JavaScript on this page: close sibling FAQ items so the list never
+   grows taller than the screen. The page is fully usable without it -
+   <details> works natively. No framework, no third party, ~10 lines. */
+(function () {
+  var items = document.querySelectorAll('.faq details');
+  for (var i = 0; i < items.length; i++) {
+    items[i].addEventListener('toggle', function () {
+      if (!this.open) return;
+      for (var j = 0; j < items.length; j++) {
+        if (items[j] !== this) items[j].open = false;
+      }
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
