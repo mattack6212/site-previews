@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<title>Perfect Choice Family Hair Cutters &mdash; Fort Oglethorpe, GA</title>
+<meta name="description" content="Family hair cutters on Old Lafayette Road in Fort Oglethorpe, Georgia. Haircuts for the whole family, perms, walk-ins welcome. Call (706) 861-0330.">
+<link rel="icon" href="images/favicon.png" type="image/png">
+
+<!--
+===============================================================================
+  UNSOLICITED DEMO  ·  NOT AUTHORISED BY THE BUSINESS  ·  DO NOT PUBLISH
+===============================================================================
+
+  Built for : Perfect Choice Family Hair Cutters
+              1600 Old Lafayette Rd, Fort Oglethorpe, GA 30742 · (706) 861-0330
+  Built by  : Matt (Chattanooga) · speculative pitch demo
+  Built on  : 2026-10-24
+  Status    : noindex/nofollow. Unlisted. Not linked from anywhere.
+              NO CONTACT HAS BEEN MADE WITH THIS BUSINESS.
+
+  -------------------------------------------------------------------------
+  PERMISSION GATE — THIS PAGE MUST NOT GO LIVE UNTIL ALL OF THESE ARE CLEARED
+  -------------------------------------------------------------------------
+  1. PHOTO PERMISSION. All four photographs on this page are cropped from
+     customer-uploaded photos on the business's Google listing. ZERO photos on
+     that listing are owner-attributed — the business has never posted a
+     picture of itself. The uploaders are Charlie Lowrance (hero), Samantha
+     Dean (at-work, station) and Jason Browning (waiting area). Fair for an
+     unlisted noindex demo; NOT something the salon can authorise by itself
+     for a live commercial site. Fix: they photograph their own shop.
+  2. FACES. Six of the eight listing photos show an identifiable face and TWO
+     OF THOSE ARE YOUNG CHILDREN. Every crop on this page is bounded to
+     exclude all faces. Those bounds are documented in build_assets.py and
+     must not be loosened. No child appears anywhere on this page.
+  3. STYLIST NAMES. The names "Mary" and "Rose" appear ONLY inside verbatim
+     customer reviews, each stamped with the date the customer wrote it. This
+     page makes NO independent claim about who works here, who owns the
+     business, or what anyone's role is. Confirm both still work here before
+     launch — and confirm they are willing to be named at all.
+  4. THE CALL-BACK FORM IS A STUB. It validates and then states that nothing
+     was sent. It needs a real destination before launch.
+  5. Remove the noindex meta and fill the footer credit placeholder LAST.
+
+  -------------------------------------------------------------------------
+  SOURCING — every factual claim on this page and where it came from
+  -------------------------------------------------------------------------
+  · Name, address, phone, hours, rating, review count, category:
+      Google Places API (New) Place Details, pulled live 2026-10-24.
+      place_id ChIJOcgS7u5nYIgR_7I7QxRMa7U
+      rating 4.6 · userRatingCount 295 · businessStatus OPERATIONAL
+      Hours Mon-Sat 08:00-18:00, Sunday closed — INDEPENDENTLY CORROBORATED
+      by Fresha and Birdeye, both read 2026-10-24.
+  · "Neighborhood Favorite 2020, 2022 and 2025": the business's own Nextdoor
+      page, fetched 2026-10-24. Nextdoor's wording is "Fave Awards".
+  · All four review quotes: Google Places API reviews array, verbatim,
+      reviewer name and publish date shown exactly as returned.
+  · "Walk-ins welcome / sign-in sheet / appointments take priority": stated on
+      the page as what REGULARS say, because that is what it is — it comes
+      from a Nextdoor neighbour recommendation and is corroborated by a Google
+      review describing the sign-in sheet. It is NOT a policy statement issued
+      by the business. CONFIRM IT WITH THEM.
+  · Payment / accessibility: Google Places attributes, 2026-10-24.
+
+  -------------------------------------------------------------------------
+  DELIBERATE OMISSIONS — things that are NOT on this page, and why
+  -------------------------------------------------------------------------
+  · NO PRICES. A 2023 Nextdoor comment says "$13.00" and two reviews say
+    "reasonable". Three years old and second-hand. Nothing is printed.
+  · NO HAIR COLOUR, no highlights, no makeup, no waxing, no "styling" menu.
+    Fresha lists "Makeup Service" twice and an AI directory claims "color
+    treatments" — neither is sourced from the business. Not repeated here.
+  · NO FOUNDING YEAR. YellowPages claims "40 Years in Business"; the page was
+    Cloudflare-blocked and the claim could not be read at source. Omitted.
+  · NO OWNER NAME and no staff roster. Nothing public establishes either.
+  · NO LOGO. This business has no logo anywhere public. The wordmark and the
+    favicon are plain type set in the salon's own wall colour. They are NOT a
+    reproduction of any mark belonging to the business, and must be replaced
+    if the business actually has one.
+  · NO "licensed & insured", no awards other than the Nextdoor one, no
+    equipment or product brands, no service-area town list, no booking widget.
+  · NO closing time of 7:00 PM. Nextdoor, Yelp and MapQuest say 7 PM; Google,
+    Fresha and Birdeye say 6 PM. The 6 PM figure has three sources including
+    the live API, so it is used — but THE CONFLICT IS UNRESOLVED. Ask them.
+
+  -------------------------------------------------------------------------
+  BRAND COLOURS — sampled, not invented
+  -------------------------------------------------------------------------
+  This business has no logo and no printed material anywhere public, so the
+  palette is sampled from the one brand asset that does exist: the salon's own
+  interior, photographed by its customers.
+      #9B9DBB  periwinkle  — median sample of their actual wall (raw/g3.jpg)
+      #5B575B  grey        — their cabinets
+      #E0D7CE  warm cream  — their floor tile
+  --accent #4A4D80 is that same wall periwinkle darkened until white text on
+  it clears WCAG AA. It is used on call-to-action buttons and nowhere else.
+  Full contrast table in research.md. Two boundaries are handled by design:
+  accent never sits on --ink and never sits on solid --peri (both fall under
+  3:1); on dark panels the call button is light-on-dark instead.
+===============================================================================
+-->
+
+<style>
+  :root{
+    --ink:#22243D;
+    --ink-2:#2E3154;
+    --peri:#9B9DBB;
+    --peri-pale:#EEEFF5;
+    --paper:#F7F3EE;
+    --white:#FFFFFF;
+    --body:#2A2C3A;
+    --muted:#5A5D72;
+    --accent:#4A4D80;
+    --accent-hover:#383B66;
+    --on-ink:#EFF0F6;
+    --on-ink-muted:#BFC2D6;
+    --peri-on-ink:#B9BBD4;
+    --link:#41447A;
+    --rule:#DCDEE8;
+    --shadow:0 1px 2px rgba(34,36,61,.06),0 6px 20px rgba(34,36,61,.07);
+    --serif:Georgia,'Iowan Old Style','Palatino Linotype',Palatino,'Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--paper);color:var(--body);
+    font-family:var(--sans);font-size:17px;line-height:1.62;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  img{max-width:100%;height:auto;display:block}
+  a{color:var(--link)}
+  h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.18;margin:0;color:var(--ink);letter-spacing:-.01em}
+  h2{font-size:clamp(1.5rem,4.4vw,2.1rem)}
+  h3{font-size:1.14rem;font-family:var(--sans);letter-spacing:-.005em}
+  p{margin:0 0 1rem}
+  .wrap{width:100%;max-width:1060px;margin:0 auto;padding:0 20px}
+  .narrow{max-width:760px}
+  section{padding:clamp(44px,7vw,76px) 0}
+  .eyebrow{
+    font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);margin:0 0 .7rem;
+  }
+  .eyebrow.on-dark{color:var(--peri-on-ink)}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+    font-family:var(--sans);font-size:1.06rem;font-weight:700;letter-spacing:.005em;
+    text-decoration:none;border:0;border-radius:9px;padding:15px 24px;
+    min-height:54px;cursor:pointer;text-align:center;
+    transition:background-color .15s ease,transform .08s ease;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-call{background:var(--accent);color:var(--white)}      /* 7.88:1 */
+  .btn-call:hover,.btn-call:focus-visible{background:var(--accent-hover)}
+  .btn-light{background:var(--peri-pale);color:var(--ink)}    /* 13.19:1 on --ink */
+  .btn-light:hover,.btn-light:focus-visible{background:var(--white)}
+  .btn-ghost{
+    background:transparent;color:var(--link);
+    box-shadow:inset 0 0 0 2px var(--rule);
+  }
+  .btn-ghost:hover,.btn-ghost:focus-visible{box-shadow:inset 0 0 0 2px var(--accent);color:var(--accent-hover)}
+  .btn-wide{width:100%}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+  .tel{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;background:var(--ink);
+    border-bottom:1px solid rgba(185,187,212,.22);
+  }
+  .bar{display:flex;align-items:center;gap:14px;min-height:64px;padding-top:9px;padding-bottom:9px}
+  .mark{display:flex;flex-direction:column;min-width:0;flex:1}
+  .mark b{
+    font-family:var(--serif);font-size:1.08rem;font-weight:700;color:var(--on-ink);
+    line-height:1.12;letter-spacing:-.015em;
+  }
+  .mark span{
+    font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;
+    color:var(--peri-on-ink);margin-top:3px;
+  }
+  .bar .btn{padding:11px 16px;min-height:46px;font-size:.97rem;flex:none}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--ink);color:var(--on-ink);padding:0 0 clamp(36px,6vw,60px)}
+  .hero-img{position:relative;width:100%;aspect-ratio:1280/720;overflow:hidden;background:var(--ink-2)}
+  .hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
+  .hero-img::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(34,36,61,.06) 0%,rgba(34,36,61,.34) 62%,var(--ink) 100%);
+  }
+  .hero-body{margin-top:-10px;position:relative;z-index:1}
+  .hero h1{
+    color:var(--on-ink);font-size:clamp(1.95rem,6.6vw,3.15rem);
+    margin:0 0 .55rem;max-width:17ch;
+  }
+  .hero .lede{
+    font-size:clamp(1.05rem,3vw,1.24rem);color:var(--on-ink-muted);
+    max-width:46ch;margin:0 0 1.5rem;
+  }
+  .hero-cta{display:flex;flex-direction:column;gap:11px;max-width:420px}
+  .hero-note{
+    margin:1.1rem 0 0;font-size:.95rem;color:var(--on-ink-muted);
+  }
+  .hero-note strong{color:var(--on-ink)}
+
+  /* ---------- trust strip ---------- */
+  .trust{background:var(--ink-2);color:var(--on-ink);padding:0}
+  .trust ul{
+    list-style:none;margin:0;padding:22px 0;display:grid;gap:16px;
+    grid-template-columns:1fr;
+  }
+  .trust li{display:flex;gap:11px;align-items:flex-start;font-size:.96rem;color:var(--on-ink-muted)}
+  .trust b{display:block;color:var(--on-ink);font-size:1.02rem;font-weight:700;line-height:1.3}
+  .tick{flex:none;width:21px;height:21px;margin-top:2px;fill:none;stroke:var(--peri-on-ink);stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---------- stars ---------- */
+  .rating{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 .25rem}
+  .stars{display:inline-flex;gap:2px;flex:none}
+  .stars svg{width:19px;height:19px;fill:#D9A441}
+  .rating .num{font-weight:700;color:var(--ink)}
+  .rating .num.on-dark{color:var(--on-ink)}
+  .rating .of{color:var(--muted);font-size:.93rem}
+  .rating .of.on-dark{color:var(--on-ink-muted)}
+
+  /* ---------- generic cards ---------- */
+  .grid{display:grid;gap:18px;grid-template-columns:1fr}
+  .card{
+    background:var(--white);border-radius:13px;padding:24px;
+    box-shadow:var(--shadow);border:1px solid var(--rule);
+  }
+  .card h3{margin:0 0 .45rem}
+  .card p{margin:0;color:var(--muted);font-size:.985rem}
+  .card .hint{display:block;margin-top:.6rem;font-size:.9rem;color:var(--muted)}
+
+  /* ---------- services ---------- */
+  .svc{display:flex;gap:15px;align-items:flex-start}
+  .svc-ico{
+    flex:none;width:42px;height:42px;border-radius:50%;background:var(--peri-pale);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .svc-ico svg{width:21px;height:21px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---------- how it works ---------- */
+  .steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:1fr;margin:0;padding:0;list-style:none}
+  .steps li{
+    counter-increment:s;position:relative;padding:20px 22px 20px 62px;
+    background:var(--white);border:1px solid var(--rule);border-radius:13px;box-shadow:var(--shadow);
+  }
+  .steps li::before{
+    content:counter(s);position:absolute;left:20px;top:20px;
+    width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--white);
+    font-size:.88rem;font-weight:700;display:flex;align-items:center;justify-content:center;
+  }
+  .steps b{display:block;color:var(--ink);margin-bottom:.2rem}
+  .steps span{color:var(--muted);font-size:.975rem}
+
+  /* ---------- reviews ---------- */
+  .reviews{background:var(--peri-pale)}
+  .quote{
+    background:var(--white);border-radius:13px;padding:24px;
+    border:1px solid var(--rule);box-shadow:var(--shadow);
+    display:flex;flex-direction:column;
+  }
+  .quote blockquote{
+    margin:0 0 1rem;font-family:var(--serif);font-size:1.07rem;line-height:1.55;color:var(--ink);
+  }
+  .quote .who{margin-top:auto;font-size:.88rem;color:var(--muted)}
+  .quote .who b{color:var(--body);font-weight:700}
+  .quote .ministars{display:inline-flex;gap:1px;vertical-align:-3px;margin-right:7px}
+  .quote .ministars svg{width:14px;height:14px;fill:#D9A441}
+
+  /* ---------- hours ---------- */
+  .hours-wrap{background:var(--white);border:1px solid var(--rule);border-radius:13px;overflow:hidden;box-shadow:var(--shadow)}
+  table.hours{width:100%;border-collapse:collapse;font-size:1rem}
+  table.hours th,table.hours td{padding:13px 18px;text-align:left;border-bottom:1px solid var(--rule)}
+  table.hours th{font-weight:600;color:var(--body);width:52%}
+  table.hours td{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+  table.hours tr:last-child th,table.hours tr:last-child td{border-bottom:0}
+  table.hours tr.closed th,table.hours tr.closed td{color:var(--muted)}
+  table.hours tr.today{background:var(--peri-pale)}
+  table.hours tr.today th{font-weight:700;color:var(--ink)}
+  table.hours tr.today td{color:var(--ink);font-weight:700}
+  .today-tag{
+    display:inline-block;margin-left:8px;font-size:.66rem;font-weight:700;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--white);background:var(--accent);
+    padding:2px 7px;border-radius:4px;vertical-align:1px;
+  }
+
+  /* ---------- gallery ---------- */
+  .shots{display:grid;gap:14px;grid-template-columns:1fr}
+  .shot{border-radius:13px;overflow:hidden;border:1px solid var(--rule);background:var(--white)}
+  .shot img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/2}
+  .shot figcaption{padding:11px 15px;font-size:.87rem;color:var(--muted)}
+
+  /* ---------- visit / map ---------- */
+  .visit{background:var(--ink);color:var(--on-ink)}
+  .visit h2{color:var(--on-ink)}
+  .visit .addr{font-size:1.16rem;line-height:1.5;color:var(--on-ink);margin:0 0 .35rem}
+  .visit .sub{color:var(--on-ink-muted);margin:0 0 1.4rem;font-size:.97rem}
+  .visit a{color:var(--peri-on-ink)}
+  .visit-cta{display:flex;flex-direction:column;gap:11px;max-width:420px;margin-top:1.4rem}
+
+  /* ---------- form ---------- */
+  .form-card{background:var(--ink-2);border-radius:14px;padding:26px;border:1px solid rgba(185,187,212,.2)}
+  .form-card h3{color:var(--on-ink);font-size:1.18rem;margin:0 0 .4rem}
+  .form-card p.fine{color:var(--on-ink-muted);font-size:.93rem;margin:0 0 1.2rem}
+  .field{margin-bottom:13px}
+  .field label{display:block;font-size:.87rem;font-weight:600;color:var(--on-ink);margin-bottom:5px}
+  .field input,.field textarea{
+    width:100%;font:inherit;font-size:1rem;padding:13px 14px;border-radius:9px;
+    border:1px solid rgba(185,187,212,.4);background:var(--white);color:var(--body);
+  }
+  .field textarea{min-height:92px;resize:vertical}
+  .form-note{margin:12px 0 0;font-size:.9rem;color:var(--on-ink-muted);min-height:1.3em}
+  .form-note.err{color:#FFC7C2}
+  .form-note.ok{color:var(--peri-on-ink)}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);color:var(--on-ink-muted);padding:34px 0 42px;border-top:1px solid rgba(185,187,212,.18)}
+  footer p{margin:0 0 .55rem;font-size:.92rem}
+  footer a{color:var(--peri-on-ink)}
+  footer .demo{
+    margin-top:18px;padding:13px 15px;border:1px dashed rgba(185,187,212,.45);
+    border-radius:9px;font-size:.84rem;color:var(--on-ink-muted);
+  }
+
+  /* ---------- sticky mobile call bar ---------- */
+  .callbar{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;
+    background:var(--ink);border-top:1px solid rgba(185,187,212,.25);
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
+    display:block;
+  }
+  .callbar .btn{width:100%}
+  body{padding-bottom:84px}
+
+  /* ---------- responsive ---------- */
+  /* At 320px the hours table runs ~10px past the viewport: the time column is
+     nowrap and the "Today" tag adds to the day column. Tighten both. */
+  @media (max-width:389px){
+    table.hours{font-size:.93rem;table-layout:fixed}
+    table.hours th,table.hours td{padding:12px 11px}
+    table.hours th{width:46%;word-break:break-word}
+    .today-tag{margin-left:6px;font-size:.6rem;padding:2px 5px}
+    .wrap{padding:0 15px}
+  }
+  @media (min-width:600px){
+    .hero-cta,.visit-cta{flex-direction:row;flex-wrap:wrap}
+    .hero-cta .btn,.visit-cta .btn{flex:1 1 auto;min-width:190px}
+    .trust ul{grid-template-columns:1fr 1fr;padding:26px 0}
+    .grid{grid-template-columns:1fr 1fr}
+    .shots{grid-template-columns:1fr 1fr}
+  }
+  @media (min-width:900px){
+    .trust ul{grid-template-columns:repeat(4,1fr)}
+    .two{display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:start}
+    .callbar{display:none}
+    body{padding-bottom:0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <div class="mark">
+      <b>Perfect Choice</b>
+      <span>Family Hair Cutters</span>
+    </div>
+    <a class="btn btn-light" href="tel:+17068610330" aria-label="Call Perfect Choice Family Hair Cutters at 7 0 6, 8 6 1, 0 3 3 0">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.4 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2Z"/></svg>
+      <span class="tel">(706) 861-0330</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <div class="hero">
+    <div class="hero-img">
+      <picture>
+        <source media="(max-width:620px)" srcset="images/hero-mobile.jpg">
+        <img src="images/hero.jpg" width="1280" height="720"
+             alt="A long, loosely curled hairstyle finished at Perfect Choice Family Hair Cutters.">
+      </picture>
+    </div>
+    <div class="wrap hero-body">
+      <h1>The family barber chair Fort Oglethorpe keeps coming back to.</h1>
+      <p class="lede">
+        Haircuts for the whole family on Old Lafayette Road &mdash; grandparents, parents
+        and the wiggly four-year-old. Six days a week. Walk in, or call ahead.
+      </p>
+
+      <div class="rating">
+        <span class="stars" role="img" aria-label="Rated 4.6 out of 5 stars">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><defs><linearGradient id="hg"><stop offset="60%" stop-color="#D9A441"/><stop offset="60%" stop-color="#C9CBD8"/></linearGradient></defs><path fill="url(#hg)" d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg>
+        </span>
+        <span class="num on-dark">4.6</span>
+        <span class="of on-dark">from 295 Google reviews</span>
+      </div>
+
+      <div class="hero-cta">
+        <a class="btn btn-light btn-wide" href="tel:+17068610330">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.4 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2Z"/></svg>
+          Call <span class="tel">(706)&nbsp;861-0330</span>
+        </a>
+        <a class="btn btn-light btn-wide" href="#visit">Get directions</a>
+      </div>
+
+      <p class="hero-note">
+        <strong>Open Monday to Saturday, 8:00&nbsp;AM&ndash;6:00&nbsp;PM.</strong>
+        Closed Sunday.
+      </p>
+    </div>
+  </div>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <div class="trust">
+    <div class="wrap">
+      <ul>
+        <li>
+          <svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span><b>4.6 stars, 295 reviews</b>On Google, as of October 2026</span>
+        </li>
+        <li>
+          <svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span><b>Nextdoor Neighborhood Favorite</b>2020, 2022 and 2025</span>
+        </li>
+        <li>
+          <svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span><b>Open six days a week</b>Monday through Saturday, 8&ndash;6</span>
+        </li>
+        <li>
+          <svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span><b>Walk-ins welcome</b>Call ahead if you're on a schedule</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services">
+    <div class="wrap">
+      <p class="eyebrow">What we do</p>
+      <h2>Straightforward family hair care.</h2>
+      <p class="narrow" style="margin-bottom:1.9rem;color:var(--muted)">
+        One shop, one chair at a time, for everybody in the house.
+      </p>
+
+      <div class="grid">
+        <div class="card svc">
+          <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20"/></svg></div>
+          <div>
+            <h3>Haircuts for every age</h3>
+            <p>Men, women and children &mdash; from a quick clean-up to a full restyle.</p>
+          </div>
+        </div>
+
+        <div class="card svc">
+          <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16c2-3 2-5 0-8M10 16c2-3 2-5 0-8M16 16c2-3 2-5 0-8M4 20h16"/></svg></div>
+          <div>
+            <h3>Perms</h3>
+            <p>Regulars come back for them, and come back again.</p>
+          </div>
+        </div>
+
+        <div class="card svc">
+          <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11a3 3 0 1 1 6 0c0 2-3 2.5-3 4.5M12 19h.01"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <div>
+            <h3>Patient with the little ones</h3>
+            <p>Wiggly four-year-olds are a normal Tuesday here, not a problem.</p>
+          </div>
+        </div>
+
+        <div class="card svc">
+          <div class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-7-9.6A4.2 4.2 0 0 1 12 8a4.2 4.2 0 0 1 7 3.4C19 16.6 12 21 12 21z"/></svg></div>
+          <div>
+            <h3>Prices people call reasonable</h3>
+            <p>Their word, not ours &mdash; it comes up again and again in the reviews.
+              <span class="hint">Call for current pricing.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section style="background:var(--white);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+    <div class="wrap">
+      <div class="two">
+        <div>
+          <p class="eyebrow">Before you come in</p>
+          <h2>Walk in, or call first. Here's the honest difference.</h2>
+          <p style="color:var(--muted)">
+            It's a small shop and it gets busy. If you have somewhere to be afterwards,
+            a quick phone call is the difference between sitting down and sitting around.
+          </p>
+          <a class="btn btn-call" href="tel:+17068610330" style="margin-top:.4rem">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.4 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2Z"/></svg>
+            Call to book a time
+          </a>
+        </div>
+
+        <ol class="steps" style="margin-top:1.6rem">
+          <li>
+            <b>Walking in</b>
+            <span>Come on in and add your name to the sign-in sheet by the door, then
+              have a seat. Busy stretches happen, especially late morning and Saturdays.</span>
+          </li>
+          <li>
+            <b>Calling ahead</b>
+            <span>Regulars will tell you appointments get priority. One phone call is
+              the surest way to be seen at a time that suits you.</span>
+          </li>
+          <li>
+            <b>Bringing the kids</b>
+            <span>Bring them. Parents have been bringing children here for years, and
+              a bit of wriggling is expected.</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <p class="eyebrow">In their own words</p>
+      <h2>295 reviews. 4.6 stars. Some of them go back decades.</h2>
+      <p class="narrow" style="margin-bottom:1.9rem;color:var(--muted)">
+        Every quote below is a real, public Google review, shown word for word
+        with the date it was written.
+      </p>
+
+      <div class="grid">
+        <figure class="quote">
+          <span class="ministars" role="img" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg>
+          </span>
+          <blockquote>&ldquo;Been going for over 20yrs now..&rdquo;</blockquote>
+          <figcaption class="who"><b>Misty Mauldin</b> &middot; Google review, May 2026</figcaption>
+        </figure>
+
+        <figure class="quote">
+          <span class="ministars" role="img" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg>
+          </span>
+          <blockquote>&ldquo;Rose is very fast giving me a great looking cut, and their prices are very reasonable&rdquo;</blockquote>
+          <figcaption class="who"><b>Harry Pleasants</b> &middot; Google review, June 2026</figcaption>
+        </figure>
+
+        <figure class="quote">
+          <span class="ministars" role="img" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg>
+          </span>
+          <blockquote>&ldquo;This is the second time I've gotten my hair permed by Mary and she did a wonderful job once again! She is kind, friendly and welcoming!&rdquo;</blockquote>
+          <figcaption class="who"><b>Samath S</b> &middot; Google review, February 2026</figcaption>
+        </figure>
+
+        <figure class="quote">
+          <span class="ministars" role="img" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.6 5.2 5.8.8-4.2 4.1 1 5.7L10 14.7 4.8 17.4l1-5.7L1.6 7.6l5.8-.8z"/></svg>
+          </span>
+          <blockquote>&ldquo;Got my 4 yr olds hair cut even with her being a little wiggly mary did a perfect job on her hair. She was so patient and kind. Love this place.&rdquo;</blockquote>
+          <figcaption class="who"><b>Samantha Dean</b> &middot; Google review, February 2021</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE SHOP ============ -->
+  <section id="shop">
+    <div class="wrap">
+      <p class="eyebrow">The shop</p>
+      <h2>Nothing fancy. Just a clean chair and somebody who knows what they're doing.</h2>
+      <p class="narrow" style="margin-bottom:1.9rem;color:var(--muted)">
+        A seat by the window while you wait, and a straightforward cut when it's your turn.
+      </p>
+      <div class="shots">
+        <figure class="shot">
+          <img src="images/at-work.jpg" width="1200" height="716" loading="lazy"
+               alt="A stylist working on a client's hair at the wash station inside the salon.">
+          <figcaption>In the chair.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="images/waiting.jpg" width="1040" height="428" loading="lazy"
+               alt="The waiting area just inside the front door, with seats by the window.">
+          <figcaption>Somewhere to sit by the door.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOURS + VISIT ============ -->
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <div class="two">
+        <div>
+          <p class="eyebrow on-dark">Find us</p>
+          <h2>Come find the shop.</h2>
+          <p class="addr">
+            1600 Old Lafayette Rd<br>
+            Fort Oglethorpe, GA 30742
+          </p>
+          <p class="sub">
+            On Old Lafayette Road in Fort Oglethorpe, a few minutes from the
+            Rossville line and about fifteen from downtown Chattanooga.
+          </p>
+
+          <p style="color:var(--on-ink-muted);font-size:.95rem;margin-bottom:0">
+            Card and debit accepted &mdash; not cash only.<br>
+            Wheelchair accessible parking, entrance and restroom.
+          </p>
+
+          <div class="visit-cta">
+            <a class="btn btn-light" href="tel:+17068610330">
+              <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.4 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2Z"/></svg>
+              Call <span class="tel">(706)&nbsp;861-0330</span>
+            </a>
+            <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&amp;query=1600%20Old%20Lafayette%20Rd%2C%20Fort%20Oglethorpe%2C%20GA%2030742&amp;query_place_id=ChIJOcgS7u5nYIgR_7I7QxRMa7U" rel="noopener noreferrer" target="_blank">
+              Open in Maps
+            </a>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem">
+          <div class="hours-wrap">
+            <table class="hours">
+              <caption class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Opening hours</caption>
+              <tbody>
+                <tr data-day="1"><th scope="row">Monday</th><td>8:00 AM &ndash; 6:00 PM</td></tr>
+                <tr data-day="2"><th scope="row">Tuesday</th><td>8:00 AM &ndash; 6:00 PM</td></tr>
+                <tr data-day="3"><th scope="row">Wednesday</th><td>8:00 AM &ndash; 6:00 PM</td></tr>
+                <tr data-day="4"><th scope="row">Thursday</th><td>8:00 AM &ndash; 6:00 PM</td></tr>
+                <tr data-day="5"><th scope="row">Friday</th><td>8:00 AM &ndash; 6:00 PM</td></tr>
+                <tr data-day="6"><th scope="row">Saturday</th><td>8:00 AM &ndash; 6:00 PM</td></tr>
+                <tr data-day="0" class="closed"><th scope="row">Sunday</th><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="form-card" style="margin-top:20px">
+            <h3>Rather we called you?</h3>
+            <p class="fine">Leave a number and a good time, and someone will ring you back.</p>
+            <form id="cb" novalidate>
+              <div class="field">
+                <label for="cb-name">Your name</label>
+                <input id="cb-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="cb-phone">Phone number</label>
+                <input id="cb-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+              </div>
+              <div class="field">
+                <label for="cb-msg">Best time to reach you (optional)</label>
+                <textarea id="cb-msg" name="msg"></textarea>
+              </div>
+              <button class="btn btn-light btn-wide" type="submit">Request a call back</button>
+              <p class="form-note" id="cb-note" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--on-ink)">Perfect Choice Family Hair Cutters</strong></p>
+    <p>1600 Old Lafayette Rd, Fort Oglethorpe, GA 30742</p>
+    <p><a href="tel:+17068610330" class="tel">(706) 861-0330</a> &middot; Mon&ndash;Sat 8:00&nbsp;AM&ndash;6:00&nbsp;PM &middot; Closed Sunday</p>
+    <p style="margin-top:1rem;font-size:.86rem">Site by [MATT &mdash; YOUR NAME / COMPANY HERE]</p>
+
+    <div class="demo">
+      <strong style="color:var(--on-ink)">Demo preview.</strong>
+      This page was built from publicly available information as an unsolicited
+      sample and has not been reviewed or approved by the business. It is set to
+      <code>noindex</code> and is not linked from anywhere. Hours, services and
+      prices must be confirmed with the salon before this goes live.
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-light" href="tel:+17068610330">
+    <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.4 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2Z"/></svg>
+    Call <span class="tel">(706) 861-0330</span>
+  </a>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* Highlight today's row in the hours table. Purely presentational. */
+  try {
+    var today = new Date().getDay();
+    var row = document.querySelector('table.hours tr[data-day="' + today + '"]');
+    if (row) {
+      row.classList.add('today');
+      var th = row.querySelector('th');
+      if (th) {
+        var tag = document.createElement('span');
+        tag.className = 'today-tag';
+        tag.textContent = 'Today';
+        th.appendChild(tag);
+      }
+    }
+  } catch (e) { /* hours table still reads fine without this */ }
+
+  /* DEMO STUB. This form does not send anything anywhere. It validates and
+     then says so plainly. Wire it to a real destination before launch. */
+  var form = document.getElementById('cb');
+  var note = document.getElementById('cb-note');
+  if (form && note) {
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var name = form.elements.name.value.trim();
+      var phone = form.elements.phone.value.trim();
+      var digits = phone.replace(/\D/g, '');
+
+      if (!name) {
+        note.className = 'form-note err';
+        note.textContent = 'Please add your name.';
+        form.elements.name.focus();
+        return;
+      }
+      if (digits.length < 10) {
+        note.className = 'form-note err';
+        note.textContent = 'Please add a phone number we can call back.';
+        form.elements.phone.focus();
+        return;
+      }
+      note.className = 'form-note ok';
+      note.textContent =
+        'Demo only — nothing was sent. On the live site this would reach the salon. ' +
+        'For now, please call (706) 861-0330.';
+      form.reset();
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
