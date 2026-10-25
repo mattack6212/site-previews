@@ -37,11 +37,14 @@
 
   DO NOT TELL THIS MAN HE NEEDS A WEBSITE. He has one and he paid for it.
 
-  The pitch is ONE NUMBER: Google PageSpeed scores it 32/100 on mobile
-  (re-run live 2026-10-25; the lead scan said 47, so it has got WORSE).
-    - Largest Contentful Paint 13.9 s
-    - Time to Interactive      24.6 s
-    - 5,338 KiB over 82 requests
+  The pitch is WEIGHT. Google PageSpeed mobile, sampled SIX times on
+  2026-10-25: 29, 31, 32, 44, 49, 63. Median 38. It never reached 70, so the
+  angle holds — but DO NOT QUOTE A SINGLE SCORE, it is a dice roll. The lead
+  scan's 47 sits inside that band, so "it got worse" is NOT supportable either.
+  Quote the spread and the structural numbers, which barely move:
+    - 5,338 KiB over 82 requests (5,335-5,514 across runs, 3.4% spread)
+    - Largest Contentful Paint 13-22 s typical (median 14.5 s)
+    - Best Practices 54/100, identical every run
     - reCAPTCHA downloaded FIVE TIMES = 1,738 KiB, a third of the page
     - a Vimeo player + HLS engine + 686 KiB poster = ~1,151 KiB
     - three analytics containers = 493 KiB
