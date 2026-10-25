@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raggedy Anne's Pet Grooming — Rossville, GA | (706) 861-1160</title>
+<meta name="description" content="Raggedy Anne's Pet Grooming on McFarland Ave in Rossville, GA. Full grooming, baths, nail trims, ear cleaning and de-matting, for nervous dogs and big dogs alike. 4.7 stars from 191 Google reviews. Open Saturdays. Call (706) 861-1160.">
+<meta name="theme-color" content="#1A1F42">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<meta property="og:title" content="Raggedy Anne's Pet Grooming — Rossville, GA">
+<meta property="og:description" content="Full grooming, baths and nail trims on McFarland Ave. Patient with nervous dogs. 4.7 stars from 191 Google reviews. Call (706) 861-1160.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/hero.jpg">
+
+<!-- DEMO SITE — prepared for Raggedy Anne's Pet Grooming, Rossville GA. Not affiliated, not live, not linked. -->
+<!-- Website by [MATT — YOUR NAME / COMPANY HERE] -->
+<!--
+  ====================================================================
+  BUILD NOTES — Raggedy Anne's Pet Grooming demo, v2, 2026-10-24
+  Single self-contained page. System fonts, inline CSS/JS, zero external
+  requests: every image is a local file in images/ served alongside this
+  page. No analytics, no fonts CDN, no trackers. Page is noindex.
+
+  Full sourcing for every claim below is in research.md.
+  --------------------------------------------------------------------
+
+  *** NO PERSON IS NAMED ANYWHERE ON THIS PAGE. ***
+
+  Two groomers are named repeatedly in the public Google reviews, and a
+  third name appears in the business's Yelp listing title. None of them
+  is on this page and none is in the SMS draft.
+
+  Reasons, in order: nobody has confirmed who still works there; the
+  reviews that name them run from 2018 to 2026 and staff move; and a
+  stranger's cold demo page that addresses an owner by a first name
+  scraped off a review reads as surveillance, not service. The reviews
+  themselves say "the ladies" and "the girls," so that is the wording
+  used here. The names are in research.md and pitch.md for the call.
+
+  No obituary or closure signal was found against any named principal
+  (checked 2026-10-24). Google businessStatus is OPERATIONAL and the
+  most recent review is from August 2026.
+
+  *** PERMISSION GATE — THE BIGGEST ISSUE ON THIS BUILD ***
+
+  ALL TEN PHOTOS ON THEIR GOOGLE LISTING ARE **VISITOR** UPLOADS.
+  NOT ONE IS OWNER-ATTRIBUTED. Eight of the ten are from a single
+  uploader who is named as a groomer in several reviews, but they are
+  posted under her personal Google account, not the business profile.
+
+  Worse than the other builds in this run: most of these frames are
+  photographs of CUSTOMERS' DOGS. Using them in an unlisted, noindex,
+  unlinked pitch demo is fair. Putting them on a live commercial site
+  is NOT something the shop can authorise by itself. Before launch they
+  shoot their own, or the uploaders are asked. pitch.md item 1.
+
+  raw/g8.jpg IS NEVER USED AND MUST NEVER BE USED — it shows an
+  identifiable CHILD'S FACE. build_assets.py does not touch it.
+
+  raw/g1.jpg contains a groomer's face. The crop that produces
+  images/wall-sign.jpg stops at x=560 to exclude her; her nearest
+  pixel is x~575. DO NOT WIDEN THAT CROP.
+
+  *** WHAT IS DELIBERATELY NOT ON THIS PAGE ***
+
+   - No prices. Reviews say "best price in town" over and over but
+     never name a figure that is current. Nothing is quoted.
+   - No cats. One 7-year-old review mentions a cat and one directory
+     claims "dogs and cats"; that is not enough. Dogs only here.
+   - No "licensed," "insured," "certified" or "award-winning." No
+     public record supports any of them.
+   - No years-in-business figure. Customers in the reviews describe
+     12 and 20+ years as their OWN patronage; that is quoted as a
+     customer's words and never restated as a company claim.
+   - No booking form and no online scheduler. The phone is the only
+     call to action, because the phone is the only channel that is
+     verified to work — and the reviews specifically praise them for
+     answering it.
+   - No service-area town list. Only Rossville is verified.
+   - No social links. See research.md: the Facebook page Google points
+     at is an auto-generated UNOFFICIAL page the business does not
+     control, and the website printed on it is a dead domain.
+
+  *** REVIEW QUOTES ***
+
+  Every quote below is verbatim from a public Google review, carries the
+  reviewer's display name, and links to the live listing. They were read
+  from the Google Maps review pane on 2026-10-24 (all 191 loaded).
+  One 1-star review from August 2026 raises a health complaint; it is
+  NOT on this page and IS in research.md, flagged, for Matt to read
+  before he calls.
+
+  *** ACCESSIBILITY ***
+
+  Palette is sampled from their own bone-shaped storefront sign and
+  their own lime interior wall; see research.md for the measurements
+  and the full WCAG contrast matrix. Every pair clears AA; red buttons
+  that sit on the mid-blue panel carry a hairline ring because the
+  fill alone is only 1.77:1 against it.
+  ====================================================================
+-->
+<style>
+:root{
+  --ink:#1A1F42;        /* their sign navy, darkened for body use */
+  --ink-2:#394486;      /* THEIR ACTUAL SIGN NAVY, measured off g3 */
+  --accent:#C4403B;     /* THEIR ACTUAL SIGN RED, -3R for AA */
+  --accent-h:#9E2A25;
+  --lime:#B2D44F;       /* THEIR ACTUAL INTERIOR WALL GREEN */
+  --lime-edge:#4F6818;
+  --cream:#EFF3E8;      /* the bone's own fill colour */
+  --paper:#FBFAF7;
+  --white:#fff;
+  --body:#20243A;
+  --muted:#55597A;
+  --on-ink:#F2F4FB;
+  --on-ink-muted:#C3C9E6;
+  --red-on-ink:#F2938C;
+  --link:#9E2A25;
+  --ring:#9AA0C4;
+  --maxw:1120px;
+  --pad:clamp(16px,4vw,28px);
+  --r:14px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--body);
+  font:400 17px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--link)}
+h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.015em;color:var(--ink)}
+h1{font-size:clamp(28px,6.4vw,50px);font-weight:800}
+h2{font-size:clamp(23px,4.4vw,34px);font-weight:800}
+h3{font-size:clamp(18px,2.6vw,21px);font-weight:700}
+p{margin:0 0 1em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.sect{padding:clamp(44px,7vw,78px) 0}
+.lede{font-size:clamp(17px,2.2vw,19.5px);color:var(--muted);max-width:62ch}
+.eyebrow{
+  font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent-h);margin:0 0 .7em;
+}
+.on-ink .eyebrow{color:var(--red-on-ink)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5em;
+  font-size:clamp(17px,2.3vw,19px);font-weight:800;text-decoration:none;
+  padding:16px 26px;border-radius:999px;min-height:56px;
+  background:var(--accent);color:#fff;border:2px solid transparent;
+  transition:background .15s ease;
+}
+.btn:hover,.btn:focus-visible{background:var(--accent-h)}
+.btn--onblue{border-color:var(--ring)}   /* 3.50:1 edge on --ink-2 */
+.btn--ghost{
+  background:transparent;color:var(--ink);border:2px solid rgba(26,31,66,.28);
+}
+.btn--ghost:hover,.btn--ghost:focus-visible{background:rgba(26,31,66,.06)}
+/* the hero is a dark panel too, but it is .hero not .on-ink — without it
+   on this selector the ghost button renders #1A1F42 on #1A1F42, i.e.
+   invisible. Both dark surfaces must be listed. */
+.on-ink .btn--ghost,.hero .btn--ghost{color:var(--on-ink);border-color:rgba(242,244,251,.45)}
+.on-ink .btn--ghost:hover,.on-ink .btn--ghost:focus-visible,
+.hero .btn--ghost:hover,.hero .btn--ghost:focus-visible{background:rgba(242,244,251,.12)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.on-ink :focus-visible,.hero :focus-visible{outline-color:var(--lime)}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;background:var(--ink);
+  border-bottom:1px solid rgba(242,244,251,.14);
+}
+.bar{
+  display:flex;align-items:center;gap:12px;justify-content:space-between;
+  min-height:68px;padding-top:9px;padding-bottom:9px;
+}
+.brand{display:flex;align-items:center;gap:11px;min-width:0;text-decoration:none}
+.brand img{width:clamp(96px,22vw,132px);height:auto;flex:0 0 auto}
+.brand b{
+  color:var(--on-ink);font-size:clamp(13px,2.5vw,15.5px);font-weight:800;
+  line-height:1.2;letter-spacing:-.01em;
+}
+.brand span{display:block;color:var(--on-ink-muted);font-weight:600;font-size:.84em}
+.bar .btn{padding:11px 17px;min-height:46px;font-size:clamp(14.5px,3vw,16.5px);flex:0 0 auto}
+@media(max-width:400px){.brand b{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--ink);color:var(--on-ink)}
+.hero picture,.hero picture img{display:block;width:100%}
+.hero img{
+  width:100%;height:clamp(190px,40vw,380px);object-fit:cover;object-position:50% 56%;
+}
+.hero .copy{padding-top:clamp(28px,5vw,48px);padding-bottom:clamp(30px,5vw,52px)}
+.hero h1{color:#fff;max-width:17ch}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p{color:var(--on-ink-muted);font-size:clamp(17px,2.3vw,20px);max-width:52ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;align-items:center}
+.callnote{font-size:14.5px;color:var(--on-ink-muted);margin:14px 0 0}
+
+/* ---------- stars / trust strip ---------- */
+.stars{
+  display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;
+  font-weight:700;font-size:15.5px;margin:0 0 18px;color:var(--on-ink);
+}
+.stars .s{color:#FFC845;letter-spacing:1px;font-size:17px}
+.stars a{color:var(--on-ink);text-decoration-color:rgba(242,244,251,.5)}
+
+.strip{background:var(--lime);border-top:3px solid var(--lime-edge);border-bottom:3px solid var(--lime-edge)}
+.strip ul{
+  list-style:none;margin:0;padding:18px 0;display:grid;gap:10px 26px;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,218px),1fr));
+}
+.strip li{
+  display:flex;gap:9px;align-items:flex-start;color:var(--ink);
+  font-weight:700;font-size:15.5px;line-height:1.4;
+}
+.strip svg{flex:0 0 auto;margin-top:2px}
+
+/* ---------- cards ---------- */
+.grid{display:grid;gap:clamp(14px,2vw,20px)}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,268px),1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.card{
+  background:var(--white);border:1px solid rgba(26,31,66,.13);border-radius:var(--r);
+  padding:clamp(18px,2.6vw,26px);
+}
+.card h3{margin-bottom:.35em}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.card .ico{
+  width:48px;height:48px;border-radius:12px;background:var(--cream);
+  display:grid;place-items:center;margin-bottom:14px;border:1px solid rgba(26,31,66,.12);
+}
+
+/* ---------- nervous-dogs feature ---------- */
+.on-ink{background:var(--ink);color:var(--on-ink)}
+.on-ink h2,.on-ink h3{color:#fff}
+.on-ink p{color:var(--on-ink-muted)}
+.split{display:grid;gap:clamp(22px,4vw,46px);align-items:center;grid-template-columns:1fr}
+@media(min-width:880px){.split{grid-template-columns:1.05fr .95fr}}
+.split img{border-radius:var(--r)}
+.ticks{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:12px}
+.ticks li{display:flex;gap:11px;align-items:flex-start;font-size:16.5px}
+.ticks svg{flex:0 0 auto;margin-top:4px}
+
+/* ---------- reviews ---------- */
+.rev{
+  background:var(--white);border:1px solid rgba(26,31,66,.13);border-left:5px solid var(--accent);
+  border-radius:var(--r);padding:clamp(18px,2.6vw,25px);
+}
+.rev blockquote{margin:0 0 13px;font-size:16.5px;line-height:1.58}
+.rev cite{font-style:normal;font-weight:700;font-size:14.5px;color:var(--ink);display:block}
+.rev .when{font-weight:600;color:var(--muted);font-size:13.5px}
+.rev .s{color:#C9941A;letter-spacing:1px;font-size:14px;display:block;margin-bottom:9px}
+
+/* ---------- gallery ---------- */
+.gal{display:grid;gap:clamp(12px,1.6vw,18px);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.gal figure{margin:0}
+.gal img{border-radius:12px;width:100%;aspect-ratio:1/1;object-fit:cover}
+.gal figcaption{font-size:13.5px;color:var(--muted);margin-top:7px;line-height:1.45}
+
+/* ---------- hours / visit ---------- */
+.panel{background:var(--ink-2);color:var(--on-ink);border-radius:var(--r);padding:clamp(20px,3vw,30px)}
+.panel h3{color:#fff}
+.hours{width:100%;border-collapse:collapse;margin:0 0 4px;font-size:16px}
+.hours th,.hours td{text-align:left;padding:9px 0;border-bottom:1px solid rgba(242,244,251,.2)}
+.hours th{font-weight:600;color:var(--on-ink-muted)}
+.hours td{text-align:right;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
+.hours tr.today th,.hours tr.today td{color:var(--lime)}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.openflag{
+  display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:14.5px;
+  background:rgba(178,212,79,.17);border:1px solid rgba(178,212,79,.5);color:var(--lime);
+  padding:7px 13px;border-radius:999px;margin-bottom:14px;
+}
+.openflag .dot{width:9px;height:9px;border-radius:50%;background:var(--lime);flex:0 0 auto}
+address{font-style:normal;font-size:17px;line-height:1.7}
+.panel address{color:var(--on-ink)}
+.panel a{color:#fff}
+
+/* ---------- final CTA ---------- */
+.final{background:var(--lime);border-top:3px solid var(--lime-edge);text-align:center}
+.final h2{max-width:20ch;margin-inline:auto}
+.final p{color:#2C3310;max-width:50ch;margin-inline:auto}
+.final .btn{margin-top:8px}
+.tel{
+  display:inline-block;font-size:clamp(26px,5.6vw,38px);font-weight:800;
+  color:var(--ink);text-decoration:none;letter-spacing:-.02em;margin:4px 0 6px;
+}
+.tel:hover{color:var(--accent-h)}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:var(--on-ink-muted);font-size:14.5px;padding:34px 0 40px}
+footer a{color:var(--on-ink)}
+footer .cols{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+footer strong{color:#fff;display:block;margin-bottom:6px}
+.demo{
+  margin-top:26px;padding-top:18px;border-top:1px solid rgba(242,244,251,.2);
+  font-size:13px;line-height:1.6;color:#A8AFD2;
+}
+
+/* ---------- sticky mobile call bar ---------- */
+.callbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);
+  border-top:1px solid rgba(242,244,251,.18);padding:10px var(--pad);
+  padding-bottom:calc(10px + env(safe-area-inset-bottom));display:none;
+}
+.callbar .btn{width:100%}
+@media(max-width:719px){
+  .callbar{display:block}
+  body{padding-bottom:84px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Raggedy Anne's Pet Grooming, Rossville Georgia">
+      <img src="images/logo.png" alt="" width="600" height="256">
+      <b>Raggedy Anne's<span>Pet Grooming &middot; Rossville</span></b>
+    </a>
+    <a class="btn" href="tel:+17068611160">Call (706) 861-1160</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <picture>
+      <source media="(max-width:719px)" srcset="images/hero-mobile.jpg">
+      <img src="images/hero.jpg" width="1400" height="597"
+           alt="The Raggedy Anne's shop on McFarland Avenue: a brick building with a large bone-shaped sign reading grooming, a bench by the front window and an open sign in the glass.">
+    </picture>
+    <div class="wrap copy">
+      <p class="stars">
+        <span class="s" aria-hidden="true">★★★★★</span>
+        <span>4.7 out of 5 &mdash;
+          <a href="https://maps.google.com/?cid=10006704777437461008" target="_blank" rel="noopener">191 Google reviews</a>
+        </span>
+      </p>
+      <h1>The groomers on McFarland Ave that <em>nervous dogs</em> settle down for.</h1>
+      <p>Full grooms, baths, nail trims and de-matting in Rossville &mdash; for the
+         shaky ones, the senior ones and the big ones. Open six days a week,
+         Saturdays included.</p>
+      <div class="cta-row">
+        <a class="btn" href="tel:+17068611160">Call (706) 861-1160</a>
+        <a class="btn btn--ghost" href="#hours">Hours &amp; directions</a>
+      </div>
+      <p class="callnote" id="opennow">1614 McFarland Ave, Rossville, GA 30741 &middot; Mon&ndash;Fri 9&ndash;4, Sat 9&ndash;3</p>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="strip" aria-label="At a glance">
+    <div class="wrap">
+      <ul>
+        <li>
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#1A1F42" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Somebody actually picks up the phone</span>
+        </li>
+        <li>
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#1A1F42" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Open Saturdays, 9 to 3</span>
+        </li>
+        <li>
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#1A1F42" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Patient with anxious and senior dogs</span>
+        </li>
+        <li>
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#1A1F42" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Big breeds welcome, not just lap dogs</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="sect" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What they do</p>
+      <h2>Grooming, start to finish</h2>
+      <p class="lede" style="margin-bottom:clamp(24px,3.4vw,36px)">
+        Everything listed here is something a customer describes in a public
+        Google review of this shop. Nothing is added.
+      </p>
+      <div class="grid g3">
+
+        <div class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#C4403B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.6"/><circle cx="6" cy="6" r="2.6"/><path d="M19.5 3.5 8.1 16.4"/><path d="M19.5 20.5 8.1 7.6"/></svg>
+          </div>
+          <h3>Full groom &amp; haircut</h3>
+          <p>Cut to what you ask for &mdash; reviewers single out being listened
+             to about the length they wanted, and getting a bandana or a bow
+             on the way out.</p>
+        </div>
+
+        <div class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#C4403B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a5.6 5.6 0 0 0 5.6-5.6c0-3.7-5.6-9.9-5.6-9.9S6.4 11.7 6.4 15.4A5.6 5.6 0 0 0 12 21Z"/><circle cx="18.4" cy="5.6" r="1.5"/><circle cx="21" cy="10" r="1"/></svg>
+          </div>
+          <h3>Baths</h3>
+          <p>In the stainless tub out back. One customer's dog "smelt good for
+             almost 4 days" after; another's came home "so soft" and smelling
+             of blueberry.</p>
+        </div>
+
+        <div class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#C4403B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="7" cy="7.4" rx="1.9" ry="2.4"/><ellipse cx="12" cy="5.9" rx="1.9" ry="2.5"/><ellipse cx="17" cy="7.4" rx="1.9" ry="2.4"/><ellipse cx="20" cy="12" rx="1.7" ry="2"/><path d="M12 12.2c-3 0-5.6 2.4-5.6 4.9 0 1.9 1.6 2.9 3.2 2.3 1.6-.6 3.2-.6 4.8 0 1.6.6 3.2-.4 3.2-2.3 0-2.5-2.6-4.9-5.6-4.9Z"/></svg>
+          </div>
+          <h3>Nail trims</h3>
+          <p>The single most-mentioned job in their reviews. Several people
+             describe calling and being told to come on in the same day &mdash;
+             and being allowed to stand with the dog while it is done.</p>
+        </div>
+
+        <div class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#C4403B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.3 3.6C6 3.6 4.4 5.4 4.4 8c0 2 .6 3.3 1.1 5.3.4 1.6.5 3.4.9 4.9.3 1.2.8 2.2 1.6 2.2 1.1 0 1.3-1.3 1.6-2.9.3-1.5.4-3.1 2.4-3.1s2.1 1.6 2.4 3.1c.3 1.6.5 2.9 1.6 2.9.8 0 1.3-1 1.6-2.2.4-1.5.5-3.3.9-4.9.5-2 1.1-3.3 1.1-5.3 0-2.6-1.6-4.4-3.9-4.4-1.5 0-2.4.7-3.7.7s-2.2-.7-3.7-.7Z"/></svg>
+          </div>
+          <h3>Ears, teeth &amp; glands</h3>
+          <p>Ear cleaning, teeth brushing and anal-gland expression, booked on
+             their own or added onto a groom.</p>
+        </div>
+
+        <div class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#C4403B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.6 7.2h16.8a1 1 0 0 1 1 1v2.4a1 1 0 0 1-1 1H3.6a1 1 0 0 1-1-1V8.2a1 1 0 0 1 1-1Z"/><path d="M5.6 11.6v6M9.1 11.6v8M12.6 11.6v6M16.1 11.6v8M19.6 11.6v6"/></svg>
+          </div>
+          <h3>De-matting &amp; full shaves</h3>
+          <p>Coats that have gone too long. One owner brought in an
+             eight-year-old cocker spaniel "in really rough shape" after
+             surgery kept her from brushing him.</p>
+        </div>
+
+        <div class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="#C4403B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.2c0-.9.9-1.5 1.7-1.1L10 5.6h4l3.3-1.5c.8-.4 1.7.2 1.7 1.1v5.2a7 7 0 0 1-14 0Z"/><circle cx="9.5" cy="11" r=".9" fill="#C4403B" stroke="none"/><circle cx="14.5" cy="11" r=".9" fill="#C4403B" stroke="none"/><path d="M12 14.2v1.1"/><path d="M10.4 16.6a2.2 2.2 0 0 0 3.2 0"/></svg>
+          </div>
+          <h3>Breeds of every size</h3>
+          <p>Great Pyrenees, standard poodles, golden retrievers, corgis,
+             schnauzers, shih tzus, cockers, maltipoos, yorkies and bulldogs
+             all turn up by name in their reviews.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NERVOUS DOGS ============ -->
+  <section class="sect on-ink">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Why people drive past other shops</p>
+        <h2>The dog that won't let anyone else do it</h2>
+        <p>It is the thing their customers write about most, and they write
+           about it at length: dogs that bite groomers, dogs that have never
+           left the farm, rescues that flinch, fourteen-year-olds with bad
+           knees. Over and over the reviews describe the same approach &mdash;
+           slow down, let the owner stay, and don't rush the dog.</p>
+        <ul class="ticks">
+          <li>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B2D44F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>You can stay in the room the first time &mdash; more than one
+                  owner says they were invited to.</span>
+          </li>
+          <li>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B2D44F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Photos through the appointment if you're anxious about
+                  leaving them.</span>
+          </li>
+          <li>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B2D44F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>A call the moment the dog is done, so it isn't waiting in a
+                  kennel for you.</span>
+          </li>
+          <li>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B2D44F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Senior dogs taken slowly. One regular's dog has been coming
+                  here since he was two; he is fourteen now.</span>
+          </li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn--onblue" href="tel:+17068611160">Call and ask about your dog</a>
+        </div>
+      </div>
+      <div>
+        <img src="images/table.jpg" width="860" height="845" loading="lazy"
+             alt="A standard poodle standing on the grooming table against the shop's lime green wall, part-way through a groom.">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="sect" id="reviews">
+    <div class="wrap">
+      <p class="eyebrow">In their customers' words</p>
+      <h2>4.7 stars from 191 Google reviews</h2>
+      <p class="lede" style="margin-bottom:clamp(24px,3.4vw,36px)">
+        Quoted verbatim, with the reviewer's name, from the
+        <a href="https://maps.google.com/?cid=10006704777437461008" target="_blank" rel="noopener">public Google listing</a>.
+      </p>
+      <div class="grid g2">
+
+        <div class="rev">
+          <span class="s" aria-hidden="true">★★★★★</span>
+          <blockquote>&ldquo;The ladies here are as sweet as can be and took such good
+            care of our two Great Pyrenees! Being three years old and never
+            having left the farm they made sure they took their time to make
+            them comfortable and make it a good experience. It's a 10/10
+            place!&rdquo;</blockquote>
+          <cite>Brooke White <span class="when">&middot; Google review, 2026</span></cite>
+        </div>
+
+        <div class="rev">
+          <span class="s" aria-hidden="true">★★★★★</span>
+          <blockquote>&ldquo;We have a very anxious schnauzer (impossible to groom or
+            bathe) that has bitten many groomers but after we started using
+            Raggedy Ann groomers she has allowed them to groom her without
+            being aggressive.&rdquo;</blockquote>
+          <cite>Paul Dewberry <span class="when">&middot; Google review</span></cite>
+        </div>
+
+        <div class="rev">
+          <span class="s" aria-hidden="true">★★★★★</span>
+          <blockquote>&ldquo;When I dropped my dog off I was so nervous but the sweet
+            lady that took care of my fur baby sent me pictures the whole time
+            to let me know she was okay&hellip; she's so soft and it only took a
+            hour and a half!&rdquo;</blockquote>
+          <cite>Destanie Hixon <span class="when">&middot; Google review, 2026</span></cite>
+        </div>
+
+        <div class="rev">
+          <span class="s" aria-hidden="true">★★★★★</span>
+          <blockquote>&ldquo;They took a last minute appointment on a Saturday with no
+            problem&hellip; They actually answer the phone during business hours
+            instead of letting every call go to voicemail like another popular
+            groomer in the Lafayette Rd area.&rdquo;</blockquote>
+          <cite>William Craig <span class="when">&middot; Google review</span></cite>
+        </div>
+
+        <div class="rev">
+          <span class="s" aria-hidden="true">★★★★★</span>
+          <blockquote>&ldquo;I've been taking my fur babies here for over 20 years now&hellip;
+            I have big dogs, so I know they have the best price around.&rdquo;</blockquote>
+          <cite>Kimberly Patterson <span class="when">&middot; Google review</span></cite>
+        </div>
+
+        <div class="rev">
+          <span class="s" aria-hidden="true">★★★★★</span>
+          <blockquote>&ldquo;They did a great job on her Maltipoo and they actually
+            listened when you tell them what you want done on the dog. Plus
+            since he was a puppy mill dog I didn't want him being kept in a
+            cage all day so they called me immediately when he was ready.&rdquo;</blockquote>
+          <cite>Jim Hicks <span class="when">&middot; Google review</span></cite>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="sect" style="background:var(--cream)">
+    <div class="wrap">
+      <p class="eyebrow">Inside the shop</p>
+      <h2>Lime green walls and a lot of clean dogs</h2>
+      <p class="lede" style="margin-bottom:clamp(22px,3vw,32px)">
+        Every photograph here was taken inside or outside this shop and posted
+        publicly to its Google listing by people who have been there.
+      </p>
+      <div class="gal">
+        <figure>
+          <img src="images/finished.jpg" width="760" height="844" loading="lazy"
+               alt="A white goldendoodle in a red bandana sitting on the shop's tile floor after a groom.">
+          <figcaption>Bandana on, job done.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/bath.jpg" width="860" height="803" loading="lazy"
+               alt="A doodle standing in the shop's stainless steel bathing tub, shampoo bottles racked on the wall behind.">
+          <figcaption>The tub, and the shampoo rack above it.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/bow.jpg" width="760" height="747" loading="lazy"
+               alt="A small dark terrier-poodle mix on the grooming table wearing a pink bow, clippers resting on the mat.">
+          <figcaption>Bows are included whether you asked or not.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/wall-sign.jpg" width="760" height="612" loading="lazy"
+               alt="The shop's handmade Raggedy Anne's sign, cut from salvaged metal letters and mounted on the lime green wall.">
+          <figcaption>Their own sign, in salvaged metal letters.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/poodle.jpg" width="760" height="747" loading="lazy"
+               alt="A black standard poodle, freshly groomed, against the shop's lime green wall.">
+          <figcaption>Poodles are a regular here.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/midgroom.jpg" width="760" height="760" loading="lazy"
+               alt="A part-coloured standard poodle sitting on the grooming table in a bandana, coat clipped and the trimmings still on the floor.">
+          <figcaption>Half an hour in, and most of the coat is on the floor.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOURS / VISIT ============ -->
+  <section class="sect" id="hours">
+    <div class="wrap">
+      <div class="grid g2">
+        <div class="panel">
+          <div class="openflag" id="flag"><span class="dot" aria-hidden="true"></span><span id="flagtext">Open six days a week</span></div>
+          <h3>Hours</h3>
+          <table class="hours">
+            <tbody>
+              <tr data-d="1"><th scope="row">Monday</th><td>9:00 AM &ndash; 4:00 PM</td></tr>
+              <tr data-d="2"><th scope="row">Tuesday</th><td>9:00 AM &ndash; 4:00 PM</td></tr>
+              <tr data-d="3"><th scope="row">Wednesday</th><td>9:00 AM &ndash; 4:00 PM</td></tr>
+              <tr data-d="4"><th scope="row">Thursday</th><td>9:00 AM &ndash; 4:00 PM</td></tr>
+              <tr data-d="5"><th scope="row">Friday</th><td>9:00 AM &ndash; 4:00 PM</td></tr>
+              <tr data-d="6"><th scope="row">Saturday</th><td>9:00 AM &ndash; 3:00 PM</td></tr>
+              <tr data-d="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h2>Finding them</h2>
+          <address>
+            <strong>Raggedy Anne's Pet Grooming</strong><br>
+            1614 McFarland Ave<br>
+            Rossville, GA 30741
+          </address>
+          <p style="margin-top:14px">
+            Look for the brick front with the big bone-shaped
+            <strong>grooming</strong> sign and the bench by the door.
+            Wheelchair-accessible parking and entrance.
+          </p>
+          <div class="cta-row" style="margin-top:18px">
+            <a class="btn" href="tel:+17068611160">Call (706) 861-1160</a>
+            <a class="btn btn--ghost" href="https://maps.google.com/?cid=10006704777437461008" target="_blank" rel="noopener">Open in Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="sect final">
+    <div class="wrap">
+      <h2>Give them a ring</h2>
+      <p>Nail trims are often same-day. For a full groom, call ahead &mdash;
+         and tell them if your dog is nervous, so they can plan the day
+         around it.</p>
+      <a class="tel" href="tel:+17068611160">(706) 861-1160</a>
+      <div><a class="btn" href="tel:+17068611160">Tap to call</a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <strong>Raggedy Anne's Pet Grooming</strong>
+        1614 McFarland Ave<br>Rossville, GA 30741<br>
+        <a href="tel:+17068611160">(706) 861-1160</a>
+      </div>
+      <div>
+        <strong>Hours</strong>
+        Mon&ndash;Fri 9:00 AM &ndash; 4:00 PM<br>
+        Saturday 9:00 AM &ndash; 3:00 PM<br>
+        Sunday closed
+      </div>
+      <div>
+        <strong>Reviews</strong>
+        4.7 stars from 191 reviews on
+        <a href="https://maps.google.com/?cid=10006704777437461008" target="_blank" rel="noopener">Google</a>.
+      </div>
+    </div>
+    <p class="demo">
+      <strong style="display:inline">Demonstration page.</strong>
+      This is an unsolicited sample built from publicly available information
+      about this business &mdash; its Google Business Profile listing, its public
+      reviews and photographs posted to that listing by visitors. It is not
+      affiliated with, endorsed by or authorised by Raggedy Anne's Pet
+      Grooming, it is not indexed, and it is not linked from anywhere.
+      Hours, services and details must be confirmed with the business before
+      any of this is published. Photographs remain the property of the people
+      who took them.
+    </p>
+  </div>
+</footer>
+
+<div class="callbar"><a class="btn" href="tel:+17068611160">Call (706) 861-1160</a></div>
+
+<script>
+/* Highlight today's row and say whether they're open right now.
+   Hours are Mon-Fri 9:00-16:00, Sat 9:00-15:00, Sun closed — exactly as
+   returned by the Google Places regularOpeningHours for this place on
+   2026-10-24. Uses the visitor's own clock; the shop is US Eastern. */
+(function(){
+  var OPEN = {1:[9,16],2:[9,16],3:[9,16],4:[9,16],5:[9,16],6:[9,15]};
+  var now = new Date(), d = now.getDay(), mins = now.getHours()*60 + now.getMinutes();
+  var row = document.querySelector('.hours tr[data-d="'+d+'"]');
+  if (row) row.classList.add('today');
+  var span = OPEN[d], open = !!span && mins >= span[0]*60 && mins < span[1]*60;
+  var ft = document.getElementById('flagtext');
+  if (ft) ft.textContent = open ? 'Open right now' : 'Closed right now';
+  var flag = document.getElementById('flag');
+  if (flag && !open) {
+    flag.style.background = 'rgba(242,244,251,.12)';
+    flag.style.borderColor = 'rgba(242,244,251,.4)';
+    flag.style.color = '#F2F4FB';
+    var dot = flag.querySelector('.dot');
+    if (dot) dot.style.background = '#C3C9E6';
+  }
+})();
+</script>
+</body>
+</html>
