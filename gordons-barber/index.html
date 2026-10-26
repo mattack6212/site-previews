@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Gordon's Barber Shop — East Ridge, TN</title>
+<meta name="description" content="Gordon's Barber Shop, 5716 Ringgold Rd #104, East Ridge TN. Walk-ins welcome, Monday through Saturday 8:30 to 6. Call (423) 855-1019.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<!--
+  ===================================================================
+  UNSOLICITED DEMO — Gordon's Barber Shop, East Ridge, TN
+  Built 2026-10-26 by Matt McFarlane.
+
+  THIS IS A SPEC PIECE. The business has NOT been contacted and has
+  NOT approved, commissioned, reviewed or paid for any of this.
+  It is marked noindex/nofollow and must never be presented as the
+  business's official site.
+
+  EVERY FACT HERE IS VERIFIED. Sources in research.md.
+    - Address, phone, hours, rating, review count, payment and
+      accessibility attributes: live Google Places pull 2026-10-26.
+    - Address cross-checked two ways: the neighbouring carniceria
+      shares 5716 Ringgold Rd, and "104" is readable on the shop's
+      own door glass. Yelp, BBB and Facebook all have it WRONG.
+    - Business name taken from his own sign ("GORDON'S BARBER SHOP"),
+      not from the Google listing spelling.
+    - All three testimonials are real, public, and attributed to the
+      reviewer's own display name and platform. None invented.
+
+  DELIBERATELY ABSENT, because none of it could be verified:
+    - NO PRICES. Newest hard figure is a $15 customer mention from
+      Feb 2023 and is too stale to publish on a man's own site.
+    - No founding year. Nothing establishes when the shop opened.
+    - No "family business" / "generations" claim.
+    - No owner surname. Single weak source (a BBB record that also
+      carries two wrong addresses).
+    - No claimed years of experience in the site's own voice. The
+      "40 years" line appears ONLY inside an attributed review quote.
+
+  IMAGES: the shop's own Google Places photos. No stock. The interior
+  shot is cropped below both faces -- the customer in the original
+  did not consent to appear on a website.
+
+  COLOURS: sampled from his storefront sign. Red #B32317 is the sign
+  red and is used for CALLS TO ACTION ONLY. All 15 foreground/
+  background pairs pass WCAG AA -- see probe/contrast.py.
+  ===================================================================
+-->
+
+<style>
+  :root{
+    --ink:#14181A; --ink-soft:#2A3133;
+    --cream:#F5F1E8; --cream-deep:#E8E0D1;
+    --green:#27493C; --green-lt:#447560;
+    --red:#B32317; --red-dark:#8E1A11;
+    --muted:#5A6467; --white:#fff;
+    --wrap:1120px;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:var(--sans); font-size:17px; line-height:1.65;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; height:auto; display:block}
+  h1,h2,h3{font-family:var(--serif); line-height:1.15; margin:0}
+  h2{font-size:clamp(1.5rem,4vw,2.1rem); letter-spacing:-.01em}
+  p{margin:0 0 1rem}
+  a{color:var(--red-dark)}
+  .wrap{max-width:var(--wrap); margin:0 auto; padding:0 20px}
+  .section{padding:clamp(44px,7vw,76px) 0}
+  .eyebrow{
+    font-family:var(--sans); font-size:.72rem; font-weight:700;
+    letter-spacing:.17em; text-transform:uppercase; color:var(--green);
+    margin:0 0 .6rem;
+  }
+  .rule{width:52px; height:3px; background:var(--red); border:0; margin:0 0 1.4rem; border-radius:2px}
+
+  /* ---------- top bar ---------- */
+  .topbar{background:var(--ink); color:var(--cream); font-size:.86rem}
+  .topbar .wrap{
+    display:flex; flex-wrap:wrap; gap:6px 20px;
+    align-items:center; justify-content:center; padding-top:9px; padding-bottom:9px;
+    text-align:center;
+  }
+  .topbar strong{color:var(--white)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative; background:var(--ink); color:var(--cream)}
+  .hero-img{
+    width:100%; height:clamp(190px,34vw,330px); object-fit:cover;
+    object-position:center 42%; opacity:.52;
+  }
+  .hero-body{
+    position:relative; margin-top:clamp(-130px,-19vw,-96px);
+    padding-bottom:clamp(34px,5vw,52px);
+  }
+  .hero-card{
+    background:var(--ink); border:1px solid #333B3E; border-radius:14px;
+    padding:clamp(22px,4vw,38px);
+    box-shadow:0 18px 44px rgba(0,0,0,.34);
+    max-width:720px;
+  }
+  .hero h1{
+    font-size:clamp(1.95rem,6.2vw,3.3rem); color:var(--white);
+    letter-spacing:-.02em; margin-bottom:.1em;
+  }
+  .hero .sub{
+    font-family:var(--serif); font-style:italic;
+    font-size:clamp(1rem,2.7vw,1.3rem); color:var(--cream); opacity:.93; margin:0 0 1.1rem;
+  }
+  .stars{
+    display:flex; flex-wrap:wrap; align-items:center; gap:9px;
+    font-size:.93rem; color:var(--cream); margin-bottom:1.4rem;
+  }
+  .stars .s{color:#F0B429; letter-spacing:2px; font-size:1.05rem}
+
+  /* ---------- buttons ---------- */
+  .cta-row{display:flex; flex-wrap:wrap; gap:12px}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:9px;
+    font-family:var(--sans); font-weight:700; font-size:1.05rem;
+    padding:15px 26px; border-radius:9px; text-decoration:none;
+    border:2px solid transparent; min-height:52px; cursor:pointer;
+    transition:background .15s,border-color .15s,color .15s;
+  }
+  .btn-call{background:var(--red); color:var(--white); border-color:var(--red)}
+  .btn-call:hover,.btn-call:focus-visible{background:var(--red-dark); border-color:var(--red-dark)}
+  .btn-ghost{background:transparent; color:var(--cream); border-color:#5C6669}
+  .btn-ghost:hover,.btn-ghost:focus-visible{border-color:var(--cream); background:rgba(255,255,255,.07)}
+  .btn-dark{background:var(--ink); color:var(--white); border-color:var(--ink)}
+  .btn-dark:hover,.btn-dark:focus-visible{background:var(--ink-soft); border-color:var(--ink-soft)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--green-lt); outline-offset:3px}
+  .note{font-size:.85rem; color:#A9B2B4; margin:.95rem 0 0}
+
+  /* ---------- quick facts ---------- */
+  .facts{background:var(--cream-deep); border-bottom:1px solid #D6CCB8}
+  .facts .wrap{
+    display:grid; gap:18px 26px; padding-top:26px; padding-bottom:26px;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  }
+  .fact .k{
+    font-size:.7rem; font-weight:700; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--green); margin-bottom:3px;
+  }
+  .fact .v{font-size:1.02rem; font-weight:600; color:var(--ink)}
+  .fact .v a{color:var(--ink); text-decoration:none; border-bottom:2px solid var(--red)}
+
+  /* ---------- services ---------- */
+  .svc-grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); margin-top:28px}
+  .svc{
+    background:var(--white); border:1px solid #DED5C5; border-left:4px solid var(--green);
+    border-radius:10px; padding:22px;
+  }
+  .svc h3{font-size:1.18rem; margin-bottom:.35rem}
+  .svc p{margin:0; color:var(--muted); font-size:.95rem; line-height:1.55}
+  .ask{
+    margin-top:24px; padding:17px 20px; background:var(--white);
+    border:1px dashed #C6BCA8; border-radius:10px; font-size:.97rem; color:var(--ink-soft);
+  }
+  .ask strong{color:var(--ink)}
+
+  /* ---------- split ---------- */
+  .split{display:grid; gap:clamp(26px,4vw,48px); grid-template-columns:1fr; align-items:center}
+  @media(min-width:860px){ .split{grid-template-columns:1.02fr .98fr} }
+  .shot{border-radius:12px; overflow:hidden; border:1px solid #D6CCB8; box-shadow:0 10px 26px rgba(20,24,26,.12)}
+  .cap{font-size:.78rem; color:var(--muted); margin:9px 2px 0; line-height:1.45}
+
+  /* ---------- reviews ---------- */
+  .reviews{background:var(--ink); color:var(--cream)}
+  .reviews h2{color:var(--white)}
+  .reviews .eyebrow{color:#8FB8A7}
+  .r-grid{display:grid; gap:17px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); margin-top:28px}
+  .r{background:#1D2426; border:1px solid #333B3E; border-radius:11px; padding:22px}
+  .r .s{color:#F0B429; letter-spacing:2px; font-size:.92rem; margin-bottom:.6rem}
+  .r blockquote{
+    margin:0 0 .9rem; font-family:var(--serif); font-size:1.03rem;
+    line-height:1.55; color:var(--white);
+  }
+  .r cite{font-style:normal; font-size:.82rem; color:#A9B2B4}
+  .r cite b{color:var(--cream); font-weight:600}
+  .r-note{margin-top:22px; font-size:.82rem; color:#A9B2B4}
+
+  /* ---------- hours ---------- */
+  .hours-card{background:var(--white); border:1px solid #DED5C5; border-radius:12px; padding:clamp(20px,3vw,28px)}
+  .hrow{display:flex; justify-content:space-between; gap:16px; padding:11px 0; border-bottom:1px solid #EDE6DA}
+  .hrow:last-child{border-bottom:0}
+  .hrow .d{font-weight:600}
+  .hrow .t{color:var(--ink-soft); font-variant-numeric:tabular-nums; text-align:right}
+  .hrow.closed .t{color:var(--muted)}
+  .walkin{
+    margin-top:18px; padding:15px 18px; background:var(--cream-deep);
+    border-radius:9px; font-size:.95rem; color:var(--ink-soft);
+  }
+  .walkin strong{color:var(--ink)}
+
+  /* ---------- amenities ---------- */
+  .amen{list-style:none; padding:0; margin:22px 0 0; display:grid; gap:11px; grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+  .amen li{display:flex; gap:10px; align-items:flex-start; font-size:.97rem}
+  .amen .tick{color:var(--green); font-weight:800; flex:none}
+
+  /* ---------- visit / final ---------- */
+  .visit{background:var(--green); color:var(--white)}
+  .visit h2{color:var(--white)}
+  .visit .eyebrow{color:#BBD9CB}
+  .visit-grid{display:grid; gap:clamp(22px,3.5vw,40px); grid-template-columns:1fr}
+  @media(min-width:800px){ .visit-grid{grid-template-columns:1fr 1fr} }
+  .addr{font-family:var(--serif); font-size:clamp(1.15rem,3vw,1.45rem); line-height:1.4; margin:0 0 .5rem}
+  .visit a.maplink{color:#DCEDE4}
+  .final{text-align:center; padding:clamp(44px,7vw,72px) 0}
+  .final h2{margin-bottom:.7rem}
+  .final p{max-width:520px; margin:0 auto 1.6rem; color:var(--ink-soft)}
+  .final .cta-row{justify-content:center}
+  .tel-big{
+    display:block; margin-top:1.1rem; font-family:var(--serif);
+    font-size:clamp(1.3rem,4vw,1.75rem); color:var(--ink); text-decoration:none;
+  }
+  .tel-big:hover{color:var(--red-dark)}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink); color:#A9B2B4; font-size:.85rem; padding:30px 0}
+  footer .wrap{display:flex; flex-wrap:wrap; gap:8px 22px; justify-content:space-between}
+  footer a{color:var(--cream)}
+
+  /* ---------- sticky mobile call bar ---------- */
+  .sticky{
+    position:fixed; left:0; right:0; bottom:0; z-index:40;
+    background:var(--red); display:none;
+    box-shadow:0 -3px 16px rgba(0,0,0,.26);
+  }
+  .sticky a{
+    display:flex; align-items:center; justify-content:center; gap:9px;
+    min-height:56px; color:var(--white); font-weight:700; font-size:1.07rem; text-decoration:none;
+  }
+  @media(max-width:719px){
+    .sticky{display:block}
+    body{padding-bottom:56px}
+  }
+  @media(prefers-reduced-motion:reduce){ *{transition:none!important; scroll-behavior:auto!important} }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><strong>Mon&ndash;Sat</strong> 8:30am&ndash;6:00pm &middot; Closed Sunday</span>
+    <span><strong>Walk-ins welcome</strong></span>
+    <span>East Ridge, TN</span>
+  </div>
+</div>
+
+<header class="hero">
+  <picture>
+    <source media="(max-width:719px)" srcset="images/hero-mobile.jpg">
+    <img class="hero-img" src="images/hero.jpg"
+         alt="The storefront sign of Gordon's Barber Shop on Ringgold Road, East Ridge, Tennessee."
+         width="1600" height="635" fetchpriority="high">
+  </picture>
+  <div class="hero-body">
+    <div class="wrap">
+      <div class="hero-card">
+        <h1>Gordon's Barber Shop</h1>
+        <p class="sub">A straightforward haircut, done right, on Ringgold Road.</p>
+        <div class="stars">
+          <span class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span><strong>4.8</strong> out of 5 &middot; 120 Google reviews</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-call" href="tel:+14238551019">
+            <span aria-hidden="true">&#9742;</span> Call (423) 855-1019
+          </a>
+          <a class="btn btn-ghost" href="#visit">Hours &amp; directions</a>
+        </div>
+        <p class="note">Walk in, or call ahead &mdash; Monday through Saturday.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="facts" aria-label="At a glance">
+  <div class="wrap">
+    <div class="fact">
+      <div class="k">Phone</div>
+      <div class="v"><a href="tel:+14238551019">(423) 855-1019</a></div>
+    </div>
+    <div class="fact">
+      <div class="k">Where</div>
+      <div class="v">5716 Ringgold Rd #104</div>
+    </div>
+    <div class="fact">
+      <div class="k">Open</div>
+      <div class="v">Mon&ndash;Sat, 8:30&ndash;6</div>
+    </div>
+    <div class="fact">
+      <div class="k">Appointments</div>
+      <div class="v">Not needed</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <p class="eyebrow">What he does</p>
+    <hr class="rule">
+    <h2>Barbering, without the fuss</h2>
+    <div class="svc-grid">
+      <div class="svc">
+        <h3>Haircut</h3>
+        <p>Men's and boys' cuts, clippers or scissors. Customers single out his fades &mdash; one review names a high skin fade specifically.</p>
+      </div>
+      <div class="svc">
+        <h3>Haircut &amp; shave</h3>
+        <p>The full visit: cut and shave together, in one chair, in one sitting.</p>
+      </div>
+      <div class="svc">
+        <h3>Shave only</h3>
+        <p>Come in for a shave on its own whenever you'd rather not do it yourself.</p>
+      </div>
+    </div>
+    <p class="ask">
+      <strong>Pricing is straightforward &mdash; just call and ask.</strong>
+      Reviewers have described it as &ldquo;unbeatable&rdquo; and &ldquo;very fair,&rdquo;
+      and kids' cuts are priced below adults'.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="background:var(--cream-deep)">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">The shop</p>
+        <hr class="rule">
+        <h2>One barber, one chair, no appointment required</h2>
+        <p>
+          Gordon's is a small shop on Ringgold Road, in the row of storefronts next to the
+          carniceria. One barber, working the chair himself, six days a week.
+        </p>
+        <p>
+          There is no booking app and no waiting list. You walk in, you sit down, and you
+          are back out again &mdash; one customer timed it at twenty-five minutes, start to
+          finish. Another turned up with no appointment at all and still got squeezed in.
+        </p>
+        <p>
+          Children are welcome, there is a gumball machine by the counter, and card and
+          tap-to-pay are both fine.
+        </p>
+      </div>
+      <div>
+        <div class="shot">
+          <img src="images/interior.jpg"
+               alt="Inside Gordon's Barber Shop: a classic hydraulic barber chair on a chrome base, a coin-operated gumball machine, bonnet hair dryers and a barber's station."
+               width="1100" height="862" loading="lazy">
+        </div>
+        <p class="cap">Inside the shop on Ringgold Road.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <p class="eyebrow">In their words</p>
+    <hr class="rule">
+    <h2>4.8 stars from 120 reviews</h2>
+    <div class="r-grid">
+      <div class="r">
+        <div class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Walk in, messy to dressy in 25 minutes. Gordon took care of me as! Thank you sir!&rdquo;</blockquote>
+        <cite><b>Austin Sullivan</b> &middot; Google review</cite>
+      </div>
+      <div class="r">
+        <div class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;The best haircut I've had in a long time and the price is unbeatable. The owner has been cutting hair for 40 years and that speaks for itself.&rdquo;</blockquote>
+        <cite><b>cormac canavan</b> &middot; Google review</cite>
+      </div>
+      <div class="r">
+        <div class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;I didn't even have an appointment, and he still found time to squeeze me in... Clearly a master of his profession.&rdquo;</blockquote>
+        <cite><b>Luke Gatlin</b> &middot; Google review</cite>
+      </div>
+    </div>
+    <p class="r-note">Reviews are quoted from the shop's public Google listing, in the reviewers' own words.</p>
+  </div>
+</section>
+
+<section class="section" id="visit-hours">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">When to come</p>
+        <hr class="rule">
+        <h2>Open six days a week</h2>
+        <div class="hours-card">
+          <div class="hrow"><span class="d">Monday</span><span class="t">8:30am &ndash; 6:00pm</span></div>
+          <div class="hrow"><span class="d">Tuesday</span><span class="t">8:30am &ndash; 6:00pm</span></div>
+          <div class="hrow"><span class="d">Wednesday</span><span class="t">8:30am &ndash; 6:00pm</span></div>
+          <div class="hrow"><span class="d">Thursday</span><span class="t">8:30am &ndash; 6:00pm</span></div>
+          <div class="hrow"><span class="d">Friday</span><span class="t">8:30am &ndash; 6:00pm</span></div>
+          <div class="hrow"><span class="d">Saturday</span><span class="t">8:30am &ndash; 6:00pm</span></div>
+          <div class="hrow closed"><span class="d">Sunday</span><span class="t">Closed</span></div>
+        </div>
+        <p class="walkin">
+          <strong>No appointment needed.</strong> If you'd rather not wait, give the shop a
+          ring first and ask how it's looking.
+        </p>
+      </div>
+      <div>
+        <p class="eyebrow">Good to know</p>
+        <hr class="rule">
+        <h2>The practical details</h2>
+        <ul class="amen">
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Credit and debit cards accepted</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Tap-to-pay accepted</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Walk-ins welcome, six days a week</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Good for children</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Wheelchair accessible entrance</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Wheelchair accessible parking</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Wheelchair accessible restroom</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Restroom on site</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section visit" id="visit">
+  <div class="wrap">
+    <div class="visit-grid">
+      <div>
+        <p class="eyebrow">Find the shop</p>
+        <hr class="rule">
+        <h2>5716 Ringgold Road</h2>
+        <p class="addr">
+          Gordon's Barber Shop<br>
+          5716 Ringgold Rd&nbsp;#104<br>
+          East Ridge, TN 37412
+        </p>
+        <p>
+          Look for the green awning and the red <strong>HAIR SALON</strong> sign &mdash;
+          Gordon's is the unit marked <strong>104</strong>, next door to the carniceria.
+          Parking is right out front.
+        </p>
+        <p>
+          <a class="maplink" href="https://maps.google.com/?cid=13010602109244075421" rel="noopener">Open in Google Maps</a>
+        </p>
+      </div>
+      <div>
+        <p class="eyebrow">Get a chair</p>
+        <hr class="rule">
+        <h2>Call the shop</h2>
+        <p>
+          Walk in any day except Sunday, or call ahead and ask how busy it is.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-dark" href="tel:+14238551019">
+            <span aria-hidden="true">&#9742;</span> Call (423) 855-1019
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Need a haircut?</h2>
+    <p>Walk in Monday through Saturday, 8:30 to 6. No appointment, no app, no fuss.</p>
+    <div class="cta-row">
+      <a class="btn btn-call" href="tel:+14238551019">
+        <span aria-hidden="true">&#9742;</span> Call (423) 855-1019
+      </a>
+    </div>
+    <a class="tel-big" href="tel:+14238551019">(423) 855-1019</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Gordon's Barber Shop &middot; 5716 Ringgold Rd #104, East Ridge, TN 37412</span>
+    <span><a href="tel:+14238551019">(423) 855-1019</a> &middot; Mon&ndash;Sat 8:30&ndash;6</span>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a href="tel:+14238551019"><span aria-hidden="true">&#9742;</span> Call the shop</a>
+</div>
+
+</body>
+</html>
