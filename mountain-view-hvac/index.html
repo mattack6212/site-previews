@@ -36,6 +36,9 @@
   * Brand colours     - sampled out of that logo file, not invented:
                           flame  #E73715   mountain blue #0657B2
                           ink    #2C172A   sky tint      #A0E3FC
+                        The UI red is #D32D0D, one step darker than the logo
+                        flame: #E73715 against white is 4.24:1, just under the
+                        4.5:1 WCAG AA floor for small text. Same hue, passes.
   * Photographs       - their own Google Business Profile photos (every one
                         attributed to "Mountain View Heating and Air" in the
                         Places API response) plus two job photos off their
@@ -91,8 +94,11 @@
   --blue:#0657B2;      /* the mountain in their logo            */
   --blue-dk:#042F63;   /* same hue, darkened for deep sections  */
   --blue-dp:#021F45;
-  --flame:#E73715;     /* the flame above the peak              */
-  --flame-dk:#C32A0C;
+  --flame:#D32D0D;     /* the flame above the peak, deepened    */
+  --flame-dk:#AF240A;  /* see note: logo samples #E73715, which */
+                       /* is 4.24:1 on white -- just under the  */
+                       /* 4.5:1 AA floor for small text, so the */
+                       /* UI red is one step darker. Same hue.  */
   --ink:#1B2130;
   --body:#4A5365;
   --line:#E2E7EF;
@@ -206,7 +212,7 @@ header{
   gap:.5rem 1.4rem;padding:18px 0;text-align:center
 }
 .offer b{font-size:clamp(1.1rem,3.3vw,1.5rem);font-weight:800;letter-spacing:-.01em}
-.offer s{opacity:.72;font-weight:600}
+.offer s{color:#FFF0EC;font-weight:600}
 .offer span{font-size:.95rem;opacity:.95}
 .offer a{
   color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px;
@@ -331,9 +337,10 @@ header{
 
 /* ---------- footer ---------- */
 footer{background:#071A33;color:#8FA8C4;font-size:.92rem;padding:44px 0 34px}
-footer h4{color:#fff;font-size:.82rem;letter-spacing:.13em;text-transform:uppercase;margin:0 0 .85rem}
+footer h3{color:#fff;font-size:.82rem;letter-spacing:.13em;text-transform:uppercase;margin:0 0 .85rem}
 .fgrid{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
 footer a{color:#CFE0F2;text-decoration:none;overflow-wrap:anywhere}
+.demo-flag a{text-decoration:underline;text-underline-offset:2px;color:#FFD9CE}
 footer a:hover{text-decoration:underline}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.2rem}
 footer li{display:flex;align-items:center;min-height:44px}
@@ -379,7 +386,7 @@ footer li a{display:inline-flex;align-items:center;min-height:44px}
     <img src="images/logo.png" width="420" height="318" alt="Mountain View Heating and Air, Chattanooga TN">
     <div class="bar-cta">
       <div class="bar-hours"><b>Open today 7 AM&ndash;9 PM</b>Seven days a week</div>
-      <a class="btn btn-call" href="tel:+14235568671" aria-label="Call Mountain View Heat and Air at 4 2 3, 5 5 6, 8 6 7 1">
+      <a class="btn btn-call" href="tel:+14235568671" aria-label="Call Mountain View Heat and Air at (423) 556-8671">
         &#9742;&nbsp;(423)&nbsp;556-8671
       </a>
     </div>
@@ -699,14 +706,14 @@ footer li a{display:inline-flex;align-items:center;min-height:44px}
         <p style="margin:0">Trusted heating &amp; cooling experts in Chattanooga, Tennessee.</p>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h3>Contact</h3>
         <ul>
           <li><a href="tel:+14235568671"><strong>(423) 556-8671</strong></a></li>
           <li>1031 John Ross Rd<br>Chattanooga, TN 37412</li>
         </ul>
       </div>
       <div>
-        <h4>Hours</h4>
+        <h3>Hours</h3>
         <ul>
           <li class="hoursrow"><span>Mon &ndash; Fri</span><span>7 AM &ndash; 9 PM</span></li>
           <li class="hoursrow"><span>Saturday</span><span>7 AM &ndash; 9 PM</span></li>
@@ -714,7 +721,7 @@ footer li a{display:inline-flex;align-items:center;min-height:44px}
         </ul>
       </div>
       <div>
-        <h4>Services</h4>
+        <h3>Services</h3>
         <ul>
           <li><a href="#services">AC repair &amp; maintenance</a></li>
           <li><a href="#services">Heating solutions</a></li>
