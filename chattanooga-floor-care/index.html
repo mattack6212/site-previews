@@ -234,8 +234,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .hero-badges{display:flex;flex-wrap:wrap;gap:8px}
 .hero-badges span{background:rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.26);color:#f3efe9;font-size:.82rem;font-weight:700;padding:7px 12px;border-radius:999px;backdrop-filter:blur(2px)}
 
-/* ---------- trust strip ---------- */
-.trust{background:var(--charcoal);color:#fff}
+/* ---------- trust strip ----------
+   NOT their logo charcoal #555756. Brand orange on that grey measures
+   2.87:1, which fails WCAG AA even for large text, and Lighthouse caught
+   it (accessibility 96, colour-contrast on these four <b> numbers).
+   #333434 is the same neutral family two steps darker and takes the orange
+   to 4.91:1 and the labels to 10.3:1. The brand charcoal is still used at
+   full strength everywhere it carries no small text. */
+.trust{background:#333434;color:#fff}
 .trust-in{display:grid;grid-template-columns:repeat(2,1fr);gap:1px 0;padding:0}
 @media(min-width:760px){.trust-in{grid-template-columns:repeat(4,1fr)}}
 .trust-i{padding:20px 14px;text-align:center}
