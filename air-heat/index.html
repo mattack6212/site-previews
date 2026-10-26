@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+===============================================================================
+  UNSOLICITED SPEC DEMO - NOT AN OFFICIAL SITE
+===============================================================================
+
+  Business   : Air Heat
+  Address    : 12896 US-27 (N Hwy 27), Chickamauga, GA 30707
+  Phone      : (706) 375-5252
+  Real site  : https://www.myairheat.com/      (Squarespace)
+  Google     : 5.0 stars / 181 reviews  (Places API, pulled 2026-10-26)
+  Place ID   : ChIJw-12LeBpYIgRrPj-UTP1U7w
+
+  WHAT THIS IS
+  ------------
+  A speculative rebuild of the homepage, built by Matt McFarlane without the
+  business's knowledge or involvement, to demonstrate a mobile-speed
+  difference. It is NOT affiliated with, endorsed by, or authorised by Air
+  Heat. Nobody there has been contacted.
+
+  IDENTITY - WHY WE ARE SURE THIS IS THE RIGHT "AIR HEAT"
+  -------------------------------------------------------
+  "Air Heat" is a generic name, so all four identifiers were matched before a
+  line of this was written:
+    1. Google Places displayName          "Air Heat"
+    2. Google Places nationalPhoneNumber  (706) 375-5252   <- matches the lead
+    3. Google Places websiteUri           https://www.myairheat.com/
+    4. Their own van, photographed by them and posted to their own Google
+       profile, is painted with BOTH "706-375-5252" AND "www.myairheat.com".
+       That van is the hero image on this page.
+  Their own homepage also states "LOCALLY OWNED IN CHICKAMAUGA, GA", which
+  matches the Places formattedAddress. One business, not two.
+
+  WHY IT EXISTS
+  -------------
+  Their live homepage is a Squarespace site. Measured on Google PageSpeed
+  Insights (mobile, Lighthouse 13.5.0) six times on 2026-10-26 it scored
+  51, 56, 53, 40, 48, 58 - median 52, a consistent fail.
+    Largest Contentful Paint  17.2 - 22.7 s
+    First Contentful Paint    2.9 - 6.7 s
+    Total page weight         5,726 KiB
+    Heaviest single asset     1,546 KiB  (an AdobeStock header photo)
+    Second heaviest             1,221 KiB  (their own family photo, unresized)
+  Their accessibility (92), best-practices (100) and SEO (92) are all good.
+  Speed is the only thing wrong with it, and it is wrong by a lot.
+
+  EVERY WORD AND PICTURE HERE IS THEIRS
+  -------------------------------------
+  * Logo           - their real logo file off myairheat.com, untouched. It
+                     carries their tagline "PUTTING PEOPLE BEFORE PROFIT" and
+                     their Best of the Best 2026 badge.
+  * Brand colours  - sampled out of that logo file, not invented:
+                       navy  #1C4075    red   #EC1C24
+                       sky   #0094D9    gold  #FCBF10
+                     Body red is #D4161D, a step darker than the logo red, so
+                     small text clears the 4.5:1 WCAG AA floor on white.
+  * Photographs    - their own Google Business Profile photos (every one
+                     attributed to "Air Heat" in the Places API response)
+                     plus one photo off their own website.
+  * Copy           - their own headlines, service descriptions, Peace of Mind
+                     Pledge, brand list and service-area line, carried over
+                     verbatim or lightly tightened. Nothing invented. Their
+                     "60+ years of experience" and "NATE-certified" claims are
+                     reproduced as THEIR claims, in their words.
+  * Team names     - exactly as published on their own /about page.
+  * Reviews        - real, pulled live from the Google Places API, shown with
+                     the reviewer's name as Google publishes it.
+
+  DELIBERATELY NOT USED
+  ---------------------
+  * The AdobeStock header photo that is currently their LCP element, plus the
+    two other AdobeStock files on their site. Not their crew, not their work.
+  * The stock studio shot of a GREE unit on their Google profile.
+  * The Wells Fargo Home Projects financing banner - third-party artwork.
+  * The surname. Their own /about page spells the general manager
+    "Jack Beesley"; a Facebook post about their award spells it "Beasley".
+    Their own site wins, but the conflict is unresolved, so no surname is
+    printed anywhere on this page and none is used in the outreach draft.
+  * Any claim they do not make themselves. No invented years-in-business, no
+    invented guarantees, no invented pricing.
+
+  TECHNICAL
+  ---------
+  Single file. No frameworks, no webfonts, no third-party scripts, no
+  analytics, no cookies. One small inline script for the FAQ toggles.
+  All CSS inline. All images local, sized, lazy-loaded below the fold.
+  <meta name="robots" content="noindex, nofollow"> - this must never
+  outrank or be mistaken for their real site.
+
+  Built 2026-10-26 by Otto for Matt McFarlane.
+===============================================================================
+-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Air Heat | Heating &amp; Cooling in Chickamauga, GA</title>
+<meta name="description" content="Air Heat - family and locally owned HVAC in Chickamauga, GA. NATE-certified technicians serving Walker and Catoosa Counties and East Ridge, TN. Call (706) 375-5252.">
+<link rel="icon" href="images/favicon.png" type="image/png">
+<link rel="preload" as="image" href="images/hero-mobile.jpg" media="(max-width: 739px)">
+<link rel="preload" as="image" href="images/hero.jpg" media="(min-width: 740px)">
+<style>
+:root{
+  --navy:#1C4075;      /* sampled: logo shield */
+  --navy-deep:#092241; /* sampled: logo outline */
+  --red:#D4161D;       /* logo red #EC1C24 darkened for AA on white */
+  --red-logo:#EC1C24;
+  --sky:#0094D9;       /* sampled: the "AIR" letterforms */
+  --sky-light:#6DC0EB;
+  --gold:#FCBF10;      /* sampled: shield edge + sun */
+  --ink:#15202E;
+  --body:#41505F;
+  --line:#DCE3EB;
+  --bg-soft:#F4F7FA;
+  --radius:14px;
+  --wrap:1120px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:#fff;color:var(--body);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:17px;line-height:1.62;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{color:var(--ink);line-height:1.18;margin:0 0 .5em;letter-spacing:-.015em}
+h1{font-size:clamp(1.75rem,5.2vw,3rem);font-weight:800}
+h2{font-size:clamp(1.4rem,3.9vw,2.15rem);font-weight:800}
+h3{font-size:1.1rem;font-weight:700}
+p{margin:0 0 1em}
+a{color:var(--navy)}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 18px}
+.section{padding:clamp(44px,7vw,76px) 0}
+.soft{background:var(--bg-soft)}
+.eyebrow{
+  font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--sky);margin:0 0 .6em;
+}
+
+/* ---------- top call bar ---------- */
+.topbar{background:var(--navy-deep);color:#fff;font-size:.86rem}
+.topbar .wrap{
+  display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;
+  justify-content:center;padding-top:8px;padding-bottom:8px;text-align:center;
+}
+.topbar span{display:inline-flex;align-items:center;gap:7px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700;
+          display:inline-flex;align-items:center;min-height:44px;padding:0 4px}
+.topbar a:hover{text-decoration:underline}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:14px;
+     padding-top:10px;padding-bottom:10px}
+.hdr img{width:150px;height:auto}
+.hdr-call{
+  display:inline-flex;align-items:center;gap:9px;flex-shrink:0;
+  background:var(--red);color:#fff;text-decoration:none;font-weight:800;
+  padding:13px 18px;border-radius:999px;font-size:1rem;min-height:48px;
+  box-shadow:0 2px 10px rgba(212,22,29,.26);white-space:nowrap;
+}
+.hdr-call:hover{background:#B91219}
+.hdr-call svg{width:18px;height:18px;flex-shrink:0;fill:currentColor}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--navy-deep);color:#fff;isolation:isolate}
+.hero picture,.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(105deg,rgba(9,34,65,.93) 0%,rgba(9,34,65,.86) 46%,rgba(28,64,117,.66) 100%);
+}
+.hero-in{position:relative;z-index:2;padding:clamp(48px,8.5vw,96px) 0}
+.hero h1{color:#fff;max-width:17ch}
+.hero p.lede{font-size:clamp(1rem,2.2vw,1.18rem);color:#D9E6F5;max-width:52ch;margin-bottom:1.5em}
+.stars{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 20px;
+       font-weight:700;color:#fff;font-size:.95rem}
+.stars b{color:var(--gold);font-size:1.15rem;letter-spacing:.06em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px 26px;border-radius:999px;font-weight:800;text-decoration:none;
+  font-size:1.06rem;min-height:54px;border:2px solid transparent;
+}
+.btn-call{background:var(--red);color:#fff;box-shadow:0 4px 16px rgba(212,22,29,.34)}
+.btn-call:hover{background:#B91219}
+.btn-call svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-ghost:hover{background:rgba(255,255,255,.17)}
+.hero-note{margin:18px 0 0;font-size:.88rem;color:#B9CCE2}
+
+/* ---------- trust strip ---------- */
+.trust{background:var(--navy);color:#fff}
+.trust ul{
+  list-style:none;margin:0;padding:18px 0;display:grid;gap:12px 26px;
+  grid-template-columns:1fr;font-size:.92rem;font-weight:600;
+}
+.trust li{display:flex;align-items:flex-start;gap:10px}
+.trust svg{width:17px;height:17px;fill:var(--gold);flex-shrink:0;margin-top:4px}
+
+/* ---------- services ---------- */
+.grid{display:grid;gap:22px;grid-template-columns:1fr}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;
+}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card-b{padding:20px;flex:1;display:flex;flex-direction:column}
+.card.plain{background:linear-gradient(160deg,#F4F7FA 0%,#E9F1F8 100%);
+            border-color:#CFDDEA}
+.card.plain .card-b{justify-content:center;padding:26px 22px}
+.card.plain h3{color:var(--navy)}
+.card-b p{font-size:.95rem;margin-bottom:0}
+.card h3{margin-bottom:.35em}
+.tagline{
+  display:inline-block;background:var(--gold);color:var(--navy-deep);
+  font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  padding:4px 10px;border-radius:999px;margin-bottom:10px;
+}
+
+/* ---------- split ---------- */
+.split{display:grid;gap:30px;grid-template-columns:1fr;align-items:center}
+.split img{border-radius:var(--radius);width:100%}
+.pledge{
+  border-left:4px solid var(--gold);background:#fff;padding:18px 22px;
+  border-radius:0 var(--radius) var(--radius) 0;margin-top:22px;
+}
+.pledge p{margin:0;font-size:.97rem}
+.pledge strong{color:var(--ink)}
+
+/* ---------- reviews ---------- */
+.rev-head{text-align:center;margin-bottom:34px}
+.rev{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;display:flex;flex-direction:column;
+}
+.rev .s{color:var(--gold);letter-spacing:.1em;font-size:1rem;margin-bottom:9px}
+.rev p{font-size:.95rem;flex:1}
+.rev .who{font-weight:700;color:var(--ink);font-size:.9rem;margin:0}
+.rev .when{font-size:.81rem;color:#7A8899;margin:2px 0 0}
+
+/* ---------- team ---------- */
+.team{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
+.team li{
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:9px 16px;font-size:.88rem;
+}
+.team b{color:var(--ink)}
+.team span{color:#7A8899;font-size:.8rem}
+
+/* ---------- faq ---------- */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{
+  cursor:pointer;padding:18px 40px 18px 0;font-weight:700;color:var(--ink);
+  position:relative;list-style:none;min-height:56px;display:flex;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";position:absolute;right:8px;top:50%;width:10px;height:10px;
+  border-right:2.5px solid var(--sky);border-bottom:2.5px solid var(--sky);
+  transform:translateY(-70%) rotate(45deg);transition:transform .18s;
+}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq .a{padding:0 0 18px;font-size:.96rem}
+.faq .a p:last-child{margin-bottom:0}
+
+/* ---------- contact ---------- */
+.contact{background:var(--navy-deep);color:#fff}
+.contact h2{color:#fff}
+.contact a{color:#fff}
+.cgrid{display:grid;gap:26px;grid-template-columns:1fr}
+.cbox{background:rgba(255,255,255,.07);border-radius:var(--radius);padding:22px}
+.cbox h3{color:#fff;font-size:1rem;margin-bottom:.5em}
+.cbox p{margin:0;font-size:.95rem;color:#CBDAEA}
+.cbox a{font-weight:700;text-decoration:none;
+        display:inline-flex;align-items:center;min-height:44px}
+.cbox a:hover{text-decoration:underline}
+.hours{list-style:none;margin:0;padding:0;font-size:.95rem;color:#CBDAEA}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:5px 0;
+          border-bottom:1px solid rgba(255,255,255,.11)}
+.hours li:last-child{border-bottom:0}
+.hours b{color:#fff;font-weight:700}
+
+/* ---------- footer ---------- */
+footer{background:#061729;color:#8FA6BF;font-size:.85rem;padding:28px 0 34px}
+footer a{color:#C7D8EA;display:inline-flex;align-items:center;
+         min-height:44px;padding:0 3px}
+.cbox a,.disc a{min-height:44px}
+.disc{
+  margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);
+  font-size:.78rem;line-height:1.6;color:#6E8399;
+}
+
+/* ---------- sticky mobile call ---------- */
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;
+  background:var(--red);box-shadow:0 -3px 16px rgba(0,0,0,.26);
+}
+.sticky a{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  color:#fff;text-decoration:none;font-weight:800;font-size:1.08rem;
+  padding:15px 12px;min-height:58px;
+}
+.sticky svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+body{padding-bottom:62px}
+
+@media (min-width:600px){
+  .trust ul{grid-template-columns:1fr 1fr}
+  .grid{grid-template-columns:1fr 1fr}
+  .cgrid{grid-template-columns:1fr 1fr}
+}
+@media (min-width:860px){
+  .trust ul{grid-template-columns:repeat(4,1fr);padding:20px 0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .split{grid-template-columns:.85fr 1.15fr;gap:46px}
+  .split.flip{grid-template-columns:1.15fr .85fr}
+  .cgrid{grid-template-columns:1.1fr .9fr .9fr}
+  .sticky{display:none}
+  body{padding-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Family &amp; locally owned in Chickamauga, GA</span>
+    <span>Mon&ndash;Fri 8:00am&ndash;4:00pm &middot;
+      <a href="tel:+17063755252">(706) 375-5252</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap hdr">
+    <a href="#top" aria-label="Air Heat home">
+      <img src="images/logo.png" width="460" height="329"
+           alt="Air Heat &mdash; Putting People Before Profit" fetchpriority="high">
+    </a>
+    <a class="hdr-call" href="tel:+17063755252">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+      Call Now
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <picture>
+      <source media="(min-width:740px)" srcset="images/hero.jpg">
+      <img src="images/hero-mobile.jpg" width="1280" height="684"
+           alt="An Air Heat van on a commercial rooftop replacement job"
+           fetchpriority="high" decoding="async">
+    </picture>
+    <div class="hero-in">
+      <div class="wrap">
+        <p class="eyebrow" style="color:var(--sky-light)">Chickamauga, Georgia</p>
+        <h1>Heating &amp; Cooling Services and Installation in Northwest Georgia</h1>
+        <div class="stars">
+          <b>&#9733;&#9733;&#9733;&#9733;&#9733;</b>
+          <span>5.0 out of 5 &mdash; 181 Google reviews</span>
+        </div>
+        <p class="lede">
+          Family and locally owned. We&rsquo;re committed to serving our community
+          with the highest quality service and craftsmanship &mdash; backed by
+          NATE-certified technicians and over 60 years of experience in the
+          HVAC industry.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-call" href="tel:+17063755252">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+            (706) 375-5252
+          </a>
+          <a class="btn btn-ghost" href="#services">Our Services</a>
+        </div>
+        <p class="hero-note">
+          Free installation estimates &middot; Licensed in Georgia and Tennessee
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="wrap">
+      <ul>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            Customer service is our #1 priority</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            NATE-certified technicians</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            60+ years of experience</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            Serving North Georgia &amp; East Ridge, TN</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow">Our Services</p>
+      <h2>Superior HVAC equipment and servicing</h2>
+      <p style="max-width:60ch;margin-bottom:34px">
+        Fully licensed in Georgia and Tennessee, Air Heat provides quality
+        heating and cooling for your home or business.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <img src="images/ac-install.jpg" width="620" height="465" loading="lazy"
+               decoding="async" alt="Outdoor condensing units installed by Air Heat">
+          <div class="card-b">
+            <h3>Air Conditioning</h3>
+            <p>Fully licensed in Georgia and Tennessee, Air Heat provides quality
+               air conditioning installation and replacement for your home or
+               business.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/air-handler.jpg" width="620" height="827" loading="lazy"
+               decoding="async" alt="A Lennox air handler installed by Air Heat">
+          <div class="card-b">
+            <h3>Heating</h3>
+            <p>Whether you need to buy a brand-new heating system or have your
+               existing one repaired, the qualified technicians at Air Heat are
+               the right choice.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/rooftop.jpg" width="620" height="741" loading="lazy"
+               decoding="async" alt="An Air Heat technician wiring a packaged rooftop unit">
+          <div class="card-b">
+            <h3>A/C &amp; Heating Installs</h3>
+            <p>Looking to replace your heating and cooling system? Whether
+               you&rsquo;re cutting energy costs, reducing future repairs or
+               upgrading a system, Air Heat is here for you.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/ductless.jpg" width="620" height="463" loading="lazy"
+               decoding="async" alt="A ductless mini-split condenser installed by Air Heat">
+          <div class="card-b">
+            <h3>HVAC Repairs</h3>
+            <p>If you&rsquo;re experiencing issues with your system&rsquo;s
+               efficiency or performance, contact our experts for a professional
+               evaluation. All calls are returned in a timely manner.</p>
+          </div>
+        </article>
+
+        <article class="card plain">
+          <div class="card-b">
+            <h3>Indoor Air Quality</h3>
+            <p>Air Heat can make sure you and your family are breathing the
+               healthiest inside your home. Ask about our available warranties
+               and financing options.</p>
+          </div>
+        </article>
+
+        <article class="card plain">
+          <div class="card-b">
+            <span class="tagline">Now offering</span>
+            <h3>Crawl Space Encapsulation</h3>
+            <p>Moisture, standing water and fungus under your home lead to higher
+               energy bills, musty smells and structural issues. Air Heat now
+               offers full crawl space services &mdash; one trusted team to
+               handle it all.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="wrap">
+      <div class="split">
+        <img src="images/family.jpg" width="560" height="975" loading="lazy"
+             decoding="async" alt="Two generations in Air Heat shirts beside a company truck">
+        <div>
+          <p class="eyebrow">Putting People Before Profit</p>
+          <h2>A small company, owned and operated by a local family</h2>
+          <p>
+            Here at our family and locally-owned HVAC company, we are committed
+            to serving our community with the highest quality service and
+            craftsmanship. Our primary focus will always be to provide you with
+            excellent customer service. We accomplish this through a level of
+            honesty and integrity that will not be surpassed by any competitor.
+          </p>
+          <p>
+            We hold our team to the highest standards by requiring every
+            technician to earn and maintain North American Technician Excellence
+            (NATE) certification &mdash; experienced professionals, dependable
+            service, and lasting peace of mind.
+          </p>
+          <div class="pledge">
+            <p><strong>Our Peace of Mind Pledge.</strong> No matter the issue, no
+            matter the hour, we pledge to stand behind our customers and their
+            needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="rev-head">
+        <p class="eyebrow">Reviews</p>
+        <h2>5.0 stars across 181 Google reviews</h2>
+        <p style="max-width:56ch;margin:0 auto">
+          Pulled live from Google on 26 October 2026. Names appear exactly as
+          Google publishes them.
+        </p>
+      </div>
+      <div class="grid">
+        <article class="rev">
+          <div class="s" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;They are the first HVAC company we have had come out to quote
+             us for a job that didn&rsquo;t immediately try to sell us a new
+             unit, which meant a lot and showed that they truly care about
+             taking care of the customer and not just making a sale.&rdquo;</p>
+          <p class="who">Chandler Crawford</p>
+          <p class="when">2 months ago</p>
+        </article>
+        <article class="rev">
+          <div class="s" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;One of my units went down during the severe heat last week.
+             Witt did a great job repairing the unit and had my a/c back on in
+             just minutes after arriving. Timely and effective service, friendly
+             staff and reasonable pricing.&rdquo;</p>
+          <p class="who">Brent Collier</p>
+          <p class="when">3 months ago</p>
+        </article>
+        <article class="rev">
+          <div class="s" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Truly the best in the business! It is so refreshing to have a
+             company that is so reliable, kind, and helpful. We&rsquo;ve used Air
+             Heat for everything &mdash; mini splits, repairs, and regular
+             maintenance. I wouldn&rsquo;t think of calling anyone else!&rdquo;</p>
+          <p class="who">Davis Mooney</p>
+          <p class="when">3 months ago</p>
+        </article>
+        <article class="rev">
+          <div class="s" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Air Heat got us quick weekend emergency service when we needed
+             it at reasonable prices. Every office employee or HVAC tech
+             I&rsquo;ve interacted with has been great, and I couldn&rsquo;t ask
+             for better service!&rdquo;</p>
+          <p class="who">Sara Beaster</p>
+          <p class="when">4 months ago</p>
+        </article>
+        <article class="rev">
+          <div class="s" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;I called early one morning, they came out within an hour. They
+             had the part on the truck to fix the unit and had it going very
+             quickly. So appreciative of this company and their
+             employees.&rdquo;</p>
+          <p class="who">roger davenport</p>
+          <p class="when">6 months ago</p>
+        </article>
+        <article class="rev">
+          <div class="s" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Big fans of Air Heat. They have serviced our two rental
+             properties exceptionally well. Would recommend them to anyone
+             looking for a new HVAC system or needing general repair.&rdquo;</p>
+          <p class="who">Thomas G.</p>
+          <p class="when">From their website</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="wrap">
+      <div class="split flip">
+        <div>
+          <p class="eyebrow">Meet the team</p>
+          <h2>The people who show up</h2>
+          <p>
+            Air Heat has served Chickamauga and the surrounding area since 2008.
+            All of our technicians are licensed and NATE-certified &mdash; we
+            require it, because it means we are sending you someone qualified to
+            do the job.
+          </p>
+          <ul class="team">
+            <li><b>Jack</b> <span>&middot; General Manager</span></li>
+            <li><b>Scott Caldwell</b> <span>&middot; Service Manager</span></li>
+            <li><b>Angie Reynolds</b> <span>&middot; Office Manager</span></li>
+            <li><b>Heather Best</b> <span>&middot; Customer Service</span></li>
+            <li><b>Adam Bell</b> <span>&middot; Service Tech</span></li>
+            <li><b>Witt Pierce</b></li>
+            <li><b>Chris Dye</b> <span>&middot; Installation Tech</span></li>
+            <li><b>Brando Galindo</b></li>
+            <li><b>Rhett Baldwin</b> <span>&middot; Install / Service</span></li>
+            <li><b>Kelly</b></li>
+          </ul>
+          <p style="margin-top:20px;font-size:.93rem">
+            <strong style="color:var(--ink)">Brands we carry:</strong>
+            American Standard &middot; Lennox &middot; Maytag &middot;
+            Mitsubishi &middot; Tempstar
+          </p>
+        </div>
+        <img src="images/shop.jpg" width="640" height="480" loading="lazy"
+             decoding="async" alt="The Air Heat shop and both service vans in Chickamauga, Georgia">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap" style="max-width:800px">
+      <p class="eyebrow">Common questions</p>
+      <h2 style="margin-bottom:28px">Good to know</h2>
+      <div class="faq">
+        <details open>
+          <summary>What areas do you serve?</summary>
+          <div class="a"><p>We serve the entire Walker and Catoosa Counties as
+            well as East Ridge, TN with high-quality heating and A/C services.
+            Our shop is on N Highway 27 in Chickamauga.</p></div>
+        </details>
+        <details>
+          <summary>Do you charge for an installation estimate?</summary>
+          <div class="a"><p>No. Call (706) 375-5252 for a free installation
+            estimate on our HVAC service.</p></div>
+        </details>
+        <details>
+          <summary>Are your technicians certified?</summary>
+          <div class="a"><p>Yes. All of our technicians are licensed and
+            NATE-certified. NATE (North American Technician Excellence) requires
+            passing a core HVACR exam plus a specialty exam, and technicians must
+            re-qualify every five years.</p></div>
+        </details>
+        <details>
+          <summary>What brands do you install and service?</summary>
+          <div class="a"><p>American Standard, Lennox, Maytag, Mitsubishi and
+            Tempstar.</p></div>
+        </details>
+        <details>
+          <summary>Do you offer financing?</summary>
+          <div class="a"><p>Yes &mdash; ask about our available warranties and
+            financing options. We accept cash, check, Visa, MasterCard, Discover
+            and American Express.</p></div>
+        </details>
+        <details>
+          <summary>What is crawl space encapsulation?</summary>
+          <div class="a"><p>Your crawl space affects your home&rsquo;s comfort,
+            air quality and long-term protection. Moisture, standing water and
+            fungus underneath your home can lead to higher energy bills, musty
+            smells and even structural issues over time. Air Heat now offers full
+            crawl space services, including vapor barriers and dehumidifiers.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--sky-light)">Contact</p>
+      <h2 style="margin-bottom:30px">Call Air Heat today</h2>
+      <div class="cgrid">
+        <div class="cbox">
+          <h3>Phone</h3>
+          <p style="font-size:1.3rem;margin-bottom:6px">
+            <a href="tel:+17063755252">(706) 375-5252</a>
+          </p>
+          <p>Free installation estimates.<br>
+             <a href="mailto:airheat08@gmail.com">airheat08@gmail.com</a></p>
+        </div>
+        <div class="cbox">
+          <h3>Shop</h3>
+          <p>12896 N Highway 27<br>Chickamauga, GA 30707</p>
+          <p style="margin-top:10px">Serving Walker &amp; Catoosa Counties and
+             East Ridge, TN.</p>
+        </div>
+        <div class="cbox">
+          <h3>Hours</h3>
+          <ul class="hours">
+            <li><b>Mon &ndash; Fri</b><span>8:00am &ndash; 4:00pm</span></li>
+            <li><b>Saturday</b><span>Closed</span></li>
+            <li><b>Sunday</b><span>Closed</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="margin-bottom:6px">
+      <strong style="color:#fff">Air Heat</strong> &middot; 12896 N Highway 27,
+      Chickamauga, GA 30707 &middot;
+      <a href="tel:+17063755252">(706) 375-5252</a>
+    </p>
+    <p style="margin-bottom:0">
+      Family &amp; locally owned since 2008 &middot; Licensed in GA: CN210158 &middot;
+      Conditioned Air Association of Georgia &middot; NATE &middot;
+      Walker County Chamber of Commerce
+    </p>
+    <p class="disc">
+      <strong style="color:#8FA6BF">Unofficial demonstration page.</strong>
+      This is a speculative redesign concept built by Matt McFarlane to
+      illustrate mobile load speed. It is not affiliated with, endorsed by, or
+      authorised by Air Heat, and it is not their official website. Their real
+      site is <a href="https://www.myairheat.com/" rel="nofollow noopener">myairheat.com</a>.
+      All photographs, the logo, the business copy and the reviews shown here
+      belong to Air Heat and its customers. Not indexed by search engines.
+    </p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a href="tel:+17063755252">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+    Call (706) 375-5252
+  </a>
+</div>
+
+</body>
+</html>
