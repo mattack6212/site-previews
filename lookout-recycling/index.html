@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ============================================================================
+  UNSOLICITED DEMO — Lookout Recycling, Inc., Rossville, GA
+  Built 2026-10-26 by Matt McFarlane.  v2
+  ============================================================================
+
+  STATUS:  Not live. Not linked from anywhere. noindex,nofollow,noarchive.
+           NO CONTACT HAS BEEN MADE WITH THIS BUSINESS.
+
+  WHAT THIS IS:  A speculative demo built entirely from the business's own
+  public information, to show the owner what a real site would look like.
+
+  ---------------------------------------------------------------------------
+  SOURCING RULES THIS FILE FOLLOWS  (full detail in research.md)
+  ---------------------------------------------------------------------------
+  * Every factual claim traces to a public source. Nothing is invented.
+  * Self-descriptions ("Family owned") are ATTRIBUTED to the source that
+    carries them, never asserted by the site in its own voice.
+  * All three customer quotes are REAL Google reviews, quoted with the
+    reviewer's name and linked to the live listing.
+  * NO TESTIMONIAL IS FABRICATED. No star rating is invented.
+    Rating shown (4.3 / 127) is live as of 2026-10-26.
+
+  ---------------------------------------------------------------------------
+  *** NO PRICES. READ research.md -> "PRICES" BEFORE ADDING ANY. ***
+  ---------------------------------------------------------------------------
+  This yard posts prices on a HANDWRITTEN WHITEBOARD at the scale window —
+  a board built to be erased. Scrap is a daily market: their own board and
+  the crowd-reported figures on iScrapApp diverge by up to 54% on the same
+  material. Publishing a number here turns a deliberately temporary posting
+  into a permanent public quote, and this yard ALREADY has a 1-star review
+  from a seller who felt underpaid. The site drives the phone call instead.
+  ScrapMonster records their posture exactly: "This yard has not published
+  any price information."
+
+  ---------------------------------------------------------------------------
+  PHOTOS — NOT CLEARED FOR A LIVE LAUNCH
+  ---------------------------------------------------------------------------
+  Of the 7 photos on their Google listing, ONE is owner-attributed
+  (the copper macro, credited to "Lookout Recycling Inc"). The rest are
+  CUSTOMER uploads. Fine for an unlisted pitch demo; NOT something the
+  business can authorise for a live commercial site. Before launch: their
+  own photography, or the uploaders' permission. See research.md -> PHOTOS.
+
+  Four of the seven were REJECTED outright: two show third-party tow
+  companies' branding + phone numbers (one with a legible licence plate),
+  one is dominated by an equipment maker's name, and one is a photo of the
+  price board that also contains a face and a reflected bystander.
+
+  ---------------------------------------------------------------------------
+  THE LOGO IS A PLACEHOLDER — IT IS NOT THEIR BRAND.
+  ---------------------------------------------------------------------------
+  This business has NO logo and NO photographed signage anywhere public.
+  The wordmark is SET IN TYPE as a stand-in. First question if he bites:
+  "do you have a sign, a card, an invoice header or a truck door we can
+  photograph?"  Palette IS theirs: copper sampled from their own photo,
+  steel/graphite from their own yard. Contrast verified -> contrast_check.py
+
+  ---------------------------------------------------------------------------
+  NOT CLAIMED ANYWHERE ON THIS PAGE (no public source supports them):
+    - any price, or any "starting at"
+    - Saturday opening (4 sources say closed; their own FB once said summer
+      Saturdays 8-11 — CONFIRM, see research.md)
+    - pickup / roll-off / container service
+    - licensing, insurance, or scale certification
+    - a founding year or "X years in business"
+    - the owner's or any staff member's name  (NOT PUBLICLY FINDABLE)
+    - lead, zinc, nickel, converters, e-scrap, radiators, coax, non-metals
+    - any service-area town other than Rossville
+  ============================================================================
+-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,noimageindex">
+<title>Lookout Recycling, Inc. — We Buy Scrap Metal in Rossville, GA</title>
+<meta name="description" content="Lookout Recycling buys scrap metal in Rossville, Georgia. Copper, brass, aluminium, steel, batteries and complete vehicles. 411 W Gordon Ave. Open Monday to Friday, 8:00 to 4:45. Call (706) 866-1625 for today's prices.">
+<meta property="og:title" content="Lookout Recycling, Inc. — Rossville, GA">
+<meta property="og:description" content="We buy scrap metal. Copper, brass, aluminium, steel, batteries, complete vehicles. 411 W Gordon Ave, Rossville. Call for today's prices.">
+<meta property="og:image" content="images/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/favicon.png" type="image/png">
+<style>
+:root{
+  /* Palette sampled from the business's own photographs. See research.md. */
+  --ink:#16181C;          /* their night-yard steel          */
+  --ink-2:#22262B;        /* their aluminium-pile grey       */
+  --paper:#F7F6F4;
+  --accent:#A6381F;       /* their copper, darkened for light bg  6.55:1 w/ white */
+  --accent-lt:#DD7F55;    /* their copper, lifted for TEXT ON DARK 6.13:1 on ink  */
+  --muted:#5C5A57;
+  --muted-d:#B9B4AE;
+  --line:#E2DEDA;
+  --line-d:#343A40;
+  --wrap:1120px;
+  --r:14px;
+  --sans:"Helvetica Neue",Helvetica,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font:17px/1.65 var(--sans);
+  overflow-x:hidden;        /* belt-and-braces: nothing may scroll sideways */
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--accent)}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.15;margin:0;letter-spacing:-.015em}
+h2{font-size:clamp(25px,4.4vw,38px);font-weight:800}
+h3{font-size:19px;font-weight:800}
+.eyebrow{
+  font-size:12px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 12px
+}
+section{padding:clamp(48px,7vw,86px) 0}
+.lede{font-size:clamp(17px,2.1vw,19.5px);color:var(--muted);max-width:62ch;margin:16px 0 0}
+
+/* ---------------------------------------------------------------- header */
+header{
+  position:sticky;top:0;z-index:60;background:rgba(22,24,28,.97);
+  border-bottom:1px solid var(--line-d);
+  backdrop-filter:saturate(1.4) blur(8px)
+}
+.bar{display:flex;align-items:center;gap:14px;min-height:64px}
+.bar img{width:150px;flex:0 0 auto}
+.bar .spacer{flex:1 1 auto;min-width:0}
+.hcall{
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;text-decoration:none;font-weight:800;
+  padding:10px 16px;border-radius:999px;font-size:15px;white-space:nowrap
+}
+.hcall:hover{background:#8E2F19}
+.hnum{display:none}
+@media(min-width:620px){.hnum{display:inline}}
+
+/* ------------------------------------------------------------------ hero */
+.hero{position:relative;background:var(--ink);color:var(--paper);overflow:hidden}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;opacity:.62}
+.hero .bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(22,24,28,.92) 0%,rgba(22,24,28,.70) 46%,rgba(22,24,28,.34) 100%)
+}
+.hero .wrap{position:relative;padding-top:clamp(52px,7vw,96px);padding-bottom:clamp(44px,6vw,80px)}
+.hero h1{font-size:clamp(33px,6.4vw,62px);font-weight:800;max-width:17ch}
+.hero h1 em{font-style:normal;color:var(--accent-lt)}
+.hero p.sub{font-size:clamp(17px,2.3vw,21px);color:#E6E2DD;max-width:50ch;margin:18px 0 0}
+.hero .where{margin:22px 0 0;font-size:15.5px;color:var(--muted-d)}
+
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 0}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:16px 26px;border-radius:999px;text-decoration:none;font-weight:800;
+  font-size:17px;border:2px solid transparent;white-space:nowrap
+}
+.btn-p{background:var(--accent);color:#fff}
+.btn-p:hover{background:#8E2F19}
+.btn-s{border-color:#555C63;color:var(--paper)}
+.btn-s:hover{border-color:var(--paper)}
+.btn-l{border-color:var(--accent);color:var(--accent)}
+.btn-l:hover{background:var(--accent);color:#fff}
+
+/* live open/closed pill — regular hours only, caveated in the markup */
+.status{
+  display:inline-flex;align-items:center;gap:9px;margin:26px 0 0;
+  background:rgba(255,255,255,.07);border:1px solid var(--line-d);
+  padding:9px 16px;border-radius:999px;font-size:14.5px;color:#E6E2DD
+}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--muted-d);flex:0 0 auto}
+.dot.on{background:#4CC27E}.dot.off{background:#C2544C}
+
+/* ------------------------------------------------------------- we buy */
+.grid{display:grid;gap:14px;margin:34px 0 0}
+@media(min-width:560px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  padding:22px 20px
+}
+.card h3{margin:0 0 7px}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+.card .also{display:block;margin-top:9px;font-size:14px;color:var(--muted)}
+/* "Before you come": full-width cards, but the prose measure stays readable */
+.prep{grid-template-columns:1fr}
+@media(min-width:900px){.prep{grid-template-columns:1fr}}
+.prep .card{padding:26px 24px}
+.prep .card p{max-width:72ch}
+.prep .card p+p{margin-top:12px}
+
+.buyfeature{
+  display:grid;gap:0;margin:34px 0 0;border-radius:var(--r);overflow:hidden;
+  border:1px solid var(--line);background:#fff
+}
+@media(min-width:820px){.buyfeature{grid-template-columns:1fr 1fr;align-items:stretch}}
+.buyfeature .txt{
+  padding:clamp(24px,3.4vw,38px);
+  display:flex;flex-direction:column;justify-content:center
+}
+.buyfeature .txt h3{font-size:clamp(21px,2.6vw,27px);margin:0 0 12px}
+.buyfeature .txt p{color:var(--muted);margin:0}
+.buyfeature .pic{min-height:230px}
+.buyfeature .pic img{width:100%;height:100%;object-fit:cover}
+.quoteline{
+  margin:18px 0 0;padding-left:15px;border-left:3px solid var(--accent);
+  font-size:15.5px;color:var(--ink)
+}
+.quoteline cite{display:block;font-style:normal;color:var(--muted);font-size:13.5px;margin-top:5px}
+
+/* ------------------------------------------------------------- prices */
+.prices{background:var(--ink);color:var(--paper)}
+.prices .eyebrow{color:var(--accent-lt)}
+.prices h2{max-width:20ch}
+.prices .lede{color:var(--muted-d)}
+.pricebox{
+  margin:32px 0 0;background:var(--ink-2);border:1px solid var(--line-d);
+  border-radius:var(--r);padding:clamp(24px,3.4vw,38px)
+}
+.pricebox h3{color:var(--accent-lt);font-size:17px;margin:0 0 10px}
+.pricebox p{margin:0 0 18px;color:#E6E2DD;max-width:58ch}
+.pricebox p:last-of-type{margin-bottom:0}
+
+/* --------------------------------------------------------- hours/visit */
+.visit{display:grid;gap:18px;margin:34px 0 0}
+@media(min-width:820px){.visit{grid-template-columns:1.05fr .95fr}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:clamp(22px,3vw,32px)}
+.hours{width:100%;border-collapse:collapse;margin:4px 0 0;font-size:16px}
+.hours th,.hours td{text-align:left;padding:11px 0;border-bottom:1px solid var(--line)}
+.hours th{font-weight:600;color:var(--muted)}
+.hours td{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.hours tr.shut td{color:var(--muted);font-weight:600}
+.hours tr.today th,.hours tr.today td{color:var(--accent)}
+.addr{font-size:17px;font-weight:700;margin:0 0 4px}
+.addr+p{margin:0;color:var(--muted);font-size:15.5px}
+.note{font-size:13.5px;color:var(--muted);margin:16px 0 0}
+
+/* --------------------------------------------------------- photo band */
+.band{background:var(--ink);line-height:0}
+.band img{width:100%;height:clamp(190px,30vw,380px);object-fit:cover;opacity:.95}
+
+/* ------------------------------------------------------------- steps */
+.steps{counter-reset:s;display:grid;gap:14px;margin:34px 0 0}
+@media(min-width:700px){.steps{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px 20px}
+.step::before{
+  counter-increment:s;content:counter(s);
+  display:flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;
+  font-weight:800;font-size:16px;margin:0 0 13px
+}
+.step h3{margin:0 0 6px;font-size:17px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+
+/* ------------------------------------------------------------ reviews */
+.reviews{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rating{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:16px 0 0}
+.rating b{font-size:40px;line-height:1;font-weight:800}
+.stars{color:var(--accent);letter-spacing:2px;font-size:19px}
+.rating span{color:var(--muted);font-size:15px}
+.rgrid{display:grid;gap:14px;margin:30px 0 0}
+@media(min-width:760px){.rgrid{grid-template-columns:repeat(3,1fr)}}
+.review{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px 20px}
+.review p{margin:0 0 14px;font-size:15.5px}
+.review cite{font-style:normal;font-weight:700;font-size:14.5px;display:block}
+.review .when{color:var(--muted);font-size:13px}
+
+/* ------------------------------------------------------------- footer */
+footer{background:var(--ink);color:var(--muted-d);padding:52px 0 40px;font-size:15px}
+footer img{width:160px;margin:0 0 20px}
+.fgrid{display:grid;gap:26px}
+@media(min-width:760px){.fgrid{grid-template-columns:1.3fr 1fr 1fr}}
+footer h4{color:var(--paper);font-size:14px;letter-spacing:.09em;text-transform:uppercase;margin:0 0 11px}
+footer a{color:var(--accent-lt);text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer p{margin:0 0 7px}
+.legal{margin:36px 0 0;padding:20px 0 0;border-top:1px solid var(--line-d);font-size:13px;color:#8C8880}
+
+/* -------------------------------------------------------- sticky phone */
+.tapbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;
+  background:rgba(22,24,28,.97);border-top:1px solid var(--line-d);
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));
+  display:flex;gap:10px;align-items:center
+}
+.tapbar .t{flex:1 1 auto;min-width:0;color:#E6E2DD;font-size:13px;line-height:1.3}
+.tapbar .t b{display:block;color:#fff;font-size:14.5px}
+.tapbar a{
+  flex:0 0 auto;background:var(--accent);color:#fff;text-decoration:none;
+  font-weight:800;padding:13px 20px;border-radius:999px;font-size:16px
+}
+@media(min-width:760px){.tapbar{display:none}}
+@media(max-width:759px){body{padding-bottom:78px}}
+
+@media(prefers-reduced-motion:no-preference){
+  a,.btn{transition:background .15s ease,color .15s ease,border-color .15s ease}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <img src="images/logo-light.png" alt="Lookout Recycling, Inc." width="420" height="158">
+    <span class="spacer"></span>
+    <a class="hcall" href="tel:+17068661625">Call<span class="hnum">&nbsp;(706)&nbsp;866-1625</span></a>
+  </div>
+</header>
+
+<!-- ============================== HERO ============================== -->
+<div class="hero">
+  <div class="bg">
+    <img src="images/hero-800.jpg"
+         srcset="images/hero-480.jpg 480w, images/hero-800.jpg 800w, images/hero.jpg 1600w"
+         sizes="100vw" alt="The yard at Lookout Recycling in Rossville, Georgia" fetchpriority="high">
+  </div>
+  <div class="wrap">
+    <h1>We buy your <em>scrap metal.</em></h1>
+    <p class="sub">
+      Copper, brass, aluminium, steel, batteries, appliances and complete vehicles.
+      Drive in, get weighed, get paid.
+    </p>
+
+    <p class="where">411 W Gordon Ave, Rossville, GA &nbsp;·&nbsp; Monday&ndash;Friday, 8:00&nbsp;AM&ndash;4:45&nbsp;PM</p>
+
+    <!-- Status is computed from the REGULAR published hours only.
+         Holidays are explicitly disclaimed in the label. -->
+    <p class="status" id="status" hidden>
+      <span class="dot" id="dot"></span>
+      <span id="statusText"></span>
+    </p>
+
+    <div class="cta">
+      <a class="btn btn-p" href="tel:+17068661625">Call (706) 866-1625</a>
+      <a class="btn btn-s" href="#buy">What we take</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ WHAT WE BUY ========================== -->
+<section id="buy">
+  <div class="wrap">
+    <p class="eyebrow">What we take</p>
+    <h2>Bring it in and we&rsquo;ll weigh it.</h2>
+    <p class="lede">
+      If a magnet sticks to it or it&rsquo;s a metal worth money, it&rsquo;s probably worth a trip.
+      Not sure what you&rsquo;ve got? That&rsquo;s a normal question &mdash; call and describe it.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Copper</h3>
+        <p>Bare bright, #1 and #2 copper.</p>
+        <span class="also">Grade depends on how clean it is.</span>
+      </div>
+      <div class="card">
+        <h3>Insulated wire</h3>
+        <p>Insulated copper wire and cable.</p>
+        <span class="also">Our specialty &mdash; see below.</span>
+      </div>
+      <div class="card">
+        <h3>Brass</h3>
+        <p>Yellow brass &mdash; fittings, valves, fixtures.</p>
+      </div>
+      <div class="card">
+        <h3>Aluminium</h3>
+        <p>Cans, old sheet, siding, rims and extrusion.</p>
+      </div>
+      <div class="card">
+        <h3>Steel &amp; shred</h3>
+        <p>Light iron, heavy steel and shreddable scrap.</p>
+      </div>
+      <div class="card">
+        <h3>Stainless</h3>
+        <p>Stainless steel, graded on arrival.</p>
+        <span class="also">Clean pays better. See &ldquo;Before you come.&rdquo;</span>
+      </div>
+      <div class="card">
+        <h3>Auto batteries</h3>
+        <p>Car and truck lead-acid batteries.</p>
+      </div>
+      <div class="card">
+        <h3>Appliances</h3>
+        <p>Water heaters, washers, dryers and the like.</p>
+      </div>
+      <div class="card">
+        <h3>Complete vehicles</h3>
+        <p>End-of-life cars and trucks, whole.</p>
+        <span class="also">Call first about paperwork.</span>
+      </div>
+    </div>
+
+    <!-- The one claim the business makes about ITSELF, attributed on the page -->
+    <div class="buyfeature">
+      <div class="txt">
+        <h3>Insulated copper is what we&rsquo;re known for.</h3>
+        <p>
+          In their own listing, Lookout Recycling describes the business this way:
+        </p>
+        <p class="quoteline">
+          &ldquo;We specialize in Insulated coppers paying top prices. We also buy all other
+          metals Ferrus and Non-Ferrus.&rdquo;
+          <cite>&mdash; Lookout Recycling, Inc., in its own words</cite>
+        </p>
+      </div>
+      <div class="pic">
+        <img src="images/copper-sq.jpg" alt="Bright bare copper wire at the yard" loading="lazy" width="560" height="560">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PRICES ============================= -->
+<!-- NO NUMBERS. See the comment block at the top of this file. -->
+<section class="prices">
+  <div class="wrap">
+    <p class="eyebrow">Today&rsquo;s prices</p>
+    <h2>Scrap is a daily market. Call for today&rsquo;s number.</h2>
+    <p class="lede">
+      Metal prices move constantly &mdash; what copper is worth this morning isn&rsquo;t
+      what it was worth last month. We don&rsquo;t publish a price list here, because a
+      number on a website goes stale the day after it&rsquo;s written.
+    </p>
+
+    <div class="pricebox">
+      <h3>Where the real numbers live</h3>
+      <p>
+        Current prices are posted on the board at the scale house, and they&rsquo;re
+        updated as the market moves. Want to know before you load the truck?
+        Pick up the phone and ask &mdash; we&rsquo;ll tell you what we&rsquo;re paying today.
+      </p>
+      <p>
+        Tell us roughly what you have and how much of it, and we can give you a
+        straight answer about what it&rsquo;s worth bringing in.
+      </p>
+      <div class="cta">
+        <a class="btn btn-p" href="tel:+17068661625">Call (706) 866-1625</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== HOURS / VISIT ========================= -->
+<section id="visit">
+  <div class="wrap">
+    <p class="eyebrow">Hours &amp; directions</p>
+    <h2>Find us on West Gordon.</h2>
+    <p class="lede">
+      We&rsquo;re on West Gordon Avenue in Rossville, just off Davis Street &mdash;
+      a few minutes from the Tennessee line.
+    </p>
+
+    <div class="visit">
+      <div class="panel">
+        <h3 style="margin:0 0 6px">Opening hours</h3>
+        <table class="hours">
+          <tbody>
+            <tr data-d="1"><th>Monday</th><td>8:00 AM &ndash; 4:45 PM</td></tr>
+            <tr data-d="2"><th>Tuesday</th><td>8:00 AM &ndash; 4:45 PM</td></tr>
+            <tr data-d="3"><th>Wednesday</th><td>8:00 AM &ndash; 4:45 PM</td></tr>
+            <tr data-d="4"><th>Thursday</th><td>8:00 AM &ndash; 4:45 PM</td></tr>
+            <tr data-d="5"><th>Friday</th><td>8:00 AM &ndash; 4:45 PM</td></tr>
+            <tr data-d="6" class="shut"><th>Saturday</th><td>Closed</td></tr>
+            <tr data-d="0" class="shut"><th>Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <p class="note">
+          We stop taking loads at closing time, not after &mdash; if you&rsquo;re bringing
+          something big, give yourself a little room before 4:45.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3 style="margin:0 0 14px">Where to go</h3>
+        <p class="addr">411 W Gordon Ave<br>Rossville, GA 30741</p>
+        <p>Near the corner of W Gordon Ave &amp; Davis St.</p>
+        <div class="cta">
+          <a class="btn btn-l" href="https://www.google.com/maps/dir/?api=1&destination=411+W+Gordon+Ave%2C+Rossville%2C+GA+30741" target="_blank" rel="noopener">Get directions</a>
+        </div>
+        <p class="note">
+          Pull in off Gordon and follow the drive into the yard. Stay in your
+          vehicle until someone waves you forward &mdash; there&rsquo;s heavy equipment
+          working, and the loader driver needs to see you before you&rsquo;re out.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Full-bleed band. This frame is the evidence for the "complete vehicles"
+     card above — whole end-of-life cars, stacked, being worked with a grapple. -->
+<div class="band">
+  <img src="images/yard-600.jpg"
+       srcset="images/yard-600.jpg 600w, images/yard.jpg 1200w"
+       sizes="100vw" loading="lazy" width="1200" height="880"
+       alt="End-of-life vehicles stacked in the yard, worked with a grapple">
+</div>
+
+<!-- ============================ HOW IT WORKS ======================== -->
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>First time? It&rsquo;s four steps.</h2>
+    <p class="lede">
+      Nobody is born knowing how a scrap yard works. Here&rsquo;s the whole thing,
+      start to finish, so you know what to expect before you turn in.
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <h3>Drive in</h3>
+        <p>Come in off W Gordon Ave and follow the drive. Someone will point you where to go.</p>
+      </div>
+      <div class="step">
+        <h3>Get weighed</h3>
+        <p>You cross the scale loaded. We weigh the vehicle, you unload, and we weigh you again empty.</p>
+      </div>
+      <div class="step">
+        <h3>We sort and grade</h3>
+        <p>Metals are separated by type and grade. Our staff will help you get it off the truck.</p>
+      </div>
+      <div class="step">
+        <h3>Get paid</h3>
+        <p>The difference in weight, at the day&rsquo;s price for each grade, is what you&rsquo;re owed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== BEFORE YOU COME ====================== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Before you come</p>
+    <h2>Worth knowing before you load up.</h2>
+    <p class="lede">
+      Two of these will put more money in your pocket. The third saves you a wasted trip.
+    </p>
+
+    <div class="grid prep">
+      <div class="card">
+        <h3>Sort it before you get here</h3>
+        <p>
+          Keep your copper separate from your brass, your aluminium separate from your steel.
+          Mixed loads take longer to work through, and metal that arrives already sorted
+          gets graded as what it actually is.
+        </p>
+        <p class="quoteline">
+          &ldquo;If you&rsquo;re looking for a faster experience pre sort all your metals
+          before arriving.&rdquo;
+          <cite>&mdash; Matt Wirick, Google review</cite>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Clean pays more than contaminated</h3>
+        <p>
+          Grading is about what&rsquo;s actually in the load. Stainless with steel bolted to it,
+          or copper still wrapped around something that isn&rsquo;t copper, can&rsquo;t be graded
+          as clean material &mdash; it goes in at the lower grade, and that&rsquo;s a real
+          difference in what you take home.
+        </p>
+        <p>
+          If you&rsquo;re not sure whether something counts as clean, <strong>ask before you
+          load it.</strong> A two-minute phone call can be worth a lot on the scale.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Not sure we take it?</h3>
+        <p>
+          Call and describe what you&rsquo;ve got. If it&rsquo;s something we don&rsquo;t
+          buy, we&rsquo;ll tell you straight rather than have you haul it here for nothing.
+          Bringing a complete vehicle, or a load big enough that you&rsquo;re wondering
+          about it? Call first &mdash; there&rsquo;s paperwork on vehicles worth sorting out
+          before you arrive.
+        </p>
+        <div class="cta">
+          <a class="btn btn-l" href="tel:+17068661625">Call (706) 866-1625</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== REVIEWS =========================== -->
+<section class="reviews">
+  <div class="wrap">
+    <p class="eyebrow">What people say</p>
+    <h2>127 reviews on Google.</h2>
+    <div class="rating">
+      <b>4.3</b>
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+      <span>4.3 out of 5, from 127 Google reviews</span>
+    </div>
+
+    <div class="rgrid">
+      <div class="review">
+        <p>&ldquo;Great place to sell copper. Staff helped me unload and sort my stuff to
+           give me a fair and competitive price.&rdquo;</p>
+        <cite>Matt Wirick</cite>
+        <span class="when">5 stars &middot; Google</span>
+      </div>
+      <div class="review">
+        <p>&ldquo;Great place, top dollar on your scrap, just some of the nicest people to
+           do business with. I&rsquo;ll go nowhere else.&rdquo;</p>
+        <cite>Stephen Ross &ldquo;Cotton&rdquo; Petet</cite>
+        <span class="when">5 stars &middot; Google</span>
+      </div>
+      <div class="review">
+        <p>&ldquo;I took my old water heater there and they made it easy to tell me the
+           process of unloading it and paid me a fair price for it. Very courteous
+           employees also.&rdquo;</p>
+        <cite>Greg Gaston</cite>
+        <span class="when">5 stars &middot; Google</span>
+      </div>
+    </div>
+
+    <p class="note" style="margin-top:22px">
+      Real reviews from our Google listing, quoted in full.
+      <a href="https://maps.google.com/?cid=838001898707403423" target="_blank" rel="noopener">Read all 127 on Google</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================ -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <img src="images/logo-light.png" alt="Lookout Recycling, Inc." width="420" height="158">
+        <p>Family owned recycling center.<br>Metal &amp; steel.</p>
+      </div>
+      <div>
+        <h4>Visit the yard</h4>
+        <p>411 W Gordon Ave<br>Rossville, GA 30741</p>
+        <p><a href="https://www.google.com/maps/dir/?api=1&destination=411+W+Gordon+Ave%2C+Rossville%2C+GA+30741" target="_blank" rel="noopener">Get directions</a></p>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <p><a href="tel:+17068661625">(706) 866-1625</a></p>
+        <p>Mon&ndash;Fri 8:00 AM &ndash; 4:45 PM<br>Closed Saturday &amp; Sunday</p>
+      </div>
+    </div>
+    <p class="legal">
+      &copy; <span id="yr">2026</span> Lookout Recycling, Inc. &middot; Rossville, Georgia.
+      &ldquo;Family owned recycling center&rdquo; as described by the business on its own
+      Facebook page. Prices change daily and are posted at the scale house &mdash; call for
+      today&rsquo;s figures.
+    </p>
+  </div>
+</footer>
+
+<div class="tapbar">
+  <span class="t"><b>Open Mon&ndash;Fri, 8:00&ndash;4:45</b>411 W Gordon Ave, Rossville</span>
+  <a href="tel:+17068661625">Call</a>
+</div>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* Open/closed from the REGULAR published hours, in the yard's own
+     timezone (America/New_York) regardless of the visitor's clock.
+     Holidays are not modelled — the label says so. */
+  var OPEN = 8*60, CLOSE = 16*60+45;
+  var now;
+  try{
+    now = new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+  }catch(e){ now = new Date(); }
+
+  var day = now.getDay(), mins = now.getHours()*60 + now.getMinutes();
+  var weekday = day >= 1 && day <= 5;
+  var open = weekday && mins >= OPEN && mins < CLOSE;
+
+  var el = document.getElementById('status');
+  var dot = document.getElementById('dot');
+  var txt = document.getElementById('statusText');
+  if(el && dot && txt){
+    var next;
+    if(weekday && mins < OPEN)       next = 'opens at 8:00 AM';
+    else if(weekday && day < 5)      next = 'opens tomorrow at 8:00 AM';
+    else                             next = 'opens Monday at 8:00 AM';
+
+    dot.className = 'dot ' + (open ? 'on' : 'off');
+    txt.innerHTML = open
+      ? '<strong>Open now</strong> · until 4:45 PM today'
+      : '<strong>Closed right now</strong> · ' + next +
+        ' · holiday hours may differ';
+    el.hidden = false;
+  }
+
+  /* highlight today's row in the hours table */
+  var row = document.querySelector('.hours tr[data-d="' + day + '"]');
+  if(row) row.classList.add('today');
+})();
+</script>
+</body>
+</html>
