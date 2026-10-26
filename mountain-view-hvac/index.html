@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+===============================================================================
+  UNSOLICITED SPEC DEMO - NOT AN OFFICIAL SITE
+===============================================================================
+
+  Business   : Mountain View Heating and Air  (trades on its own site as
+               "Mountain View Heat & Air")
+  Address    : 1031 John Ross Rd, Chattanooga, TN 37412
+  Phone      : (423) 556-8671
+  Real site  : https://mountainviewheatandair.com/
+  Google     : 5.0 stars / 258 reviews  (Places API, pulled 2026-10-26)
+
+  WHAT THIS IS
+  ------------
+  A speculative rebuild of the homepage, built by Matt McFarlane without the
+  owner's knowledge or involvement, to demonstrate a mobile-speed difference.
+  It is NOT affiliated with, endorsed by, or authorised by the business.
+
+  WHY IT EXISTS
+  -------------
+  Their live homepage is a GoHighLevel / LeadConnector funnel. Measured on
+  Google PageSpeed Insights (mobile, Lighthouse 13.5.0) six times on
+  2026-10-26 it scored 41, 41, 41, 41, 42, 42 - a very stable fail.
+    Largest Contentful Paint  12.4 - 13.8 s
+    First Contentful Paint    6.3 s
+    Total page weight         ~1,959 KiB over 121 requests
+    Server response           10 ms   <-- the HOST is fast; the PAGE is not
+    <title> element           MISSING entirely
+    Meta description          MISSING entirely
+
+  EVERY WORD AND PICTURE HERE IS THEIRS
+  -------------------------------------
+  * Logo              - their own header logo file, transparent PNG.
+  * Brand colours     - sampled out of that logo file, not invented:
+                          flame  #E73715   mountain blue #0657B2
+                          ink    #2C172A   sky tint      #A0E3FC
+  * Photographs       - their own Google Business Profile photos (every one
+                        attributed to "Mountain View Heating and Air" in the
+                        Places API response) plus two job photos off their
+                        own website.
+  * Copy              - their own headlines, service names, benefit bullets,
+                        FAQ answers and service-area list, carried over
+                        verbatim or lightly tightened. Nothing invented about
+                        the business. No licence numbers, no years-in-business,
+                        no employee counts, no claims they do not make
+                        themselves.
+  * Reviews           - real, pulled live from the Google Places API, shown
+                        with the reviewer's name as Google publishes it.
+
+  DELIBERATELY NOT USED
+  ---------------------
+  * The stock photo on their current site (two models in blue shirts holding
+    a clipboard). It is not their crew and it is not their work.
+  * The owner's surname. Reviews and their own testimonial name a "Wendell"
+    and a "Brad", first names only. A different Chattanooga HVAC company is
+    owned by a "Wendell Whitmire" - almost certainly an unrelated person, so
+    no surname is used or implied anywhere.
+  * The word "October" from their "October Service Call Special". Their own
+    Google profile graphic says simply "HOME OF THE $19 SERVICE CALL", which
+    does not go stale on the 1st.
+
+  TECHNICAL
+  ---------
+  * noindex, nofollow, noarchive - must never compete with their real site.
+  * Single file. All CSS inline. No web fonts, no frameworks, no trackers,
+    no cookies, no third-party requests of any kind.
+  * ~13 KB of HTML+CSS; ~840 KB of images, and only the logo + one hero
+    image load before first paint.
+  * The quote form is inert by design and says so when submitted.
+
+  Contact for removal: Matt McFarlane. Remove on request, no questions asked.
+===============================================================================
+-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mountain View Heat &amp; Air | HVAC Repair &amp; Installation in Chattanooga, TN</title>
+<meta name="description" content="Trusted heating and cooling experts in Chattanooga, TN. AC repair, heating, HVAC installation, duct cleaning and drain cleaning. 5.0 stars from 258 Google reviews. Call (423) 556-8671.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#042F63">
+<link rel="icon" href="images/favicon.png" type="image/png">
+<link rel="preload" as="image" href="images/hero-mobile.jpg" media="(max-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero.jpg" media="(min-width: 701px)" fetchpriority="high">
+<style>
+/* ---------------------------------------------------------------
+   Palette sampled directly from their logo file. Nothing invented.
+   --------------------------------------------------------------- */
+:root{
+  --blue:#0657B2;      /* the mountain in their logo            */
+  --blue-dk:#042F63;   /* same hue, darkened for deep sections  */
+  --blue-dp:#021F45;
+  --flame:#E73715;     /* the flame above the peak              */
+  --flame-dk:#C32A0C;
+  --ink:#1B2130;
+  --body:#4A5365;
+  --line:#E2E7EF;
+  --tint:#F3F7FC;
+  --sky:#A0E3FC;       /* the light side of their logo gradient */
+  --cream:#FCDDA3;     /* the warm side of their logo gradient  */
+  --wrap:1140px;
+  --r:14px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font:400 17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+       "Helvetica Neue",Arial,sans-serif;
+  color:var(--body);
+  background:#fff;
+  overflow-x:hidden;
+}
+h1,h2,h3{color:var(--ink);line-height:1.18;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(1.85rem,6.4vw,3.2rem);font-weight:800}
+h2{font-size:clamp(1.5rem,4.6vw,2.35rem);font-weight:800}
+h3{font-size:1.14rem;font-weight:700}
+p{margin:0 0 1rem}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue)}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.sec{padding:clamp(48px,7.5vw,88px) 0}
+.eyebrow{
+  font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--flame);margin:0 0 .65rem
+}
+.lede{font-size:clamp(1.02rem,2.3vw,1.16rem);max-width:62ch}
+.center{text-align:center}
+.center .lede{margin-left:auto;margin-right:auto}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:56px;padding:0 1.6rem;border-radius:999px;
+  font-size:1.06rem;font-weight:800;text-decoration:none;
+  border:2px solid transparent;cursor:pointer;text-align:center;
+  transition:transform .12s ease, box-shadow .12s ease, background-color .12s ease;
+}
+.btn:active{transform:translateY(1px)}
+.btn-call{background:var(--flame);color:#fff;box-shadow:0 8px 22px rgba(231,55,21,.34)}
+.btn-call:hover{background:var(--flame-dk)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.62)}
+.btn-ghost:hover{background:rgba(255,255,255,.2)}
+.btn-solid{background:var(--blue);color:#fff}
+.btn-solid:hover{background:var(--blue-dk)}
+.btn-wide{width:100%}
+
+/* ---------- sticky header ---------- */
+header{
+  position:sticky;top:0;z-index:60;background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.bar{display:flex;align-items:center;gap:14px;min-height:72px;flex-wrap:nowrap}
+.bar img{width:168px;height:auto;flex:0 1 auto;min-width:0}
+.bar-cta{margin-left:auto;display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.bar-hours{
+  display:none;font-size:.82rem;line-height:1.3;color:var(--body);text-align:right
+}
+.bar-hours b{display:block;color:var(--ink);font-size:.92rem}
+.bar .btn{min-height:46px;padding:0 1.05rem;font-size:.97rem;white-space:nowrap}
+@media(min-width:620px){ .bar img{width:200px} }
+@media(min-width:900px){ .bar-hours{display:block} .bar .btn{min-height:50px;padding:0 1.35rem} }
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--blue-dp);color:#fff;isolation:isolate}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:url("images/hero-mobile.jpg") center/cover no-repeat;
+}
+@media(min-width:701px){ .hero::before{background-image:url("images/hero.jpg")} }
+/* Mobile: text runs the full width, so the scrim has to stay heavy at the top
+   and can only open up below the buttons. Desktop: the copy sits in the left
+   half, so the scrim sweeps diagonally and lets their photo show on the right. */
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(183deg,rgba(2,31,69,.92) 0%,rgba(2,31,69,.88) 55%,
+             rgba(4,47,99,.66) 88%,rgba(4,47,99,.52) 100%);
+}
+@media(min-width:701px){
+  .hero::after{
+    background:linear-gradient(101deg,rgba(2,31,69,.95) 0%,rgba(2,31,69,.88) 42%,
+               rgba(4,47,99,.58) 74%,rgba(4,47,99,.40) 100%);
+  }
+}
+.hero-in{padding:clamp(40px,7vw,86px) 0 clamp(44px,7vw,88px)}
+.hero h1{color:#fff;max-width:17ch}
+.hero .sub{
+  color:#DCEAF8;font-size:clamp(1.03rem,2.6vw,1.22rem);max-width:54ch;margin-bottom:1.6rem
+}
+.stars{
+  display:inline-flex;align-items:center;gap:.6rem;flex-wrap:wrap;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.26);
+  padding:.5rem .95rem;border-radius:999px;margin-bottom:1.15rem;
+  font-size:.93rem;color:#fff;font-weight:600
+}
+.stars .s{color:#FFC53D;letter-spacing:.09em;font-size:1rem}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:1.5rem}
+.hero-btns .btn{flex:1 1 230px}
+.hero-note{font-size:.9rem;color:#BFD6EC;margin:0}
+
+/* ---------- $19 offer band ---------- */
+.offer{background:var(--flame);color:#fff}
+.offer-in{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+  gap:.5rem 1.4rem;padding:18px 0;text-align:center
+}
+.offer b{font-size:clamp(1.1rem,3.3vw,1.5rem);font-weight:800;letter-spacing:-.01em}
+.offer s{opacity:.72;font-weight:600}
+.offer span{font-size:.95rem;opacity:.95}
+.offer a{
+  color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px;
+  display:inline-flex;align-items:center;min-height:44px;padding:0 .2rem
+}
+.lede a{display:inline-block;min-height:44px;line-height:44px}
+
+/* ---------- trust strip ---------- */
+.trust{background:var(--tint);border-bottom:1px solid var(--line)}
+.trust ul{
+  list-style:none;margin:0;padding:26px 0;display:grid;gap:14px 26px;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))
+}
+.trust li{display:flex;gap:.65rem;align-items:flex-start;font-size:.97rem;color:var(--ink);font-weight:600}
+.tick{
+  flex:0 0 auto;width:23px;height:23px;border-radius:50%;background:var(--blue);
+  color:#fff;font-size:.78rem;display:grid;place-items:center;margin-top:1px;font-weight:700
+}
+
+/* ---------- generic grid ---------- */
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))}
+
+/* ---------- service cards ---------- */
+.card{
+  border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff;
+  display:flex;flex-direction:column;min-width:0;
+  transition:box-shadow .16s ease,transform .16s ease
+}
+.card:hover{box-shadow:0 14px 34px rgba(4,47,99,.12);transform:translateY(-2px)}
+.card img{width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--tint)}
+.card-b{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.card-b p{font-size:.97rem;margin-bottom:1.1rem}
+.card-b .go{
+  margin-top:auto;font-weight:800;color:var(--blue);text-decoration:none;font-size:.97rem;
+  display:inline-flex;align-items:center;gap:.4rem;min-height:48px
+}
+.card-b .go:hover{text-decoration:underline}
+
+/* ---------- split ---------- */
+.split{display:grid;gap:clamp(26px,4.5vw,52px);align-items:center;
+       grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr))}
+.split img{border-radius:var(--r);width:100%}
+.ticks{list-style:none;margin:0 0 1.6rem;padding:0;display:grid;gap:.78rem}
+.ticks li{display:flex;gap:.7rem;align-items:flex-start}
+.ticks b{color:var(--ink)}
+
+/* ---------- reviews ---------- */
+.reviews{background:var(--blue-dk);color:#fff}
+.reviews h2{color:#fff}
+.reviews .lede{color:#CFE0F2}
+.quote{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.17);
+  border-radius:var(--r);padding:24px;display:flex;flex-direction:column;min-width:0
+}
+.quote .s{color:#FFC53D;letter-spacing:.1em;margin-bottom:.6rem;font-size:1rem}
+.quote p{color:#E6EFF8;font-size:.99rem;overflow-wrap:anywhere}
+.quote cite{margin-top:auto;font-style:normal;font-weight:800;color:#fff;font-size:.95rem}
+.quote cite span{display:block;font-weight:500;color:#9FBEDC;font-size:.85rem;margin-top:.15rem}
+.rev-foot{margin:26px 0 0;text-align:center;color:#BFD6EC;font-size:.92rem}
+
+/* ---------- areas ---------- */
+.areas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0;padding:0;list-style:none}
+.areas li{
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:.5rem 1.05rem;font-weight:600;color:var(--ink);font-size:.95rem
+}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:780px;margin:0 auto}
+.faq details{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:#fff}
+.faq summary{
+  cursor:pointer;padding:17px 50px 17px 19px;font-weight:700;color:var(--ink);
+  position:relative;list-style:none;min-height:56px;display:flex;align-items:center;
+  font-size:1.01rem
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:19px;top:50%;transform:translateY(-50%);
+  font-size:1.45rem;font-weight:400;color:var(--blue);line-height:1
+}
+.faq details[open] summary::after{content:"\2212"}
+.faq .ans{padding:0 19px 18px;font-size:.99rem}
+.faq .ans p{margin:0}
+
+/* ---------- form ---------- */
+.form-sec{background:var(--tint)}
+.formcard{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(22px,4vw,34px);max-width:620px;margin:0 auto
+}
+.frow{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}
+.field{display:flex;flex-direction:column;gap:.35rem;margin-bottom:14px;min-width:0}
+.field label{font-weight:700;color:var(--ink);font-size:.9rem}
+.field input,.field select,.field textarea{
+  font:inherit;font-size:16px;  /* 16px stops iOS zooming on focus */
+  width:100%;max-width:100%;min-width:0;
+  padding:13px 14px;border:1px solid #CBD5E3;border-radius:10px;
+  background:#fff;color:var(--ink);min-height:52px
+}
+.field textarea{min-height:104px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:3px solid rgba(6,87,178,.28);outline-offset:1px;border-color:var(--blue)
+}
+.fineprint{font-size:.83rem;color:#6B7585;margin:.9rem 0 0}
+.formnote{
+  margin:14px 0 0;padding:13px 15px;border-radius:10px;background:#FFF4E6;
+  border:1px solid #F3D9AE;color:#7A5214;font-size:.9rem;display:none
+}
+.formnote.on{display:block}
+
+/* ---------- final CTA ---------- */
+.final{background:var(--blue-dp);color:#fff;text-align:center}
+.final h2{color:#fff}
+.final p{color:#C9DDF1;max-width:52ch;margin-left:auto;margin-right:auto}
+.final .btn{margin-top:.6rem}
+.phone-big{
+  display:inline-flex;align-items:center;justify-content:center;
+  margin-top:1.1rem;min-height:52px;padding:.2rem .4rem;color:#fff;font-weight:800;
+  font-size:clamp(1.35rem,5vw,2rem);text-decoration:none;letter-spacing:-.01em
+}
+.phone-big:hover{text-decoration:underline}
+
+/* ---------- footer ---------- */
+footer{background:#071A33;color:#8FA8C4;font-size:.92rem;padding:44px 0 34px}
+footer h4{color:#fff;font-size:.82rem;letter-spacing:.13em;text-transform:uppercase;margin:0 0 .85rem}
+.fgrid{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+footer a{color:#CFE0F2;text-decoration:none;overflow-wrap:anywhere}
+footer a:hover{text-decoration:underline}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.2rem}
+footer li{display:flex;align-items:center;min-height:44px}
+footer li a{display:inline-flex;align-items:center;min-height:44px}
+.hoursrow{display:flex;justify-content:space-between;gap:1rem;max-width:260px}
+.legal{
+  margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);
+  font-size:.83rem;color:#6E88A6
+}
+.demo-flag{
+  margin-top:14px;padding:13px 15px;border-radius:10px;
+  background:rgba(231,55,21,.14);border:1px solid rgba(231,55,21,.42);
+  color:#F3B9A9;font-size:.83rem;line-height:1.55
+}
+
+/* ---------- sticky mobile call bar ---------- */
+.callbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;padding:10px 14px
+  calc(10px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.97);border-top:1px solid var(--line);
+  box-shadow:0 -4px 18px rgba(4,47,99,.1)
+}
+.callbar .btn{min-height:54px}
+@media(min-width:900px){ .callbar{display:none} }
+@media(max-width:899px){ body{padding-bottom:84px} }
+
+.skip{
+  position:absolute;left:-9999px;top:0;background:#fff;color:var(--blue);
+  padding:12px 18px;z-index:200;font-weight:700
+}
+.skip:focus{left:8px;top:8px}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap bar">
+    <img src="images/logo.png" width="420" height="318" alt="Mountain View Heating and Air, Chattanooga TN">
+    <div class="bar-cta">
+      <div class="bar-hours"><b>Open today 7 AM&ndash;9 PM</b>Seven days a week</div>
+      <a class="btn btn-call" href="tel:+14235568671" aria-label="Call Mountain View Heat and Air at 4 2 3, 5 5 6, 8 6 7 1">
+        &#9742;&nbsp;(423)&nbsp;556-8671
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div class="stars">
+        <span class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span>5.0 from 258 Google reviews</span>
+      </div>
+      <h1>Trusted heating &amp; cooling experts in Chattanooga</h1>
+      <p class="sub">
+        We keep your home or business comfortable, no matter the weather &mdash; with
+        reliable HVAC service, lower energy bills, and no surprise costs.
+      </p>
+      <div class="hero-btns">
+        <a class="btn btn-call" href="tel:+14235568671">&#9742;&nbsp;Call (423) 556-8671</a>
+        <a class="btn btn-ghost" href="#request">Request service</a>
+      </div>
+      <p class="hero-note">Open 7 AM&ndash;9 PM, seven days a week &middot; Serving Chattanooga &amp; North Georgia</p>
+    </div>
+  </section>
+
+  <!-- ============ $19 OFFER ============ -->
+  <section class="offer">
+    <div class="wrap offer-in">
+      <b>Home of the $19 service call</b>
+      <span><s>$99.00</s> &nbsp;&rarr;&nbsp; <strong>$19.99</strong></span>
+      <span><a href="tel:+14235568671">Call to schedule &rarr;</a></span>
+    </div>
+  </section>
+
+  <!-- ============ TRUST ============ -->
+  <section class="trust">
+    <div class="wrap">
+      <ul>
+        <li><span class="tick" aria-hidden="true">&#10003;</span> Certified, licensed &amp; insured technicians</li>
+        <li><span class="tick" aria-hidden="true">&#10003;</span> No surprise costs &mdash; clear, upfront pricing</li>
+        <li><span class="tick" aria-hidden="true">&#10003;</span> Service for all major brands and models</li>
+        <li><span class="tick" aria-hidden="true">&#10003;</span> Over 250 homes &amp; businesses served</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="sec" id="services">
+    <div class="wrap">
+      <div class="center" style="margin-bottom:34px">
+        <p class="eyebrow">Our services</p>
+        <h2>Elevate your comfort with our expertise</h2>
+        <p class="lede">
+          Certified technicians delivering air conditioning and heating repair,
+          installation and maintenance across the Greater Chattanooga area.
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <img src="images/ac-repair.jpg" width="620" height="673" loading="lazy" decoding="async"
+               alt="Aging outdoor air conditioning condenser with a damaged fan blade before repair">
+          <div class="card-b">
+            <h3>AC repair &amp; maintenance</h3>
+            <p>Quick and efficient air conditioning repair to keep your space cool, with fast diagnosis to pinpoint the issue.</p>
+            <a class="go" href="tel:+14235568671">Request service &rarr;</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/heating.jpg" width="620" height="806" loading="lazy" decoding="async"
+               alt="Furnace and air handler installed in a basement with insulated ductwork">
+          <div class="card-b">
+            <h3>Heating solutions</h3>
+            <p>Reliable heating installation and repairs for year-round comfort, before the first cold snap arrives.</p>
+            <a class="go" href="tel:+14235568671">Request service &rarr;</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/installation.jpg" width="620" height="465" loading="lazy" decoding="async"
+               alt="New HVAC air handler and insulated duct run installed in an attic">
+          <div class="card-b">
+            <h3>HVAC installation</h3>
+            <p>Professional installation tailored to your home &mdash; central air, heat pumps, furnaces and ductless mini-splits.</p>
+            <a class="go" href="tel:+14235568671">Request service &rarr;</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/ductless.jpg" width="620" height="698" loading="lazy" decoding="async"
+               alt="Two ductless mini-split condensers installed on a concrete pad beside a brick home">
+          <div class="card-b">
+            <h3>Ductless mini-splits</h3>
+            <p>Room-by-room comfort without ductwork &mdash; ideal for additions, bonus rooms and older homes.</p>
+            <a class="go" href="tel:+14235568671">Request service &rarr;</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/duct-work.jpg" width="620" height="430" loading="lazy" decoding="async"
+               alt="Custom-fabricated sheet metal duct plenum sealed and ready to install">
+          <div class="card-b">
+            <h3>Duct cleaning &amp; sealing</h3>
+            <p>Improve air quality and system efficiency with thorough duct cleaning and sealing.</p>
+            <a class="go" href="tel:+14235568671">Request service &rarr;</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/maintenance.jpg" width="620" height="472" loading="lazy" decoding="async"
+               alt="Outdoor condenser unit serviced beside a brick home">
+          <div class="card-b">
+            <h3>Maintenance plans</h3>
+            <p>Save energy and reduce costs with a maintenance plan &mdash; service twice a year keeps a system running efficiently.</p>
+            <a class="go" href="tel:+14235568671">Request service &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY ============ -->
+  <section class="sec" style="background:var(--tint)">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Why homeowners call us back</p>
+        <h2>Quick, hassle-free repair that gets results</h2>
+        <p class="lede" style="margin-bottom:1.5rem">
+          Our team is made up of highly trained professionals with extensive
+          experience in HVAC installation, repair and energy-efficient solutions.
+        </p>
+        <ul class="ticks">
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span><b>Stay comfortable year-round.</b> Efficient heating and cooling tailored to your space.</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span><b>Fast, hassle-free repairs.</b> Quick solutions to get your system running smoothly again.</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span><b>Save money on energy bills.</b> Regular maintenance keeps your system working efficiently.</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span><b>Breathe cleaner air.</b> Air filtration and humidity control for a healthier home.</span></li>
+        </ul>
+        <a class="btn btn-solid" href="tel:+14235568671">&#9742;&nbsp;Call (423) 556-8671</a>
+      </div>
+      <img src="images/technician.jpg" width="900" height="675" loading="lazy" decoding="async"
+           alt="Mountain View technician on a ladder running a duct cleaning line, with the dining table covered and shoe covers on">
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="sec reviews">
+    <div class="wrap">
+      <div class="center" style="margin-bottom:34px">
+        <p class="eyebrow" style="color:var(--sky)">Our happy clients</p>
+        <h2>5.0 stars across 258 Google reviews</h2>
+        <p class="lede">Every one of them left by a neighbour in the Chattanooga area.</p>
+      </div>
+      <div class="grid">
+        <blockquote class="quote">
+          <div class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;My AC stopped working during the heatwave. Wendell came out first thing in the morning and had it running again within 20 mins. I appreciated that he took the time to explain the issue and that the repair didn&rsquo;t break the bank.&rdquo;</p>
+          <cite>Alexander H<span>Google review</span></cite>
+        </blockquote>
+        <blockquote class="quote">
+          <div class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Wendell is fantastic! Extremely hard working and always ensured we knew exactly what was going on and how he would tackle each situation. He was extremely patient, professional, and friendly.&rdquo;</p>
+          <cite>Zachary Edds<span>Google review</span></cite>
+        </blockquote>
+        <blockquote class="quote">
+          <div class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Only one call needs to be made for quick, honest repair and advice. I have used other companies in the past, but this is my business for all heating and air needs going forward.&rdquo;</p>
+          <cite>Charles<span>Google review</span></cite>
+        </blockquote>
+      </div>
+      <p class="rev-foot">Reviews shown as published on Google.</p>
+    </div>
+  </section>
+
+  <!-- ============ AREAS ============ -->
+  <section class="sec">
+    <div class="wrap center">
+      <p class="eyebrow">Service area</p>
+      <h2>Greater Chattanooga areas we serve</h2>
+      <p class="lede" style="margin-bottom:28px">
+        Based on John Ross Road in Chattanooga, covering the city, the surrounding
+        communities and all of North Georgia.
+      </p>
+      <ul class="areas">
+        <li>Chattanooga</li><li>Hixson</li><li>Red Bank</li><li>Ooltewah</li>
+        <li>Signal Mountain</li><li>Lookout Mountain</li><li>Harrison</li>
+        <li>All of North Georgia</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="sec" style="background:var(--tint)">
+    <div class="wrap">
+      <div class="center" style="margin-bottom:30px">
+        <p class="eyebrow">Still not sure?</p>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>How often should I have my HVAC system serviced?</summary>
+          <div class="ans"><p>At least twice a year &mdash; once before summer for your air conditioning, and once before winter for your heating system.</p></div>
+        </details>
+        <details>
+          <summary>What are the signs that my system needs repair?</summary>
+          <div class="ans"><p>Unusual noises, inconsistent temperatures, higher energy bills, and poor airflow.</p></div>
+        </details>
+        <details>
+          <summary>Are your technicians certified and insured?</summary>
+          <div class="ans"><p>Yes &mdash; all our technicians are fully certified, licensed and insured.</p></div>
+        </details>
+        <details>
+          <summary>How long does an HVAC system typically last?</summary>
+          <div class="ans"><p>With proper maintenance, most systems last between 10 and 15 years, depending on usage and brand quality.</p></div>
+        </details>
+        <details>
+          <summary>Do you offer emergency repair?</summary>
+          <div class="ans"><p>Yes &mdash; we provide emergency repair service to get your comfort restored as quickly as possible. Call (423) 556-8671.</p></div>
+        </details>
+        <details>
+          <summary>What types of systems do you install?</summary>
+          <div class="ans"><p>Central air conditioning, ductless mini-splits, heat pumps and furnaces, matched to your home.</p></div>
+        </details>
+        <details>
+          <summary>How can I reduce my energy costs?</summary>
+          <div class="ans"><p>Regular maintenance, cleaning or replacing filters, sealing ductwork, proper insulation and a programmable thermostat all help.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FORM ============ -->
+  <section class="sec form-sec" id="request">
+    <div class="wrap">
+      <div class="center" style="margin-bottom:28px">
+        <p class="eyebrow">Schedule an appointment</p>
+        <h2>Request service</h2>
+        <p class="lede">In a hurry? Calling is fastest &mdash; <a href="tel:+14235568671"><strong>(423) 556-8671</strong></a>.</p>
+      </div>
+      <form class="formcard" id="svcform" novalidate>
+        <div class="frow">
+          <div class="field">
+            <label for="f-name">Full name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email">
+        </div>
+        <div class="frow">
+          <div class="field">
+            <label for="f-city">City</label>
+            <input id="f-city" name="city" type="text" autocomplete="address-level2">
+          </div>
+          <div class="field">
+            <label for="f-svc">What do you need?</label>
+            <select id="f-svc" name="service">
+              <option>AC repair</option>
+              <option>Heating repair</option>
+              <option>New system installation</option>
+              <option>Ductless mini-split</option>
+              <option>Duct cleaning &amp; sealing</option>
+              <option>Maintenance plan</option>
+              <option>Drain cleaning</option>
+              <option>Something else</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-msg">Tell us what&rsquo;s going on</label>
+          <textarea id="f-msg" name="message"></textarea>
+        </div>
+        <button class="btn btn-call btn-wide" type="submit">Request service</button>
+        <p class="fineprint">
+          By providing your phone number you agree to receive text messages from
+          Mountain View Heat &amp; Air.
+        </p>
+        <p class="formnote" id="formnote" role="status">
+          <strong>This is a demonstration page.</strong> The form is not connected to
+          anything and nothing was sent. On the real site this would email and text
+          the office. To reach Mountain View Heat &amp; Air right now, call
+          <a href="tel:+14235568671"><strong>(423) 556-8671</strong></a>.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="sec final">
+    <div class="wrap">
+      <h2>Looking to maximise your comfort?</h2>
+      <p>
+        Tell us what your home needs and we&rsquo;ll give you a straight answer on
+        what it takes to fix it &mdash; with clear, upfront pricing.
+      </p>
+      <a class="phone-big" href="tel:+14235568671">&#9742;&nbsp;(423) 556-8671</a>
+      <div><a class="btn btn-call" href="tel:+14235568671" style="margin-top:1.3rem">Call now</a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <img src="images/logo.png" width="420" height="318" loading="lazy" decoding="async"
+             style="width:190px;margin-bottom:14px" alt="Mountain View Heating and Air">
+        <p style="margin:0">Trusted heating &amp; cooling experts in Chattanooga, Tennessee.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+14235568671"><strong>(423) 556-8671</strong></a></li>
+          <li>1031 John Ross Rd<br>Chattanooga, TN 37412</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li class="hoursrow"><span>Mon &ndash; Fri</span><span>7 AM &ndash; 9 PM</span></li>
+          <li class="hoursrow"><span>Saturday</span><span>7 AM &ndash; 9 PM</span></li>
+          <li class="hoursrow"><span>Sunday</span><span>7 AM &ndash; 9 PM</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">AC repair &amp; maintenance</a></li>
+          <li><a href="#services">Heating solutions</a></li>
+          <li><a href="#services">HVAC installation</a></li>
+          <li><a href="#services">Duct cleaning &amp; sealing</a></li>
+          <li><a href="#services">Drain cleaning</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="legal">
+      &copy; 2026 Mountain View Heat and Air. All rights reserved.
+      <div class="demo-flag">
+        <strong>Unofficial demonstration page.</strong> This is a speculative redesign
+        built by Matt McFarlane to show a mobile page-speed comparison. It is not
+        affiliated with, endorsed by, or authorised by Mountain View Heating and Air,
+        and it is blocked from search engines. The logo, photographs and wording all
+        belong to the business. The official site is
+        <a href="https://mountainviewheatandair.com/" rel="noopener nofollow">mountainviewheatandair.com</a>.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-call btn-wide" href="tel:+14235568671">&#9742;&nbsp;Call (423) 556-8671</a>
+</div>
+
+<script>
+/* The only script on the page: keep the inert demo form honest. */
+document.getElementById('svcform').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var n = document.getElementById('formnote');
+  n.classList.add('on');
+  n.scrollIntoView({ block: 'center' });
+});
+</script>
+</body>
+</html>
