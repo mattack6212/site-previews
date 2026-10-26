@@ -107,7 +107,10 @@
   --red:#D4161D;       /* logo red #EC1C24 darkened for AA on white */
   --red-logo:#EC1C24;
   --sky:#0094D9;       /* sampled: the "AIR" letterforms */
+  --sky-ink:#0076AE;   /* same hue, darkened: #0094D9 on white is only 3.4:1.
+                          #0076AE is 5.0:1 on white, 4.7:1 on --bg-soft. */
   --sky-light:#6DC0EB;
+  --muted:#5E6B7C;     /* 5.4:1 on white; the slate it replaced was 3.6:1 */
   --gold:#FCBF10;      /* sampled: shield edge + sun */
   --ink:#15202E;
   --body:#41505F;
@@ -135,7 +138,7 @@ a{color:var(--navy)}
 .soft{background:var(--bg-soft)}
 .eyebrow{
   font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--sky);margin:0 0 .6em;
+  color:var(--sky-ink);margin:0 0 .6em;
 }
 
 /* ---------- top call bar ---------- */
@@ -237,10 +240,15 @@ header{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);
   padding:22px;display:flex;flex-direction:column;
 }
-.rev .s{color:var(--gold);letter-spacing:.1em;font-size:1rem;margin-bottom:9px}
+/* Brand gold on a white card is 1.7:1. These glyphs are decorative (each row
+   is role="img" with its rating as the label, and the heading states 5.0 in
+   text), but they still have to be visible: #B8860B is 3.25:1, clearing the
+   3:1 WCAG floor for non-text content. Hero stars stay brand gold - on navy
+   they measure 9.6:1. */
+.rev .s{color:#B8860B;letter-spacing:.1em;font-size:1rem;margin-bottom:9px}
 .rev p{font-size:.95rem;flex:1}
 .rev .who{font-weight:700;color:var(--ink);font-size:.9rem;margin:0}
-.rev .when{font-size:.81rem;color:#7A8899;margin:2px 0 0}
+.rev .when{font-size:.81rem;color:var(--muted);margin:2px 0 0}
 
 /* ---------- team ---------- */
 .team{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
@@ -249,7 +257,7 @@ header{
   padding:9px 16px;font-size:.88rem;
 }
 .team b{color:var(--ink)}
-.team span{color:#7A8899;font-size:.8rem}
+.team span{color:var(--muted);font-size:.8rem}
 
 /* ---------- faq ---------- */
 .faq{border-top:1px solid var(--line)}
@@ -520,7 +528,7 @@ body{padding-bottom:62px}
       </div>
       <div class="grid">
         <article class="rev">
-          <div class="s" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="s" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>&ldquo;They are the first HVAC company we have had come out to quote
              us for a job that didn&rsquo;t immediately try to sell us a new
              unit, which meant a lot and showed that they truly care about
@@ -529,7 +537,7 @@ body{padding-bottom:62px}
           <p class="when">2 months ago</p>
         </article>
         <article class="rev">
-          <div class="s" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="s" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>&ldquo;One of my units went down during the severe heat last week.
              Witt did a great job repairing the unit and had my a/c back on in
              just minutes after arriving. Timely and effective service, friendly
@@ -538,7 +546,7 @@ body{padding-bottom:62px}
           <p class="when">3 months ago</p>
         </article>
         <article class="rev">
-          <div class="s" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="s" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>&ldquo;Truly the best in the business! It is so refreshing to have a
              company that is so reliable, kind, and helpful. We&rsquo;ve used Air
              Heat for everything &mdash; mini splits, repairs, and regular
@@ -547,7 +555,7 @@ body{padding-bottom:62px}
           <p class="when">3 months ago</p>
         </article>
         <article class="rev">
-          <div class="s" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="s" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>&ldquo;Air Heat got us quick weekend emergency service when we needed
              it at reasonable prices. Every office employee or HVAC tech
              I&rsquo;ve interacted with has been great, and I couldn&rsquo;t ask
@@ -556,7 +564,7 @@ body{padding-bottom:62px}
           <p class="when">4 months ago</p>
         </article>
         <article class="rev">
-          <div class="s" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="s" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>&ldquo;I called early one morning, they came out within an hour. They
              had the part on the truck to fix the unit and had it going very
              quickly. So appreciative of this company and their
@@ -565,7 +573,7 @@ body{padding-bottom:62px}
           <p class="when">6 months ago</p>
         </article>
         <article class="rev">
-          <div class="s" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="s" role="img" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <p>&ldquo;Big fans of Air Heat. They have serviced our two rental
              properties exceptionally well. Would recommend them to anyone
              looking for a new HVAC system or needing general repair.&rdquo;</p>
