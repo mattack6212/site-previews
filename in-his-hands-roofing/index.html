@@ -135,7 +135,8 @@ header{position:sticky;top:0;z-index:50;background:#fff;
   color:var(--ink);min-width:0}
 .brand img{width:44px;height:auto;flex:none}
 .brand b{font-size:1.02rem;line-height:1.1;display:block;white-space:nowrap}
-.brand span{font-size:.72rem;color:#777;letter-spacing:.04em;
+/* #666 on white is 5.7:1; #777 measured 4.48:1 and failed WCAG AA */
+.brand span{font-size:.72rem;color:#666;letter-spacing:.04em;
   text-transform:uppercase;white-space:nowrap}
 .hcall{margin-left:auto;background:var(--red);color:#fff;text-decoration:none;
   font-weight:700;padding:11px 16px;border-radius:7px;white-space:nowrap;
@@ -228,7 +229,7 @@ header{position:sticky;top:0;z-index:50;background:#fff;
 .rev .s{color:var(--red);letter-spacing:2px;font-size:.9rem}
 .rev p{margin:.55em 0 .9em;font-size:.95rem}
 .rev cite{font-style:normal;font-weight:700;color:var(--ink);font-size:.92rem}
-.rev small{display:block;color:#888;font-size:.8rem;margin-top:1px}
+.rev small{display:block;color:#666;font-size:.8rem;margin-top:1px}
 
 /* ---------- owners ---------- */
 .owners{display:grid;gap:20px;grid-template-columns:1fr}
@@ -248,10 +249,11 @@ header{position:sticky;top:0;z-index:50;background:#fff;
 /* ---------- final call ---------- */
 .final{background:var(--red);color:#fff;text-align:center}
 .final h2{color:#fff;font-size:1.8rem}
-.final p{max-width:46ch;margin:0 auto 1.5em;color:#FFE9EB;font-size:1.04rem}
+.final p{max-width:46ch;margin:0 auto 1.5em;color:#FFF0F1;font-size:1.04rem}
 .final .btn-white{background:#fff;color:var(--red);font-size:1.22rem;
   padding:18px 34px}
-.final .hours{margin-top:1.3em;font-size:.92rem;color:#FFE0E3}
+/* #FFE0E3 on the brand red measured 4.27:1 - under AA at this size */
+.final .hours{margin-top:1.3em;font-size:.92rem;color:#FFF2F3}
 
 /* ---------- footer ---------- */
 footer{background:#141414;color:#A9A9A9;padding:40px 0 30px;font-size:.92rem}
@@ -261,12 +263,13 @@ footer a:hover{text-decoration:underline}
 footer li a,.disc a{display:inline-block;padding:6px 0;min-height:24px}
 .fgrid{display:grid;gap:26px;grid-template-columns:1fr}
 @media(min-width:760px){ .fgrid{grid-template-columns:1.3fr 1fr 1fr} }
-footer h4{color:#fff;font-size:.82rem;text-transform:uppercase;
+footer h3{color:#fff;font-size:.82rem;text-transform:uppercase;
   letter-spacing:.09em;margin:0 0 .8em}
 footer ul{list-style:none;margin:0;padding:0}
 footer li{margin:.35em 0}
+/* #7C7C7C on #141414 measured 4.41:1 - under AA; #9A9A9A is 6.5:1 */
 .disc{margin-top:30px;padding-top:18px;border-top:1px solid #2C2C2C;
-  font-size:.8rem;color:#7C7C7C;line-height:1.55}
+  font-size:.8rem;color:#9A9A9A;line-height:1.55}
 
 /* sticky mobile call bar */
 .callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--red);
@@ -294,6 +297,7 @@ footer li{margin:.35em 0}
 
 <h1 class="vh">In His Hands Roofing &mdash; roofing and seamless gutters in the greater Chattanooga area</h1>
 
+<main>
 <section class="hero" id="top">
   <div class="wrap">
     <span class="since">Family owned since 1984</span>
@@ -463,17 +467,18 @@ footer li{margin:.35em 0}
     <p class="hours">Monday&ndash;Friday, 8:00 AM &ndash; 5:00 PM &middot; Closed Saturday and Sunday</p>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <h4>In His Hands Roofing</h4>
+        <h3>In His Hands Roofing</h3>
         <p style="margin:0">Roofing and seamless gutters for the greater
            Chattanooga area. Family owned since 1984.</p>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h3>Contact</h3>
         <ul>
           <li><a href="tel:+14236374265">(423) 637-4265</a></li>
           <li><a href="mailto:inhishandscontractors@gmail.com">inhishandscontractors@gmail.com</a></li>
@@ -481,7 +486,7 @@ footer li{margin:.35em 0}
         </ul>
       </div>
       <div>
-        <h4>Hours</h4>
+        <h3>Hours</h3>
         <ul>
           <li>Monday&ndash;Friday &mdash; 8:00 AM to 5:00 PM</li>
           <li>Saturday &mdash; Closed</li>
