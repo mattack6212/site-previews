@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+================================================================================
+  UNSOLICITED DEMO — Webb's Mobile Welding and Repair Service, LaFayette, GA
+  Built 2026-10-27 by Matt McFarlane.  NOT LIVE.  noindex.
+  THE BUSINESS HAS NOT BEEN CONTACTED. Nothing here was shown to or approved by
+  the owner. Every fact is sourced in research.md; every photo is his own.
+================================================================================
+
+  WHAT IS DELIBERATELY OMITTED, AND WHY
+  -------------------------------------
+  * NO STREET ADDRESS. He publishes 233 Millsap Rd on his own Google listing, so
+    it is not secret -- but a live Places Nearby search of a 180m radius around
+    those coordinates returns exactly ONE business (his), and his own photo of
+    the fabrication yard shows neighbouring houses directly behind the fence.
+    That reads as a home with a shop on the property. Putting a man's probable
+    home address in 24pt type on a website is his decision, not a stranger's.
+    The page says LaFayette / Walker County. CONFIRM BEFORE LAUNCH.
+  * NO SERVICE RADIUS. He publishes none, anywhere. No "within 50 miles" circle
+    was invented. The page says he is based in LaFayette and to call and check.
+    CONFIRM BEFORE LAUNCH.
+  * NO PRICES OF ANY KIND. No rate, minimum or call-out fee exists in any public
+    source. (A "$55/hour" figure belongs to a DIFFERENT Webb's Mobile Welding in
+    Tifton GA, 250 miles away, owner James Webb. It is not his and is not here.)
+  * NO OWNER NAME, first or last. Google publishes "Brennon Webb" as the
+    contributor name on 9 of his 10 listing photos, and two reviewers spell it
+    "Brennon" -- but two others spell it "Brennan". Contested 2-2. A demo that
+    misspells a man's name is worse than one that omits it.
+  * NO "licensed", "insured", "bonded", "certified" or "AWS". He claims none of
+    these publicly and they are his claims to make, not Matt's. He has NO FMCSA
+    registration (checked live; none is expected for this trade) and no DOT
+    number appears anywhere on this page.
+  * NO FACEBOOK LINK. A reviewer publicly says "check out his work on Facebook",
+    but no Facebook page for this business could be found. Linking a guess would
+    risk sending customers to a different Webb's (there is one in Elberton GA).
+  * NO EMAIL, NO CONTACT FORM, NO BOOKING. He publishes no email address and
+    there is nothing to wire a form to. The phone is the whole call to action.
+  * NO STOCK PHOTOGRAPHY. Every image is his own Google Business Profile upload.
+  * NO TRUCK OR RIG PHOTO -- because none exists online. Conspicuous for a
+    business with "Mobile" in the name. Flagged in pitch.md as a thing to shoot.
+
+  UNVERIFIED ASSUMPTIONS CARRIED BY THIS PAGE
+  -------------------------------------------
+  1. "10+ Years in business" and the VETERANS DISCOUNT are quoted, attributed,
+     from his own Google Business Profile description -- but that description was
+     read through BIRDEYE'S SCRAPE, not off Google directly, and no second source
+     carries it. First-person wording ("I also offer") says it is his. Both are
+     QUOTED, never asserted in the site's voice. CONFIRM BOTH BEFORE LAUNCH.
+  2. "Open 24 hours" is what his Google listing says. Whether he actually wants
+     3am calls is a different question. CONFIRM BEFORE LAUNCH.
+  3. Aluminium welding is sourced to ONE review (Tim Dean, boat). Real, but
+     single-sourced. Shown as his customer's words, not as a service guarantee.
+  4. "Drop-off welcome" comes from ONE review (Michael King, hydraulic cylinder).
+     Stated as "call first", with no address. CONFIRM BEFORE LAUNCH.
+  5. The reviews stop in July 2025 -- 15 months ago. The business is
+     OPERATIONAL and he replies to reviews, but the page makes no claim about
+     current availability or workload.
+
+  PHOTO-PERMISSION GATE
+  ---------------------
+  Nine of the ten photos used here were uploaded by the owner to his own Google
+  Business Profile; one (unused) was uploaded by a customer. Public upload is
+  NOT a licence to republish. NOTHING GOES LIVE UNTIL HE SAYS SO.
+  TWO PHOTOS WERE REJECTED OUTRIGHT:
+    - g1: another company's banner is legible behind the work ("...Restorations"
+      over an address line). Not his mark, not ours to publish.
+    - g5: a CUSTOMER'S GARAGE, with a carved plaque reading "LORI & GENE" on the
+      wall -- the reviewer's and her husband's first names, inside their home.
+  TWO MORE WERE CROPPED, NOT TRUSTED:
+    - g6 (hero): a beam sign reading "Lookout Wa..." was cropped off the top.
+    - g7 (ramp): door placards and a hanging sign whose script would not resolve
+      even at 10x were cropped off. Unreadable is not the same as absent.
+  The only brand marks remaining anywhere are ACRA-TURN and "21 60" on his own
+  lathe -- a manufacturer's badge on his own machine.
+
+  PLACEHOLDER FLAGS
+  -----------------
+  * THE WORDMARK IS A PLACEHOLDER. He has NO LOGO -- no decal, no sign, no
+    lettering, nothing, in any of the ten photos. The name is set in type.
+    If he has a logo on a truck or a shirt, it replaces this immediately.
+  * The favicon is the same placeholder: a letter W in type.
+  * Colours are NOT placeholders -- they are sampled from his own photographs.
+    Accent #C2451C is the oxide red off his own handrail (hue 16, measured).
+    Darks are his Acra-Turn lathes (hue 200-202, measured). All 20 WCAG pairs
+    pass: /usr/bin/python3 probe/contrast.py -> FAILURES: 0
+================================================================================
+-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Webb's Mobile Welding and Repair Service — LaFayette, GA</title>
+<meta name="description" content="Mobile welding and repair based in LaFayette, Georgia. On-site welding, custom fabrication, handrails, gates and equipment repair. 5.0 stars on Google. Call (706) 996-0517.">
+<link rel="icon" href="images/favicon.png">
+<style>
+:root{
+  /* Sampled from his own photos -- see probe/contrast.py for the measurements. */
+  --accent:#C2451C;      /* oxide red off his own handrail, g4, hue 16 */
+  --accent-hov:#BE5833;  /* brightens, never darkens */
+  --accent-dk:#E0794F;   /* accent TEXT on dark only -- 6.10:1 on ink */
+  --ink:#101619;         /* Acra-Turn lathe blue, deepened */
+  --ink-2:#161E22;
+  --on-ink:#F2F5F6;
+  --on-ink-mut:#AEBCC2;
+  --paper:#FFFFFF;
+  --paper-2:#F4F2F0;     /* warm grey from mill-scale steel */
+  --body:#15191B;
+  --muted:#546065;
+  --rule:#8F8880;
+  --maxw:1120px;
+  --pad:clamp(18px,5vw,30px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--body);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--accent)}
+h1,h2,h3{line-height:1.15;margin:0;letter-spacing:-.015em;overflow-wrap:break-word}
+h1{font-size:clamp(29px,7vw,54px);font-weight:800}
+h2{font-size:clamp(23px,4.4vw,36px);font-weight:800}
+h3{font-size:clamp(17px,2.4vw,20px);font-weight:700}
+p{margin:0 0 1em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+.sec{padding:clamp(44px,8vw,78px) 0}
+.sec--dark{background:var(--ink);color:var(--on-ink)}
+.sec--alt{background:var(--paper-2)}
+.eyebrow{
+  font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 12px;
+}
+.sec--dark .eyebrow{color:var(--accent-dk)}
+.lede{font-size:clamp(16px,2.1vw,19px);color:var(--muted);max-width:62ch}
+.sec--dark .lede{color:var(--on-ink-mut)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  background:var(--accent);color:#fff;text-decoration:none;
+  font-weight:800;font-size:clamp(16px,2.3vw,18px);
+  padding:15px 24px;border-radius:7px;border:0;
+  min-height:52px;transition:background .15s ease;
+}
+.btn:hover,.btn:focus-visible{background:var(--accent-hov)}
+.btn--ghost{
+  background:transparent;color:var(--on-ink);
+  border:2px solid rgba(242,245,246,.45);
+}
+.btn--ghost:hover,.btn--ghost:focus-visible{background:rgba(242,245,246,.12)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent-dk);outline-offset:3px}
+
+/* ---------- header ---------- */
+.hdr{background:var(--ink);color:var(--on-ink);border-bottom:3px solid var(--accent)}
+.hdr__in{
+  max-width:var(--maxw);margin:0 auto;padding:14px var(--pad);
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+/* PLACEHOLDER WORDMARK -- he has no logo. Set in type. */
+.mark{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+.mark b{font-size:clamp(17px,3.1vw,22px);font-weight:800;letter-spacing:-.02em}
+.mark span{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--on-ink-mut);font-weight:700}
+.hdr .btn{padding:11px 18px;min-height:46px;font-size:15px;white-space:nowrap}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--ink);color:var(--on-ink)}
+.hero__media{position:relative}
+.hero__media img{width:100%;object-fit:cover;max-height:460px}
+.hero__media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(16,22,25,.25) 0%,rgba(16,22,25,.72) 72%,var(--ink) 100%);
+}
+.hero__body{position:relative;padding:26px 0 clamp(40px,7vw,62px);margin-top:-54px;z-index:1}
+.hero h1{margin-bottom:14px}
+.hero__sub{font-size:clamp(16px,2.3vw,20px);color:var(--on-ink-mut);max-width:58ch;margin-bottom:22px}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+.hero__stats{
+  display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;
+  padding-top:20px;border-top:1px solid rgba(242,245,246,.18);
+  font-size:14px;color:var(--on-ink-mut);
+}
+.hero__stats b{color:var(--on-ink);font-size:17px}
+.stars{color:var(--accent-dk);letter-spacing:2px}
+
+/* ---------- comes-to-you strip ---------- */
+.strip{background:var(--accent);color:#fff}
+.strip .wrap{padding-block:18px}
+.strip p{margin:0;font-weight:700;font-size:clamp(15px,2.2vw,18px);text-align:center}
+
+/* ---------- grids ---------- */
+.grid{display:grid;gap:clamp(14px,2.4vw,22px)}
+.g2{grid-template-columns:1fr}
+.g3{grid-template-columns:1fr}
+@media(min-width:620px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.g3{grid-template-columns:repeat(3,1fr)}}
+
+.card{
+  background:var(--paper);border:1px solid var(--rule);border-radius:9px;
+  padding:clamp(18px,2.8vw,24px);
+}
+.sec--alt .card{background:var(--paper)}
+.card h3{margin-bottom:8px}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+.card__tag{
+  display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:9px;
+}
+
+/* ---------- service list ---------- */
+.svc{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+@media(min-width:620px){.svc{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.svc{grid-template-columns:repeat(3,1fr)}}
+.svc li{
+  display:flex;gap:11px;align-items:flex-start;
+  padding:13px 15px;background:var(--paper);border:1px solid var(--rule);border-radius:7px;
+  font-weight:600;font-size:15.5px;
+}
+.svc svg{flex:0 0 auto;margin-top:3px;color:var(--accent)}
+
+/* ---------- quotes ---------- */
+.quote{
+  background:var(--ink-2);border-radius:9px;padding:clamp(18px,2.8vw,24px);
+  border-left:4px solid var(--accent);
+}
+.quote blockquote{margin:0 0 12px;font-size:16px;line-height:1.6;color:var(--on-ink)}
+.quote cite{font-style:normal;font-size:13px;color:var(--on-ink-mut);font-weight:700}
+.quote cite span{font-weight:400;color:var(--on-ink-mut)}
+
+/* ---------- gallery ---------- */
+.gal{display:grid;gap:clamp(10px,1.8vw,16px);grid-template-columns:1fr}
+@media(min-width:620px){.gal{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.gal{grid-template-columns:repeat(3,1fr)}}
+.gal figure{margin:0;border:1px solid var(--rule);border-radius:9px;overflow:hidden;background:var(--paper)}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.gal figcaption{padding:11px 14px;font-size:13.5px;color:var(--muted);font-weight:600}
+
+/* ---------- hours / contact ---------- */
+.panel{
+  background:var(--ink-2);border-radius:9px;padding:clamp(20px,3vw,28px);
+}
+.panel dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 18px;font-size:15.5px}
+.panel dt{color:var(--on-ink-mut);font-weight:600}
+.panel dd{margin:0;color:var(--on-ink);font-weight:700}
+.tel{
+  display:inline-block;color:var(--on-ink);text-decoration:none;
+  font-size:clamp(25px,5.4vw,36px);font-weight:800;letter-spacing:-.02em;
+}
+.tel:hover,.tel:focus-visible{color:var(--accent-dk)}
+.note{font-size:13.5px;color:var(--muted);max-width:64ch}
+.sec--dark .note{color:var(--on-ink-mut)}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--ink);color:var(--on-ink-mut);font-size:13.5px;padding:30px 0 96px}
+.ftr a{color:var(--accent-dk)}
+.ftr p{margin:0 0 7px}
+
+/* ---------- sticky mobile call bar ---------- */
+.callbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  background:var(--ink);border-top:1px solid rgba(242,245,246,.2);
+  padding:9px var(--pad) calc(9px + env(safe-area-inset-bottom));
+  display:flex;
+}
+.callbar .btn{width:100%}
+@media(min-width:760px){.callbar{display:none}.ftr{padding-bottom:30px}}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr__in">
+    <!-- PLACEHOLDER WORDMARK: he has no logo in any public photo. -->
+    <div class="mark">
+      <b>Webb&rsquo;s Mobile Welding</b>
+      <span>and Repair Service &middot; LaFayette, GA</span>
+    </div>
+    <a class="btn" href="tel:+17069960517">Call (706)&nbsp;996-0517</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero__media">
+    <picture>
+      <source media="(max-width:620px)" srcset="images/hero-mobile.jpg">
+      <img src="images/hero.jpg" width="1500" height="844"
+           alt="Inside Webb's shop: two engine lathes, a plate roll and an overhead chain hoist, with a fabricated gate frame laid out on the floor.">
+    </picture>
+  </div>
+  <div class="hero__body">
+    <div class="wrap">
+      <h1>Welding that comes to you &mdash; or a real shop when the job needs one.</h1>
+      <p class="hero__sub">
+        On-site welding and repair out of LaFayette, Georgia. Custom fabrication,
+        handrails, gates, trailers and equipment put back to work.
+      </p>
+      <div class="hero__cta">
+        <a class="btn" href="tel:+17069960517">Call (706)&nbsp;996-0517</a>
+        <a class="btn btn--ghost" href="#work">See the work</a>
+      </div>
+      <div class="hero__stats">
+        <span><b>5.0</b> <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          from <b>13</b> Google reviews</span>
+        <span><b>Open 24 hours</b>, 7 days</span>
+        <span>Based in <b>LaFayette</b> &middot; Walker County</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- "we come to you" sits as high as it can without being the headline -->
+<div class="strip">
+  <div class="wrap"><p>Mobile service &mdash; the truck comes to the job. Shop work by arrangement.</p></div>
+</div>
+
+<!-- ===================== WHY CALL ===================== -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Why people call</p>
+    <h2>He answers the phone.</h2>
+    <p class="lede" style="margin-bottom:26px">
+      That sounds like a low bar. In his reviews it is the single thing customers
+      mention most &mdash; two of them, two years apart, after calling round everybody else.
+    </p>
+    <div class="grid g2">
+      <div class="quote">
+        <blockquote>&ldquo;I called 5 different welding companies on Saturday and Webb was only
+          one that called back. He was able to take care of my problem Sunday morning and did a
+          great job on the aluminum weld on my boat.&rdquo;</blockquote>
+        <cite>Tim Dean <span>&middot; Google review</span></cite>
+      </div>
+      <div class="quote">
+        <blockquote>&ldquo;Out of all the places i called, Webbs was the only one to answer the
+          phone personally. I told him my issues i had with a cracked hydraulic cylinder and he
+          said he would take a look and see what he could do.&rdquo;</blockquote>
+        <cite>Michael King <span>&middot; Google review</span></cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICE AREA / MOBILE ===================== -->
+<section class="sec sec--dark">
+  <div class="wrap">
+    <p class="eyebrow">Mobile service</p>
+    <h2>The job does not have to move.</h2>
+    <p class="lede" style="margin-bottom:26px">
+      Broken equipment, a gate on its hinges, a trailer that will not roll &mdash; most of it
+      is easier to weld where it stands. Based in LaFayette and out across the surrounding
+      area; <strong style="color:var(--on-ink)">call to check he covers you.</strong>
+    </p>
+    <div class="grid g3">
+      <div class="quote">
+        <blockquote>&ldquo;Brennan came out and fixed some broken welds &amp; braced a mount on
+          our industrial track chipper &mdash; excellent work, fit us in last minute on a
+          Saturday, good experience all around.&rdquo;</blockquote>
+        <cite>AJ Mayo <span>&middot; Google review</span></cite>
+      </div>
+      <div class="quote">
+        <blockquote>&ldquo;I hired Webb&rsquo;s mobile welding to fabricate square tubing into a
+          frame for a water tank inside of a van. Brennan arrived 9 minutes early and took the
+          time to ensure he knew exactly what I wanted.&rdquo;</blockquote>
+        <cite>Phillip Seay <span>&middot; Google review</span></cite>
+      </div>
+      <div class="quote">
+        <blockquote>&ldquo;Webb&rsquo;s Mobile Welding did an exceptional job on my gate. He was
+          timely and efficient. Prices were lower than priced by 2 other businesses.&rdquo;</blockquote>
+        <cite>Regina Mckin <span>&middot; Google review</span></cite>
+      </div>
+    </div>
+    <p class="note" style="margin-top:22px">
+      Weekend and after-hours work is in the reviews above &mdash; a Saturday call-out and a
+      Sunday morning repair. Call and ask what he can get to.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== WHAT HE DOES ===================== -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">What he does</p>
+    <h2>Repair it, or build it from scratch.</h2>
+    <p class="lede" style="margin-bottom:26px">
+      Every item below is something a customer has described him doing, in a public review,
+      or is visible in his own photographs.
+    </p>
+    <ul class="svc">
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.2 12.6 2 8.4l1.5-1.5 2.7 2.7L12.5 3 14 4.5z"/></svg> Custom handrails</li>
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.2 12.6 2 8.4l1.5-1.5 2.7 2.7L12.5 3 14 4.5z"/></svg> Gates and gate frames</li>
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.2 12.6 2 8.4l1.5-1.5 2.7 2.7L12.5 3 14 4.5z"/></svg> Steel ramps and platforms</li>
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.2 12.6 2 8.4l1.5-1.5 2.7 2.7L12.5 3 14 4.5z"/></svg> Equipment and machinery repair</li>
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.2 12.6 2 8.4l1.5-1.5 2.7 2.7L12.5 3 14 4.5z"/></svg> Custom frames and brackets</li>
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.2 12.6 2 8.4l1.5-1.5 2.7 2.7L12.5 3 14 4.5z"/></svg> Hydraulic cylinder repair</li>
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.2 12.6 2 8.4l1.5-1.5 2.7 2.7L12.5 3 14 4.5z"/></svg> Broken welds re-run</li>
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.2 12.6 2 8.4l1.5-1.5 2.7 2.7L12.5 3 14 4.5z"/></svg> Aluminium work</li>
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.2 12.6 2 8.4l1.5-1.5 2.7 2.7L12.5 3 14 4.5z"/></svg> Blacksmith / forged detail</li>
+    </ul>
+    <p class="note" style="margin-top:20px">
+      Aluminium is sourced to one customer&rsquo;s boat repair, not to a general guarantee &mdash;
+      if your job is aluminium, say so when you call. Got something that isn&rsquo;t on this
+      list? Ring and ask.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== THE SHOP ===================== -->
+<section class="sec sec--alt">
+  <div class="wrap">
+    <p class="eyebrow">The shop</p>
+    <h2>Mobile when it helps. Machine tools when it doesn&rsquo;t.</h2>
+    <p class="lede" style="margin-bottom:26px">
+      A service truck gets you a weld. The shop gets you a part turned, plate rolled to a
+      radius and a whole assembly built before it ever leaves. Drop-off is welcome &mdash;
+      call first.
+    </p>
+    <div class="grid g3">
+      <div class="card">
+        <span class="card__tag">Turning</span>
+        <h3>Two engine lathes</h3>
+        <p>Shafts, pins, bushings and sleeves made or re-cut, rather than ordered in and waited for.</p>
+      </div>
+      <div class="card">
+        <span class="card__tag">Forming</span>
+        <h3>Plate roll &amp; press</h3>
+        <p>How the curved gate frames in these photos were made. Flat steel does not bend itself.</p>
+      </div>
+      <div class="card">
+        <span class="card__tag">Lifting</span>
+        <h3>Overhead hoist</h3>
+        <p>Heavy assemblies handled in the bay, so big fabrications are a job rather than a problem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WORK ===================== -->
+<section class="sec" id="work">
+  <div class="wrap">
+    <p class="eyebrow">The work</p>
+    <h2>His own photographs.</h2>
+    <p class="lede" style="margin-bottom:26px">
+      Every picture on this page was taken by the shop, not bought from a stock library.
+    </p>
+    <div class="gal">
+      <figure>
+        <img src="images/rail-home.jpg" width="900" height="684" loading="lazy"
+             alt="A custom steel handrail following curved brick steps on a house, finished in oxide red.">
+        <figcaption>Handrail, built to follow the steps</figcaption>
+      </figure>
+      <figure>
+        <img src="images/ramp.jpg" width="1040" height="710" loading="lazy"
+             alt="A black diamond-plate access ramp with welded handrails, installed at a kerb outside a brick building.">
+        <figcaption>Diamond-plate access ramp and rails</figcaption>
+      </figure>
+      <figure>
+        <img src="images/gate-detail.jpg" width="900" height="702" loading="lazy"
+             alt="Close view of a half-round gate panel with evenly spaced bars, laid out on the shop floor.">
+        <figcaption>Half-round gate panel</figcaption>
+      </figure>
+      <figure>
+        <img src="images/yard.jpg" width="1040" height="694" loading="lazy"
+             alt="Finished steel railings and rectangular gate frames laid out on concrete in the fabrication yard.">
+        <figcaption>Rails and frames, ready to go out</figcaption>
+      </figure>
+      <figure>
+        <img src="images/shop-curve.jpg" width="1040" height="780" loading="lazy"
+             alt="A large curved steel gate frame laid out across the shop floor beside a welder and tool chests.">
+        <figcaption>A curve that started out as flat bar</figcaption>
+      </figure>
+      <figure>
+        <img src="images/hooks.jpg" width="900" height="684" loading="lazy"
+             alt="Hand-forged steel hooks and bent rod stock arranged on a steel workbench next to a vice.">
+        <figcaption>Hand-forged hooks</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="sec sec--dark">
+  <div class="wrap">
+    <p class="eyebrow">Reviews</p>
+    <h2>13 reviews on Google. Every one of them five stars.</h2>
+    <p class="lede" style="margin-bottom:26px">
+      Published under the reviewers&rsquo; own names on his Google listing.
+    </p>
+    <div class="grid g3">
+      <div class="quote">
+        <blockquote>&ldquo;Brennon made a custom hand rail for my garage steps. I can&rsquo;t say
+          how impressed I was! You can&rsquo;t even tell where the welds are!!&rdquo;</blockquote>
+        <cite>Lori Thomas <span>&middot; Google review</span></cite>
+      </div>
+      <div class="quote">
+        <blockquote>&ldquo;Love this guys work ethic, he will be doing all of my welding from now
+          on! I highly highly highly recommend!&rdquo;</blockquote>
+        <cite>Dakota Newberry <span>&middot; Google review</span></cite>
+      </div>
+      <div class="quote">
+        <blockquote>&ldquo;Great Service. Prompt reliable ans fast. Recommend for all your
+          welding needs.&rdquo;</blockquote>
+        <cite>Ted Edwards <span>&middot; Google review</span></cite>
+      </div>
+    </div>
+    <p class="note" style="margin-top:22px">
+      In his own words on his Google listing: &ldquo;Mobile welding and repair. 10+ Years in
+      business. I also offer discounts for veterans.&rdquo;
+    </p>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="sec sec--dark" id="contact" style="background:var(--ink-2)">
+  <div class="wrap">
+    <div class="grid g2">
+      <div>
+        <p class="eyebrow">Get it fixed</p>
+        <h2 style="margin-bottom:14px">Call and tell him what&rsquo;s broken.</h2>
+        <p class="lede" style="margin-bottom:18px">
+          Quotes are over the phone. If it is easier to send a photo of the job, ask him when
+          you ring.
+        </p>
+        <a class="tel" href="tel:+17069960517">(706) 996-0517</a>
+        <div style="margin-top:18px">
+          <a class="btn" href="tel:+17069960517">Call now</a>
+        </div>
+      </div>
+      <div class="panel">
+        <dl>
+          <dt>Hours</dt><dd>Open 24 hours, 7 days</dd>
+          <dt>Based in</dt><dd>LaFayette, GA &middot; Walker County</dd>
+          <dt>Service</dt><dd>Mobile &mdash; call to check your area</dd>
+          <dt>Shop work</dt><dd>Drop-off by arrangement &mdash; call first</dd>
+          <dt>Google</dt><dd>5.0 from 13 reviews</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ftr">
+  <div class="wrap">
+    <p><strong style="color:var(--on-ink)">Webb&rsquo;s Mobile Welding and Repair Service</strong>
+       &middot; LaFayette, Georgia</p>
+    <p><a href="tel:+17069960517">(706) 996-0517</a> &middot; Open 24 hours</p>
+    <p style="margin-top:14px;opacity:.75">Mobile welding, repair and custom fabrication across
+       Walker County and north-west Georgia.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn" href="tel:+17069960517">Call (706)&nbsp;996-0517</a>
+</div>
+
+</body>
+</html>
