@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+===============================================================================
+  UNSOLICITED SPEC DEMO - Wilson Waste Co., Inc., Rossville, GA
+  Built 2026-10-27 by Matt McFarlane. NOT commissioned. NOT live.
+  NO CONTACT HAS BEEN MADE WITH THIS BUSINESS.
+
+  Everything on this page came from public sources only: a live Google Places
+  API pull (place ID ChIJkTahWRZDYIgRALBEpQuJnws, 2026-10-27), the FMCSA SAFER
+  carrier record for USDOT 499404, and public business directories. Full
+  sourcing in research.md.
+===============================================================================
+
+  THE VERTICAL WAS WRONG IN THE LEAD SCAN
+  ---------------------------------------
+  The scan filed this lead as "Trash." It is not a garbage hauler. It is a
+  TEXTILE RECYCLER. Confirmed four independent ways:
+    1. Their own trailer placard: "WILSON WASTE CO. INC. / TEXTILE RECYCLING /
+       706-820-9077" (photographed; images/placard.jpg)
+    2. Manta category: Environmental Services > Scrap and Waste Materials >
+       Textile Waste
+    3. IndustryNet category: TEXTILE WASTE RECLAMATION, SIC "Textile goods"
+    4. FMCSA cargo flags: General Freight + Paper Products. "Garbage/Refuse"
+       is explicitly NOT checked.
+  A "trash pickup" site would have been wrong in every line.
+
+  WHAT IS OMITTED, AND WHY
+  ------------------------
+  * NO FOUNDING YEAR. Manta says "Est. 1988 / 38 years in business" and FMCSA
+    first registered them 1992-09-28. Manta is auto-generated and uncorroborated,
+    so no year is asserted anywhere on this page. Confirm with the owner.
+  * NO PRICES. Nothing public states what they pay or charge for anything.
+  * NO SERVICE LIST BEYOND TEXTILE RECYCLING. What grades or materials they
+    accept is nowhere public. The page says what their own placard says and
+    stops. No invented list of accepted materials.
+  * NO EMAIL. A federal filing lists wilsonwasteco@aol.com. It is public, but
+    publishing an inbox the company may not monitor is a liability, not a
+    feature. Raise it on the call instead.
+  * NO OWNER NAME. FMCSA lists officers "Belinda Laws / Kenneth Wilson" and a
+    2019 reviewer thanks "Mr. Wilson". That corroborates the surname only. The
+    first name is single-source, so no personal name appears on this page.
+  * NO CLAIM ABOUT FLEET SIZE. FMCSA says 4 power units / 3 CDL drivers, but
+    that is a self-reported April 2026 filing, not a marketing claim to publish.
+  * NO REVIEW COUNT INFLATION. 4.5 stars / 14 ratings, exactly as the live API
+    returned it on 2026-10-27.
+
+  UNVERIFIED ASSUMPTIONS FLAGGED
+  ------------------------------
+  * STREET NUMBER IS CONTESTED - THE SINGLE BIGGEST CONFIRM ITEM.
+    Three different numbers are in public circulation on Dry Valley Rd:
+      - 1321  <- used here. The company's OWN self-reported address on its
+                 MCS-150 federal filing dated 2026-04-10. Most recent, and
+                 it is their own statement.
+      - 1313  <- what Google Places returns today.
+      - 321   <- Yelp, Manta, CMac, YellowPages. Almost certainly a legacy
+                 digit-dropped error; a neighbour sits at 1188 Dry Valley Rd,
+                 so the 1300 block is real and a "321" block is not.
+    DO NOT LAUNCH until the owner confirms the number. The directions block
+    below is deliberately landmark-based so the page is useful either way.
+  * HOURS are single-source (Google regularOpeningHours, Mon-Fri 7-5, closed
+    Sat/Sun). Internally consistent with currentOpeningHours. Confirm.
+  * FAX (706) 820-2453 is from the FMCSA filing, not from the company's own
+    marketing. Confirm it is still in service before launch.
+
+  PHOTO PERMISSION GATE - READ BEFORE ANY LAUNCH
+  ----------------------------------------------
+  Both images on this page are derived from ONE photo on the Google listing,
+  contributed by a CUSTOMER ("BLACXKCOBRA THE PRINCE"), not by the company.
+  Wilson Waste does not own it and neither does Matt. This is fine for a
+  private spec demo; it is NOT fine for a live site.
+  -> Before launch: shoot new photos on site with permission, or get written
+     permission. This is a blocking item.
+
+  PHOTOS REJECTED, WITH REASONS
+  -----------------------------
+  * raw/p1.jpg REJECTED - rusted steel plates, gates and fencing stacked in the
+    yard. No branding or faces, but it reads as a scrap-metal junk pile, which
+    actively misrepresents a textile recycler. Editorial rejection.
+  * raw/p0.jpg REJECTED - a row of six parked trailers. One carries a blue "A"
+    livery mark plus fleet numbers (2708, 63xxx) that cannot be attributed to
+    Wilson Waste and are probably a previous owner's branding.
+  * images/dock.jpg BUILT THEN DELETED - the loading dock and check-in stairs,
+    which would have been genuinely useful. Killed because the trailer's long
+    side wall carries GHOSTED PAINTED-OVER LETTERING reading "...ATLANT..." -
+    residual livery from a previous owner. Another company's branding.
+  * The hero crop starts at x=0.33 of the source frame FOR THAT REASON, to
+    exclude the ghost lettering entirely.
+  * No stock imagery is used anywhere. Both images are this company's own yard.
+
+  PLACEHOLDER FLAGS
+  -----------------
+  * NO LOGO EXISTS. The wordmark in the header is SET IN TYPE, reproducing the
+    layout of their own trailer placard (serif caps, rule, "CO. INC.", red
+    secondary line). It is a PLACEHOLDER standing in for a real logo. If they
+    have artwork, it replaces this.
+  * Brand colours: ink/paper/steel were MEASURED from the placard photo after
+    correcting a heavy blue cast. The RED is NORMALIZED, not raw-sampled - thin
+    lettering means every red pixel is an anti-aliased blend. Hue direction
+    (crimson-leaning, not orange) is evidence-anchored. See contrast_check.py.
+  * WCAG AA verified by calculation: 16/16 pairs pass. contrast_check.py -> 0 failures.
+===============================================================================
+-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Wilson Waste Co., Inc. &mdash; Textile Recycling &middot; Rossville, GA</title>
+<meta name="description" content="Wilson Waste Co., Inc. - textile recycling in Rossville, Georgia. Open Monday to Friday, 7am to 5pm. Call (706) 820-9077.">
+<style>
+  :root{
+    --ink:#14181C; --body:#3A4248; --muted:#5A646B;
+    --paper:#FFFFFF; --surface:#F4F5F6; --steel:#CFCDD0;
+    --charcoal:#2B3137; --red:#B3202E; --redlt:#FF8A8A;
+    --onchar:#E8EBED; --mutedchar:#AEB7BD;
+    --wrap:1060px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--surface); color:var(--body);
+    font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    overflow-wrap:break-word; padding-bottom:72px;
+  }
+  img{max-width:100%; height:auto; display:block}
+  h1,h2,h3{color:var(--ink); line-height:1.18; margin:0 0 .5em; letter-spacing:-.01em}
+  h2{font-size:1.6rem; margin-top:0}
+  h3{font-size:1.1rem}
+  p{margin:0 0 1em}
+  a{color:var(--red)}
+  .wrap{max-width:var(--wrap); margin:0 auto; padding:0 20px}
+  section{padding:44px 0; border-bottom:1px solid var(--steel)}
+  section.alt{background:var(--paper)}
+
+  /* ---------- header ---------- */
+  .top{background:var(--charcoal); color:var(--onchar); padding:14px 0}
+  .top .wrap{display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between}
+  /* PLACEHOLDER WORDMARK - set in type, mirrors their trailer placard. */
+  .mark{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif; line-height:1.05}
+  .mark b{display:block; font-size:1.42rem; font-weight:700; letter-spacing:.055em; color:#fff}
+  .mark .co{display:block; font-size:.88rem; letter-spacing:.2em; color:var(--onchar); margin:2px 0 3px}
+  .mark .tr{display:block; font-size:.72rem; letter-spacing:.17em; color:var(--redlt); text-transform:uppercase}
+  .topcall{display:flex; flex-direction:column; align-items:flex-end; gap:2px}
+  .topcall .lbl{font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--mutedchar)}
+  .topcall a{color:#fff; text-decoration:none; font-size:1.3rem; font-weight:700; letter-spacing:.01em}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--paper); padding:40px 0 44px; border-bottom:1px solid var(--steel)}
+  .hero .grid{display:grid; grid-template-columns:1fr; gap:26px; align-items:center}
+  .eyebrow{font-size:.74rem; letter-spacing:.18em; text-transform:uppercase; color:var(--red); font-weight:700; margin:0 0 10px}
+  .hero h1{font-size:2.05rem; margin-bottom:.35em}
+  .lede{font-size:1.1rem; color:var(--body); margin-bottom:20px}
+  .hero img{border-radius:10px; border:1px solid var(--steel)}
+
+  .statusline{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 20px}
+  .chip{background:var(--surface); border:1px solid var(--steel); color:var(--ink);
+        border-radius:999px; padding:6px 13px; font-size:.86rem; font-weight:600}
+  .chip.rate{background:#FFF8E6; border-color:#E8D49A}
+
+  .btn{display:inline-block; background:var(--red); color:#fff; text-decoration:none;
+       font-weight:700; font-size:1.18rem; padding:16px 26px; border-radius:9px;
+       text-align:center; letter-spacing:.01em}
+  .btn.full{display:block; width:100%}
+  .btnsub{font-size:.85rem; color:var(--muted); margin:9px 0 0}
+
+  /* ---------- directions ---------- */
+  .find{background:var(--charcoal); color:var(--onchar); border-bottom:none}
+  .find h2{color:#fff}
+  .find .eyebrow{color:var(--redlt)}
+  .route{list-style:none; counter-reset:r; padding:0; margin:0 0 22px}
+  .route li{counter-increment:r; position:relative; padding:0 0 16px 46px; font-size:1.04rem}
+  .route li::before{
+    content:counter(r); position:absolute; left:0; top:-1px; width:30px; height:30px;
+    background:var(--redlt); color:var(--charcoal); border-radius:50%;
+    font-weight:800; font-size:.95rem; display:flex; align-items:center; justify-content:center;
+  }
+  .warn{background:rgba(255,138,138,.12); border:1px solid var(--redlt); border-left-width:5px;
+        border-radius:8px; padding:15px 17px; margin:0 0 22px}
+  .warn strong{color:var(--redlt); display:block; margin-bottom:5px; letter-spacing:.02em}
+  .warn p{margin:0; color:var(--onchar)}
+  /* Secondary note: the GPS warning above is the critical one and keeps the
+     red. This one is advisory, so it steps down to a neutral steel treatment. */
+  .warn.note{background:rgba(232,235,237,.07); border-color:var(--mutedchar)}
+  .warn.note strong{color:#fff}
+  .find .src{color:var(--mutedchar); font-size:.86rem; margin:0}
+  .find .src a{color:var(--redlt)}
+
+  /* ---------- generic blocks ---------- */
+  .cols{display:grid; grid-template-columns:1fr; gap:20px}
+  .card{background:var(--paper); border:1px solid var(--steel); border-radius:10px; padding:20px}
+  section.alt .card{background:var(--surface)}
+  .card h3{margin-bottom:.35em}
+  .card p:last-child{margin-bottom:0}
+
+  table.hours{width:100%; border-collapse:collapse; max-width:440px}
+  table.hours th,table.hours td{text-align:left; padding:11px 4px; border-bottom:1px solid var(--steel); font-size:1rem}
+  table.hours th{font-weight:600; color:var(--ink)}
+  table.hours td{text-align:right; color:var(--body); font-variant-numeric:tabular-nums}
+  table.hours tr.shut td,table.hours tr.shut th{color:var(--muted)}
+
+  blockquote{margin:0 0 18px; padding:16px 18px; background:var(--paper);
+             border:1px solid var(--steel); border-left:5px solid var(--red); border-radius:8px}
+  section.alt blockquote{background:var(--surface)}
+  blockquote p{margin:0 0 9px; font-size:1rem}
+  blockquote cite{font-style:normal; font-size:.84rem; color:var(--muted)}
+
+  .contact dl{margin:0; display:grid; grid-template-columns:1fr; gap:16px}
+  .contact dt{font-size:.73rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:3px}
+  .contact dd{margin:0; font-size:1.06rem; color:var(--ink); font-weight:600}
+  .contact dd a{font-weight:700; text-decoration:none}
+  .contact dd span{display:block; font-weight:400; font-size:.9rem; color:var(--muted); margin-top:3px}
+
+  /* ---------- sticky call bar ---------- */
+  .bar{position:fixed; left:0; right:0; bottom:0; z-index:50; background:var(--red);
+       box-shadow:0 -2px 14px rgba(0,0,0,.26); padding:env(safe-area-inset-bottom) 0 0}
+  .bar a{display:flex; align-items:center; justify-content:center; gap:9px;
+         color:#fff; text-decoration:none; font-weight:700; font-size:1.17rem; padding:17px 14px}
+
+  footer{background:var(--charcoal); color:var(--mutedchar); padding:30px 0; font-size:.88rem; border:0}
+  footer p{margin:0 0 .6em}
+  footer strong{color:var(--onchar)}
+  .demo{background:#FFF4D6; border-top:3px solid var(--red); color:#4A3A10; padding:14px 0; font-size:.86rem}
+  .demo p{margin:0}
+
+  @media (min-width:760px){
+    .hero .grid{grid-template-columns:1.08fr .92fr; gap:38px}
+    .hero h1{font-size:2.5rem}
+    .cols{grid-template-columns:1fr 1fr}
+    .contact dl{grid-template-columns:1fr 1fr}
+    .btn.full{display:inline-block; width:auto}
+    body{padding-bottom:0}
+    .bar{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- demo banner: must be removed if this ever goes live -->
+<div class="demo"><div class="wrap"><p><strong>Unsolicited design sample.</strong> Built from public information. Not an official Wilson Waste Co. website &mdash; not affiliated, not endorsed, not live.</p></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <!-- PLACEHOLDER WORDMARK: typeset, no real logo exists. -->
+    <div class="mark">
+      <b>WILSON WASTE</b>
+      <span class="co">CO. INC.</span>
+      <span class="tr">Textile Recycling</span>
+    </div>
+    <div class="topcall">
+      <span class="lbl">Call the yard</span>
+      <a href="tel:+17068209077">(706)&nbsp;820-9077</a>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">Rossville, Georgia &middot; Walker County</p>
+      <h1>Textile recycling in the Chattanooga Valley</h1>
+      <p class="lede">A working yard on Dry Valley Road. Drivers welcome Monday through Friday, 7:00&nbsp;am to 5:00&nbsp;pm.</p>
+
+      <div class="statusline">
+        <span class="chip rate">&#9733; 4.5 average &middot; 14 Google ratings</span>
+        <span class="chip">Mon&ndash;Fri 7am&ndash;5pm</span>
+        <span class="chip">Closed weekends</span>
+      </div>
+
+      <a class="btn full" href="tel:+17068209077">Call (706) 820-9077</a>
+      <p class="btnsub">Office hours are 7:00&nbsp;am &ndash; 5:00&nbsp;pm, Monday to Friday.</p>
+    </div>
+    <div>
+      <img src="images/hero.jpg" width="1100" height="1182"
+           alt="A Wilson Waste Co. trailer parked at the Dry Valley Road yard, its placard reading Wilson Waste Co. Inc., Textile Recycling, 706-820-9077.">
+    </div>
+  </div>
+</div>
+
+<!--
+  THE CORE BLOCK. This is the reason the site is worth building.
+  Three of the five public Google reviews are drivers giving each other
+  directions, because there is no website to put directions on. Two of those
+  three docked a star over the approach. Every step below is quoted or
+  paraphrased from those reviews - nothing here is invented.
+-->
+<section class="find">
+  <div class="wrap">
+    <p class="eyebrow">Before you set off</p>
+    <h2>How to find the yard</h2>
+
+    <div class="warn">
+      <strong>Don't trust your GPS on the last few miles.</strong>
+      <p>Drivers keep reporting that satnav routes them down the wrong roads into the valley. Use the route below instead.</p>
+    </div>
+
+    <ol class="route">
+      <li>Come in on <strong>Highway&nbsp;2</strong>.</li>
+      <li>Turn onto <strong>Happy Valley Road</strong> &mdash; stay on it.</li>
+      <li>Happy Valley Road takes you onto <strong>Dry Valley Road</strong>. The yard is on Dry Valley.</li>
+      <li><strong>Do not</strong> try to cut through on Ridgeland or Dogwood.</li>
+    </ol>
+
+    <div class="warn note">
+      <strong>Heads up for tractor-trailers.</strong>
+      <p>The approach is narrow with tight turns. Drivers advise bringing your tandems forward for maximum manoeuvrability before you make the turn in.</p>
+    </div>
+
+    <h3 style="color:#fff">Checking in</h3>
+    <ol class="route">
+      <li>Park out of the way.</li>
+      <li>Go <strong>up the stairs next to the first dock</strong>.</li>
+      <li><strong>Keep left</strong> &mdash; you'll see the offices.</li>
+      <li>Check in there. They'll bring the paperwork out to you when you're finished.</li>
+    </ol>
+
+    <p class="src">Every step on this page is taken from drivers' own public Google reviews of this yard, 2016&ndash;2025. <a href="https://maps.google.com/?cid=837538738824589312">Read the reviews</a>.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">What we do</p>
+    <h2>Textile recycling</h2>
+    <div class="cols">
+      <div class="card">
+        <h3>Textile recycling</h3>
+        <p>Wilson Waste Co., Inc. is a textile recycler &mdash; the trade term is textile waste reclamation. That is the business named on our own equipment and the category we're listed under in the industrial directories.</p>
+      </div>
+      <div class="card">
+        <h3>A working yard, not a drop box</h3>
+        <p>This is a commercial yard with loading docks, set up for trailers. If you're hauling in a load, use the route and the check-in steps above.</p>
+      </div>
+    </div>
+    <!--
+      DELIBERATELY THIN. Nothing public states which grades or materials they
+      accept, what they pay, who they serve, or whether they collect. Writing
+      a materials list here would be invention. The owner fills this in.
+    -->
+    <p style="margin-top:20px; color:var(--muted); font-size:.95rem">Not sure whether we handle what you've got? <a href="tel:+17068209077">Call the yard</a> and ask.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Opening hours</p>
+    <h2>When the yard is open</h2>
+    <table class="hours">
+      <tr><th>Monday</th><td>7:00 am &ndash; 5:00 pm</td></tr>
+      <tr><th>Tuesday</th><td>7:00 am &ndash; 5:00 pm</td></tr>
+      <tr><th>Wednesday</th><td>7:00 am &ndash; 5:00 pm</td></tr>
+      <tr><th>Thursday</th><td>7:00 am &ndash; 5:00 pm</td></tr>
+      <tr><th>Friday</th><td>7:00 am &ndash; 5:00 pm</td></tr>
+      <tr class="shut"><th>Saturday</th><td>Closed</td></tr>
+      <tr class="shut"><th>Sunday</th><td>Closed</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">What drivers say</p>
+    <h2>4.5 stars from 14 ratings</h2>
+
+    <blockquote>
+      <p>&ldquo;Staff was professional and decently quick enough.&rdquo;</p>
+      <cite>&mdash; p turtle, Google review, 2024</cite>
+    </blockquote>
+
+    <blockquote>
+      <p>&ldquo;The owner is a great guy and helps to make sure his drivers drive safe for our community.&rdquo;</p>
+      <cite>&mdash; Sab B, Google review, 2019</cite>
+    </blockquote>
+
+    <blockquote>
+      <p>&ldquo;Park out of the way and go up the stairs next to the first dock then keep left and you will see offices. That's where you check in, they will bring paperwork to you once finished.&rdquo;</p>
+      <cite>&mdash; p turtle, Google review, 2024</cite>
+    </blockquote>
+
+    <p style="color:var(--muted); font-size:.92rem; margin-bottom:0">Quoted verbatim from public Google reviews, attributed to the reviewer's own display name. Rating and count verified 27 October 2026.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Wilson Waste Co., Inc.</h2>
+    <dl>
+      <dt>Phone</dt>
+      <dd><a href="tel:+17068209077">(706) 820-9077</a><span>Monday to Friday, 7am&ndash;5pm</span></dd>
+
+      <dt>Fax</dt>
+      <dd>(706) 820-2453</dd>
+
+      <dt>Yard</dt>
+      <dd>1321 Dry Valley Rd<span>Rossville, GA 30741 &middot; Walker County</span></dd>
+
+      <dt>Mail</dt>
+      <dd>PO Box 144<span>Flintstone, GA 30725</span></dd>
+    </dl>
+    <p style="margin-top:26px"><a class="btn full" href="tel:+17068209077">Call (706) 820-9077</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Wilson Waste Co., Inc.</strong> &middot; Textile recycling &middot; Rossville, Georgia</p>
+    <p>Mon&ndash;Fri 7:00 am &ndash; 5:00 pm &middot; <a href="tel:+17068209077" style="color:var(--redlt)">(706) 820-9077</a></p>
+    <p style="margin-top:14px; font-size:.82rem">This is an unsolicited design sample built from publicly available information. It is not an official website of Wilson Waste Co., Inc. and is not affiliated with or endorsed by the company.</p>
+  </div>
+</footer>
+
+<div class="bar"><a href="tel:+17068209077">&#9742;&nbsp; Call (706) 820-9077</a></div>
+
+</body>
+</html>
