@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Barber&iacute;a Brawn &mdash; Barbershop on Ringgold Road, East Ridge TN</title>
+<meta name="description" content="Barberia Brawn (Brawn Barbershop), 6802 Ringgold Rd, East Ridge TN. Fades, beard work and braids by appointment. Closed Tuesdays. Call (423) 645-7640.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<!--
+  ===================================================================
+  UNSOLICITED DEMO - Brawn Barbershop / Barberia Brawn, East Ridge TN
+  Built 2026-10-27 by Matt McFarlane.
+
+  THIS IS A SPEC PIECE. The business has NOT been contacted and has
+  NOT approved, commissioned, reviewed or paid for any of this.
+  It is marked noindex/nofollow and must never be presented as the
+  business's official site.
+
+  EVERY FACT HERE IS VERIFIED. Sources in research.md.
+    - Phone, address, hours, rating, review count, price band and
+      accessibility attributes: live Google Places pull 2026-10-27.
+    - Hours and street number are CORROBORATED BY THE SHOP ITSELF in
+      a public Facebook group post: "we are located in 6802 ringgold
+      rd ... But tuesday only day off".
+    - Services, durations and prices: THEIR OWN Booksy booking page,
+      read 2026-10-27, and shown as list prices. Booksy's rotating
+      "save up to 10%" promo prices are deliberately NOT published
+      here - they move, and a stale discount on a man's own site
+      starts arguments at the chair.
+    - "No walk-ins" is THEIR booking policy, stated on their Booksy
+      page. The site does not invent a walk-in offer they don't make.
+    - All three testimonials are real, public Google reviews quoted
+      verbatim and attributed to the reviewer's own display name.
+      Nothing invented, nothing trimmed to mislead.
+
+  DELIBERATELY ABSENT, because none of it could be verified:
+    - NO SUITE NUMBER. 6802 Ringgold Rd is a multi-tenant building
+      with units 102-206 and their listing carries no unit. Guessing
+      one would send people to the wrong door.
+    - No owner name anywhere. "Richard Brawn" and "Jerry Martinez"
+      both appear in public sources but neither is confirmed as the
+      owner, and Booksy misspells the second one.
+    - No founding year, no years-of-experience claim.
+    - No second phone number. There is clearly a second number
+      painted on their window in raw/b8.jpg; it could not be read
+      with confidence, so it is not published. See research.md.
+    - No "se habla espanol". Near-certain from their own branding,
+      but it is an inference, not a verified service claim.
+
+  IMAGES: three of their own Google Places photos. No stock. SEVEN of
+  the ten available photos were REJECTED because they show
+  identifiable faces - two of them children. Detail in build_assets.py.
+
+  COLOURS: sampled from their own fixtures and watermark, not chosen.
+  Brass #AF915E comes off their chair bases and cabinet handles and is
+  used for CALLS TO ACTION AND RULES ONLY. All 19 foreground/background
+  pairs pass WCAG AA - run probe/contrast.py, expect FAILURES: 0.
+
+  LOGO: the "B*" favicon is REDRAWN from the watermark on their own
+  photo, because their real mark only exists burned into a picture of
+  a customer. It is a PLACEHOLDER until they hand over the real file.
+  ===================================================================
+-->
+
+<style>
+  :root{
+    --ink:#131416; --ink-soft:#23262B; --panel:#1B1E22;
+    --bone:#F6F3ED; --bone-deep:#EAE4D9;
+    --brass:#AF915E; --brass-lt:#E0C68B; --brass-dark:#6B5729;
+    --muted:#585D64; --muted-dk:#A8AEB6; --white:#fff;
+    --line:#DED6C7;
+    --wrap:1120px;
+    --serif:"Didot","Bodoni 72","Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bone); color:var(--ink);
+    font-family:var(--sans); font-size:17px; line-height:1.65;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; height:auto; display:block}
+  h1,h2,h3{font-family:var(--serif); line-height:1.15; margin:0}
+  h2{font-size:clamp(1.5rem,4vw,2.1rem); letter-spacing:-.005em}
+  p{margin:0 0 1rem}
+  a{color:var(--brass-dark)}
+  .wrap{max-width:var(--wrap); margin:0 auto; padding:0 20px}
+  .section{padding:clamp(44px,7vw,76px) 0}
+  .eyebrow{
+    font-family:var(--sans); font-size:.72rem; font-weight:700;
+    letter-spacing:.17em; text-transform:uppercase; color:var(--brass-dark);
+    margin:0 0 .6rem;
+  }
+  .rule{width:52px; height:3px; background:var(--brass-dark); border:0; margin:0 0 1.4rem; border-radius:2px}
+
+  /* ---------- top bar ---------- */
+  .topbar{background:var(--ink); color:var(--bone); font-size:.86rem}
+  .topbar .wrap{
+    display:flex; flex-wrap:wrap; gap:6px 20px;
+    align-items:center; justify-content:center; padding-top:9px; padding-bottom:9px;
+    text-align:center;
+  }
+  .topbar strong{color:var(--white)}
+  .topbar .tue{color:var(--brass-lt); font-weight:600}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative; background:var(--ink); color:var(--bone)}
+  .hero-img{
+    width:100%; height:clamp(200px,36vw,350px); object-fit:cover;
+    object-position:center 56%; opacity:.60;
+  }
+  .hero-body{
+    position:relative; margin-top:clamp(-140px,-20vw,-100px);
+    padding-bottom:clamp(34px,5vw,52px);
+  }
+  .hero-card{
+    background:rgba(19,20,22,.94); border:1px solid #343840; border-radius:14px;
+    padding:clamp(22px,4vw,38px);
+    box-shadow:0 18px 44px rgba(0,0,0,.44);
+    max-width:730px;
+  }
+  .brandmark{
+    display:flex; align-items:center; gap:11px; margin:0 0 .85rem;
+  }
+  .brandmark .badge{
+    width:34px; height:34px; border-radius:50%; background:var(--bone);
+    display:flex; align-items:center; justify-content:center; flex:none;
+  }
+  .brandmark .badge img{width:34px; height:34px; border-radius:50%}
+  .brandmark .kicker{
+    font-family:var(--sans); font-size:.7rem; font-weight:700;
+    letter-spacing:.2em; text-transform:uppercase; color:var(--brass-lt);
+  }
+  .hero h1{
+    font-size:clamp(1.9rem,6vw,3.25rem); color:var(--white);
+    letter-spacing:.01em; margin-bottom:.12em;
+  }
+  .hero .sub{
+    font-family:var(--serif); font-style:italic;
+    font-size:clamp(1rem,2.7vw,1.3rem); color:var(--bone); opacity:.94; margin:0 0 1.1rem;
+  }
+  .stars{
+    display:flex; flex-wrap:wrap; align-items:center; gap:9px;
+    font-size:.93rem; color:var(--bone); margin-bottom:1.4rem;
+  }
+  .stars .s{color:var(--brass-lt); letter-spacing:2px; font-size:1.05rem}
+
+  /* ---------- buttons ---------- */
+  .cta-row{display:flex; flex-wrap:wrap; gap:12px}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:9px;
+    font-family:var(--sans); font-weight:700; font-size:1.05rem;
+    padding:15px 26px; border-radius:9px; text-decoration:none;
+    border:2px solid transparent; min-height:52px; cursor:pointer;
+    transition:background .15s,border-color .15s,color .15s;
+  }
+  .btn-call{background:var(--brass); color:var(--ink); border-color:var(--brass)}
+  .btn-call:hover,.btn-call:focus-visible{background:var(--brass-lt); border-color:var(--brass-lt)}
+  .btn-ghost{background:transparent; color:var(--bone); border-color:#5A6068}
+  .btn-ghost:hover,.btn-ghost:focus-visible{border-color:var(--bone); background:rgba(255,255,255,.07)}
+  .btn-dark{background:var(--ink); color:var(--white); border-color:var(--ink)}
+  .btn-dark:hover,.btn-dark:focus-visible{background:var(--ink-soft); border-color:var(--ink-soft)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--brass-lt); outline-offset:3px}
+  .note{font-size:.85rem; color:var(--muted-dk); margin:.95rem 0 0}
+
+  /* ---------- quick facts ---------- */
+  .facts{background:var(--bone-deep); border-bottom:1px solid var(--line)}
+  .facts .wrap{
+    display:grid; gap:18px 26px; padding-top:26px; padding-bottom:26px;
+    grid-template-columns:repeat(auto-fit,minmax(185px,1fr));
+  }
+  .fact .k{
+    font-size:.7rem; font-weight:700; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--brass-dark); margin-bottom:3px;
+  }
+  .fact .v{font-size:1.02rem; font-weight:600; color:var(--ink)}
+  .fact .v a{color:var(--ink); text-decoration:none; border-bottom:2px solid var(--brass)}
+
+  /* ---------- services ---------- */
+  .svc-list{margin-top:28px; border-top:1px solid var(--line)}
+  .svc{
+    display:flex; flex-wrap:wrap; gap:4px 18px; align-items:baseline;
+    padding:17px 2px; border-bottom:1px solid var(--line);
+  }
+  .svc .nm{font-family:var(--serif); font-size:1.18rem; font-weight:600; flex:1 1 210px}
+  .svc .dur{font-size:.85rem; color:var(--muted); flex:none}
+  .svc .pr{
+    font-size:1.05rem; font-weight:700; color:var(--ink);
+    font-variant-numeric:tabular-nums; flex:none; min-width:74px; text-align:right;
+  }
+  .ask{
+    margin-top:24px; padding:17px 20px; background:var(--white);
+    border:1px dashed #C9BFAC; border-radius:10px; font-size:.95rem; color:var(--ink-soft);
+  }
+  .ask strong{color:var(--ink)}
+
+  /* ---------- split ---------- */
+  .split{display:grid; gap:clamp(26px,4vw,48px); grid-template-columns:1fr; align-items:center}
+  @media(min-width:860px){ .split{grid-template-columns:1.02fr .98fr} }
+  .shot{border-radius:12px; overflow:hidden; border:1px solid var(--line); box-shadow:0 10px 26px rgba(19,20,22,.14)}
+  .cap{font-size:.78rem; color:var(--muted); margin:9px 2px 0; line-height:1.45}
+
+  /* ---------- reviews ---------- */
+  .reviews{background:var(--ink); color:var(--bone)}
+  .reviews h2{color:var(--white)}
+  .reviews .eyebrow{color:var(--brass-lt)}
+  .reviews .rule{background:var(--brass)}
+  .r-grid{display:grid; gap:17px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); margin-top:28px}
+  .r{background:var(--panel); border:1px solid #343840; border-radius:11px; padding:22px}
+  .r .s{color:var(--brass-lt); letter-spacing:2px; font-size:.92rem; margin-bottom:.6rem}
+  .r blockquote{
+    margin:0 0 .9rem; font-family:var(--serif); font-size:1.03rem;
+    line-height:1.55; color:var(--white);
+  }
+  .r cite{font-style:normal; font-size:.82rem; color:var(--muted-dk)}
+  .r cite b{color:var(--bone); font-weight:600}
+  .r-note{margin-top:22px; font-size:.82rem; color:var(--muted-dk)}
+
+  /* ---------- hours ---------- */
+  .hours-card{background:var(--white); border:1px solid var(--line); border-radius:12px; padding:clamp(20px,3vw,28px)}
+  .hrow{display:flex; justify-content:space-between; gap:16px; padding:11px 0; border-bottom:1px solid #EFE9DD}
+  .hrow:last-child{border-bottom:0}
+  .hrow .d{font-weight:600}
+  .hrow .t{color:var(--ink-soft); font-variant-numeric:tabular-nums; text-align:right}
+  .hrow.closed .d,.hrow.closed .t{color:var(--muted)}
+  .walkin{
+    margin-top:18px; padding:15px 18px; background:var(--bone-deep);
+    border-radius:9px; font-size:.95rem; color:var(--ink-soft);
+  }
+  .walkin strong{color:var(--ink)}
+
+  /* ---------- amenities ---------- */
+  .amen{list-style:none; padding:0; margin:22px 0 0; display:grid; gap:11px; grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+  .amen li{display:flex; gap:10px; align-items:flex-start; font-size:.97rem}
+  .amen .tick{color:var(--brass-dark); font-weight:800; flex:none}
+
+  /* ---------- visit / final ---------- */
+  .visit{background:var(--ink-soft); color:var(--white)}
+  .visit h2{color:var(--white)}
+  .visit .eyebrow{color:var(--brass-lt)}
+  .visit .rule{background:var(--brass)}
+  .visit-grid{display:grid; gap:clamp(22px,3.5vw,40px); grid-template-columns:1fr}
+  @media(min-width:800px){ .visit-grid{grid-template-columns:1fr 1fr} }
+  .addr{font-family:var(--serif); font-size:clamp(1.15rem,3vw,1.45rem); line-height:1.4; margin:0 0 .5rem}
+  .visit a.maplink{color:var(--brass-lt)}
+  .final{text-align:center; padding:clamp(44px,7vw,72px) 0}
+  .final h2{margin-bottom:.7rem}
+  .final p{max-width:540px; margin:0 auto 1.6rem; color:var(--ink-soft)}
+  .final .cta-row{justify-content:center}
+  .tel-big{
+    display:block; margin-top:1.1rem; font-family:var(--serif);
+    font-size:clamp(1.3rem,4vw,1.75rem); color:var(--ink); text-decoration:none;
+  }
+  .tel-big:hover{color:var(--brass-dark)}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink); color:var(--muted-dk); font-size:.85rem; padding:30px 0}
+  footer .wrap{display:flex; flex-wrap:wrap; gap:8px 22px; justify-content:space-between}
+  footer a{color:var(--bone)}
+
+  /* ---------- sticky mobile call bar ---------- */
+  .sticky{
+    position:fixed; left:0; right:0; bottom:0; z-index:40;
+    background:var(--brass); display:none;
+    box-shadow:0 -3px 16px rgba(0,0,0,.3);
+  }
+  .sticky a{
+    display:flex; align-items:center; justify-content:center; gap:9px;
+    min-height:56px; color:var(--ink); font-weight:700; font-size:1.07rem; text-decoration:none;
+  }
+  @media(max-width:719px){
+    .sticky{display:block}
+    body{padding-bottom:56px}
+    /* the kicker wraps to two ragged lines at 390px with the wide tracking */
+    .brandmark .kicker{letter-spacing:.11em; font-size:.66rem; line-height:1.35}
+  }
+  @media(prefers-reduced-motion:reduce){ *{transition:none!important; scroll-behavior:auto!important} }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><strong>Wed&ndash;Sat</strong> 10am&ndash;8pm &middot; <strong>Mon</strong> 10&ndash;7 &middot; <strong>Sun</strong> 10&ndash;5</span>
+    <span class="tue">Closed Tuesdays</span>
+    <span>Ringgold Rd, East Ridge</span>
+  </div>
+</div>
+
+<header class="hero">
+  <picture>
+    <source media="(max-width:719px)" srcset="images/hero-mobile.jpg">
+    <img class="hero-img" src="images/hero.jpg"
+         alt="Inside Barberia Brawn: a row of black barber chairs on polished brass bases, black cabinetry with brass handles and a light oak floor."
+         width="1500" height="747" fetchpriority="high">
+  </picture>
+  <div class="hero-body">
+    <div class="wrap">
+      <div class="hero-card">
+        <p class="brandmark">
+          <span class="badge"><img src="images/favicon.png" alt="" width="34" height="34"></span>
+          <span class="kicker">Brawn Barbershop &middot; East Ridge, TN</span>
+        </p>
+        <h1>Barber&iacute;a Brawn</h1>
+        <p class="sub">Precision fades, beard work and braids &mdash; on Ringgold Road.</p>
+        <div class="stars">
+          <span class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span><strong>4.8</strong> out of 5 &middot; 102 Google reviews</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-call" href="tel:+14236457640">
+            <span aria-hidden="true">&#9742;</span> Call (423) 645-7640
+          </a>
+          <a class="btn btn-ghost" href="https://booksy.com/en-us/1480954_brawns-barber-shop_barber-shop_35820_chattanooga" rel="noopener">Book online</a>
+        </div>
+        <p class="note">By appointment &mdash; call the shop or book a time. Closed Tuesdays.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="facts" aria-label="At a glance">
+  <div class="wrap">
+    <div class="fact">
+      <div class="k">Phone</div>
+      <div class="v"><a href="tel:+14236457640">(423) 645-7640</a></div>
+    </div>
+    <div class="fact">
+      <div class="k">Where</div>
+      <div class="v">6802 Ringgold Rd</div>
+    </div>
+    <div class="fact">
+      <div class="k">Open</div>
+      <div class="v">Six days &middot; closed Tue</div>
+    </div>
+    <div class="fact">
+      <div class="k">Booking</div>
+      <div class="v">By appointment</div>
+    </div>
+  </div>
+</section>
+
+<main>
+<section class="section" id="services">
+  <div class="wrap">
+    <p class="eyebrow">What they do</p>
+    <hr class="rule">
+    <h2>Services</h2>
+    <div class="svc-list">
+      <div class="svc">
+        <span class="nm">Hair cut</span>
+        <span class="dur">40 min</span>
+        <span class="pr">$39.99</span>
+      </div>
+      <div class="svc">
+        <span class="nm">Mid fade</span>
+        <span class="dur">45 min</span>
+        <span class="pr">$39.99</span>
+      </div>
+      <div class="svc">
+        <span class="nm">Beard detail &amp; line up</span>
+        <span class="dur">15 min</span>
+        <span class="pr">$19.99</span>
+      </div>
+      <div class="svc">
+        <span class="nm">Haircut, beard &amp; eyebrows</span>
+        <span class="dur">50 min</span>
+        <span class="pr">$50.00</span>
+      </div>
+      <div class="svc">
+        <span class="nm">Hair braids</span>
+        <span class="dur">2 hr 30 min</span>
+        <span class="pr">$150.00</span>
+      </div>
+      <div class="svc">
+        <span class="nm">Hair dye &amp; hair cut</span>
+        <span class="dur">3 hr 5 min</span>
+        <span class="pr">$150.00</span>
+      </div>
+    </div>
+    <p class="ask">
+      <strong>Prices as published on the shop's own booking page.</strong>
+      Promotional discounts run from time to time and are not shown here &mdash;
+      call the shop to confirm before you come in.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bone-deep)">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">The shop</p>
+        <hr class="rule">
+        <h2>Built on purpose, booked by appointment</h2>
+        <p>
+          Barber&iacute;a Brawn sits in the row of units at 6802 Ringgold Road,
+          in East Ridge. Inside it is black cabinetry, brass-based chairs and a
+          hexagon-lit ceiling &mdash; a room that has clearly been fitted out on
+          purpose rather than inherited.
+        </p>
+        <p>
+          It runs on appointments rather than walk-ins, so the chair is yours when
+          you arrive and there is no sitting around waiting for one. Reviewers
+          mention the same two things over and over: the barbers take their time,
+          and the lines come out clean.
+        </p>
+        <p>
+          Children are welcome, and there is a restroom on site.
+        </p>
+      </div>
+      <div>
+        <div class="shot">
+          <img src="images/room.jpg"
+               alt="The chair row at Barberia Brawn, with brass footrests, black marble-topped armrests and a window onto Ringgold Road."
+               width="1040" height="881" loading="lazy">
+        </div>
+        <p class="cap">Inside the shop on Ringgold Road.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <p class="eyebrow">In their words</p>
+    <hr class="rule">
+    <h2>4.8 stars from 102 reviews</h2>
+    <div class="r-grid">
+      <div class="r">
+        <div class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Expected a regular fade haircut, bro went above n beyond. Took his time n made sure everything looked even n lined up. Nice clean shop.&rdquo;</blockquote>
+        <cite><b>Kingtucky</b> &middot; Google review</cite>
+      </div>
+      <div class="r">
+        <div class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;They are always so patient and welcoming with my 8-year-old, and the haircut always comes out amazing. They are Professional, skilled, and genuinely kind.&rdquo;</blockquote>
+        <cite><b>Melanie M</b> &middot; Google review</cite>
+      </div>
+      <div class="r">
+        <div class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;You guys are professionals and I'm definitely coming back. It's one of the best haircuts I ever had.&rdquo;</blockquote>
+        <cite><b>King Mash</b> &middot; Google review</cite>
+      </div>
+    </div>
+    <p class="r-note">Reviews are quoted from the shop's public Google listing, in the reviewers' own words.</p>
+  </div>
+</section>
+
+<section class="section" id="visit-hours">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">When to come</p>
+        <hr class="rule">
+        <h2>Open six days a week</h2>
+        <div class="hours-card">
+          <div class="hrow"><span class="d">Monday</span><span class="t">10:00am &ndash; 7:00pm</span></div>
+          <div class="hrow closed"><span class="d">Tuesday</span><span class="t">Closed</span></div>
+          <div class="hrow"><span class="d">Wednesday</span><span class="t">10:00am &ndash; 8:00pm</span></div>
+          <div class="hrow"><span class="d">Thursday</span><span class="t">10:00am &ndash; 8:00pm</span></div>
+          <div class="hrow"><span class="d">Friday</span><span class="t">10:00am &ndash; 8:00pm</span></div>
+          <div class="hrow"><span class="d">Saturday</span><span class="t">10:00am &ndash; 8:00pm</span></div>
+          <div class="hrow"><span class="d">Sunday</span><span class="t">10:00am &ndash; 5:00pm</span></div>
+        </div>
+        <p class="walkin">
+          <strong>Open Saturdays and Sundays</strong> &mdash; and late, until 8pm,
+          Wednesday through Saturday. The one day they are shut is Tuesday.
+        </p>
+      </div>
+      <div>
+        <p class="eyebrow">Good to know</p>
+        <hr class="rule">
+        <h2>The practical details</h2>
+        <ul class="amen">
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>By appointment &mdash; call or book online</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Open six days a week, including Sunday</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Open until 8pm, Wednesday to Saturday</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Good for children</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Restroom on site</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Wheelchair accessible entrance</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Wheelchair accessible parking</span></li>
+          <li><span class="tick" aria-hidden="true">&#10003;</span><span>Braids and colour work by appointment</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bone-deep)">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="shot">
+          <img src="images/braids.jpg"
+               alt="Freshly finished braids at Barberia Brawn, with the barber's clipper rail and round mirror behind."
+               width="1040" height="763" loading="lazy">
+        </div>
+        <p class="cap">Braids, finished in the chair.</p>
+      </div>
+      <div>
+        <p class="eyebrow">Beyond the fade</p>
+        <hr class="rule">
+        <h2>Braids and colour, booked ahead</h2>
+        <p>
+          Alongside cuts and beard work, the shop books longer appointments for
+          braids and for colour. These are not squeeze-in jobs &mdash; braids run
+          two and a half hours, and a dye-and-cut runs three.
+        </p>
+        <p>
+          If that is what you are after, book it rather than turning up, so the
+          time is set aside for you.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section visit" id="visit">
+  <div class="wrap">
+    <div class="visit-grid">
+      <div>
+        <p class="eyebrow">Find the shop</p>
+        <hr class="rule">
+        <h2>On Ringgold Road</h2>
+        <p class="addr">
+          Barber&iacute;a Brawn<br>
+          6802 Ringgold Rd<br>
+          East Ridge, TN 37412
+        </p>
+        <p>
+          On Ringgold Road in East Ridge, in the row of units shared with the
+          upholstery shop and the mattress store. Parking is on site.
+        </p>
+        <p>
+          <a class="maplink" href="https://maps.google.com/?cid=14429332224206377240" rel="noopener">Open in Google Maps</a>
+        </p>
+      </div>
+      <div>
+        <p class="eyebrow">Get a chair</p>
+        <hr class="rule">
+        <h2>Book a time</h2>
+        <p>
+          Call the shop, or pick a slot on the booking page. Closed Tuesdays.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-call" href="tel:+14236457640">
+            <span aria-hidden="true">&#9742;</span> Call (423) 645-7640
+          </a>
+          <a class="btn btn-ghost" href="https://booksy.com/en-us/1480954_brawns-barber-shop_barber-shop_35820_chattanooga" rel="noopener">Book online</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Ready for a cut?</h2>
+    <p>Open until 8pm Wednesday through Saturday, and Sundays till 5. Closed Tuesdays.</p>
+    <div class="cta-row">
+      <a class="btn btn-call" href="tel:+14236457640">
+        <span aria-hidden="true">&#9742;</span> Call (423) 645-7640
+      </a>
+      <a class="btn btn-dark" href="https://booksy.com/en-us/1480954_brawns-barber-shop_barber-shop_35820_chattanooga" rel="noopener">Book online</a>
+    </div>
+    <a class="tel-big" href="tel:+14236457640">(423) 645-7640</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Barber&iacute;a Brawn &middot; Brawn Barbershop &middot; 6802 Ringgold Rd, East Ridge, TN 37412</span>
+    <span><a href="tel:+14236457640">(423) 645-7640</a> &middot; Closed Tuesdays</span>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a href="tel:+14236457640"><span aria-hidden="true">&#9742;</span> Call the shop</a>
+</div>
+
+</body>
+</html>
