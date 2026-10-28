@@ -174,8 +174,14 @@
      (14). The logo itself is pure #000 over alpha. See build_assets.py */
   --ink:#18152c;
   --ink2:#272727;
-  --accent:#f9520b;
-  --accent-dk:#d84304;
+  /* Their stylesheet orange is #f9520b. White-on-#f9520b measures 3.36:1
+     and #f9520b-on-white 3.36:1 — both fail WCAG AA, which is a real
+     chunk of the 74 accessibility score on their live site. These are the
+     same hue, taken down two steps until they pass: white on --accent is
+     4.66:1, --accent-text on the wash is 5.01:1. Same brand, legible. */
+  --accent:#d04405;
+  --accent-dk:#b03703;
+  --accent-text:#bf3d04;
   --grey:#737373;
   --line:#e2e2e2;
   --wash:#f6f6f7;
@@ -199,7 +205,7 @@ h3{font-size:19px;font-weight:700;margin-bottom:6px}
 .lede{font-size:clamp(16px,2.4vw,19px);color:var(--grey);max-width:66ch}
 .eyebrow{
   font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--accent);margin-bottom:10px
+  color:var(--accent-text);margin-bottom:10px
 }
 
 /* ---------- top bar ---------- */
@@ -364,6 +370,7 @@ footer a{color:#fff}
   </div>
 </div>
 
+<main>
 <section id="services">
   <div class="wrap">
     <div class="eyebrow">What we pour</div>
@@ -602,6 +609,7 @@ footer a{color:#fff}
     </div>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="wrap">
