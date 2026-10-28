@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Superior Septic &amp; Plumbing LLC — Rossville, GA | Concept Demo</title>
+<meta name="description" content="Unsolicited concept redesign for Superior Septic &amp; Plumbing LLC of Rossville, Georgia. Not the official site.">
+<meta name="theme-color" content="#2F2F8F">
+<link rel="preload" as="image" href="images/hero.webp" fetchpriority="high">
+<!--
+================================================================================
+  WHAT THIS PAGE IS, IN PLAIN ENGLISH
+================================================================================
+
+  This is an UNSOLICITED CONCEPT DEMO built by Matt McFarlane, an independent
+  web developer in Chattanooga, Tennessee.
+
+  It is NOT the official website of Superior Septic & Plumbing LLC.
+  Their real site is:  https://superiorsepticandplumbing.com/
+
+  Superior Septic & Plumbing LLC did not commission this, has not seen it, has
+  not approved it, and is not affiliated with it in any way. Nobody from the
+  business was contacted before it was built. There is no business
+  relationship of any kind between Matt McFarlane and Superior Septic &
+  Plumbing LLC.
+
+  WHY IT EXISTS
+  -------------
+  It is a sample. It shows what a fast, single-page site built from their own
+  material could look like. It is the entire pitch -- there is no follow-up
+  sequence, no tracking, no retargeting pixel, no analytics of any kind, and
+  no form that collects anything from anybody.
+
+  IF THE OWNER WANTS IT GONE
+  --------------------------
+  It comes down immediately, no questions asked, no argument. One message is
+  enough. The page is served as noindex/nofollow/noarchive precisely so it can
+  never compete with their real site in search results while it is up.
+
+  WHERE EVERY PIECE CAME FROM
+  ---------------------------
+  * Logo .................. their own file, served from their own domain at
+                            /assets/logo-VBy2hDK-.webp
+  * Brand colour #2F2F8F .. sampled directly from 4,506 opaque pixels of that
+                            logo file. Not guessed, not approximated.
+  * All five photographs .. their own uploads to their own Google Business
+                            Profile. Every one carries the Places API
+                            authorAttribution "Superior Septic & Plumbing".
+  * Reviews ............... REAL reviews pulled live from the Google Places
+                            API on 2026-10-27, quoted verbatim, under the
+                            reviewers' real published names.
+  * Rating 4.9 / 92 ....... live from the Places API, same pull.
+  * Services .............. their own service list, their own wording.
+  * Hours ................. their Google Business Profile.
+  * Phone numbers ......... their own published numbers.
+  * State certification ... Georgia Department of Public Health, Environmental
+                            Health Section, published county lists. Verified
+                            firsthand in both the Pumper list and the
+                            Installer list, Walker County, 2026-10-27.
+
+  WHAT IS DELIBERATELY *NOT* HERE
+  -------------------------------
+  * No invented testimonials. Their real site currently shows six testimonials
+    attributed to "Michael R.", "Jennifer S.", "Robert T.", "Sarah M.",
+    "David L." and "Lisa K." None of those names match any of their 92 real
+    Google reviewers. Those were not copied here, and should not be.
+  * No "500+ projects", "10+ years" or "100% satisfaction" figures. Those are
+    self-reported numbers, and on their live site the counters that are meant
+    to display them are stuck at zero.
+  * No "24/7" claim. Their site says 24/7; their Google profile says Mon-Sat
+    8-5, closed Sunday; their site footer says 8am-10pm seven days. Three
+    different answers, so this page repeats only what Google publishes.
+  * No stock photography. No AI-generated imagery. Not one pixel.
+  * No crew faces. Three of their ten profile photos show a crew member's
+    face. They published those themselves, but putting an identifiable
+    person's face on a demo they never asked for is a different thing
+    entirely. Those three were left out.
+  * No licence numbers, crew counts, prices, or founding dates beyond what is
+    cited above.
+
+  Questions, or a takedown request: Matt McFarlane, Chattanooga TN.
+================================================================================
+-->
+<style>
+  :root{
+    --brand:#2F2F8F;        /* sampled from their logo */
+    --brand-dk:#222269;
+    --brand-dker:#1A1A52;
+    --ink:#15172E;
+    --body:#3F4357;
+    --line:#DDE0EA;
+    --bg:#FFFFFF;
+    --surf:#F5F6FA;
+    --green:#15803D;
+    --star:#B45309;
+    --maxw:1120px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--body);
+    font:400 17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+         "Helvetica Neue",Arial,sans-serif;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;height:auto;display:block}
+  h1,h2,h3,h4{color:var(--ink);line-height:1.2;margin:0 0 .5em;font-weight:800;
+    letter-spacing:-.02em;overflow-wrap:break-word}
+  h1{font-size:clamp(1.7rem,5.2vw,3rem)}
+  h2{font-size:clamp(1.4rem,3.8vw,2.1rem)}
+  h3{font-size:1.1rem}
+  p{margin:0 0 1em}
+  a{color:var(--brand)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+    overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--brand);
+    color:#fff;padding:12px 18px;z-index:100;text-decoration:none}
+  .skip:focus{left:0}
+  :focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+
+  /* ---------- header ---------- */
+  header{border-bottom:1px solid var(--line);background:#fff}
+  .hbar{display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:12px 0;flex-wrap:wrap}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .logo img{width:150px;height:89px}
+  .hcall{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+  .hcall a{font-weight:800;font-size:1.18rem;color:var(--brand-dk);
+    text-decoration:none;letter-spacing:-.01em}
+  .hcall span{font-size:.78rem;color:var(--body);letter-spacing:.06em;
+    text-transform:uppercase;font-weight:700}
+
+  /* ---------- hero ---------- */
+  .hero{padding:34px 0 30px}
+  .hero-grid{display:grid;gap:26px;align-items:center}
+  .eyebrow{display:inline-block;font-size:.76rem;font-weight:800;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--brand-dk);
+    background:#E9EAF7;padding:7px 13px;border-radius:999px;margin-bottom:14px}
+  .lead{font-size:clamp(1rem,2.4vw,1.14rem);max-width:56ch}
+  .rate{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:0 0 20px;
+    font-size:.95rem}
+  .rate b{color:var(--ink);font-size:1.08rem}
+  .stars{color:var(--star);letter-spacing:1px;font-size:1.05rem}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    min-height:54px;padding:14px 24px;border-radius:11px;font-weight:800;
+    font-size:1.05rem;text-decoration:none;border:2px solid var(--brand);
+    transition:background .15s,color .15s}
+  .btn-p{background:var(--brand);color:#fff}
+  .btn-p:hover{background:var(--brand-dker);border-color:var(--brand-dker)}
+  .btn-s{background:#fff;color:var(--brand-dk)}
+  .btn-s:hover{background:var(--surf)}
+  .hero img.shot{border-radius:14px;box-shadow:0 10px 30px rgba(21,23,46,.16)}
+
+  /* ---------- trust strip ---------- */
+  .trust{background:var(--brand);color:#fff;padding:26px 0}
+  .trust h2{color:#fff}
+  .tgrid{display:grid;gap:16px;grid-template-columns:1fr}
+  .titem{display:flex;gap:12px;align-items:flex-start}
+  .titem .tk{flex:0 0 auto;width:26px;height:26px;border-radius:50%;
+    background:#fff;color:var(--brand);display:flex;align-items:center;
+    justify-content:center;font-weight:800;font-size:.95rem;line-height:1}
+  .titem b{display:block;color:#fff;font-size:1rem;margin-bottom:2px}
+  .titem span{color:#E4E5F6;font-size:.9rem;line-height:1.5}
+  .titem a{color:#fff}
+
+  /* ---------- sections ---------- */
+  section{padding:46px 0}
+  .alt{background:var(--surf)}
+  .lede{max-width:62ch;margin-bottom:26px}
+  .grid{display:grid;gap:18px;grid-template-columns:1fr}
+  .card{background:#fff;border:1px solid var(--line);border-radius:13px;
+    padding:20px}
+  .card h3{margin-bottom:.35em}
+  .card p{margin:0;font-size:.96rem}
+  .alt .card{background:#fff}
+
+  /* ---------- certification callout ---------- */
+  .cert{border:2px solid var(--green);border-radius:14px;padding:22px;
+    background:#F2FBF5}
+  .cert h2{margin-bottom:.4em}
+  .cert .tag{display:inline-block;background:var(--green);color:#fff;
+    font-size:.73rem;font-weight:800;letter-spacing:.09em;
+    text-transform:uppercase;padding:5px 11px;border-radius:999px;
+    margin-bottom:12px}
+  .cert ul{margin:0 0 12px;padding-left:20px}
+  .cert li{margin-bottom:7px}
+  .cert .src{font-size:.86rem;color:#41604D;margin:0}
+  /* 24px minimum tap height: WCAG 2.5.8. Measured at 320px, these inline
+     links came out 16-17px tall before this rule. */
+  .cert .src a{color:#11552C;display:inline-block;min-height:24px;
+    line-height:24px}
+
+  /* ---------- gallery ---------- */
+  .gal{display:grid;gap:16px;grid-template-columns:1fr}
+  .gal figure{margin:0}
+  .gal img{border-radius:12px;width:100%}
+  .gal figcaption{font-size:.88rem;padding-top:8px;color:var(--body)}
+
+  /* ---------- reviews ---------- */
+  .rev{background:#fff;border:1px solid var(--line);border-left:4px solid var(--brand);
+    border-radius:11px;padding:19px}
+  .rev blockquote{margin:0 0 13px;font-size:.98rem;color:var(--ink)}
+  .rev .who{font-size:.87rem;color:var(--body)}
+  .rev .who b{color:var(--ink);display:block;font-size:.95rem}
+
+  /* ---------- areas ---------- */
+  .areas{display:grid;gap:22px;grid-template-columns:1fr}
+  .areas ul{list-style:none;margin:0;padding:0;display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:7px}
+  .areas li{font-size:.94rem;padding-left:16px;position:relative}
+  .areas li::before{content:"";position:absolute;left:0;top:.56em;width:6px;
+    height:6px;border-radius:50%;background:var(--brand)}
+
+  /* ---------- contact ---------- */
+  .ccard{background:#fff;border:1px solid var(--line);border-radius:13px;
+    padding:22px}
+  .ccard dl{margin:0;display:grid;gap:15px}
+  .ccard dt{font-size:.76rem;font-weight:800;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--brand-dk);margin-bottom:3px}
+  .ccard dd{margin:0;font-size:1rem;color:var(--ink)}
+  .ccard dd a{font-weight:700;text-decoration:none;display:inline-block;
+    min-height:26px;line-height:26px}
+  .ccard dd a:hover{text-decoration:underline}
+  .hrs{font-size:.96rem;line-height:1.9}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);color:#C9CCDC;padding:34px 0 108px;
+    font-size:.9rem}
+  footer h3{color:#fff;font-size:1rem;margin-bottom:.6em}
+  footer a{color:#fff;display:inline-block;min-height:24px;line-height:24px}
+  .disc{border:1px solid #3A3D55;border-radius:11px;padding:17px;
+    margin-bottom:20px;background:#1D2039;line-height:1.65}
+  .disc b{color:#fff}
+
+  /* ---------- sticky call bar (mobile) ---------- */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;
+    background:var(--brand);box-shadow:0 -3px 14px rgba(21,23,46,.28)}
+  .sticky a{flex:1 1 0;min-width:0;display:flex;align-items:center;
+    justify-content:center;gap:8px;min-height:60px;padding:10px 8px;color:#fff;
+    font-weight:800;text-decoration:none;font-size:1.02rem;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sticky a+a{border-left:1px solid rgba(255,255,255,.3)}
+
+  /* ---------- responsive ---------- */
+  @media (min-width:700px){
+    .tgrid{grid-template-columns:repeat(2,1fr)}
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .gal{grid-template-columns:repeat(2,1fr)}
+    .areas{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (min-width:960px){
+    .hero-grid{grid-template-columns:1.05fr .95fr;gap:40px}
+    .tgrid{grid-template-columns:repeat(4,1fr)}
+    .grid{grid-template-columns:repeat(3,1fr)}
+    footer{padding-bottom:34px}
+    .sticky{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;
+      scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+  <div class="wrap hbar">
+    <a class="logo" href="#main" aria-label="Superior Septic and Plumbing LLC, Rossville Georgia">
+      <img src="images/logo.webp" width="320" height="190"
+           alt="Superior Septic &amp; Plumbing LLC logo: an excavator and a vacuum tank truck">
+    </a>
+    <div class="hcall">
+      <span>Call or text</span>
+      <a href="tel:+14236540584">(423)&nbsp;654-0584</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============== HERO ============== -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Rossville, Georgia &middot; Walker County</span>
+        <h1>Septic systems installed, repaired and pumped.</h1>
+        <p class="lead">A family-owned septic and plumbing company working across
+          North Georgia and the Chattanooga area &mdash; from a tank that needs
+          pumping to a full field-line replacement.</p>
+        <p class="rate">
+          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <b>4.9</b> <span>out of 5 across 92 Google reviews</span>
+        </p>
+        <div class="cta">
+          <a class="btn btn-p" href="tel:+14236540584">Call (423)&nbsp;654-0584</a>
+          <a class="btn btn-s" href="tel:+17068414347">Second line: (706)&nbsp;841-4347</a>
+        </div>
+      </div>
+      <div>
+        <img class="shot" src="images/hero.webp" width="1000" height="749"
+             fetchpriority="high"
+             alt="A new green polyethylene septic tank set into an excavated trench, with white PVC inlet pipe and black corrugated field line running toward it.">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TRUST STRIP ============== -->
+  <section class="trust">
+    <div class="wrap">
+      <h2 class="sr">Why homeowners call Superior</h2>
+      <div class="tgrid">
+        <div class="titem">
+          <span class="tk" aria-hidden="true">&#10003;</span>
+          <div><b>State-certified, both ways</b>
+            <span>Georgia DPH lists Superior as an approved <strong>Pumper</strong>
+              and a certified <strong>Installer</strong> in Walker County.</span></div>
+        </div>
+        <div class="titem">
+          <span class="tk" aria-hidden="true">&#10003;</span>
+          <div><b>4.9 across 92 reviews</b>
+            <span>Public Google rating, and the most recent review is weeks old,
+              not years.</span></div>
+        </div>
+        <div class="titem">
+          <span class="tk" aria-hidden="true">&#10003;</span>
+          <div><b>Family &amp; locally owned</b>
+            <span>Their own description of the business.</span></div>
+        </div>
+        <div class="titem">
+          <span class="tk" aria-hidden="true">&#10003;</span>
+          <div><b>Own trucks, own machines</b>
+            <span>Vacuum tanker and excavators &mdash; one crew from the dig to
+              the backfill.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SERVICES ============== -->
+  <section>
+    <div class="wrap">
+      <h2>What they do</h2>
+      <p class="lede">The service list below is Superior's own, in their own
+        words.</p>
+      <div class="grid">
+        <div class="card"><h3>Septic system repair</h3>
+          <p>Repairs, maintenance and installation to keep a system working and
+            prevent backups.</p></div>
+        <div class="card"><h3>Septic tank installation</h3>
+          <p>New tanks set and connected, with assessment of the site
+            beforehand.</p></div>
+        <div class="card"><h3>Septic tank pumping</h3>
+          <p>Waste removal and routine maintenance to stop blockages before they
+            start.</p></div>
+        <div class="card"><h3>Field line repair &amp; installation</h3>
+          <p>Drain-field lines replaced or newly laid when the old lines stop
+            taking water.</p></div>
+        <div class="card"><h3>Sewer line repair &amp; replacement</h3>
+          <p>Sewer lines repaired or fully replaced, including runs under
+            driveways.</p></div>
+        <div class="card"><h3>Drain cleaning</h3>
+          <p>Residential and commercial &mdash; kitchen, bathroom and main
+            household lines.</p></div>
+        <div class="card"><h3>Water heater repair &amp; installation</h3>
+          <p>Repair or replacement of residential water heaters.</p></div>
+        <div class="card"><h3>Water line repair &amp; installation</h3>
+          <p>Supply lines repaired, replaced or run new.</p></div>
+        <div class="card"><h3>Grinder &amp; sump pump service</h3>
+          <p>Grinder pumps and sump pumps serviced and replaced.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CERTIFICATION ============== -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="cert">
+        <span class="tag">Verified against state records</span>
+        <h2>Certified by the State of Georgia &mdash; for both halves of the job</h2>
+        <p>Georgia keeps two separate certifications for septic work, and plenty
+          of companies hold only one. Superior Septic &amp; Plumbing LLC appears
+          on <strong>both</strong> published Georgia Department of Public Health
+          lists, filed under <strong>Walker County</strong>:</p>
+        <ul>
+          <li><strong>Georgia Approved Septic Tank Pumper Companies</strong>
+            &mdash; so they can legally pump and haul septage.</li>
+          <li><strong>Georgia Certified Septic Tank Installer Companies</strong>
+            &mdash; so they can legally install a new system, not just empty an
+            old one.</li>
+        </ul>
+        <p class="src">Checked directly against the Environmental Health Section's
+          county lists on 27 October 2026 &mdash;
+          <a href="https://dph.georgia.gov/environmental-health/onsite-sewage"
+             rel="nofollow noopener" target="_blank">dph.georgia.gov</a>.
+          This is a state record, not a claim the company makes about itself.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== THE WORK ============== -->
+  <section>
+    <div class="wrap">
+      <h2>The work</h2>
+      <p class="lede">Every photograph below was taken and published by Superior
+        Septic &amp; Plumbing on their own Google Business Profile.</p>
+      <div class="gal">
+        <figure>
+          <img src="images/truck.webp" width="900" height="674" loading="lazy"
+               alt="Superior Septic and Plumbing's black vacuum tank truck parked on gravel, with a yellow mini excavator loaded on a trailer behind it.">
+          <figcaption>Their vacuum tanker and mini excavator. The truck door is
+            lettered <strong>Superior Septic &amp; Plumbing LLC</strong>.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fieldlines.webp" width="800" height="600" loading="lazy"
+               alt="Five parallel drain-field trenches freshly cut into a lawn, lined with white geotextile fabric, with a mini excavator parked at the end.">
+          <figcaption>A full drain field going in &mdash; five lines cut, lined
+            and ready to cover.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/pumping.webp" width="800" height="600" loading="lazy"
+               alt="A green suction hose lowered into an open concrete septic tank during pumping, with the lid set aside on the soil.">
+          <figcaption>Pumping a tank out &mdash; lid off, suction line in.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/trench.webp" width="800" height="600" loading="lazy"
+               alt="A long narrow trench running alongside a gravel driveway through a wooded yard, with a dump trailer parked at the far end.">
+          <figcaption>A line run trenched in along a drive.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== REVIEWS ============== -->
+  <section class="alt">
+    <div class="wrap">
+      <h2>What customers actually said</h2>
+      <p class="lede">Real Google reviews, quoted word for word, under the names
+        the reviewers published them with. Pulled from the Google Places API on
+        27 October 2026.</p>
+      <div class="grid">
+
+        <div class="rev">
+          <blockquote>&ldquo;The team at Superior was awesome and quick to help
+            when our field lines failed and we needed new ones put in pronto!
+            Absolutely reliable and did an amazing job. It is so hard to find
+            good, honest people. They will definitely be my go to people from
+            now on!&rdquo;</blockquote>
+          <p class="who"><b>Christina Khalili</b>
+            <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            5 out of 5 &middot; June 2026</p>
+        </div>
+
+        <div class="rev">
+          <blockquote>&ldquo;So, after living at this place for 34 years, the
+            field lines weren't working anymore. These guys worked hard to come
+            up with the best solution. Even the County Inspector was
+            complimenting their work. I don't believe anyone else would have
+            done a better job. I feel confident about the next 34
+            years.&rdquo;</blockquote>
+          <p class="who"><b>Mark Michaels</b>
+            <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            5 out of 5 &middot; July 2026</p>
+        </div>
+
+        <div class="rev">
+          <blockquote>&ldquo;The crew Jeff sent went above and beyond. One of the
+            team had a family emergency so he made two trips to my house to do
+            what he promised. The rest of the crew worked right thru lunch to get
+            the job done. On time and on budget. A++ service.&rdquo;</blockquote>
+          <p class="who"><b>Rob Nealon</b>
+            <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            5 out of 5 &middot; May 2026</p>
+        </div>
+
+        <div class="rev">
+          <blockquote>&ldquo;Excellent service and communication. We needed to
+            coordinate two contractors for our sewer line replacement due to its
+            location under our concrete driveway. We appreciated how responsive
+            and easy to work with they were as well as the great job they
+            did.&rdquo;</blockquote>
+          <p class="who"><b>Tina Marie Lindahl</b>
+            <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            5 out of 5 &middot; August 2026</p>
+        </div>
+
+        <div class="rev">
+          <blockquote>&ldquo;I was contacted by Superior and they came out and
+            moved the clean out and laid seed/straw. I appreciate this. 5
+            stars.&rdquo;</blockquote>
+          <p class="who"><b>Tucker Hill</b>
+            <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            5 out of 5 &middot; June 2026 &mdash; after raising a problem and
+            having it put right</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SERVICE AREAS ============== -->
+  <section>
+    <div class="wrap">
+      <h2>Where they work</h2>
+      <p class="lede">Superior's own published service area &mdash; the
+        Chattanooga metro and the North Georgia counties below it.</p>
+      <div class="areas">
+        <div>
+          <h3>Tennessee</h3>
+          <ul>
+            <li>Chattanooga</li><li>East Chattanooga</li><li>East Ridge</li>
+            <li>Red Bank</li><li>Hixson</li><li>Soddy-Daisy</li>
+            <li>Signal Mountain</li><li>Ooltewah</li><li>Collegedale</li>
+            <li>Harrison</li><li>Apison</li><li>Cleveland</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Georgia</h3>
+          <ul>
+            <li>Rossville</li><li>Chickamauga</li><li>Rock Spring</li>
+            <li>LaFayette</li><li>Lookout Mountain</li><li>Wildwood</li>
+            <li>Trenton</li><li>Tunnel Hill</li><li>Dalton</li>
+            <li>Varnell</li><li>Calhoun</li><li>Trion</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CONTACT ============== -->
+  <section class="alt">
+    <div class="wrap">
+      <h2>Get hold of them</h2>
+      <div class="ccard">
+        <dl>
+          <div>
+            <dt>Primary line</dt>
+            <dd><a href="tel:+14236540584">(423)&nbsp;654-0584</a></dd>
+          </div>
+          <div>
+            <dt>Second line</dt>
+            <dd><a href="tel:+17068414347">(706)&nbsp;841-4347</a></dd>
+          </div>
+          <div>
+            <dt>Shop</dt>
+            <dd>1652 McFarland Ave, Rossville, GA 30741</dd>
+          </div>
+          <div>
+            <dt>Hours, as published on their Google profile</dt>
+            <dd class="hrs">
+              Monday&ndash;Saturday&nbsp;&middot;&nbsp;8:00&nbsp;AM&ndash;5:00&nbsp;PM<br>
+              Sunday&nbsp;&middot;&nbsp;Closed
+            </dd>
+          </div>
+          <div>
+            <dt>On Google</dt>
+            <dd><a href="https://maps.google.com/maps?cid=6995414875479139576"
+                   rel="nofollow noopener" target="_blank">Google Business Profile
+                   &amp; directions</a></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="disc">
+      <b>This is not the official website of Superior Septic &amp; Plumbing LLC.</b>
+      It is an unsolicited concept demo, built by an independent web developer in
+      Chattanooga from the company's own publicly published logo, photographs,
+      service list and Google reviews. The company did not ask for it, has not
+      seen it, has not approved it, and is not affiliated with it. No one at the
+      business was contacted. It collects nothing, tracks nothing, and sets no
+      cookies. Their real site is
+      <a href="https://superiorsepticandplumbing.com/" rel="nofollow noopener"
+         target="_blank">superiorsepticandplumbing.com</a>, and if the owner
+      would like this page taken down it will come down immediately on request.
+    </div>
+    <h3>Superior Septic &amp; Plumbing LLC</h3>
+    <p>1652 McFarland Ave, Rossville, Georgia 30741 &middot;
+      <a href="tel:+14236540584">(423)&nbsp;654-0584</a></p>
+    <p>Demo page &mdash; not indexed, not affiliated, not endorsed.</p>
+  </div>
+</footer>
+
+<nav class="sticky" aria-label="Quick contact">
+  <a href="tel:+14236540584">&#9742;&nbsp; Call (423) 654-0584</a>
+  <a href="sms:+14236540584">&#9993;&nbsp; Text</a>
+</nav>
+
+</body>
+</html>
