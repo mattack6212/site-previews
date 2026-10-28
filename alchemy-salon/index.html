@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alchemy Salon — Color, Cuts &amp; Tans | Fort Oglethorpe, GA</title>
+<meta name="description" content="Alchemy Salon on Thomas Road in Fort Oglethorpe, GA. Color, cuts, pixies, blonding, occasion styling and tanning. 4.9 stars from 96 Google reviews. Call (706) 888-0845 to book.">
+<meta name="theme-color" content="#22262E">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<meta property="og:title" content="Alchemy Salon — Fort Oglethorpe, GA">
+<meta property="og:description" content="Color, cuts and tans in a comfy setting on Thomas Road. 4.9 stars from 96 Google reviews. Call (706) 888-0845.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/hero.jpg">
+
+<!-- DEMO SITE — prepared for Alchemy Salon, Fort Oglethorpe GA. Not affiliated, not live, not linked. -->
+<!-- Website by [MATT — YOUR NAME / COMPANY HERE] -->
+<!--
+  ====================================================================
+  BUILD NOTES — Alchemy Salon demo, v2, 2026-10-27
+  Single self-contained page. System fonts, inline CSS/JS, zero external
+  requests: every image is a local file in images/ served alongside this
+  page. No analytics, no font CDN, no trackers, no embedded map iframe.
+  Page is noindex, nofollow.
+
+  Full sourcing for every claim below is in research.md.
+  --------------------------------------------------------------------
+
+  *** THE SCAN WAS WRONG ABOUT THE TOWN. ***
+
+  1. THE TOWN IS FORT OGLETHORPE, NOT ROSSVILLE.
+     6 Thomas Rd, Fort Oglethorpe, GA 30742 — CATOOSA County, not Walker.
+     Verified live 2026-10-27 against the Places API (addressComponents
+     locality = Fort Oglethorpe), their own Instagram bio, and their own
+     Facebook page, all three of which agree. Rossville is a different
+     city. NEVER say Rossville to these people.
+
+  2. THEY MOVED, AND HALF THE INTERNET DIDN'T NOTICE.
+     Google has the current address (6 Thomas Rd). MapQuest, Birdeye,
+     ChamberOfCommerce.com and YellowPages all still publish the OLD one
+     — 100 Nativity Pl — and the chamber listing also carries an old
+     phone number, 706-419-8415. A Google review from 2026-04-23 calls it
+     "her new place", so the move is recent. This is free, checkable
+     value to hand them on the call. See pitch.md.
+
+  3. "NO WEBSITE" IS CORRECT, AND THERE IS NO BOOKING PAGE EITHER.
+     The Places record has no websiteUri. Their Instagram bio has NO LINK
+     AT ALL. Vagaro, StyleSeat, Booksy, Fresha and GlossGenius were each
+     checked by hand on 2026-10-27 and NONE of them has a page for this
+     salon — the near-miss hits are other businesses with the same name
+     in Wyomissing PA, Atlanta GA and Saraland AL. They book by phone and
+     by social DM, in their own words: "Message us or call the salon."
+     So the page books by phone. No booking widget they didn't ask for.
+
+  --- NO DEATH, NO CLOSURE ON THE BUSINESS -------------------------
+  Checked before any outreach copy was written: Google businessStatus
+  OPERATIONAL, 4.9 from 96 reviews, Instagram posting into October 2026,
+  Facebook live. No obituary for the named principal. One same-surname
+  obituary in the same town is recorded in research.md as a SENSITIVE
+  finding with an UNESTABLISHED relationship — it is not on this page,
+  not in the SMS, and must never be raised.
+
+  --- WHAT THIS PAGE DOES NOT CLAIM --------------------------------
+  * NO PRICES. They publish none anywhere. Google bands the listing
+    PRICE_LEVEL_VERY_EXPENSIVE; that is a crowd-sourced guess and is not
+    repeated here or anywhere else.
+  * NO STAFF ROSTER. Stylist names appear ONLY inside verbatim customer
+    reviews, exactly as the customer wrote them. The page itself names
+    nobody of its own accord. CONFIRM THE ROSTER BEFORE LAUNCH.
+  * NO NAILS, NO MASSAGE, NO SPA, NO LASHES, NO WAXING, NO FACIALS.
+    Nothing first-party supports any of it.
+  * NO AWARDS, no "best of", no years-in-business figure of its own. The
+    "20+ years experience" line is quoted and attributed to them because
+    it is their own sentence off their own Facebook page, not a fact
+    this build verified.
+
+  --- IMAGES: OWNER-POSTED ONLY ------------------------------------
+  Ten photos hang off the Google listing. SIX are posted by the business
+  account; FOUR are customer uploads (Kayla Burns, Tammy Lewis, Caitlin
+  Spangler x2). Only the six owner-posted frames are used. One of those
+  six had a seated bystander in the upper-left and is cropped below her.
+  See build_assets.py for the crop assertion.
+
+  --- COLOUR ---------------------------------------------------------
+  Every colour is measured off their own room and white-balanced:
+    gold  #8A6738  their mustard velvet lounge armchairs (#B7894B raw)
+    blush #F0DDD2  their floor-to-ceiling peony mural
+    ink   #22262E  their black styling station and book tower
+  Gold is the ONLY accent and is used only on calls to action and links.
+  All 18 foreground/background pairs are recomputed by build_assets.py
+  on every run and it exits non-zero below 4.5:1. Tightest margin +0.13.
+
+  --- THE FAVICON IS A PLACEHOLDER ---------------------------------
+  Alchemy Salon has no published logo or wordmark anywhere: no sign in
+  any photo, no logged-out avatar on either social account, no website.
+  The favicon is therefore a plain letterform "A" set in their measured
+  gold. It is NOT their logo and must not be presented as one. First
+  thing to replace if they say yes.
+  ====================================================================
+-->
+<style>
+  :root{
+    --ink:#22262E;
+    --ink-2:#2F3542;
+    --paper:#FFFFFF;
+    --cream:#FAF6F0;
+    --blush:#F0DDD2;
+    --blush-2:#FBF1EB;
+    --gold:#8A6738;
+    --gold-h:#755830;
+    --gold-ink:#E0B978;
+    --muted:#585E68;
+    --muted-ink:#BDC3CE;
+    --text:#262A33;
+    --maxw:1120px;
+    --serif:"Hoefler Text",Didot,"Times New Roman",Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--paper);color:var(--text);
+    font-family:var(--sans);font-size:17px;line-height:1.65;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;height:auto;display:block}
+  a{color:var(--gold)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;width:100%}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+  h1{font-size:clamp(2rem,6.2vw,3.5rem)}
+  h2{font-size:clamp(1.55rem,4.2vw,2.4rem)}
+  h3{font-size:1.14rem;font-family:var(--sans);font-weight:700;letter-spacing:0}
+  p{margin:0 0 1em}
+  .eyebrow{
+    font-family:var(--sans);font-size:.76rem;font-weight:700;
+    letter-spacing:.17em;text-transform:uppercase;color:var(--gold);margin:0 0 .9em
+  }
+  section{padding:clamp(48px,7vw,86px) 0}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.5em;
+    padding:16px 26px;border-radius:999px;font-weight:700;font-size:1.02rem;
+    text-decoration:none;border:2px solid transparent;cursor:pointer;
+    transition:background .15s,border-color .15s,color .15s;
+    min-height:52px;text-align:center;
+  }
+  .btn-call{background:var(--gold);color:#fff;border-color:var(--gold)}
+  .btn-call:hover,.btn-call:focus{background:var(--gold-h);border-color:var(--gold-h)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:rgba(34,38,46,.3)}
+  .btn-ghost:hover,.btn-ghost:focus{border-color:var(--ink);background:rgba(34,38,46,.05)}
+  .on-dark .btn-ghost{color:#fff;border-color:rgba(255,255,255,.4)}
+  .on-dark .btn-ghost:hover,.on-dark .btn-ghost:focus{border-color:#fff;background:rgba(255,255,255,.1)}
+  .btns{display:flex;flex-wrap:wrap;gap:12px}
+
+  /* ---------- sticky header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;background:var(--ink);
+    border-bottom:1px solid rgba(255,255,255,.1)
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:64px;padding-top:8px;padding-bottom:8px}
+  .mark{
+    font-family:var(--serif);color:#fff;font-size:1.26rem;font-weight:600;
+    letter-spacing:.02em;text-decoration:none;line-height:1.1
+  }
+  .mark span{display:block;font-family:var(--sans);font-size:.6rem;font-weight:700;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--gold-ink);margin-top:2px}
+  .hdr-call{
+    background:var(--gold);color:#fff;text-decoration:none;font-weight:700;
+    padding:11px 18px;border-radius:999px;font-size:.95rem;white-space:nowrap;min-height:44px;
+    display:inline-flex;align-items:center
+  }
+  .hdr-call:hover,.hdr-call:focus{background:var(--gold-h)}
+
+  /* ---------- hero ---------- */
+  .hero{padding:0;background:var(--ink);color:#fff}
+  .hero-grid{display:grid;grid-template-columns:1fr}
+  .hero-img{position:relative;min-height:240px}
+  .hero-img img{width:100%;height:100%;object-fit:cover;min-height:240px}
+  .hero-copy{padding:clamp(34px,5.5vw,62px) 20px}
+  .hero-copy .inner{max-width:560px;margin:0 auto}
+  .hero h1{color:#fff;margin-bottom:.45em}
+  .hero .lede{color:var(--muted-ink);font-size:1.1rem;margin-bottom:1.5em}
+  .hero .btns{margin-bottom:1.4em}
+  .stars{color:var(--gold-ink);font-size:.97rem;font-weight:600;margin:0}
+  .stars .sub{display:block;color:var(--muted-ink);font-weight:400;font-size:.88rem;margin-top:3px}
+  .d-only{display:none}
+
+  /* ---------- trust strip ---------- */
+  .trust{background:var(--blush);padding:0}
+  .trust ul{
+    list-style:none;margin:0;padding:22px 20px;max-width:var(--maxw);
+    margin-inline:auto;display:grid;gap:16px;grid-template-columns:1fr;text-align:center
+  }
+  .trust li{font-size:.95rem;color:var(--ink)}
+  .trust b{display:block;font-size:1.08rem;font-family:var(--serif);font-weight:600}
+
+  /* ---------- services ---------- */
+  .svc{background:var(--paper)}
+  .svc-grid{display:grid;gap:18px;grid-template-columns:1fr;margin-top:34px}
+  .card{
+    background:var(--cream);border:1px solid rgba(34,38,46,.08);
+    border-radius:14px;padding:26px 24px
+  }
+  .card h3{margin-bottom:.4em;color:var(--ink)}
+  .card p{margin:0;color:var(--muted);font-size:.97rem}
+  .note{
+    margin-top:26px;font-size:.92rem;color:var(--muted);
+    border-left:3px solid var(--blush);padding-left:16px
+  }
+
+  /* ---------- work gallery ---------- */
+  .work{background:var(--blush-2)}
+  .work-grid{display:grid;gap:14px;grid-template-columns:repeat(2,1fr);margin-top:30px}
+  .work-grid figure{margin:0;border-radius:12px;overflow:hidden;background:#ddd}
+  .work-grid img{width:100%;aspect-ratio:3/4;object-fit:cover}
+
+  /* ---------- reviews ---------- */
+  .reviews{background:var(--ink);color:#fff}
+  .reviews h2{color:#fff}
+  .reviews .sub{color:var(--muted-ink);margin-bottom:2em}
+  .rev-grid{display:grid;gap:18px;grid-template-columns:1fr}
+  .rev{background:var(--ink-2);border-radius:14px;padding:24px;border:1px solid rgba(255,255,255,.08)}
+  .rev .s{color:var(--gold-ink);letter-spacing:.14em;font-size:.86rem;margin:0 0 .7em}
+  .rev blockquote{margin:0 0 .9em;font-size:1rem;line-height:1.6;color:#fff}
+  .rev cite{font-style:normal;font-size:.86rem;color:var(--muted-ink)}
+
+  /* ---------- space ---------- */
+  .space-grid{display:grid;gap:30px;grid-template-columns:1fr;align-items:center}
+  .space-grid img{border-radius:14px}
+
+  /* ---------- visit ---------- */
+  .visit{background:var(--cream)}
+  .visit-grid{display:grid;gap:34px;grid-template-columns:1fr}
+  table.hours{border-collapse:collapse;width:100%;max-width:400px;font-size:1rem}
+  table.hours th,table.hours td{text-align:left;padding:9px 0;border-bottom:1px solid rgba(34,38,46,.12)}
+  table.hours th{font-weight:600;color:var(--ink)}
+  table.hours td{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+  table.hours tr.closed td{color:#7A5B5B}
+  .addr{font-size:1.06rem;line-height:1.7}
+  .addr a{font-weight:700}
+
+  /* ---------- final ---------- */
+  .final{background:var(--gold);color:#fff;text-align:center}
+  .final h2{color:#fff}
+  .final p{color:rgba(255,255,255,.96);max-width:540px;margin-inline:auto}
+  .final .btns{justify-content:center;margin-top:1.4em}
+  .final .btn-call{background:#fff;color:var(--gold);border-color:#fff}
+  .final .btn-call:hover,.final .btn-call:focus{background:var(--cream);border-color:var(--cream);color:var(--gold-h)}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);color:var(--muted-ink);padding:52px 0 60px;font-size:.93rem}
+  footer a{color:var(--gold-ink)}
+  footer .fmark{font-family:var(--serif);color:#fff;font-size:1.5rem;margin:0 0 .4em}
+  .demo-note{
+    margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);
+    font-size:.82rem;line-height:1.6;color:#9AA2B0;max-width:760px
+  }
+  .demo-note strong{color:var(--muted-ink)}
+
+  /* ---------- breakpoints ---------- */
+  @media (min-width:600px){
+    .trust ul{grid-template-columns:repeat(3,1fr);padding:26px 20px}
+    .svc-grid{grid-template-columns:repeat(2,1fr)}
+    .rev-grid{grid-template-columns:repeat(2,1fr)}
+    .work-grid{grid-template-columns:repeat(4,1fr)}
+  }
+  @media (min-width:900px){
+    .hero-grid{grid-template-columns:1.05fr 1fr;align-items:stretch}
+    .hero-img{min-height:520px}
+    .hero-copy{display:flex;align-items:center;padding:60px 48px}
+    .hero-copy .inner{max-width:520px;margin:0}
+    .d-only{display:block}
+    .m-only{display:none}
+    .svc-grid{grid-template-columns:repeat(3,1fr)}
+    .space-grid{grid-template-columns:1fr 1fr;gap:52px}
+    .visit-grid{grid-template-columns:1fr 1fr;gap:60px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="mark" href="#top">Alchemy Salon<span>Fort Oglethorpe</span></a>
+    <a class="hdr-call" href="tel:+17068880845">Call (706)&nbsp;888-0845</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero on-dark" aria-label="Alchemy Salon, Fort Oglethorpe">
+    <div class="hero-grid">
+      <div class="hero-img">
+        <img class="d-only" src="images/hero.jpg" alt="A styling station at Alchemy Salon: a black chair and mirror in front of a floor-to-ceiling peony mural, on light oak flooring." width="1500" height="840">
+        <img class="m-only" src="images/hero-mobile.jpg" alt="A styling station at Alchemy Salon: a black chair and mirror in front of a floor-to-ceiling peony mural, on light oak flooring." width="900" height="952">
+      </div>
+      <div class="hero-copy">
+        <div class="inner">
+          <p class="eyebrow">Thomas Road &middot; Fort Oglethorpe, GA</p>
+          <h1>Current trends in a comfy setting.</h1>
+          <p class="lede">
+            Color, cuts and tans on Thomas&nbsp;Road. Call the salon and we&rsquo;ll find you a chair.
+          </p>
+          <div class="btns">
+            <a class="btn btn-call" href="tel:+17068880845">Call (706)&nbsp;888-0845</a>
+            <a class="btn btn-ghost" href="#services">See what we do</a>
+          </div>
+          <p class="stars">
+            &#9733;&#9733;&#9733;&#9733;&#9733; 4.9 out of 5
+            <span class="sub">from 96 Google reviews</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="trust" aria-label="At a glance">
+    <ul>
+      <li><b>4.9 &#9733; / 96 reviews</b>on Google</li>
+      <li><b>Tuesday &ndash; Saturday</b>Closed Sunday &amp; Monday</li>
+      <li><b>6 Thomas Rd</b>Fort Oglethorpe, GA 30742</li>
+    </ul>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="svc" id="services">
+    <div class="wrap">
+      <p class="eyebrow">What we do</p>
+      <h2>Color, cuts, pixies &mdash; and a tanning bed</h2>
+      <p style="max-width:620px;color:var(--muted)">
+        A small salon that does a lot of color. Blondes, reds, lived-in brunettes,
+        and short cuts done properly.
+      </p>
+
+      <div class="svc-grid">
+        <div class="card">
+          <h3>Color</h3>
+          <p>The thing we do most. Full color, retouches, and the kind of dimensional
+            work that grows out without a hard line.</p>
+        </div>
+        <div class="card">
+          <h3>Blonding</h3>
+          <p>Lightening, toning, and keeping it that way &mdash; the service our regulars
+            tell people about by name.</p>
+        </div>
+        <div class="card">
+          <h3>Cuts &amp; pixies</h3>
+          <p>Everyday cuts and short shapes. Pixies are on the list for a reason:
+            they&rsquo;re a cut not every salon wants to take on.</p>
+        </div>
+        <div class="card">
+          <h3>Occasion styling</h3>
+          <p>Braided half-ups, curls and pinned looks for weddings, prom and
+            anything else worth sitting still for.</p>
+        </div>
+        <div class="card">
+          <h3>Tanning</h3>
+          <p>Yes, we tan too. Ask at the desk or on the phone.</p>
+        </div>
+        <div class="card">
+          <h3>Not sure what you want?</h3>
+          <p>Bring a picture or bring nothing. The stylists here would rather talk it
+            through first than guess.</p>
+        </div>
+      </div>
+
+      <p class="note">
+        This is what Alchemy Salon lists publicly. The full menu lives at the salon &mdash;
+        give them a ring on <a href="tel:+17068880845">(706)&nbsp;888-0845</a> and ask.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section class="work">
+    <div class="wrap">
+      <p class="eyebrow">Recent work</p>
+      <h2>Their own photographs, start to finish</h2>
+      <p style="max-width:620px;color:var(--muted)">
+        Every picture below was posted by the salon itself.
+      </p>
+      <div class="work-grid">
+        <figure><img src="images/work-blonde.jpg" alt="Long blonde hair with dimensional highlights, styled in loose waves." width="760" height="1013" loading="lazy"></figure>
+        <figure><img src="images/work-brunette.jpg" alt="A shoulder-length brunette cut with lighter ends, styled in textured waves." width="760" height="1013" loading="lazy"></figure>
+        <figure><img src="images/work-red.jpg" alt="Long dark hair melting into a deep red through the mid-lengths and ends." width="760" height="1013" loading="lazy"></figure>
+        <figure><img src="images/work-updo.jpg" alt="An occasion style: a braided half-up with pinned curls and a pearl hair pin." width="760" height="814" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============
+       All four are quoted VERBATIM from Google, with the reviewer's real
+       display name and the month they posted. Nothing is edited, trimmed
+       mid-sentence, or paraphrased. Stylist first names appear because the
+       customers wrote them. CONFIRM THE ROSTER BEFORE LAUNCH — pitch.md. -->
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--gold-ink)">What people say</p>
+      <h2>4.9 stars from 96 Google reviews</h2>
+      <p class="sub">Quoted word for word. Nothing edited.</p>
+      <div class="rev-grid">
+
+        <div class="rev">
+          <p class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <blockquote>&ldquo;This salon is by far one of the best salons I have ever been to. Rhe
+            atmosphere is amazing. The stylists are very welcoming and listen to what you want
+            done and even give suggestions based on your hair type and color. They frequently ask
+            how you are doing and if you need anything while your hair is processing unlike other
+            salons. 10/10 I would recommend coming here&rdquo;</blockquote>
+          <cite>&mdash; Allison Gaines, March 2026</cite>
+        </div>
+
+        <div class="rev">
+          <p class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <blockquote>&ldquo;Faith is the absolute best! So personable, funny, and so talented at
+            what she does. I&rsquo;ve been going to her for years and don&rsquo;t trust anyone else
+            with my hair like I trust her. She&rsquo;s a must, especially if you&rsquo;re into
+            blonding.&rdquo;</blockquote>
+          <cite>&mdash; Caitlin Spangler, April 2026</cite>
+        </div>
+
+        <div class="rev">
+          <p class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <blockquote>&ldquo;The Salon has such a cute vibe and all the stylist are super friendly.
+            Faith really listens to what I want and gives helpful suggestions on my hair type. She
+            nails it every time. Love her and love this salon!&rdquo;</blockquote>
+          <cite>&mdash; Sheila Vaughn, March 2026</cite>
+        </div>
+
+        <div class="rev">
+          <p class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <blockquote>&ldquo;Love coming to see Faith every 8 weeks. She has been doing my hair (for
+            a very long time) and I would recommend her to anyone I know! She always does a great
+            job and her new place is so cute and fun to look around while my hair
+            processes.&rdquo;</blockquote>
+          <cite>&mdash; Megan Hewitt, April 2026</cite>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE SPACE ============ -->
+  <section>
+    <div class="wrap">
+      <div class="space-grid">
+        <div>
+          <p class="eyebrow">The room</p>
+          <h2>Somewhere decent to sit while it processes</h2>
+          <p>
+            Color takes time. So there are real armchairs, a shelf of books, and coffee
+            going &mdash; rather than a row of plastic seats by the door.
+          </p>
+          <p style="color:var(--muted)">
+            The salon is on Thomas&nbsp;Road in Fort Oglethorpe, with wheelchair-accessible
+            parking, entrance and restroom. Cards and debit are fine.
+          </p>
+          <div class="btns" style="margin-top:1.4em">
+            <a class="btn btn-call" href="tel:+17068880845">Call (706)&nbsp;888-0845</a>
+          </div>
+        </div>
+        <div>
+          <img src="images/lounge.jpg" alt="The waiting area at Alchemy Salon: two mustard velvet armchairs, a wooden coffee table, a tall book shelf and a coffee station by the window." width="1000" height="1154" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <p class="eyebrow">Find us</p>
+      <h2>On Thomas Road in Fort Oglethorpe</h2>
+      <div class="visit-grid">
+        <div>
+          <p class="addr">
+            <strong>Alchemy Salon</strong><br>
+            6 Thomas Rd<br>
+            Fort Oglethorpe, GA 30742<br><br>
+            <a href="tel:+17068880845">(706)&nbsp;888-0845</a>
+          </p>
+          <p style="color:var(--muted);font-size:.95rem">
+            Appointments are by phone. Call the salon and we&rsquo;ll get you booked in
+            with whoever has the right slot.
+          </p>
+          <div class="btns" style="margin-top:1.2em">
+            <a class="btn btn-call" href="tel:+17068880845">Call to book</a>
+          </div>
+        </div>
+        <div>
+          <h3 style="margin-bottom:.7em">Opening hours</h3>
+          <table class="hours">
+            <tbody>
+              <tr class="closed"><th scope="row">Monday</th><td>Closed</td></tr>
+              <tr><th scope="row">Tuesday</th><td>10:00 am &ndash; 7:00 pm</td></tr>
+              <tr><th scope="row">Wednesday</th><td>10:00 am &ndash; 7:00 pm</td></tr>
+              <tr><th scope="row">Thursday</th><td>10:00 am &ndash; 7:00 pm</td></tr>
+              <tr><th scope="row">Friday</th><td>10:00 am &ndash; 5:00 pm</td></tr>
+              <tr><th scope="row">Saturday</th><td>9:00 am &ndash; 5:00 pm</td></tr>
+              <tr class="closed"><th scope="row">Sunday</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+          <p style="color:var(--muted);font-size:.92rem;margin-top:1.1em">
+            Three evenings a week until 7, and a full day on Saturday.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final on-dark">
+    <div class="wrap">
+      <h2>Ready for a change?</h2>
+      <p>Call the salon. Tell them what you&rsquo;re thinking, or bring a picture &mdash;
+        either works.</p>
+      <div class="btns">
+        <a class="btn btn-call" href="tel:+17068880845">Call (706)&nbsp;888-0845</a>
+        <a class="btn btn-ghost" href="#services">What we do</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="fmark">Alchemy Salon</p>
+    <p>6 Thomas Rd, Fort Oglethorpe, GA 30742</p>
+    <p><a href="tel:+17068880845">(706)&nbsp;888-0845</a> &middot; Tuesday to Saturday</p>
+    <p class="demo-note">
+      <strong>Demonstration page.</strong> This is an unsolicited sample built for Alchemy Salon
+      from publicly available information. It is not affiliated with, endorsed by, or authorised by
+      the business, it is not indexed by search engines, and it is not linked from anywhere. Every
+      photograph was posted by the salon itself to its own Google Business Profile; customer-uploaded
+      photographs were deliberately not used. Every review is quoted verbatim from Google. No prices
+      are quoted because the business does not publish any. The favicon is a typographic placeholder,
+      not the salon&rsquo;s logo.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
