@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Broome's Wrecker Service — East Ridge, TN | Concept Demo</title>
+<meta name="description" content="Unsolicited concept demo for Broome's Wrecker Service of East Ridge, Tennessee. Not the official site.">
+<meta name="theme-color" content="#16283D">
+<!--
+================================================================================
+  WHAT THIS PAGE IS, IN PLAIN ENGLISH
+================================================================================
+
+  This is an UNSOLICITED CONCEPT DEMO built by Matt McFarlane, an independent
+  web developer in Chattanooga, Tennessee.
+
+  It is NOT the official website of Broome's Wrecker Service. As of
+  29 October 2026 the business has no website at all -- no domain is
+  registered under any obvious variant of the name, and neither of its two
+  Google Business Profiles publishes a website link.
+
+  Broome's Wrecker Service did not commission this, has not seen it, has not
+  approved it, and is not affiliated with it in any way. Nobody from the
+  business was contacted before it was built. There is no business
+  relationship of any kind between Matt McFarlane and Broome's Wrecker
+  Service.
+
+  WHY IT EXISTS
+  -------------
+  It is a sample. It shows what a fast, single-page site built only from
+  their own public material could look like. It is the entire pitch -- no
+  follow-up sequence, no tracking, no retargeting pixel, no analytics of any
+  kind, and no form that collects anything from anybody.
+
+  IF THE OWNER WANTS IT GONE
+  --------------------------
+  It comes down immediately, no questions asked, no argument. One message is
+  enough. The page is served noindex/nofollow/noarchive so it can never
+  compete with anything of theirs in search results while it is up.
+
+  WHERE EVERY PIECE CAME FROM
+  ---------------------------
+  * Business name, address,
+    phone, hours, rating ..... Google Places API, pulled live 2026-10-29.
+  * Rating 4.8 / 77 reviews .. same live pull. (A scan on 2026-09-11 recorded
+                               4.8 / 76; one review has been added since.)
+  * Second listing 3.8 / 78 .. "East Ridge Auto Electric Co", Google Places
+                               API, same address, 2026-10-29 pull.
+  * Reviews ................. REAL Google reviews, quoted verbatim, under the
+                               reviewers' own published names.
+  * Town .................... addressComponents returns locality "East Ridge",
+                               Hamilton County, Tennessee. Corroborated by the
+                               sister business being named for the town and by
+                               local news coverage of East Ridge businesses.
+
+  WHAT IS DELIBERATELY *NOT* HERE
+  -------------------------------
+  * NO PHOTOGRAPHS AT ALL. This is the big one. All three photos on their
+    Google listing were customer-submitted, and every one shows a customer's
+    badly wrecked vehicle -- a smashed Kia, and two angles of a destroyed
+    Toyota. One of them also shows an identifiable person sitting in a car in
+    the background. Putting a customer's wreck, or a stranger's face, on a
+    demo nobody asked for is not acceptable, so this page carries zero
+    photography rather than borrow any of it. No stock images either. No
+    AI-generated imagery. Not one pixel.
+  * NO LOGO. None is published anywhere. The wordmark in the header is set in
+    ordinary type. ===> IT IS A PLACEHOLDER. <=== If the business has real
+    lettering on its truck doors, that is what should be used instead, and
+    the colours below should be resampled from it.
+  * PLACEHOLDER COLOURS. The navy (#16283D) and amber (#F0A202) were NOT
+    sampled from anything the business owns, because there is nothing to
+    sample. They are a neutral, legible default. Every foreground/background
+    pair on this page was checked by calculation against WCAG 2.1 AA and the
+    lowest ratio used anywhere is 5.02:1.
+  * NO "24/7" CLAIM. Sources conflict. Both Google profiles publish
+    Mon-Fri 8:30 AM - 5:00 PM and "Closed" Saturday and Sunday. A customer
+    review and one directory describe round-the-clock wrecker help. Three
+    answers, so this page repeats only what Google publishes and says plainly
+    that after-hours should be confirmed.
+  * NO FOUNDING DATE AND NO "X YEARS IN BUSINESS" claim of its own. A quoted
+    reviewer says "55 years"; that is his sentence, inside his review, not an
+    assertion this page makes.
+  * NO regulatory, licensing, authority, carrier-number or compliance
+    information of any kind. That was researched, and it is deliberately
+    absent from this page and from everything sent to the owner.
+  * No invented testimonials. No fabricated statistics. No crew names. No
+    prices. No truck or driver counts. No service-area list, because none is
+    published.
+
+  Questions, or a takedown request: Matt McFarlane, Chattanooga TN.
+================================================================================
+-->
+<style>
+  :root{
+    --brand:#16283D;        /* PLACEHOLDER - not sampled from anything */
+    --brand-dk:#0E1C2B;
+    --amber:#F0A202;        /* PLACEHOLDER */
+    --amber-dk:#9A4C00;
+    --ink:#11161D;
+    --body:#39414E;
+    --line:#DCE1E9;
+    --bg:#FFFFFF;
+    --surf:#F4F6F9;
+    --green:#15803D;
+    --star:#8A4B00;
+    --maxw:1080px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--body);
+    font:400 17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+         "Helvetica Neue",Arial,sans-serif;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{color:var(--ink);line-height:1.18;margin:0 0 .5em;font-weight:800;
+    letter-spacing:-.02em;overflow-wrap:break-word}
+  h1{font-size:clamp(1.65rem,5vw,2.9rem)}
+  h2{font-size:clamp(1.35rem,3.6vw,2rem)}
+  h3{font-size:1.08rem}
+  p{margin:0 0 1em}
+  a{color:var(--brand)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+    overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--brand);
+    color:#fff;padding:12px 18px;z-index:100;text-decoration:none}
+  .skip:focus{left:0}
+  :focus-visible{outline:3px solid var(--amber-dk);outline-offset:2px}
+
+  /* ---------- header ---------- */
+  header{border-bottom:3px solid var(--amber);background:var(--brand)}
+  .hbar{display:flex;align-items:center;justify-content:space-between;
+    gap:14px;padding:13px 0;flex-wrap:wrap}
+  .mark{text-decoration:none;display:block;min-width:0}
+  .mark .m1{display:block;color:#fff;font-weight:800;letter-spacing:-.02em;
+    font-size:clamp(1.02rem,3.6vw,1.4rem);line-height:1.1}
+  .mark .m2{display:block;color:var(--amber);font-weight:800;
+    font-size:.7rem;letter-spacing:.17em;text-transform:uppercase;
+    margin-top:4px}
+  .hcall{display:flex;flex-direction:column;align-items:flex-end;gap:1px}
+  .hcall a{font-weight:800;font-size:clamp(1rem,3.4vw,1.2rem);color:#fff;
+    text-decoration:none;letter-spacing:-.01em;min-height:30px;line-height:30px}
+  .hcall span{font-size:.68rem;color:var(--amber);letter-spacing:.11em;
+    text-transform:uppercase;font-weight:800}
+
+  /* ---------- hero ---------- */
+  .hero{padding:32px 0 28px}
+  .eyebrow{display:inline-block;font-size:.73rem;font-weight:800;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--brand);
+    background:#E7ECF3;padding:7px 13px;border-radius:999px;margin-bottom:14px}
+  .lead{font-size:clamp(1rem,2.3vw,1.14rem);max-width:54ch}
+  .rate{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:0 0 22px;
+    font-size:.95rem}
+  .rate b{color:var(--ink);font-size:1.1rem}
+  .stars{color:var(--star);letter-spacing:1px;font-size:1.05rem}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    min-height:56px;padding:14px 22px;border-radius:11px;font-weight:800;
+    font-size:1.05rem;text-decoration:none;border:2px solid transparent;
+    transition:background .15s,color .15s;text-align:center}
+  .btn-p{background:var(--amber);color:var(--ink);border-color:var(--amber)}
+  .btn-p:hover{background:#D79100;border-color:#D79100}
+  .btn-s{background:#fff;color:var(--brand);border-color:var(--brand)}
+  .btn-s:hover{background:var(--surf)}
+
+  /* ---------- call band ---------- */
+  .band{background:var(--brand);color:#fff;padding:26px 0}
+  .band h2{color:#fff;margin-bottom:.3em}
+  .band p{color:#DCE3EC;margin:0 0 18px;max-width:56ch}
+  .band .big{display:inline-flex;align-items:center;gap:10px;
+    font-size:clamp(1.5rem,6vw,2.3rem);font-weight:800;color:var(--amber);
+    text-decoration:none;letter-spacing:-.02em;min-height:52px}
+  .band .big:hover{text-decoration:underline}
+
+  /* ---------- sections ---------- */
+  section{padding:44px 0}
+  .alt{background:var(--surf)}
+  .lede{max-width:60ch;margin-bottom:24px}
+  .grid{display:grid;gap:17px;grid-template-columns:1fr}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:20px;border-top:3px solid var(--amber)}
+  .card h3{margin-bottom:.35em}
+  .card p{margin:0;font-size:.95rem}
+  /* 24px minimum target size, WCAG 2.5.8. This inline tel: link measured
+     18px tall at 320px before this rule. */
+  .card a{display:inline-block;min-height:24px;line-height:24px;
+    font-weight:700}
+
+  /* ---------- trust ---------- */
+  .tgrid{display:grid;gap:16px;grid-template-columns:1fr}
+  .titem{display:flex;gap:12px;align-items:flex-start}
+  .titem .tk{flex:0 0 auto;width:26px;height:26px;border-radius:50%;
+    background:var(--green);color:#fff;display:flex;align-items:center;
+    justify-content:center;font-weight:800;font-size:.9rem;line-height:1}
+  .titem b{display:block;color:var(--ink);font-size:1rem;margin-bottom:2px}
+  .titem span{color:var(--body);font-size:.92rem;line-height:1.55}
+
+  /* ---------- reviews ---------- */
+  .rev{background:#fff;border:1px solid var(--line);
+    border-left:4px solid var(--amber);border-radius:11px;padding:19px}
+  .rev blockquote{margin:0 0 13px;font-size:.97rem;color:var(--ink)}
+  .rev .who{font-size:.86rem;color:var(--body)}
+  .rev .who b{color:var(--ink);display:block;font-size:.94rem}
+
+  /* ---------- contact ---------- */
+  .ccard{background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:22px}
+  .ccard dl{margin:0;display:grid;gap:16px}
+  .ccard dt{font-size:.74rem;font-weight:800;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--brand);margin-bottom:4px}
+  .ccard dd{margin:0;font-size:1rem;color:var(--ink)}
+  .ccard dd a{font-weight:700;text-decoration:none;display:inline-block;
+    min-height:28px;line-height:28px}
+  .ccard dd a:hover{text-decoration:underline}
+  .hrs{font-size:.96rem;line-height:1.9}
+  .note{font-size:.88rem;color:var(--body);margin:14px 0 0;
+    border-top:1px solid var(--line);padding-top:13px}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);color:#C7CDD8;padding:32px 0 104px;
+    font-size:.89rem}
+  footer h3{color:#fff;font-size:1rem;margin-bottom:.6em}
+  footer a{color:#fff;display:inline-block;min-height:24px;line-height:24px}
+  .disc{border:1px solid #333A47;border-radius:11px;padding:17px;
+    margin-bottom:20px;background:#1A212B;line-height:1.65}
+  .disc b{color:#fff}
+
+  /* ---------- sticky call bar ---------- */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;
+    background:var(--amber);box-shadow:0 -3px 14px rgba(17,22,29,.3)}
+  .sticky a{flex:1 1 0;min-width:0;display:flex;align-items:center;
+    justify-content:center;gap:8px;min-height:62px;padding:10px 8px;
+    color:var(--ink);font-weight:800;text-decoration:none;font-size:1.04rem;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sticky a+a{border-left:2px solid rgba(17,22,29,.25)}
+
+  /* ---------- responsive ---------- */
+  @media (min-width:700px){
+    .tgrid{grid-template-columns:repeat(2,1fr)}
+    .grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (min-width:960px){
+    .tgrid{grid-template-columns:repeat(4,1fr)}
+    .grid{grid-template-columns:repeat(3,1fr)}
+    footer{padding-bottom:32px}
+    .sticky{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+  <div class="wrap hbar">
+    <a class="mark" href="#main" aria-label="Broome's Wrecker Service, East Ridge Tennessee">
+      <span class="m1">Broome&rsquo;s Wrecker Service</span>
+      <span class="m2">East Ridge, Tennessee</span>
+    </a>
+    <div class="hcall">
+      <span>Wrecker</span>
+      <a href="tel:+14236290253">(423)&nbsp;629-0253</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============== HERO ============== -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">East Ridge &middot; Hamilton County, Tennessee</span>
+      <h1>Broken down on Ringgold Road? One number.</h1>
+      <p class="lead">Broome&rsquo;s Wrecker Service tows and recovers vehicles in
+        East Ridge and across the Chattanooga area, working out of the same
+        Ringgold Road address as the family&rsquo;s repair shop.</p>
+      <p class="rate">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <b>4.8</b> <span>out of 5 across 77 Google reviews</span>
+      </p>
+      <div class="cta">
+        <a class="btn btn-p" href="tel:+14236290253">&#9742;&nbsp; Call (423)&nbsp;629-0253</a>
+        <a class="btn btn-s" href="#contact">Hours &amp; location</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TRUST ============== -->
+  <section class="alt">
+    <div class="wrap">
+      <h2 class="sr">Why people call Broome&rsquo;s</h2>
+      <div class="tgrid">
+        <div class="titem">
+          <span class="tk" aria-hidden="true">&#10003;</span>
+          <div><b>4.8 across 77 reviews</b>
+            <span>Their public Google rating &mdash; one of the highest of any
+              wrecker service in the area.</span></div>
+        </div>
+        <div class="titem">
+          <span class="tk" aria-hidden="true">&#10003;</span>
+          <div><b>They come to you</b>
+            <span>Reviewers describe pickups well outside town, including
+              breakdowns out on I-24.</span></div>
+        </div>
+        <div class="titem">
+          <span class="tk" aria-hidden="true">&#10003;</span>
+          <div><b>Not always a tow</b>
+            <span>One reviewer was back on the road from the roadside without
+              needing to be towed at all.</span></div>
+        </div>
+        <div class="titem">
+          <span class="tk" aria-hidden="true">&#10003;</span>
+          <div><b>A repair shop too</b>
+            <span>East Ridge Auto Electric Co works from the same Ringgold Road
+              address, on its own line.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CALL BAND ============== -->
+  <section class="band">
+    <div class="wrap">
+      <h2>If you are stuck right now</h2>
+      <p>Stop reading and call. The phone is answered at the Ringgold Road
+        office during the hours published below.</p>
+      <a class="big" href="tel:+14236290253">&#9742;&nbsp;(423)&nbsp;629-0253</a>
+    </div>
+  </section>
+
+  <!-- ============== SERVICES ============== -->
+  <section>
+    <div class="wrap">
+      <h2>What they do</h2>
+      <p class="lede">Described from what their own customers wrote in public
+        reviews. Nothing here is invented, and nothing is quoted from a price
+        list, because none is published.</p>
+      <div class="grid">
+        <div class="card"><h3>Towing</h3>
+          <p>Cars and light vehicles recovered and hauled &mdash; local moves
+            around East Ridge and longer pulls back into town.</p></div>
+        <div class="card"><h3>Roadside recovery</h3>
+          <p>Vehicles stuck in awkward or unsafe spots, including a car
+            partially blocking a live traffic lane.</p></div>
+        <div class="card"><h3>Highway call-outs</h3>
+          <p>One reviewer broke down on I-24 about 25 miles out of town and was
+            picked up there.</p></div>
+        <div class="card"><h3>Roadside assistance</h3>
+          <p>Sometimes the fix happens on the shoulder and the vehicle drives
+            away under its own power.</p></div>
+        <div class="card"><h3>Auto electric &amp; repair</h3>
+          <p>East Ridge Auto Electric Co, same address, separate line:
+            <a href="tel:+14236297951">(423)&nbsp;629-7951</a>.</p></div>
+        <div class="card"><h3>Straight pricing</h3>
+          <p>Reviewers repeatedly mention being charged less than they braced
+            for. Confirm the rate when you call.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== REVIEWS ============== -->
+  <section class="alt">
+    <div class="wrap">
+      <h2>What customers actually said</h2>
+      <p class="lede">Real Google reviews, quoted word for word, under the names
+        the reviewers published them with. Pulled from the Google Places API on
+        29 October 2026.</p>
+      <div class="grid">
+
+        <div class="rev">
+          <blockquote>&ldquo;The entire staff at Broome&rsquo;s Towing has been
+            great to work with. I highly recommend them for any towing needs you
+            have. You don&rsquo;t stay in business, especially in these days, for
+            55 years unless you are outstanding in your workmanship and the way
+            you treat folks.&rdquo;</blockquote>
+          <p class="who"><b>Jim Hudgins</b>
+            <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            5 out of 5 &middot; January 2026</p>
+        </div>
+
+        <div class="rev">
+          <blockquote>&ldquo;A few weeks ago my car broke down on I 24 about 25
+            miles out of town. Broome&rsquo;s came to tow my car. They came much
+            quicker than promised and were very professional and courteous. I
+            expected to pay a high price for them driving so far out, but was
+            pleasantly surprised by how much was charged.&rdquo;</blockquote>
+          <p class="who"><b>Dennis Johnson</b>
+            <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            5 out of 5 &middot; March 2021</p>
+        </div>
+
+        <div class="rev">
+          <blockquote>&ldquo;My car was literally stuck between a rock and a hard
+            place when I called Broome&rsquo;s. It was late on a Friday afternoon
+            during high traffic; my car was partially blocking the right lane of a
+            busy road. A very helpful lady answered and gave me an estimated time
+            of the wrecker&rsquo;s arrival. The tow truck driver arrived in the
+            stated time frame and was very professional and
+            courteous.&rdquo;</blockquote>
+          <p class="who"><b>Gloria Hastings</b>
+            <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            5 out of 5 &middot; October 2021</p>
+        </div>
+
+        <div class="rev">
+          <blockquote>&ldquo;The owners are very nice people, the friendliest
+            people I have ever met in a business situation, very understanding I
+            would refer them to anyone needing a tow! Prices are best
+            around!&rdquo;</blockquote>
+          <p class="who"><b>Jana Bean</b>
+            <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            5 out of 5 &middot; June 2025</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CONTACT ============== -->
+  <section id="contact">
+    <div class="wrap">
+      <h2>Get hold of them</h2>
+      <div class="ccard">
+        <dl>
+          <div>
+            <dt>Wrecker &amp; towing</dt>
+            <dd><a href="tel:+14236290253">(423)&nbsp;629-0253</a></dd>
+          </div>
+          <div>
+            <dt>East Ridge Auto Electric Co &mdash; same address</dt>
+            <dd><a href="tel:+14236297951">(423)&nbsp;629-7951</a></dd>
+          </div>
+          <div>
+            <dt>Address</dt>
+            <dd>4003 Ringgold Rd, East Ridge, TN 37412</dd>
+          </div>
+          <div>
+            <dt>Office hours, as published on their Google profile</dt>
+            <dd class="hrs">
+              Monday&ndash;Friday&nbsp;&middot;&nbsp;8:30&nbsp;AM&ndash;5:00&nbsp;PM<br>
+              Saturday &amp; Sunday&nbsp;&middot;&nbsp;Closed
+            </dd>
+          </div>
+          <div>
+            <dt>On Google</dt>
+            <dd><a href="https://maps.google.com/?cid=7369089078629128260"
+                   rel="nofollow noopener" target="_blank">Business profile
+                   &amp; directions</a></dd>
+          </div>
+        </dl>
+        <p class="note"><strong>About after-hours:</strong> the hours above are
+          exactly what Google publishes today. Some customers describe help
+          outside those hours, so if you need a wrecker at night or on a weekend,
+          call and ask rather than assuming either way.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="disc">
+      <b>This is not the official website of Broome&rsquo;s Wrecker Service.</b>
+      It is an unsolicited concept demo, built by an independent web developer in
+      Chattanooga from the company&rsquo;s own publicly published listing details
+      and Google reviews. The company did not ask for it, has not seen it, has not
+      approved it, and is not affiliated with it. No one at the business was
+      contacted. It collects nothing, tracks nothing, and sets no cookies. It
+      contains no photographs, because the only photos available were customers&rsquo;
+      wrecked vehicles. The wordmark and colours are placeholders. If the owner
+      would like this page taken down it will come down immediately on request.
+    </div>
+    <h3>Broome&rsquo;s Wrecker Service</h3>
+    <p>4003 Ringgold Rd, East Ridge, Tennessee 37412 &middot;
+      <a href="tel:+14236290253">(423)&nbsp;629-0253</a></p>
+    <p>Demo page &mdash; not indexed, not affiliated, not endorsed.</p>
+  </div>
+</footer>
+
+<nav class="sticky" aria-label="Quick contact">
+  <a href="tel:+14236290253">&#9742;&nbsp; Call (423) 629-0253</a>
+</nav>
+
+</body>
+</html>
