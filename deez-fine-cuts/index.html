@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Deez Fine Cuts &amp; Salon — Barber Shop on Brainerd Rd, Chattanooga TN</title>
+<meta name="description" content="Deez Fine Cuts &amp; Salon, 3459 Brainerd Rd Ste A, Chattanooga TN. Cutting Brainerd since 1996. Haircuts, beard trims, straight razor shaves. Call (423) 622-3649.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231A1618'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%23FAF8F7' text-anchor='middle'%3ED%3C/text%3E%3Crect x='18' y='50' width='28' height='3' fill='%23BC3C31'/%3E%3C/svg%3E">
+
+<!--
+================================================================================
+  UNSOLICITED SPEC DEMO — Deez Fine Cuts & Salon, Chattanooga TN
+  Built 2026-11-01 by Matt McFarlane.  NOT AN OFFICIAL SITE. NOT AFFILIATED.
+  NO CONTACT HAS BEEN MADE WITH THIS BUSINESS.
+  noindex,nofollow is set above and must stay set until the owner says yes.
+
+  EVERY CLAIM ON THIS PAGE IS SOURCED. See research.md for the full audit.
+    - Name, address, phone, hours, 4.9/76 rating ... live Google Places pull,
+      2026-11-01, place_id ChIJhf3dUTZnYIgRys6tG4bWi8M (probe/details.json)
+    - "Since 1996" / 30 years ......... BBB profile: Business Started 1/1/1996,
+      "Years in Business: 30". BBB rating A+ (NOT BBB-accredited - the page
+      says so plainly, and so does the footnote on this page).
+    - Services (haircut, beard trim, straight razor shave) ... Google review
+      service tags on named public reviews. NOT a price list - see below.
+    - Review quotes ... verbatim from public Google reviews, each attributed
+      to the reviewer's public display name, platform and Google's own
+      relative date. Nothing invented. NO FABRICATED TESTIMONIALS.
+    - "quality hair care at low prices" ... THEIR OWN words, from their
+      Facebook page Intro. Shown on the page as a quoted self-description.
+
+  DELIBERATELY NOT ON THIS PAGE (see research.md):
+    - NO PRICES. Customer-reported Google price tags disagree ($10-20 on
+      beard trims, $70-80 on haircut+beard, $100+ on an unlisted service)
+      and are 1-2 years old. Google's own priceRange field is null. Publishing
+      a guessed price on a man's own website starts arguments at the chair.
+    - NO WALK-IN CLAIM. Public reviews contradict each other - one says
+      "walk ins are welcome" (2018), another calls the appointment-only
+      policy a downside (2020). Unresolved, so the page just says call.
+    - NO PARKING CLAIM. The single non-5-star public review is specifically
+      about parking being bad. Not going to claim it is easy.
+    - NO BARBER ROSTER. "Dee" and "Harrell" appear only inside quoted
+      reviews, attributed to the reviewers who wrote them.
+
+  IMAGES - all five Google Places photos were viewed at full resolution.
+    ALL FIVE were rejected whole: three show MINORS with identifiable faces,
+    two show adults with identifiable faces (one also has two bystanders
+    visible in the mirror). The two images used here are CRAFT CROPS taken
+    above the eyebrow line from the two adult photos - hair only, no face,
+    no eyes, no bystanders. NO STOCK PHOTOGRAPHY IS USED ANYWHERE.
+    See build_assets.py for the exact crop boxes and the reasoning.
+
+  BRAND - there is no logo, signage or storefront photo in ANY public source.
+    >> THE WORDMARK BELOW IS SET IN TYPE. IT IS NOT THEIR LOGO. <<
+    The red is not a design choice: #BC3C31 is sampled programmatically from
+    the painted feature wall in their own shop photo (build_assets.py).
+    Used for CTAs and rules only. All 21 colour pairs pass WCAG AA:
+    /usr/bin/python3 probe/contrast.py -> FAILURES: 0
+================================================================================
+-->
+
+<style>
+  :root{
+    --ink:#1A1618; --body:#3A3438; --muted:#5E565B;
+    --surface:#FAF8F7; --panel:#FFFFFF; --sunk:#F1EDEB; --line:#DED7D3;
+    --red:#BC3C31;      /* SAMPLED from their own wall - CTA fills only */
+    --red-dk:#9B2F26;   /* darkened - small text and thin rules on light */
+    --red-on-dark:#E8705F;
+    --ondark:#F3EFED; --ondark-muted:#B9AFAB;
+    --wrap:1080px;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--surface); color:var(--body);
+    font-family:var(--sans); font-size:17px; line-height:1.65;
+    overflow-wrap:break-word; word-wrap:break-word;
+  }
+  img{max-width:100%; height:auto; display:block}
+  a{color:var(--red-dk)}
+  h1,h2,h3{font-family:var(--serif); color:var(--ink); line-height:1.15; margin:0}
+  h2{font-size:clamp(1.5rem,4.2vw,2.1rem); letter-spacing:-.01em}
+  h3{font-size:1.1rem; letter-spacing:-.005em}
+  .wrap{width:100%; max-width:var(--wrap); margin:0 auto; padding:0 20px}
+  .sec{padding:clamp(40px,7vw,68px) 0}
+  .sunk{background:var(--sunk); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+  :focus-visible{outline:3px solid var(--red-dk); outline-offset:2px; border-radius:4px}
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:8px;top:8px;z-index:200;background:var(--panel);padding:10px 14px;border-radius:8px}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:.55em;
+    background:var(--red); color:#fff; text-decoration:none;
+    font-family:var(--sans); font-weight:700; font-size:1.07rem;
+    padding:16px 26px; border-radius:10px; border:0;
+    min-height:54px; text-align:center; letter-spacing:.01em;
+  }
+  .btn:hover,.btn:focus{background:var(--red-dk); color:#fff}
+  .btn-lg{width:100%; font-size:1.18rem; padding:19px 26px; min-height:62px}
+  @media(min-width:560px){ .btn-lg{width:auto; min-width:330px} }
+  .btn-ghost{
+    background:transparent; color:var(--ondark);
+    border:2px solid rgba(243,239,237,.45);
+  }
+  .btn-ghost:hover,.btn-ghost:focus{background:rgba(243,239,237,.12); color:var(--ondark)}
+  .tel{white-space:nowrap}
+
+  /* ---------- masthead ---------- */
+  .top{background:var(--ink); color:var(--ondark); padding:14px 0}
+  .top-in{display:flex; flex-wrap:wrap; gap:10px 18px; align-items:center; justify-content:space-between}
+  .mark{font-family:var(--serif); font-size:1.12rem; font-weight:700; color:#fff; letter-spacing:.005em}
+  .mark .amp{color:var(--red-on-dark)}
+  .top a.pill{
+    display:inline-flex; align-items:center; gap:.45em;
+    color:#fff; background:var(--red); text-decoration:none;
+    font-weight:700; font-size:1rem; padding:10px 16px; border-radius:8px; min-height:44px;
+  }
+  .top a.pill:hover,.top a.pill:focus{background:var(--red-dk)}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--ink); color:var(--ondark); padding:clamp(34px,6vw,62px) 0 clamp(38px,6vw,64px)}
+  .kicker{
+    font-family:var(--sans); font-size:.76rem; font-weight:700;
+    letter-spacing:.17em; text-transform:uppercase; color:var(--red-on-dark); margin:0 0 16px
+  }
+  .hero h1{
+    color:#fff; font-size:clamp(2.1rem,8vw,3.65rem); letter-spacing:-.02em; margin:0 0 6px;
+  }
+  .hero h1 .amp{color:var(--red-on-dark)}
+  .hero .sub{
+    font-family:var(--serif); font-style:italic;
+    font-size:clamp(1.08rem,3.4vw,1.4rem); color:var(--ondark); margin:0 0 22px
+  }
+  .hero .lede{color:var(--ondark-muted); max-width:46ch; margin:0 0 28px; font-size:1.05rem}
+  .hero-cta{display:flex; flex-direction:column; gap:12px; align-items:flex-start}
+  @media(min-width:560px){ .hero-cta{flex-direction:row; flex-wrap:wrap; align-items:center} }
+  .callnote{font-size:.9rem; color:var(--ondark-muted); margin:14px 0 0}
+  .openflag{
+    display:inline-flex; align-items:center; gap:.5em;
+    font-size:.88rem; font-weight:700; color:var(--ondark);
+    background:rgba(243,239,237,.1); border:1px solid rgba(243,239,237,.22);
+    padding:7px 13px; border-radius:999px; margin:0 0 20px;
+  }
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--red-on-dark);flex:none}
+
+  /* ---------- trust strip ---------- */
+  .trust{background:var(--panel); border-bottom:1px solid var(--line)}
+  .trust-g{
+    display:grid; grid-template-columns:1fr 1fr; gap:1px;
+    background:var(--line);
+  }
+  @media(min-width:760px){ .trust-g{grid-template-columns:repeat(4,1fr)} }
+  .trust-i{background:var(--panel); padding:20px 16px; text-align:center}
+  .trust-n{
+    font-family:var(--serif); font-size:1.55rem; font-weight:700;
+    color:var(--ink); line-height:1.1; display:block
+  }
+  .trust-n .star{color:var(--red-dk)}
+  .trust-l{font-size:.81rem; color:var(--muted); letter-spacing:.03em; margin-top:4px; display:block}
+
+  /* ---------- generic ---------- */
+  .eyebrow{
+    font-size:.76rem; font-weight:700; letter-spacing:.17em;
+    text-transform:uppercase; color:var(--red-dk); margin:0 0 10px
+  }
+  .rule{height:3px; width:52px; background:var(--red-dk); border-radius:2px; margin:16px 0 22px}
+  .lead{font-size:1.06rem; max-width:62ch; margin:0 0 8px}
+
+  /* ---------- services ---------- */
+  .svc{display:grid; gap:14px; margin:26px 0 0}
+  @media(min-width:680px){ .svc{grid-template-columns:repeat(3,1fr)} }
+  .svc-i{
+    background:var(--panel); border:1px solid var(--line);
+    border-top:3px solid var(--red-dk);
+    border-radius:10px; padding:22px 20px;
+  }
+  .svc-i h3{margin:0 0 7px}
+  .svc-i p{margin:0; font-size:.96rem; color:var(--muted)}
+  .svc-note{
+    margin:22px 0 0; font-size:.92rem; color:var(--muted);
+    background:var(--panel); border:1px solid var(--line);
+    border-left:3px solid var(--red-dk);
+    padding:14px 16px; border-radius:8px;
+  }
+
+  /* ---------- work ---------- */
+  .work{display:grid; gap:16px; margin:26px 0 0}
+  @media(min-width:680px){ .work{grid-template-columns:1fr 1fr} }
+  .shot{border-radius:10px; overflow:hidden; background:var(--ink); border:1px solid var(--line)}
+  .shot img{width:100%; aspect-ratio:3/2; object-fit:cover}
+  .cap{font-size:.84rem; color:var(--muted); margin:9px 2px 0}
+
+  /* ---------- reviews ---------- */
+  .revs{display:grid; gap:16px; margin:26px 0 0}
+  @media(min-width:760px){ .revs{grid-template-columns:repeat(3,1fr)} }
+  .rev{
+    background:var(--panel); border:1px solid var(--line);
+    border-radius:10px; padding:22px 20px; display:flex; flex-direction:column;
+  }
+  .stars{color:var(--red-dk); font-size:1rem; letter-spacing:.12em; margin:0 0 10px}
+  .rev blockquote{
+    margin:0 0 14px; font-family:var(--serif); font-size:1.04rem;
+    line-height:1.52; color:var(--ink);
+  }
+  .rev cite{
+    font-style:normal; font-size:.84rem; color:var(--muted);
+    margin-top:auto; display:block; border-top:1px solid var(--line); padding-top:11px;
+  }
+  .rev cite b{color:var(--body); font-weight:700}
+
+  /* ---------- hours + find ---------- */
+  .two{display:grid; gap:22px}
+  @media(min-width:760px){ .two{grid-template-columns:1fr 1fr; gap:34px} }
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:24px 22px}
+  table.hrs{width:100%; border-collapse:collapse; margin:14px 0 0; font-size:.99rem}
+  table.hrs th,table.hrs td{text-align:left; padding:9px 0; border-bottom:1px solid var(--line)}
+  table.hrs th{font-weight:600; color:var(--body); width:46%}
+  table.hrs td{text-align:right; color:var(--ink); font-variant-numeric:tabular-nums}
+  table.hrs tr:last-child th,table.hrs tr:last-child td{border-bottom:0}
+  table.hrs .shut td{color:var(--muted)}
+  table.hrs .early th,table.hrs .early td{color:var(--red-dk); font-weight:700}
+  .addr{font-style:normal; font-size:1.06rem; line-height:1.6; color:var(--ink); margin:14px 0 6px}
+  .addr .ln{display:block}
+  .meta{font-size:.92rem; color:var(--muted); margin:10px 0 0}
+  .ul{list-style:none; padding:0; margin:16px 0 0}
+  .ul li{position:relative; padding:0 0 0 24px; margin:0 0 9px; font-size:.97rem}
+  .ul li::before{
+    content:""; position:absolute; left:0; top:.52em;
+    width:9px; height:9px; border-radius:2px; background:var(--red-dk);
+  }
+
+  /* ---------- final CTA ---------- */
+  .fin{background:var(--ink); color:var(--ondark); text-align:center}
+  .fin h2{color:#fff; margin:0 0 12px}
+  .fin p{color:var(--ondark-muted); max-width:48ch; margin:0 auto 26px}
+  .fin .btn-lg{margin:0 auto}
+
+  /* ---------- footer ---------- */
+  footer{background:#0E0C0D; color:var(--ondark-muted); padding:30px 0 38px; font-size:.88rem}
+  footer .fmark{font-family:var(--serif); color:#fff; font-size:1.05rem; margin:0 0 8px}
+  footer a{color:var(--ondark)}
+  .disc{
+    margin:20px 0 0; padding:14px 16px; border:1px dashed rgba(243,239,237,.28);
+    border-radius:8px; font-size:.82rem; line-height:1.55; color:var(--ondark-muted);
+  }
+
+  /* ---------- sticky mobile call bar ---------- */
+  .bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:100;
+    background:var(--ink); border-top:1px solid rgba(243,239,237,.18);
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    display:block;
+  }
+  .bar a{
+    display:flex; align-items:center; justify-content:center; gap:.5em;
+    background:var(--red); color:#fff; text-decoration:none; font-weight:700;
+    font-size:1.1rem; padding:15px; border-radius:10px; min-height:54px;
+  }
+  .bar a:hover,.bar a:focus{background:var(--red-dk)}
+  .barpad{height:92px}
+  @media(min-width:760px){ .bar{display:none} .barpad{display:none} }
+  @media print{ .bar,.barpad{display:none} }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- masthead -->
+<div class="top">
+  <div class="wrap top-in">
+    <!-- WORDMARK IS SET IN TYPE. NOT THEIR LOGO. No logo exists in any public source. -->
+    <span class="mark">Deez Fine Cuts <span class="amp">&amp;</span> Salon</span>
+    <a class="pill tel" href="tel:+14236223649" aria-label="Call Deez Fine Cuts and Salon at 4 2 3, 6 2 2, 3 6 4 9">
+      <span aria-hidden="true">&#9742;</span> (423) 622-3649
+    </a>
+  </div>
+</div>
+
+<!-- hero -->
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Brainerd Road &middot; Chattanooga, Tennessee</p>
+    <p class="openflag"><span class="dot" aria-hidden="true"></span> Open six days &middot; 7 AM starts Friday &amp; Saturday</p>
+    <h1>Deez Fine Cuts <span class="amp">&amp;</span> Salon</h1>
+    <p class="sub">Cutting Brainerd Road since 1996.</p>
+    <p class="lede">
+      Thirty years in the same chair on Brainerd Road, and a 4.9 out of 5 from
+      76 Google reviews. Haircuts, beard trims and straight razor shaves.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-lg tel" href="tel:+14236223649">
+        <span aria-hidden="true">&#9742;</span> Call (423) 622-3649
+      </a>
+      <a class="btn btn-ghost" href="#hours">See hours &amp; find us</a>
+    </div>
+    <p class="callnote">The fastest way to get a chair is to pick up the phone.</p>
+  </div>
+</header>
+
+<!-- trust strip -->
+<section class="trust" aria-label="At a glance">
+  <div class="wrap" style="padding:0">
+    <div class="trust-g">
+      <div class="trust-i">
+        <span class="trust-n">4.9<span class="star">&#9733;</span></span>
+        <span class="trust-l">76 Google reviews</span>
+      </div>
+      <div class="trust-i">
+        <span class="trust-n">1996</span>
+        <span class="trust-l">30 years in business</span>
+      </div>
+      <div class="trust-i">
+        <span class="trust-n">6 days</span>
+        <span class="trust-l">Monday &ndash; Saturday</span>
+      </div>
+      <div class="trust-i">
+        <span class="trust-n">7<span class="star">AM</span></span>
+        <span class="trust-l">Friday &amp; Saturday open</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+
+<!-- services -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">What they do</p>
+    <h2>Three things, done properly.</h2>
+    <div class="rule"></div>
+    <!-- Deliberately does NOT assert "two master barbers" as fact: that phrase
+         is one reviewer's opinion and appears on this page only inside his
+         quoted review, attributed to him. -->
+    <p class="lead">
+      A barber shop and salon on Brainerd Road with a following that goes back
+      decades.
+    </p>
+
+    <div class="svc">
+      <div class="svc-i">
+        <h3>Haircuts</h3>
+        <p>Fades, tapers and the razor-squared line-up you can see in the photographs below.</p>
+      </div>
+      <div class="svc-i">
+        <h3>Beard trims</h3>
+        <p>Shaped, edged and blended into the cut, or booked on its own.</p>
+      </div>
+      <div class="svc-i">
+        <h3>Straight razor shaves</h3>
+        <p>The traditional hot-towel straight razor finish.</p>
+      </div>
+    </div>
+
+    <!-- Services list comes from Google review SERVICE TAGS on named public
+         reviews, not from a published menu. No price list exists publicly. -->
+    <p class="svc-note">
+      <b>Prices aren&rsquo;t published online</b> &mdash; and the few figures floating
+      around on Google are years old and disagree with each other. Call the shop
+      and ask; you&rsquo;ll get a straight answer in about ten seconds.
+    </p>
+  </div>
+</section>
+
+<!-- work -->
+<section class="sec sunk">
+  <div class="wrap">
+    <p class="eyebrow">The work</p>
+    <h2>The line-up is the signature.</h2>
+    <div class="rule"></div>
+    <p class="lead">Both photographs below were taken in this shop, of this shop&rsquo;s work.</p>
+
+    <div class="work">
+      <figure class="shot" style="margin:0">
+        <!-- CRAFT CROP of raw/d4.jpg, cut above the eyebrow line. No face. -->
+        <img src="images/lineup.jpg" width="1400" height="913" loading="lazy" decoding="async"
+             alt="Close view of a fresh haircut: waves on top, a tight taper at the temple and a sharp squared razor line-up across the hairline.">
+      </figure>
+      <figure class="shot" style="margin:0">
+        <!-- CRAFT CROP of raw/d2.jpg, cut above the eyebrow line. No face. -->
+        <img src="images/fade.jpg" width="1400" height="770" loading="lazy" decoding="async"
+             alt="Overhead view of a finished cut showing the taper blending up into the waves and a crisp razor edge along the hairline.">
+      </figure>
+    </div>
+    <p class="cap">
+      Photographs from the shop&rsquo;s own Google listing, cropped to the work.
+    </p>
+  </div>
+</section>
+
+<!-- reviews -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">What customers say</p>
+    <h2>4.9 out of 5, across 76 reviews.</h2>
+    <div class="rule"></div>
+
+    <div class="revs">
+      <!-- Verbatim public Google reviews. Attributed. Nothing invented. -->
+      <article class="rev">
+        <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <blockquote>&ldquo;I have been a customer there for years and years. And the atmosphere is very nice. And my dude Dee and Harrell are the best Master barbers in town in my opinion.&rdquo;</blockquote>
+        <cite><b>Brian Clay</b><br>Google review &middot; 2 years ago</cite>
+      </article>
+      <article class="rev">
+        <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <blockquote>&ldquo;Exceptionally great service as always.&rdquo;</blockquote>
+        <cite><b>Albert Martin</b><br>Google review &middot; 1 year ago</cite>
+      </article>
+      <article class="rev">
+        <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <blockquote>&ldquo;Awesome cut by a great team.&rdquo;</blockquote>
+        <cite><b>Joe</b><br>Google review &middot; 2 years ago</cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- hours + find us -->
+<section class="sec sunk" id="hours">
+  <div class="wrap">
+    <p class="eyebrow">Hours &amp; directions</p>
+    <h2>Open six days a week.</h2>
+    <div class="rule"></div>
+
+    <div class="two">
+      <div class="card">
+        <h3>Opening hours</h3>
+        <table class="hrs">
+          <tbody>
+            <tr><th scope="row">Monday</th><td>10:00 AM &ndash; 5:00 PM</td></tr>
+            <tr><th scope="row">Tuesday</th><td>10:00 AM &ndash; 5:00 PM</td></tr>
+            <tr><th scope="row">Wednesday</th><td>10:00 AM &ndash; 5:00 PM</td></tr>
+            <tr><th scope="row">Thursday</th><td>10:00 AM &ndash; 5:00 PM</td></tr>
+            <tr class="early"><th scope="row">Friday</th><td>7:00 AM &ndash; 5:00 PM</td></tr>
+            <tr class="early"><th scope="row">Saturday</th><td>7:00 AM &ndash; 4:00 PM</td></tr>
+            <tr class="shut"><th scope="row">Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <p class="meta">
+          Early 7 AM start on Friday and Saturday &mdash; before work, before the weekend.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Find the shop</h3>
+        <address class="addr">
+          <span class="ln">Deez Fine Cuts &amp; Salon</span>
+          <span class="ln">3459 Brainerd Rd, Suite A</span>
+          <span class="ln">Chattanooga, TN 37411</span>
+        </address>
+        <p class="meta">Near the corner of Brainerd Road and Bellflower Circle.</p>
+        <ul class="ul">
+          <li>Wheelchair accessible restroom</li>
+          <li>Good for kids</li>
+          <li>Cutting this stretch of Brainerd Road since 1996</li>
+        </ul>
+        <p style="margin:20px 0 0">
+          <a class="btn tel" href="tel:+14236223649">
+            <span aria-hidden="true">&#9742;</span> Call (423) 622-3649
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- final CTA -->
+<section class="sec fin">
+  <div class="wrap">
+    <h2>Need a chair this week?</h2>
+    <p>
+      &ldquo;Specializing in quality hair care at low prices&rdquo; &mdash; the shop&rsquo;s
+      own description of itself. One call gets you booked.
+    </p>
+    <a class="btn btn-lg tel" href="tel:+14236223649">
+      <span aria-hidden="true">&#9742;</span> Call (423) 622-3649
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="fmark">Deez Fine Cuts &amp; Salon</p>
+    <p style="margin:0">
+      3459 Brainerd Rd, Suite A, Chattanooga, TN 37411<br>
+      <a class="tel" href="tel:+14236223649">(423) 622-3649</a>
+    </p>
+    <p style="margin:12px 0 0">
+      Mon&ndash;Thu 10 AM&ndash;5 PM &middot; Fri 7 AM&ndash;5 PM &middot; Sat 7 AM&ndash;4 PM &middot; Sun closed
+    </p>
+    <p class="disc">
+      <b>Demonstration page.</b> This is an unsolicited sample website built for
+      Deez Fine Cuts &amp; Salon by an independent web designer. It is not an
+      official site and is not affiliated with or endorsed by the business.
+      Hours, rating, address and services shown are taken from the shop&rsquo;s
+      public Google listing on 1 November 2026; the 1996 founding date is from
+      its Better Business Bureau profile, where it holds an A+ rating and is not
+      BBB-accredited. Review quotations are verbatim from public Google reviews
+      and belong to the people who wrote them. Please call the shop to confirm
+      anything before relying on it.
+    </p>
+  </div>
+</footer>
+
+<!-- sticky mobile call bar -->
+<div class="barpad" aria-hidden="true"></div>
+<div class="bar">
+  <a class="tel" href="tel:+14236223649">
+    <span aria-hidden="true">&#9742;</span> Call (423) 622-3649
+  </a>
+</div>
+
+</body>
+</html>
