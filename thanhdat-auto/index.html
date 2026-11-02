@@ -248,7 +248,8 @@
 
   /* gallery */
   .gal{display:grid;grid-template-columns:1fr;gap:16px;margin-top:30px}
-  @media(min-width:680px){.gal{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:620px){.gal{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:980px){.gal{grid-template-columns:repeat(4,1fr)}}
   .gal figure{margin:0}
   /* the three source photos have three different aspect ratios; normalise so
      the row reads as one band and the captions line up */
@@ -474,6 +475,10 @@
       <figure>
         <img src="images/bay.webp" width="760" height="865" alt="A work van in the bay with the hood up and the front end apart, engine bay exposed mid-job." loading="lazy" decoding="async">
         <figcaption>A work van in the bay, mid-job.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/engine.webp" width="518" height="462" alt="A rebuilt V8 engine painted orange, sitting on the shop floor ready to be fitted." loading="lazy" decoding="async">
+        <figcaption>A rebuilt engine on the floor, ready to go in.</figcaption>
       </figure>
     </div>
   </div>
