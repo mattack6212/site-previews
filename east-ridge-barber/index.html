@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>East Ridge Barber Shop | Appointment Only | East Ridge, TN</title>
+<meta name="description" content="East Ridge Barber Shop on Ringgold Road in East Ridge, Tennessee. Appointment only - call (423) 894-8454. Open Tuesday to Friday 9-6 and Saturday 8-2.">
+
+<!--
+  ============================================================================
+  UNOFFICIAL DEMO / PROPOSAL PAGE - NOT AFFILIATED WITH THE BUSINESS
+  ============================================================================
+  Built as an unpaid sample for the owner's consideration. Nothing here is
+  live, nothing is published on the owner's behalf, and no one at the shop has
+  been contacted. This page is set to noindex and is not advertised anywhere.
+
+  WHERE THE INFORMATION CAME FROM
+  Every fact on this page was taken from the business's own public Google
+  Business Profile on 2026-11-02 - name, address, phone, opening hours,
+  rating and review count - plus customer reviews quoted under the reviewers'
+  own published display names. Nothing was invented, estimated or guessed.
+
+  PERMISSION GATE - WHY THERE ARE NO PHOTOGRAPHS
+  This page deliberately contains ZERO photography. The nine photographs on
+  the Google listing were all uploaded by customers rather than by the
+  business, and eight of the nine show identifiable children. None of them
+  could be republished without the permission of the business AND of the
+  people in them, so none of them were used. There is no stock imagery and no
+  AI-generated imagery either. Every graphic element here is CSS or inline
+  SVG. If the owner supplies photographs he is happy with, they drop straight
+  in.
+
+  THE WORDMARK IS A PLACEHOLDER
+  No logo or sign artwork for this business could be found in any public
+  source, so the name is simply set in type. Nothing has been traced, copied
+  or recreated. Real artwork replaces it on request.
+
+  DELIBERATE OMISSIONS - these are questions for the owner, not oversights
+   - No prices. No price list is published anywhere, so none is shown.
+   - No staff names, although customers name individual barbers in their
+     public reviews. Quotes have been trimmed so that no member of staff is
+     named on this page.
+   - No services beyond those the public reviews actually evidence.
+   - No founding year and no claim about how long the shop has traded.
+   - No payment methods: the Google listing records none.
+   - No street unit number, which could not be confirmed.
+   - No email address and no social media links.
+
+  A NOTE ON THIRD-PARTY LISTINGS
+  During research, information about this business was found published on
+  several third-party directory sites that the owner does not control. Some
+  of what those sites say about the business is wrong or out of date, and at
+  least one of them directs visitors somewhere the owner has no involvement
+  with. Details are available on request - they are worth ten minutes of the
+  owner's time whether or not this page is ever used.
+  ============================================================================
+-->
+
+<style>
+  :root{
+    --ink:#191717; --ink-deep:#0E0D0D;
+    --green:#1A6136; --green-dk:#14512C; --green-tx:#136030; --green-br:#5FCB8A;
+    --cream:#F7F3EA; --white:#FFFFFF; --sand:#EDE6D8;
+    --muted:#CBC5BB; --sub:#4C4845; --rvname:#5A5551;
+    --mauve:#C0A8C0; --mauve-md:#9A7A9A; --mauve-tx:#6E4E6E;
+    --amber:#F0B429; --amber-dk:#8A6100;
+    --maxw:1080px;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px; line-height:1.6; overflow-x:hidden;
+  }
+  img,svg{max-width:100%; height:auto;}
+  .wrap{width:100%; max-width:var(--maxw); margin:0 auto; padding:0 20px;}
+  h1,h2,h3{line-height:1.2; margin:0 0 .5em; letter-spacing:-0.015em;}
+  p{margin:0 0 1em;}
+  a{color:var(--green-tx);}
+
+  /* ---------- sticky call bar ---------- */
+  .callbar{
+    position:sticky; top:0; z-index:50; background:var(--ink-deep);
+    border-bottom:2px solid var(--green);
+  }
+  .callbar .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:12px; min-height:56px; padding-top:6px; padding-bottom:6px;
+  }
+  .cb-name{
+    color:var(--cream); font-weight:700; font-size:15px; letter-spacing:.02em;
+    line-height:1.25; min-width:0;
+  }
+  .cb-name span{display:block; font-weight:500; font-size:12px; color:var(--muted); letter-spacing:.08em; text-transform:uppercase;}
+  .cb-call{
+    display:inline-flex; align-items:center; gap:8px; flex:0 0 auto;
+    min-height:44px; padding:10px 16px; border-radius:6px;
+    background:var(--green); color:var(--white); text-decoration:none;
+    font-weight:700; font-size:15px; white-space:nowrap;
+  }
+  .cb-call:hover,.cb-call:focus{background:var(--green-dk);}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--ink); color:var(--cream); padding:44px 0 40px; position:relative;}
+  .hero::after{
+    content:""; display:block; position:absolute; left:0; right:0; bottom:0;
+    height:3px; background:linear-gradient(90deg,var(--green) 0 35%,var(--mauve) 35% 100%);
+  }
+  .eyebrow{
+    color:var(--muted); text-transform:uppercase; letter-spacing:.16em;
+    font-size:12px; font-weight:700; margin:0 0 14px;
+  }
+  .hero h1{
+    font-size:clamp(30px,8vw,54px); font-weight:800; color:var(--cream);
+    margin:0 0 6px; overflow-wrap:break-word;
+  }
+  .hero .rule{width:64px; height:4px; background:var(--green-br); margin:16px 0 18px; border-radius:2px;}
+  .hero p.lede{color:var(--muted); font-size:clamp(16px,2.4vw,19px); max-width:46ch; margin:0 0 26px;}
+  .rating{display:flex; align-items:center; flex-wrap:wrap; gap:10px; margin:0 0 26px;}
+  .rating .score{font-size:26px; font-weight:800; color:var(--cream); line-height:1;}
+  .stars{display:inline-flex; gap:2px;}
+  .stars svg{width:19px; height:19px; display:block;}
+  .rating .count{color:var(--muted); font-size:14px;}
+  .btnrow{display:flex; flex-wrap:wrap; gap:12px;}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    min-height:52px; padding:14px 26px; border-radius:7px;
+    background:var(--green); color:var(--white); text-decoration:none;
+    font-weight:800; font-size:18px; border:2px solid var(--green);
+  }
+  .btn:hover,.btn:focus{background:var(--green-dk); border-color:var(--green-dk);}
+  .btn.ghost{background:transparent; color:var(--cream); border-color:var(--muted);}
+  .btn.ghost:hover,.btn.ghost:focus{background:rgba(255,255,255,.08); border-color:var(--cream);}
+
+  /* ---------- appointment banner ---------- */
+  .appt{background:var(--ink-deep); color:var(--cream); padding:30px 0;}
+  .appt-box{
+    border:2px solid var(--green-br); border-radius:10px; padding:22px 20px;
+    display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;
+  }
+  .appt-ico{flex:0 0 auto; width:40px; height:40px;}
+  .appt-txt{flex:1 1 260px; min-width:0;}
+  .appt-txt h2{font-size:clamp(20px,4.4vw,26px); color:var(--green-br); margin:0 0 8px;}
+  .appt-txt p{color:var(--muted); margin:0 0 14px; font-size:16px;}
+  .appt-txt p:last-child{margin-bottom:0;}
+  .appt-call{
+    display:inline-flex; align-items:center; gap:10px; min-height:48px;
+    padding:12px 22px; border-radius:6px; background:var(--green);
+    color:var(--white); text-decoration:none; font-weight:800; font-size:17px;
+  }
+  .appt-call:hover,.appt-call:focus{background:var(--green-dk);}
+
+  /* ---------- sections ---------- */
+  section{padding:48px 0;}
+  .sec-head{margin:0 0 26px;}
+  .sec-head h2{font-size:clamp(23px,5vw,33px); color:var(--ink); margin:0 0 8px;}
+  .sec-head .krule{width:52px; height:4px; background:var(--green); border-radius:2px;}
+  .sec-sub{color:var(--sub); max-width:58ch; margin:12px 0 0;}
+  .alt{background:var(--sand);}
+
+  /* ---------- hours ---------- */
+  .hours{width:100%; border-collapse:collapse; background:var(--white); border-radius:10px; overflow:hidden;}
+  .hours caption{text-align:left; color:var(--sub); font-size:14px; padding:0 0 10px;}
+  .hours th,.hours td{padding:13px 16px; text-align:left; font-size:16px; border-bottom:1px solid var(--sand);}
+  .hours th{font-weight:700; color:var(--ink); width:44%;}
+  .hours td{color:var(--sub); font-variant-numeric:tabular-nums;}
+  .hours tr:last-child th,.hours tr:last-child td{border-bottom:0;}
+  .hours tr.closed th{color:var(--rvname);}
+  .hours tr.closed td{color:var(--mauve-tx); font-weight:700;}
+  .hours tr.today{background:#F2FAF4;}
+  .hours tr.today th{color:var(--green-tx);}
+  .hours tr.today td{color:var(--green-tx); font-weight:800;}
+
+  /* ---------- services ---------- */
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:16px;}
+  .card{
+    background:var(--white); border-radius:10px; padding:22px 20px;
+    border-left:4px solid var(--green);
+  }
+  .card h3{font-size:19px; margin:0 0 8px; color:var(--ink);}
+  .card p{color:var(--sub); font-size:15.5px; margin:0;}
+
+  /* ---------- reviews ---------- */
+  .revs{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:16px;}
+  .rev{background:var(--white); border-radius:10px; padding:22px 20px; border-top:4px solid var(--mauve-md);}
+  .rev .stars{margin:0 0 12px;}
+  .rev blockquote{margin:0 0 14px; color:var(--ink); font-size:16px; line-height:1.55;}
+  .rev .who{color:var(--rvname); font-size:13.5px; margin:0;}
+  .rev .who b{color:var(--sub); font-weight:700;}
+
+  /* ---------- facts strip ---------- */
+  .facts{background:var(--ink-deep); color:var(--cream); padding:34px 0;}
+  .facts .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr)); gap:22px;}
+  .fact .k{color:var(--muted); text-transform:uppercase; letter-spacing:.12em; font-size:11.5px; font-weight:700; margin:0 0 6px;}
+  .fact .v{color:var(--white); font-size:17px; font-weight:700; margin:0; overflow-wrap:break-word;}
+  .fact .v a{
+    color:var(--green-br); text-decoration:none;
+    display:inline-flex; align-items:center; min-height:44px; padding:4px 0;
+  }
+  .fact .v a:hover,.fact .v a:focus{text-decoration:underline;}
+
+  /* ---------- closing cta ---------- */
+  .close-cta{background:var(--ink); color:var(--cream); padding:52px 0 56px; text-align:center;}
+  .close-cta h2{color:var(--cream); font-size:clamp(23px,5vw,33px); margin:0 0 10px;}
+  .close-cta p{color:var(--muted); max-width:48ch; margin:0 auto 24px;}
+  .close-phone{
+    display:inline-flex; align-items:center; justify-content:center; gap:12px;
+    min-height:60px; padding:16px 30px; border-radius:8px; background:var(--green);
+    color:var(--white); text-decoration:none; font-size:clamp(20px,5vw,27px); font-weight:800;
+    overflow-wrap:break-word;
+  }
+  .close-phone:hover,.close-phone:focus{background:var(--green-dk);}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink-deep); color:var(--muted); padding:34px 0 96px; font-size:14.5px;}
+  footer .fname{color:var(--cream); font-weight:700; font-size:16px; margin:0 0 6px;}
+  footer a{
+    color:var(--green-br);
+    display:inline-flex; align-items:center; min-height:44px; padding:4px 0;
+  }
+  footer .disc{margin:18px 0 0; padding-top:16px; border-top:1px solid #272424; color:var(--rvname); font-size:12.5px;}
+  footer .disc b{color:var(--muted);}
+
+  /* ---------- mobile dock ---------- */
+  .dock{
+    position:fixed; left:0; right:0; bottom:0; z-index:60; display:none;
+    background:var(--ink-deep); border-top:2px solid var(--green); padding:8px 14px;
+  }
+  .dock a{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    min-height:50px; border-radius:7px; background:var(--green); color:var(--white);
+    text-decoration:none; font-weight:800; font-size:17px;
+  }
+  .dock a:hover,.dock a:focus{background:var(--green-dk);}
+  @media (max-width:720px){
+    .dock{display:block;}
+    .callbar .cb-name span{display:none;}
+    section{padding:40px 0;}
+  }
+  @media (max-width:360px){
+    .wrap{padding:0 14px;}
+    .cb-call{padding:10px 12px; font-size:14px;}
+    .cb-name{font-size:13.5px;}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    a{transition:background-color .15s ease, border-color .15s ease;}
+  }
+</style>
+</head>
+<body>
+
+<!-- sticky call bar : tap-to-call #1 -->
+<div class="callbar">
+  <div class="wrap">
+    <div class="cb-name">East Ridge Barber Shop<span>Appointment only</span></div>
+    <a class="cb-call" href="tel:+14238948454" aria-label="Call East Ridge Barber Shop at 4 2 3, 8 9 4, 8 4 5 4">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+      Call
+    </a>
+  </div>
+</div>
+
+<main>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Ringgold Road &middot; East Ridge, Tennessee</p>
+      <h1>East Ridge Barber Shop</h1>
+      <div class="rule"></div>
+      <p class="lede">A family-run barber shop on Ringgold Road. Haircuts for men, women and
+        children &mdash; by appointment, so you are not sitting and waiting.</p>
+
+      <div class="rating">
+        <span class="score">4.8</span>
+        <span class="stars" role="img" aria-label="Rated 4.8 out of 5 stars on Google">
+          <svg viewBox="0 0 20 20" fill="#F0B429" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+          <svg viewBox="0 0 20 20" fill="#F0B429" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+          <svg viewBox="0 0 20 20" fill="#F0B429" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+          <svg viewBox="0 0 20 20" fill="#F0B429" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><defs><linearGradient id="h4"><stop offset="80%" stop-color="#F0B429"/><stop offset="80%" stop-color="#55504C"/></linearGradient></defs><path fill="url(#h4)" d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+        </span>
+        <span class="count">68 Google reviews</span>
+      </div>
+
+      <!-- tap-to-call #2 -->
+      <div class="btnrow">
+        <a class="btn" href="tel:+14238948454">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          (423) 894-8454
+        </a>
+        <a class="btn ghost" href="#hours">Opening hours</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== APPOINTMENT BANNER ===================== -->
+  <section class="appt" aria-labelledby="appt-h">
+    <div class="wrap">
+      <div class="appt-box">
+        <svg class="appt-ico" viewBox="0 0 24 24" fill="none" stroke="#5FCB8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M8.5 14.5l2.2 2.2 4.3-4.3"/>
+        </svg>
+        <div class="appt-txt">
+          <h2 id="appt-h">Appointment only &mdash; please call first</h2>
+          <p>This shop works by appointment. Give us a ring and we will book you a time,
+             so there is no queue and no waiting when you arrive.</p>
+          <!-- tap-to-call #3 -->
+          <a class="appt-call" href="tel:+14238948454">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+            Call to book &middot; (423) 894-8454
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOURS ===================== -->
+  <section id="hours">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Opening hours</h2>
+        <div class="krule"></div>
+        <p class="sec-sub">Closed Sunday and Monday. Saturday is a short day, finishing at 2pm.
+           Appointments are needed for all of these times.</p>
+      </div>
+      <table class="hours">
+        <caption>Hours as published on the shop's Google listing.</caption>
+        <tbody>
+          <tr class="closed"><th scope="row">Monday</th><td>Closed</td></tr>
+          <tr><th scope="row">Tuesday</th><td>9:00am &ndash; 6:00pm</td></tr>
+          <tr><th scope="row">Wednesday</th><td>9:00am &ndash; 6:00pm</td></tr>
+          <tr><th scope="row">Thursday</th><td>9:00am &ndash; 6:00pm</td></tr>
+          <tr><th scope="row">Friday</th><td>9:00am &ndash; 6:00pm</td></tr>
+          <tr><th scope="row">Saturday</th><td>8:00am &ndash; 2:00pm</td></tr>
+          <tr class="closed"><th scope="row">Sunday</th><td>Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="alt" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="svc-h">Haircuts for the whole family</h2>
+        <div class="krule"></div>
+        <p class="sec-sub">Everyone is welcome in the chair &mdash; men, women and children.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>Men's haircuts</h3>
+          <p>The everyday cut this shop has built its name on, booked to a time that suits you.</p>
+        </div>
+        <div class="card">
+          <h3>Children's cuts</h3>
+          <p>Kids are welcome, and plenty of families here are on their second and third generation.</p>
+        </div>
+        <div class="card">
+          <h3>Women's haircuts</h3>
+          <p>Not just a barber shop for the men &mdash; women are cut here too. Just ask when you call.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REVIEWS ===================== -->
+  <section aria-labelledby="rev-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="rev-h">What customers say</h2>
+        <div class="krule"></div>
+        <p class="sec-sub">Real reviews from this shop's Google listing, quoted word for word.</p>
+      </div>
+      <div class="revs">
+
+        <div class="rev">
+          <span class="stars" role="img" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+          </span>
+          <blockquote>&ldquo;Old school, family owned and run barbershop. Good people, good cuts.
+            Call and make an appointment!.. they&rsquo;re popular. Plus you won&rsquo;t have to wait long.&rdquo;</blockquote>
+          <p class="who"><b>Robert O&rsquo;Kelley</b> &middot; Google review</p>
+        </div>
+
+        <div class="rev">
+          <span class="stars" role="img" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+          </span>
+          <blockquote>&ldquo;I have been coming to East Ridge Barber Shop for nearly 30 years.&rdquo;</blockquote>
+          <p class="who"><b>Nick Heintz</b> &middot; Google review</p>
+        </div>
+
+        <div class="rev">
+          <span class="stars" role="img" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+          </span>
+          <blockquote>&ldquo;My husband has been going here for about 40 years. &hellip; Women go there
+            also. Everyone talks and cuts up.&rdquo;</blockquote>
+          <p class="who"><b>Juanita Barnes</b> &middot; Google review</p>
+        </div>
+
+        <div class="rev">
+          <span class="stars" role="img" aria-label="4 out of 5 stars">
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#8A6100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+            <svg viewBox="0 0 20 20" width="17" height="17" fill="#55504C" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg>
+          </span>
+          <blockquote>&ldquo;My grandkids got there hair done here !! Fast ! Great job!&rdquo;</blockquote>
+          <p class="who"><b>Lisa McGee</b> &middot; Google review</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FACTS / FIND US ===================== -->
+  <section class="facts" aria-labelledby="find-h">
+    <div class="wrap">
+      <h2 id="find-h" style="color:var(--cream);font-size:clamp(21px,4.6vw,28px);margin:0 0 22px;">Find us</h2>
+      <div class="grid">
+        <div class="fact">
+          <p class="k">Address</p>
+          <p class="v">6220 Ringgold Rd<br>East Ridge, TN 37412</p>
+        </div>
+        <div class="fact">
+          <p class="k">Phone</p>
+          <!-- tap-to-call #4 -->
+          <p class="v"><a href="tel:+14238948454">(423) 894-8454</a></p>
+        </div>
+        <div class="fact">
+          <p class="k">Booking</p>
+          <p class="v">Appointment only</p>
+        </div>
+        <div class="fact">
+          <p class="k">Getting here</p>
+          <p class="v" style="font-weight:500;font-size:15.5px;">On Ringgold Road, beside the Taco Bell. Wheelchair accessible entrance and parking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLOSING CTA ===================== -->
+  <section class="close-cta" aria-labelledby="close-h">
+    <div class="wrap">
+      <h2 id="close-h">Book your chair</h2>
+      <p>Appointment only &mdash; one call and you have a time. Closed Sunday and Monday.</p>
+      <!-- tap-to-call #5 -->
+      <a class="close-phone" href="tel:+14238948454">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        (423) 894-8454
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="fname">East Ridge Barber Shop</p>
+    <p style="margin:0 0 4px;">6220 Ringgold Rd, East Ridge, TN 37412</p>
+    <!-- tap-to-call #6 -->
+    <p style="margin:0;"><a href="tel:+14238948454">(423) 894-8454</a> &middot; Appointment only</p>
+    <p class="disc"><b>Unofficial demonstration page.</b> This is an unpaid sample built for the
+      owner's consideration from information published on the business's own public Google listing
+      on 2 November 2026. It is not affiliated with, endorsed by or operated by the business, it is
+      not indexed by search engines, and no photographs of the shop, its staff or its customers
+      have been reproduced. Hours and details should be confirmed by phone.</p>
+  </div>
+</footer>
+
+<!-- fixed mobile dock : tap-to-call #7 -->
+<div class="dock">
+  <a href="tel:+14238948454">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+    Call to book an appointment
+  </a>
+</div>
+
+<script>
+  // Highlight today's row in the hours table. Purely cosmetic.
+  (function(){
+    try{
+      var rows = document.querySelectorAll('.hours tbody tr');
+      var order = [1,2,3,4,5,6,0]; // table starts Monday; JS getDay() has Sunday=0
+      var today = new Date().getDay();
+      var idx = order.indexOf(today);
+      if (idx > -1 && rows[idx] && !rows[idx].classList.contains('closed')) {
+        rows[idx].classList.add('today');
+      }
+    }catch(e){}
+  })();
+</script>
+
+</body>
+</html>
