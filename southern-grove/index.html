@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  UNSOLICITED DEMO / CONCEPT PAGE  -  Southern Grove Construction
+  ============================================================================
+  Built by Matt McFarlane, independent web developer, Chattanooga TN.
+  Date: 2026-11-01
+
+  This page is NOT affiliated with, authorised by, or endorsed by Southern
+  Grove Construction. It is an unsolicited redesign concept, built so the
+  owner can see a concrete alternative to his current site rather than read
+  a description of one. It has never been advertised, submitted to a search
+  engine, or linked from any public index, and it carries <meta name="robots"
+  content="noindex,nofollow"> below.
+
+  SOURCES - every factual claim on this page traces to one of these:
+    * Google Places API, live pull 2026-11-01 - name, address, phone, hours,
+      5.0 rating, 67 review count, "General contractor" category, and the
+      five review quotes (reproduced verbatim, attributed by first name).
+    * sgcchatt.com, their live GoDaddy site - logo, hero photo, the eight
+      gallery photos, the mission paragraph, and the taglines "Crafted for
+      Generations" and "Built with Integrity".
+    * sgcchatt.com as archived by the Wayback Machine on 2025-10-15 - the
+      service list, the service-area towns, "Your Home is our reputation",
+      and the street address. All of this is THEIR OWN copy, which the
+      current version of their site no longer displays.
+    * Two photos from their Google Business Profile, owner-attributed
+      (the slate-and-copper roof detail and the copper-gutter restoration).
+
+  IMAGES: every photograph is their own, taken from their own website or
+  their own Google Business Profile. No stock photography is used anywhere.
+  The logo is their own artwork. Brand colours were sampled directly out of
+  that logo file (deep olive #2F3417, brass #A87A22, light gold #D8C290).
+
+  NOT CLAIMED ANYWHERE ON THIS PAGE, because none of it was verified:
+  licence or bond numbers, insurance, warranty terms, years in business,
+  crew size, awards, certifications, financing, free estimates, or pricing.
+
+  If anyone at Southern Grove Construction wants this page taken down, it
+  comes down immediately, no questions asked and no follow-up.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Southern Grove Construction | Custom Homes &amp; Remodels | Chattanooga TN</title>
+<meta name="description" content="Southern Grove Construction builds custom homes, premium remodels and exterior renovations in Chattanooga TN and North Georgia. Rated 5.0 from 67 Google reviews. Call (423) 541-9820.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<style>
+:root{
+  --ink:#1E230F;        /* deepest olive - body text on light */
+  --green:#2F3417;      /* logo green - dark panels */
+  --green-dk:#232710;   /* callbar, footer */
+  --gold:#A87A22;       /* logo brass - CTA fill, rules */
+  --gold-dk:#7F5B16;    /* brass darkened for AA text on white */
+  --gold-lt:#D8C290;    /* light gold - text/rules on dark */
+  --cream:#F7F4ED;
+  --sand:#EFEAE0;
+  --white:#fff;
+  --sub:#4A5240;        /* secondary text on light */
+  --muted:#CFD3C2;      /* secondary text on dark */
+  --maxw:1120px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font:400 17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;border:0}
+a{color:var(--gold-dk)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:700;line-height:1.15;margin:0}
+h2{font-size:clamp(25px,5.1vw,36px);letter-spacing:.2px}
+h3{font-size:19px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+section{padding:54px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 34px}
+.sec-sub{color:var(--sub);margin:12px 0 0;font-size:16.5px}
+.rule{width:62px;height:3px;background:var(--gold);margin:14px auto 0;border-radius:2px}
+
+/* ---------- sticky call bar (mobile) ---------- */
+.callbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;
+  background:var(--green-dk);border-top:2px solid var(--gold);
+}
+.callbar a{
+  flex:1 1 0;min-width:0;min-height:58px;display:flex;align-items:center;
+  justify-content:center;gap:8px;text-decoration:none;color:var(--cream);
+  font-weight:700;font-size:16px;padding:8px 10px;
+}
+.callbar a.primary{background:var(--gold);color:#15120A}
+.callbar .lbl{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(min-width:861px){.callbar{display:none}}
+body{padding-bottom:58px}
+@media(min-width:861px){body{padding-bottom:0}}
+
+/* ---------- header ---------- */
+header{background:var(--cream);border-bottom:1px solid #DED8CA}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px}
+.hdr img{width:clamp(190px,46vw,268px);height:auto}
+.hdr-right{display:none;text-align:right}
+@media(min-width:861px){.hdr-right{display:block}}
+.hdr-ph{font-family:Georgia,serif;font-size:25px;font-weight:700;color:var(--ink);text-decoration:none;display:block;letter-spacing:.3px}
+.hdr-ph:hover{color:var(--gold-dk)}
+.hdr-hours{font-size:13.5px;color:var(--sub);margin-top:2px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--green-dk)}
+.hero-img{width:100%;height:clamp(330px,56vw,520px);object-fit:cover;opacity:.52}
+.hero-body{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:24px 20px;
+}
+.hero h1{color:#fff;font-size:clamp(28px,6.4vw,50px);text-shadow:0 2px 14px rgba(0,0,0,.72);max-width:16ch}
+.hero p{color:#F2EEE2;margin:14px 0 0;font-size:clamp(16px,2.5vw,20px);text-shadow:0 2px 10px rgba(0,0,0,.8);max-width:44ch}
+.stars{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:16px;flex-wrap:wrap}
+.stars b{color:#fff;font-size:17px;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.stars .glyph{color:#F2C155;font-size:19px;letter-spacing:2px;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.stars span{color:#E8E3D5;font-size:14.5px;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:24px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:54px;padding:14px 26px;border-radius:4px;text-decoration:none;
+  font-weight:700;font-size:17px;border:2px solid transparent;
+}
+.btn-gold{background:var(--gold);color:#15120A;border-color:var(--gold)}
+.btn-gold:hover{background:#946A1C;border-color:#946A1C}
+.btn-ghost{background:rgba(14,18,8,.5);color:#fff;border-color:#fff}
+.btn-ghost:hover{background:rgba(14,18,8,.74)}
+
+/* ---------- facts strip ---------- */
+.facts{background:var(--green);color:var(--cream);padding:0}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;}
+@media(min-width:620px){.facts ul{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.facts ul{grid-template-columns:repeat(4,1fr)}}
+.facts li{padding:18px 20px;text-align:center;border-bottom:1px solid rgba(216,194,144,.22)}
+@media(min-width:900px){.facts li{border-bottom:0;border-right:1px solid rgba(216,194,144,.22)}
+ .facts li:last-child{border-right:0}}
+.facts b{display:block;font-family:Georgia,serif;font-size:20px;color:#fff}
+.facts span{display:block;font-size:14px;color:var(--muted);margin-top:3px}
+
+/* ---------- services ---------- */
+.svc{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:640px){.svc{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.svc{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--white);border:1px solid #E3DCCC;border-left:4px solid var(--gold);border-radius:5px;padding:22px}
+.card h3{color:var(--ink)}
+.card p{margin:9px 0 0;color:var(--sub);font-size:16px}
+
+/* ---------- gallery ---------- */
+.gal{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:760px){.gal{grid-template-columns:repeat(3,1fr)}}
+.shot{position:relative;margin:0;border-radius:5px;overflow:hidden;background:#ddd}
+.shot img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.shot.tall img{aspect-ratio:3/4}
+.shot figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:22px 12px 9px;
+  background:linear-gradient(to top,rgba(12,15,7,.9),rgba(12,15,7,0));
+  color:#fff;font-size:13.5px;font-weight:600;
+}
+
+/* ---------- reviews ---------- */
+.revs{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:800px){.revs{grid-template-columns:repeat(3,1fr)}}
+.rev{background:var(--white);border:1px solid #E3DCCC;border-radius:5px;padding:22px;display:flex;flex-direction:column}
+.rev .g{color:#B07F1E;letter-spacing:2px;font-size:15px}
+.rev p{margin:10px 0 14px;color:#39402F;font-size:15.5px;line-height:1.6;flex:1}
+.rev .who{font-weight:700;font-size:14.5px;color:#454D3C}
+.rev .src{font-size:12.5px;color:#5C6450;margin-top:2px}
+
+/* ---------- area ---------- */
+.area{background:var(--sand)}
+.chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:8px}
+.chips span{background:var(--white);border:1px solid #DDD5C3;border-radius:999px;padding:8px 15px;font-size:14.5px;color:#3E4634}
+
+/* ---------- contact ---------- */
+.contact{background:var(--green-dk);color:var(--cream)}
+.contact h2{color:#fff}
+.cgrid{display:grid;gap:26px;grid-template-columns:1fr;margin-top:30px}
+@media(min-width:780px){.cgrid{grid-template-columns:1fr 1fr}}
+.cbox{background:rgba(255,255,255,.055);border:1px solid rgba(216,194,144,.3);border-radius:6px;padding:24px}
+.cbox h3{color:var(--gold-lt);font-size:15px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:12px}
+.bigphone{
+  font-family:Georgia,serif;font-size:clamp(28px,6.6vw,40px);font-weight:700;
+  color:#fff;text-decoration:none;display:inline-flex;align-items:center;
+  line-height:1.2;min-height:48px;padding:4px 0;
+}
+.bigphone:hover{color:var(--gold-lt)}
+.cbox p{margin:8px 0 0;color:#E4E0D2;font-size:16px}
+.cbox a.em{color:var(--gold-lt);word-break:break-word;display:inline-flex;align-items:center;min-height:44px}
+.hours{list-style:none;margin:0;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px solid rgba(216,194,144,.17);font-size:15.5px}
+.hours li:last-child{border-bottom:0}
+.hours .cl{color:#D9B9A0}
+
+/* ---------- footer ---------- */
+footer{background:#171A0C;color:#B9BEA9;padding:30px 0;font-size:14px;text-align:center}
+.footmark{
+  font-family:Georgia,"Times New Roman",serif;font-size:20px;font-weight:700;
+  letter-spacing:2.4px;text-transform:uppercase;color:var(--gold-lt);margin-bottom:12px;
+}
+footer a{color:var(--gold-lt);display:inline-flex;align-items:center;min-height:44px;padding:0 2px}
+.disc{margin-top:16px;font-size:12.5px;color:#7F856F;max-width:620px;margin-left:auto;margin-right:auto;line-height:1.6}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hdr">
+    <img src="images/logo.png" alt="Southern Grove Construction" width="268" height="153">
+    <div class="hdr-right">
+      <a class="hdr-ph" href="tel:+14235419820">(423)&nbsp;541-9820</a>
+      <div class="hdr-hours">Monday&ndash;Friday, 8:00&nbsp;AM&ndash;5:00&nbsp;PM</div>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <picture>
+    <source media="(max-width:700px)" srcset="images/hero-mobile.jpg">
+    <img class="hero-img" src="images/hero.jpg" alt="Custom home with stone turret and slate roof built by Southern Grove Construction" width="1400" height="788" fetchpriority="high">
+  </picture>
+  <div class="hero-body">
+    <h1>Custom Homes &amp; Premium Remodels</h1>
+    <p>A general contractor serving Chattanooga and North Georgia.</p>
+    <div class="stars">
+      <span class="glyph" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <b>5.0</b><span>from 67 Google reviews</span>
+    </div>
+    <div class="hero-btns">
+      <a class="btn btn-gold" href="tel:+14235419820">Call (423) 541-9820</a>
+      <a class="btn btn-ghost" href="#work">See our work</a>
+    </div>
+  </div>
+</div>
+
+<div class="facts">
+  <ul>
+    <li><b>5.0 &#9733;</b><span>67 Google reviews</span></li>
+    <li><b>General Contractor</b><span>Residential &amp; commercial</span></li>
+    <li><b>Chattanooga &amp; N. Georgia</b><span>Including Lookout &amp; Signal Mountain</span></li>
+    <li><b>Mon&ndash;Fri 8&ndash;5</b><span>(423) 541-9820</span></li>
+  </ul>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What We Build</h2>
+      <div class="rule"></div>
+      <p class="sec-sub">From small exterior renovations to full custom homes &mdash; residential and commercial.</p>
+    </div>
+    <div class="svc">
+      <div class="card">
+        <h3>Custom &amp; Semi-Custom Homes</h3>
+        <p>Ground-up residential construction, built to your plans or ours.</p>
+      </div>
+      <div class="card">
+        <h3>Premium Remodels</h3>
+        <p>Whole-home renovations and high-end updates to kitchens, baths and living space.</p>
+      </div>
+      <div class="card">
+        <h3>Additions &amp; Screened Porches</h3>
+        <p>Decks, screened porches and additions &mdash; including work built under an existing roofline.</p>
+      </div>
+      <div class="card">
+        <h3>Exterior Renovations</h3>
+        <p>Siding, windows, trim and exterior carpentry on new and historic homes.</p>
+      </div>
+      <div class="card">
+        <h3>Slate &amp; Copper Roofing</h3>
+        <p>Slate roofing, copper valleys, flashing and half-round copper gutters.</p>
+      </div>
+      <div class="card">
+        <h3>Commercial Construction</h3>
+        <p>Commercial projects alongside our residential work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="background:var(--sand)">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Recent Work</h2>
+      <div class="rule"></div>
+      <p class="sec-sub">Every photograph below is Southern Grove Construction&rsquo;s own.</p>
+    </div>
+    <div class="gal">
+      <figure class="shot"><img src="images/work-truss.jpg" alt="Exposed timber truss ceiling with black iron brackets" loading="lazy" width="800" height="600"><figcaption>Timber trusses &amp; pine ceiling</figcaption></figure>
+      <figure class="shot tall"><img src="images/work-cathedral.jpg" alt="Cathedral timber ceiling with iron chandelier" loading="lazy" width="700" height="933"><figcaption>Cathedral ceiling</figcaption></figure>
+      <figure class="shot"><img src="images/work-cedar.jpg" alt="Cedar siding and black standing-seam metal roof" loading="lazy" width="800" height="600"><figcaption>Cedar siding &amp; standing seam</figcaption></figure>
+      <figure class="shot tall"><img src="images/work-modern.jpg" alt="Modern black farmhouse with covered porch" loading="lazy" width="700" height="933"><figcaption>Modern farmhouse</figcaption></figure>
+      <figure class="shot"><img src="images/work-greatroom.jpg" alt="Two-storey great room with a wall of windows" loading="lazy" width="800" height="600"><figcaption>Two-storey great room</figcaption></figure>
+      <figure class="shot"><img src="images/work-fireplace.jpg" alt="Fireplace with granite surround and charcoal panelled wall" loading="lazy" width="800" height="600"><figcaption>Panelled fireplace wall</figcaption></figure>
+      <figure class="shot tall"><img src="images/work-slate.jpg" alt="Slate roof with a new copper valley" loading="lazy" width="700" height="933"><figcaption>Slate roof, copper valley</figcaption></figure>
+      <figure class="shot"><img src="images/work-copper.jpg" alt="Stucco home with copper gutters and tile roof" loading="lazy" width="800" height="600"><figcaption>Copper gutters, tile roof</figcaption></figure>
+      <figure class="shot"><img src="images/work-brick.jpg" alt="Large brick home with multiple gables" loading="lazy" width="800" height="600"><figcaption>Brick custom home</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What Our Clients Say</h2>
+      <div class="rule"></div>
+      <p class="sec-sub">5.0 stars across 67 reviews. A few of them, word for word.</p>
+    </div>
+    <div class="revs">
+      <div class="rev">
+        <div class="g" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;The best company I have ever dealt with for a home improvement project. They replaced a 40ft deck and added so much value to our home&hellip; They even represented me at our historic commission meeting to approve the design.&rdquo;</p>
+        <div class="who">Kenneth T.</div>
+        <div class="src">Google review</div>
+      </div>
+      <div class="rev">
+        <div class="g" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;I wanted to retain the existing roof over the screened portion of the deck&hellip; Adam figured out how to build a new screened porch and deck under the existing roof. It&rsquo;s what we wanted, and it looks amazing.&rdquo;</p>
+        <div class="who">Randy R.</div>
+        <div class="src">Google review</div>
+      </div>
+      <div class="rev">
+        <div class="g" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Extremely reliable in every interaction I&rsquo;ve had with them&hellip; SGC was the first company to submit their bid. It was also the most detailed bid, so I could understand exactly what I would be paying for.&rdquo;</p>
+        <div class="who">Lookout Mountain Farm</div>
+        <div class="src">Google review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Where We Work</h2>
+      <div class="rule"></div>
+      <p class="sec-sub">General contractor serving Chattanooga and North Georgia. Call to see if we cover your area.</p>
+    </div>
+    <div class="chips">
+      <span>Chattanooga</span><span>North Chattanooga</span><span>Lookout Mountain</span>
+      <span>Signal Mountain</span><span>Ringgold, GA</span><span>Flintstone, GA</span>
+      <span>Fort Oglethorpe, GA</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Start Your Project</h2>
+      <div class="rule"></div>
+      <p class="sec-sub" style="color:#D5D2C2">Tell us about the space. Photos of what you have now always help.</p>
+    </div>
+    <div class="cgrid">
+      <div class="cbox">
+        <h3>Call or Email</h3>
+        <a class="bigphone" href="tel:+14235419820">(423)&nbsp;541-9820</a>
+        <p><a class="em" href="mailto:Connect@sgcchatt.com">Connect@sgcchatt.com</a></p>
+        <p style="margin-top:14px">4318 6th Avenue<br>Chattanooga, Tennessee 37407</p>
+      </div>
+      <div class="cbox">
+        <h3>Hours</h3>
+        <ul class="hours">
+          <li><span>Monday</span><span>8:00 AM &ndash; 5:00 PM</span></li>
+          <li><span>Tuesday</span><span>8:00 AM &ndash; 5:00 PM</span></li>
+          <li><span>Wednesday</span><span>8:00 AM &ndash; 5:00 PM</span></li>
+          <li><span>Thursday</span><span>8:00 AM &ndash; 5:00 PM</span></li>
+          <li><span>Friday</span><span>8:00 AM &ndash; 5:00 PM</span></li>
+          <li><span>Saturday</span><span class="cl">Closed</span></li>
+          <li><span>Sunday</span><span class="cl">Closed</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footmark">Southern Grove Construction</div>
+    <div>4318 6th Avenue, Chattanooga, TN 37407 &nbsp;&middot;&nbsp; <a href="tel:+14235419820">(423) 541-9820</a></div>
+    <div style="margin-top:6px">Crafted for Generations &middot; Built with Integrity</div>
+    <p class="disc">
+      Unsolicited design concept built for Southern Grove Construction by an independent
+      web developer. Not affiliated with or endorsed by the company. All photographs,
+      the logo and the company&rsquo;s own wording remain the property of Southern Grove
+      Construction. This page is set to noindex and is not advertised or listed anywhere.
+    </p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick contact">
+  <a class="primary" href="tel:+14235419820"><span class="lbl">Call (423) 541-9820</span></a>
+  <a href="#contact"><span class="lbl">Hours</span></a>
+</nav>
+
+</body>
+</html>
