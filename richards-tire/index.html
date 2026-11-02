@@ -9,14 +9,14 @@
 <meta name="theme-color" content="#16202E">
 <!--
 ================================================================================
-  WHAT THIS PAGE IS, IN PLAIN ENGLISH
+  WHAT THIS PAGE IS, IN PLAIN ENGLISH                            BUILD v2
 ================================================================================
 
   This is an UNSOLICITED CONCEPT DEMO built by Matt McFarlane, an independent
   web developer in Chattanooga, Tennessee.
 
   It is NOT the official website of Richard's Tire & Automotive.
-  As of 2026-10-30 the shop has no website of its own.
+  As of 2026-11-01 the shop has no website of its own.
 
   Richard's Tire & Automotive did not commission this, has not seen it, has
   not approved it, and is not affiliated with it in any way. Nobody from the
@@ -40,20 +40,28 @@
 
   WHERE EVERY PIECE CAME FROM
   ---------------------------
-  * Name, address, phone .. Google Places API (New), pulled live 2026-10-30
-                            11:02 ET. Place ID ChIJLcFS_mxdYIgRfqR0T0w6Uts.
+  * Name, address, phone .. Google Places API (New), pulled live 2026-11-01.
+                            Place ID ChIJLcFS_mxdYIgRfqR0T0w6Uts. Re-verified
+                            against the 2026-10-30 v1 pull: IDENTICAL on every
+                            field -- name, address, phone, rating, count,
+                            hours, payment, accessibility, photo count.
   * Town = ROSSVILLE, GA .. addressComponents: locality "Rossville",
                             admin_area_2 "Walker County", state "Georgia",
                             postal 30741-1906. The source scan said Rossville
                             too -- it was RIGHT this time, and that was
                             verified rather than assumed. Corroborated by
                             CARFAX, Nextdoor, Birdeye, MapQuest, YellowPages.
-  * 4.8 / 71 reviews ...... live from the same Places pull. Identical to the
-                            2026-09-11 scan figure; both were checked.
+  * 4.8 / 71 reviews ...... live from the same Places pull, 2026-11-01.
+                            Unchanged from both the 2026-09-11 scan and the
+                            2026-10-30 pull. All three were checked.
   * The three reviews ..... REAL Google reviews, quoted VERBATIM, under the
                             reviewers' own published display names, pulled
-                            live 2026-10-30. Nothing paraphrased, nothing
-                            invented, nothing trimmed except where marked.
+                            live 2026-11-01. Nothing paraphrased, nothing
+                            invented, nothing trimmed.
+  * CARFAX 5.0 / 23 ....... carfax.com verified-service reviews, which are
+                            tied to repair orders the shop itself reported.
+                            100% five star, 7 customers favorited. Confirmed
+                            live 2026-11-01.
   * Hours ................. their Google Business Profile regularOpeningHours.
                             Five independent sources agree, including the
                             early FRIDAY 4 PM close.
@@ -65,22 +73,36 @@
                             derived from repair orders the shop itself
                             reported -- not from marketing copy. Plus one
                             Places review tagged "Electrical repair".
+  * Makes serviced ........ CARFAX "Top Makes Serviced", same repair-order
+                            derivation. Not a claim about what they will
+                            accept -- a record of what has come through.
   * Colours ............... NOT sampled from a logo, because no logo exists
                             anywhere -- see PLACEHOLDER note below.
                             Every text colour pair was verified against WCAG
                             AA BY CALCULATION (contrast.py, results in
-                            raw/contrast.txt). All 21 pairs pass AA.
+                            raw/v2/contrast.txt).
 
   >>> PLACEHOLDER -- THE WORDMARK AND THE PALETTE <<<
   ---------------------------------------------------
   The shop has NO LOGO that could be found. There is no website, the Google
-  listing carries ZERO photos, no reachable Facebook page exists, and no
-  directory holds an image. So brand colours could not be sampled from
-  anything, and nothing was traced or invented.
+  listing carries ZERO photos (re-confirmed live 2026-11-01: the Places
+  response has no photos array at all), and the one Facebook URL in
+  circulation is dead -- see BROKEN ROUTES below. No directory holds an image.
+  So brand colours could not be sampled from anything, and nothing was traced
+  or invented.
   The wordmark here is SET IN TYPE as a stand-in. It is a placeholder, and so
   is the slate/red palette -- those are conventional independent-garage
   colours chosen to assert nothing. A sign, a shirt, an invoice header or a
   business card replaces both immediately.
+
+  >>> THIRD-PARTY LISTING ERRORS -- DELIBERATELY NOT PUBLISHED HERE <<<
+  ---------------------------------------------------------------------
+  Research turned up two directories that publish an incorrect "website" for
+  this shop. Neither is the shop's fault -- both are third-party data errors,
+  and neither is named, linked or described anywhere on this page. Those are
+  conversations for Matt to have with the owners directly, in person, not
+  something to publish on their own site. Details are held in the build
+  notes, which are not deployed.
 
   WHAT IS DELIBERATELY *NOT* HERE
   -------------------------------
@@ -88,6 +110,9 @@
     there is no other verified source of their imagery, and using a stock
     garage photo or an AI-generated one would be a lie about their shop.
     Every visual element is CSS or inline SVG.
+  * NO TIRE-BRAND LOGOS. No Goodyear, Michelin, BFGoodrich or any other mark.
+    None appears on any signage photo of theirs, because no signage photo of
+    theirs exists.
   * NO TIRE SALES CLAIM. The name says "Tire &" but Google's own primaryType
     is car_repair, tire_shop appears nowhere in its types, and CARFAX's
     service history lists "Tire Rotation" and no tire fitting or sales. This
@@ -96,19 +121,22 @@
   * NO PRICES. None exist in any public source for this shop. Google has not
     even assigned it a price level.
   * NO SURNAME, and no personal name beyond the trading name. "Richard" and
-    "Tonya" appear only inside verbatim customer quotes, attributed to the
-    customers who wrote them. No surname is published anywhere on the web.
+    the co-owner's name appear only inside verbatim customer quotes,
+    attributed to the customers who wrote them. No surname is published
+    anywhere on the web. The co-owner's first name is spelled THREE different
+    ways across sources (CARFAX "Tonya", a Google reviewer "Tony's", and a
+    directory email implying "Toni") -- so it is never set in the page's own
+    voice, only inside quotes.
   * NO EMAIL ADDRESS. One is exposed on a third-party directory listing. It
     is not published here; it is not a channel they have advertised.
   * NO "FAMILY OWNED", NO "SINCE 19xx", NO YEAR COUNT as a shop claim. The
-    "over 10 years" / "20 years" figures are CUSTOMERS' words and appear only
+    "fifteen or sixteen years" figures are CUSTOMERS' words and appear only
     inside attributed quotes, never as the shop's own statement.
   * NO BBB badge, no certifications, no ASE claim -- none verified.
   * NO contact form, no booking widget, no email capture. The page drives a
     phone call, which is the only channel they have actually published.
   * NO reference to any negative review, and none of their content.
-  * NO mention of the broken third-party links. That is a conversation for
-    Matt to have with them, not something to publish on their own page.
+  * NO COMPETITOR is named anywhere, in any form.
 
   >>> PERMISSION GATE -- CONFIRM BEFORE THIS GOES LIVE <<<
   --------------------------------------------------------
@@ -125,8 +153,8 @@
       do NOT want to be asked for.
    5. TIRES. What tire work do they actually do -- rotation only, or fitting
       and sales too? What wheel sizes can the shop handle?
-   6. Do they want either owner's name on the site at all, and is it spelled
-      Tonya or Toni?
+   6. Do they want either owner's name on the site at all, and how is the
+      co-owner's name actually spelled?
    7. Do they want the 4.8/71 Google rating shown, and the CARFAX 5.0/23?
    8. Do they want an email address or contact form, or is the phone enough?
    9. Is there a towing arrangement, a warranty, or a diagnostic fee a
@@ -184,7 +212,7 @@ a{color:inherit}
 .wordmark .l1{display:block;font-size:clamp(33px,8.2vw,60px)}
 .wordmark .l2{display:block;font-size:clamp(15px,3.3vw,24px);font-weight:700;letter-spacing:.15em;
   text-transform:uppercase;color:#C3CDDC;margin-top:10px}
-.hero-sub{font-size:clamp(16px,2.4vw,19px);color:#F4F1EC;margin:20px 0 26px;max-width:38ch}
+.hero-sub{font-size:clamp(16px,2.4vw,19px);color:#F4F1EC;margin:20px 0 26px;max-width:40ch}
 .hero-sub b{color:#fff}
 .hero-cta{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
 .cta-note{font-size:13.5px;color:#C3CDDC;letter-spacing:.02em}
@@ -206,24 +234,46 @@ a{color:inherit}
 /* ---------- sections ---------- */
 section{padding:56px 0}
 .sec-head{margin:0 0 10px;font-size:clamp(24px,4.6vw,36px);font-weight:900;letter-spacing:-.015em;line-height:1.15}
-.sec-sub{margin:0 0 32px;color:#48556B;font-size:16.5px;max-width:58ch}
+.sec-sub{margin:0 0 32px;color:#48556B;font-size:16.5px;max-width:60ch}
 .rule{height:4px;width:66px;background:#B3202A;border-radius:2px;margin:0 0 22px}
 
+/* reviews */
+.reviews{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(265px,1fr))}
+.review{background:#fff;border:1px solid #E0DAD0;border-left:4px solid #B3202A;border-radius:9px;padding:22px 20px;
+  display:flex;flex-direction:column}
+.review .stars svg{width:16px;height:16px;fill:#B87400}
+.review p{margin:12px 0 14px;font-size:15.5px;line-height:1.62;color:#16202E}
+.review footer{font-size:13.5px;color:#56637A;font-weight:600;margin-top:auto}
+.rv-when{font-weight:400;color:#5F6B80}
+
+/* carfax trust band */
+.trust{background:#EDE8E0}
+.trust-box{background:#fff;border:1px solid #E0DAD0;border-radius:11px;padding:28px 24px;
+  display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.trust-score{flex:0 0 auto;text-align:center;min-width:140px}
+.trust-score b{display:block;font-size:46px;font-weight:900;line-height:1;letter-spacing:-.03em;color:#16202E}
+.trust-score .stars{justify-content:center;margin:9px 0 6px}
+.trust-score .stars svg{width:17px;height:17px;fill:#B87400}
+.trust-score span{font-size:13.5px;color:#56637A;font-weight:600}
+.trust-copy{flex:1 1 280px;min-width:0}
+.trust-copy p{margin:0 0 10px;font-size:16px;color:#48556B;line-height:1.6}
+.trust-copy p:last-child{margin-bottom:0}
+.trust-copy b{color:#16202E}
+
 /* services */
-.svc{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(232px,1fr))}
+.svc{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(288px,1fr))}
 .svc-card{background:#fff;border:1px solid #E0DAD0;border-radius:10px;padding:22px 20px}
 .svc-card .ico{width:26px;height:26px;fill:#B3202A;margin-bottom:12px}
 .svc-card h3{margin:0 0 7px;font-size:17.5px;font-weight:800;letter-spacing:-.01em}
 .svc-card p{margin:0;font-size:15px;color:#48556B;line-height:1.55}
-.svc-note{margin:26px 0 0;font-size:14.5px;color:#48556B;max-width:62ch}
+.svc-note{margin:26px 0 0;font-size:14.5px;color:#48556B;max-width:64ch}
 
-/* reviews */
-.reviews{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(265px,1fr))}
-.review{background:#fff;border:1px solid #E0DAD0;border-left:4px solid #B3202A;border-radius:9px;padding:22px 20px}
-.review .stars svg{width:16px;height:16px}
-.review p{margin:12px 0 14px;font-size:15.5px;line-height:1.62;color:#16202E}
-.review footer{font-size:13.5px;color:#56637A;font-weight:600}
-.rv-when{font-weight:400;color:#5F6B80}
+/* makes strip */
+.makes{margin:30px 0 0;padding:20px 22px;background:#fff;border:1px solid #E0DAD0;border-radius:10px}
+.makes h3{margin:0 0 6px;font-size:15px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#16202E}
+.makes p{margin:0 0 12px;font-size:14.5px;color:#48556B}
+.makes ul{list-style:none;margin:0;padding:0;display:flex;gap:9px;flex-wrap:wrap}
+.makes li{border:1px solid #E0DAD0;border-radius:999px;padding:7px 15px;font-size:15px;font-weight:700;color:#16202E}
 
 /* hours / contact panels */
 .panels{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(292px,1fr));align-items:start}
@@ -252,7 +302,7 @@ td{text-align:right;color:#48556B;font-variant-numeric:tabular-nums}
 .close-cta{background:#16202E;color:#F4F1EC;text-align:center}
 .close-cta .sec-head{color:#fff}
 .close-cta .rule{margin:0 auto 22px}
-.close-cta p{color:#C3CDDC;max-width:48ch;margin:0 auto 28px;font-size:16.5px}
+.close-cta p{color:#C3CDDC;max-width:50ch;margin:0 auto 28px;font-size:16.5px}
 .close-cta .btn-lg{margin:0 auto}
 .close-phone{display:block;margin-top:10px;padding:12px 8px;min-height:48px;
   font-size:clamp(23px,5.4vw,32px);font-weight:900;color:#fff;text-decoration:none;letter-spacing:-.01em}
@@ -276,6 +326,8 @@ footer.site b{color:#F4F1EC}
   .callbar .wrap{min-height:52px}
   .cb-call-txt{display:none}
   .btn{padding:12px 15px}
+  .trust-box{padding:22px 18px;gap:18px}
+  .trust-score{min-width:0;width:100%}
 }
 </style>
 </head>
@@ -315,7 +367,7 @@ footer.site b{color:#F4F1EC}
           <span class="rating-txt"><b>4.8</b> from 71 Google reviews</span>
         </div>
 
-        <p class="hero-sub">The mechanic on McFarland Avenue that Rossville keeps going back to &mdash; <b>for ten, fourteen, twenty years</b> at a stretch.</p>
+        <p class="hero-sub">The mechanic on McFarland Avenue that Rossville keeps coming back to. <b>Diagnostics, engine, brakes and suspension</b> &mdash; call and talk to the man who does the work.</p>
 
         <div class="hero-cta">
           <a class="btn btn-lg" href="tel:+17068661249">
@@ -372,6 +424,80 @@ footer.site b{color:#F4F1EC}
   </div>
 </div>
 
+<!-- SOCIAL PROOF FIRST: the strongest asset this shop has is what people wrote. -->
+<section>
+  <div class="wrap">
+    <div class="rule"></div>
+    <h2 class="sec-head">What customers actually wrote</h2>
+    <p class="sec-sub">Real Google reviews, word for word, under the names the reviewers published them with. Nothing edited.</p>
+
+    <div class="reviews">
+      <article class="review">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        </div>
+        <p>&ldquo;Glad I chose this shop as Richard knew exactly what my car problem was. I so appreciate him .&rdquo;</p>
+        <footer>Brenda King <span class="rv-when">&middot; Google review</span></footer>
+      </article>
+
+      <article class="review">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        </div>
+        <p>&ldquo;Richard has helped me keep my vehicles safe and in good repair for so long now that I forget to give him a review. Today I took him a relatively simple repair but it was as always, a pleasant experience with great results, great service and pleasant people! Thanks!&rdquo;</p>
+        <footer>David Thornhill <span class="rv-when">&middot; Google review</span></footer>
+      </article>
+
+      <article class="review">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        </div>
+        <p>&ldquo;I have been going to Richard's for about 15-16 yrs. This man and his wife have been nothing but honest and respectful to me. I have never once had to question any repairs on my vehicles and I have never found any better price on my repairs.&rdquo;</p>
+        <footer>Tony T <span class="rv-when">&middot; Google review</span></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CARFAX: verified-service reviews, tied to real repair orders. -->
+<section class="trust">
+  <div class="wrap">
+    <div class="rule"></div>
+    <h2 class="sec-head">A perfect score on verified repair orders</h2>
+    <p class="sec-sub">CARFAX only accepts a review from someone whose service record the shop actually reported. They cannot be bought and they cannot be faked.</p>
+
+    <div class="trust-box">
+      <div class="trust-score">
+        <b>5.0</b>
+        <div class="stars" role="img" aria-label="Rated 5.0 out of 5 stars on CARFAX">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        </div>
+        <span>23 verified reviews</span>
+      </div>
+      <div class="trust-copy">
+        <p><b>Every single one is five stars.</b> Twenty-three verified customers, no four-star, no three, no two, no one &mdash; and seven of them went back and marked the shop as a favourite.</p>
+        <p>Those reviews sit on CARFAX rather than on Google, which is why most people in Rossville have never seen them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <div class="rule"></div>
@@ -380,92 +506,58 @@ footer.site b{color:#F4F1EC}
 
     <div class="svc">
       <div class="svc-card">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8h-3V6a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1zM9 6h6v2H9V6zm3 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9 9 0 0 0-9 9c0 3.1 1.6 5.9 4 7.5V21a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-2.5c2.4-1.6 4-4.4 4-7.5a9 9 0 0 0-9-9zm0 4a1 1 0 0 1 1 1v3.3l2.1 1.2a1 1 0 1 1-1 1.7l-2.6-1.5a1 1 0 0 1-.5-.9V7a1 1 0 0 1 1-1z"/></svg>
         <h3>Diagnostics</h3>
-        <p>Trouble codes read and explained before anything is taken apart.</p>
+        <p>Trouble codes read and explained before anything gets taken apart.</p>
       </div>
       <div class="svc-card">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8h-2V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v2H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1h1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1zM8 6h8v2H8V6z"/></svg>
         <h3>Engine &amp; mechanical</h3>
-        <p>General engine service and mechanical repair on most makes.</p>
+        <p>General engine service and mechanical repair, the core of the shop's work.</p>
       </div>
       <div class="svc-card">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm0 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zM4 11h3v2H4v-2zm13 0h3v2h-3v-2zM11 4h2v3h-2V4zm0 13h2v3h-2v-3z"/></svg>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 3.5a6.5 6.5 0 0 1 6.4 5.4h-3.6a3 3 0 0 0-2.8-2V5.5zm-1.5.3v3.4a3 3 0 0 0-1.6 1.7H5.6a6.5 6.5 0 0 1 4.9-5.1zM5.6 13.1h3.3a3 3 0 0 0 1.6 1.7v3.4a6.5 6.5 0 0 1-4.9-5.1zm6.4 5.4v-3.4a3 3 0 0 0 2.8-2h3.6a6.5 6.5 0 0 1-6.4 5.4z"/></svg>
         <h3>Brakes</h3>
-        <p>Brake inspection, pads, rotors and hydraulics.</p>
+        <p>Brake service and replacement.</p>
       </div>
       <div class="svc-card">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3H9a1 1 0 0 0-1 1v1H6a1 1 0 0 0-1 1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a1 1 0 0 0-1-1h-2V4a1 1 0 0 0-1-1zm-1 9h-1.8v4h-2.4v-4H8l3-4 3 4z"/></svg>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8h-1V6.5a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1V8H9V6.5a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1V8H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1zm-9 7H9v2H7v-2H5v-2h2v-2h2v2h2v2zm8 0h-6v-2h6v2z"/></svg>
         <h3>Batteries &amp; electrical</h3>
-        <p>Battery service and electrical repair.</p>
+        <p>Battery service, plus electrical repair noted on a Google review.</p>
       </div>
       <div class="svc-card">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 2.6a7.4 7.4 0 0 1 4 1.2l-4 4-4-4a7.4 7.4 0 0 1 4-1.2zM4.6 12a7.4 7.4 0 0 1 1.2-4l4 4-4 4a7.4 7.4 0 0 1-1.2-4zm7.4 7.4a7.4 7.4 0 0 1-4-1.2l4-4 4 4a7.4 7.4 0 0 1-4 1.2zm6.2-3.4l-4-4 4-4a7.4 7.4 0 0 1 0 8z"/></svg>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm14 0a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM7.8 13h8.4a4.9 4.9 0 0 1 .5-1.6l-2-4.6A1 1 0 0 0 13.8 6h-3.6a1 1 0 0 0-.9.6l-2 4.8c.2.5.4 1 .5 1.6z"/></svg>
         <h3>Steering &amp; suspension</h3>
-        <p>Steering and suspension work, plus tire rotation.</p>
+        <p>Steering and suspension work, including tire rotation.</p>
       </div>
       <div class="svc-card">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10a1 1 0 0 1 1 1v3h1.5A1.5 1.5 0 0 1 21 9.5v5a1.5 1.5 0 0 1-3 0V13h-1v6a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 3v4h8V7H8z"/></svg>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h7a2 2 0 0 1 2 2v3h1.8a2 2 0 0 1 1.9 1.4l1.2 3.9a2 2 0 0 1 .1.6V18a1 1 0 0 1-1 1h-1.1a2.5 2.5 0 0 1-4.8 0H9.9a2.5 2.5 0 0 1-4.8 0H4a1 1 0 0 1-1-1V6a2 2 0 0 1 2-2h2zm9 7v3h3.4l-.9-3H16z"/></svg>
         <h3>Oil &amp; maintenance</h3>
-        <p>Oil changes and routine scheduled maintenance.</p>
+        <p>Oil changes and routine maintenance to keep a vehicle on the road.</p>
       </div>
     </div>
 
-    <p class="svc-note"><strong>Call before you come.</strong> This list is drawn from public service records, so it shows what the shop has worked on rather than a full menu &mdash; if what you need is not on it, the quickest answer is a phone call.</p>
+    <div class="makes">
+      <h3>Makes that come through most</h3>
+      <p>From the repair orders the shop reports &mdash; not a list of what they will accept.</p>
+      <ul>
+        <li>Chevrolet</li>
+        <li>Ford</li>
+        <li>Honda</li>
+        <li>Ram</li>
+        <li>Toyota</li>
+      </ul>
+    </div>
+
+    <p class="svc-note">This is a mechanic's shop that also handles tire rotation. For tire fitting or wheel sizes, call first and ask &mdash; it is a quick question and saves a wasted trip.</p>
   </div>
 </section>
 
 <section style="background:#EDE8E0">
   <div class="wrap">
     <div class="rule"></div>
-    <h2 class="sec-head">What customers actually wrote</h2>
-    <p class="sec-sub">Real Google reviews, quoted word for word under the names their authors published them under. Nothing here was written for this page.</p>
-
-    <div class="reviews">
-      <div class="review">
-        <div class="stars" role="img" aria-label="5 out of 5 stars">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-        </div>
-        <p>&ldquo;Richard has helped me keep my vehicles safe and in good repair for so long now that I forget to give him a review. Today I took him a relatively simple repair but it was as always, a pleasant experience with great results, great service and pleasant people! Thanks!&rdquo;</p>
-        <footer>David Thornhill <span class="rv-when">&middot; Google review</span></footer>
-      </div>
-
-      <div class="review">
-        <div class="stars" role="img" aria-label="5 out of 5 stars">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-        </div>
-        <p>&ldquo;Richard is a great mechanic and reasonably priced for fixing my truck. He is friendly and explains everything so I can understand. I trust him and will use him for all mechanical work I need. [&hellip;] Their shop is clean and orderly and I was very impressed. Go see them if your car needs work.&rdquo;</p>
-        <footer>Wanda Fine <span class="rv-when">&middot; Google review</span></footer>
-      </div>
-
-      <div class="review">
-        <div class="stars" role="img" aria-label="5 out of 5 stars">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="#B87400"/></svg>
-        </div>
-        <p>&ldquo;Glad I chose this shop as Richard knew exactly what my car problem was. I so appreciate him.&rdquo;</p>
-        <footer>Brenda King <span class="rv-when">&middot; Google review, 2026</span></footer>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="rule"></div>
     <h2 class="sec-head">Hours, directions and the phone number</h2>
-    <p class="sec-sub">Note the early close on Friday &mdash; the shop shuts at 4, not 5.</p>
+    <p class="sec-sub">The shop closes at 4 on Friday, an hour earlier than the rest of the week, and is closed at weekends.</p>
 
     <div class="panels">
       <div class="panel">
@@ -486,32 +578,36 @@ footer.site b{color:#F4F1EC}
       <div class="panel">
         <h3>Find the shop</h3>
         <address class="addr">
-          <b>Richard's Tire &amp; Automotive</b>
-          809 McFarland Ave<br>
-          Rossville, GA 30741
+          <b>809 McFarland Ave</b>
+          Rossville, GA 30741<br>
+          Walker County
         </address>
-        <a class="maplink" href="https://maps.google.com/?cid=15803758141821461630" rel="noopener noreferrer">
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Richard%27s+Tire+%26+Automotive%2C+809+McFarland+Ave%2C+Rossville%2C+GA+30741" target="_blank" rel="noopener noreferrer">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
           Open in Google Maps
         </a>
         <ul class="plist">
           <li>
-            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-            <span>Credit and debit cards accepted</span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 6H3a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm0 4H3V8h18v2zm0 6H3v-3h18v3z"/></svg>
+            Credit and debit cards accepted
           </li>
           <li>
-            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-            <span>Accessible parking, entrance and restroom</span>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm-2 5h4a2 2 0 0 1 2 2v5h-2v7h-4v-7H8V9a2 2 0 0 1 2-2z"/></svg>
+            Accessible parking, entrance and restroom
           </li>
         </ul>
       </div>
 
       <div class="panel">
         <h3>Call the shop</h3>
-        <p style="margin:0 0 6px;color:#48556B;font-size:15.5px">The fastest way to get an answer about your vehicle.</p>
+        <p style="margin:0 0 6px;color:#48556B;font-size:15.5px">The quickest way to get an answer about your vehicle.</p>
         <a class="panel-call" href="tel:+17068661249">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" style="width:22px;height:22px"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" style="width:21px;height:21px"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
           (706) 866-1249
+        </a>
+        <a class="btn" href="tel:+17068661249" style="width:100%;margin-top:14px">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          Tap to call
         </a>
       </div>
     </div>
@@ -522,10 +618,10 @@ footer.site b{color:#F4F1EC}
   <div class="wrap">
     <div class="rule"></div>
     <h2 class="sec-head">Got something that needs looking at?</h2>
-    <p>Call the shop and talk to the man who will be doing the work.</p>
+    <p>Call the shop, describe the problem, and get a straight answer about whether it is worth bringing in.</p>
     <a class="btn btn-lg" href="tel:+17068661249">
       <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
-      Call Richard's
+      Call (706) 866-1249
     </a>
     <a class="close-phone" href="tel:+17068661249">(706) 866-1249</a>
   </div>
@@ -533,14 +629,13 @@ footer.site b{color:#F4F1EC}
 
 <footer class="site">
   <div class="wrap">
-    <p><b>This is a concept demo, not the official website of Richard's Tire &amp; Automotive.</b></p>
-    <p>It was built by Matt McFarlane, an independent web developer in Chattanooga, Tennessee, using only information the business has already published publicly &mdash; its Google Business Profile and its customers' own reviews. The shop did not commission it, has not seen it and has not approved it. There is no affiliation of any kind.</p>
-    <p>No photographs appear on this page because the business has none published anywhere, and no stock or AI-generated imagery was substituted. The logo treatment and colours are placeholders. Reviews are quoted verbatim from Google under their authors' published names. No prices, services or claims appear here that could not be traced to a public source.</p>
-    <p>The page loads nothing from anyone else's server, sets no cookies, runs no analytics and collects nothing from visitors. <b>If the owners would like it taken down, one message is enough and it goes immediately.</b></p>
+    <p><b>This is not the official website of Richard's Tire &amp; Automotive.</b> It is an unsolicited concept demo built by Matt McFarlane, an independent web developer in Chattanooga, Tennessee. The shop did not commission it, has not seen it, has not approved it, and is not affiliated with it.</p>
+    <p>Every fact on this page &mdash; the address, the phone number, the hours, the rating and the reviews &mdash; was taken from Richard's Tire &amp; Automotive's own public listings on 1 November 2026 and is quoted without alteration. <b>The wordmark and the colours are placeholders</b>, set in type, because no logo or sign photograph could be found. There are no photographs on this page for the same reason.</p>
+    <p>The page loads nothing from anyone else's server: no fonts, no scripts, no analytics, no cookies, no tracking of any kind, and there is no form. <b>If the owners want it taken down, one message is enough and it goes immediately.</b></p>
   </div>
 </footer>
 
-<!-- fixed bottom call dock, mobile only -->
+<!-- mobile-only bottom dock: the call is never more than one tap away -->
 <div class="dock">
   <a class="btn" href="tel:+17068661249">
     <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
