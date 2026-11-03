@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+===============================================================================
+  UNSOLICITED SPEC DEMO - NOT AN OFFICIAL SITE
+===============================================================================
+
+  Business   : Ted Fugunt Heating & Air Conditioning
+  Address    : 1105 Mackey Ave, Chattanooga, TN 37421
+  Phone      : (423) 894-3723
+  Real site  : https://www.tedfugunt.com/
+  Google     : 4.7 stars / 109 reviews  (Places API, pulled 2026-11-03)
+
+  WHAT THIS IS
+  ------------
+  A speculative rebuild of the homepage, built by Matt McFarlane without the
+  owner's knowledge or involvement, as a mobile layout and speed demonstration.
+  It is NOT affiliated with, endorsed by, or authorised by the business.
+  It is marked noindex and is not intended to rank or to replace anything.
+
+  DELIBERATE OMISSIONS
+  --------------------
+  * No pricing. None is published anywhere and none was invented.
+  * No testimonials beyond three verbatim public Google reviews, each shown
+    with the reviewer name exactly as Google displays it and the real date.
+  * No staff names, no owner name, and no company history. Omitted on purpose.
+  * No "24/7" claim. Their own footer advertises 24/7 emergency service
+    directly under "Mon - Fri 8:00 AM - 4:00 PM", and Google publishes only
+    the 8-4 window. The conflict is unresolved, so this page states only the
+    hours both sources agree on.
+  * No licence number. None is published on their site; none was invented.
+  * No payment methods and no accessibility claims. The Places API returned
+    neither field, so neither is asserted.
+  * No service guarantee, no response-time promise, no "free estimate".
+    Nothing of the sort is published, so nothing of the sort appears.
+  * Credentials (Carrier Factory Authorized Dealer, NATE-certified
+    technicians, EPA certified, bonded and insured) are reproduced ONLY as
+    the company's own published self-claims and are labelled as such on the
+    page. No third-party logo, badge or wordmark is reproduced anywhere.
+  * Service-area list is theirs, with one correction: their footer spells it
+    "Ooltwah"; the town is "Ooltewah".
+  * The contact form is inert by design. It posts nowhere and stores nothing.
+
+  PHOTO-PERMISSION GATE RESULT
+  ----------------------------
+  ZERO-PHOTOGRAPHY BUILD. No photograph appears on this page.
+
+  Nine photos were available from the Places API. Six were customer-attributed
+  and were rejected without being viewed, as they are not the company's to
+  licence. Three were attributed to the business and all three were downloaded
+  and viewed before any decision:
+    - Two are the wrapped company truck. No people, no children, no legible
+      plate, no customer property - but both carry a third-party manufacturer
+      dealer badge on the hood, so both were rejected for publication.
+    - One is a third-party manufacturer dealer logo on white. Rejected outright.
+
+  The two truck photos were used as a reference source ONLY, to read the exact
+  trading-name lockup and to sample the wrap colours. The wrap artwork was not
+  traced, redrawn or reproduced in any form.
+
+  COLOUR PROVENANCE
+  -----------------
+  Brand blue  #0B3FA0 - sampled from the truck wrap at two independent points
+                        (#083CA2 hue 220deg, #12439F hue 219deg), and
+                        corroborated by the live site's own button colour
+                        rgb(16,45,127) = #102D7F.
+  Cyan accent #1890CC - most-saturated cyan cluster in the cab gradient
+                        (hue 200deg, sat 88%, val 80%).
+  Nothing in this palette was invented.
+
+  THIRD-PARTY LISTING ERRORS
+  --------------------------
+  Third-party listing and directory errors affecting this business were found
+  during research and are documented in the separate, undeployed build notes.
+  They are not reproduced here.
+
+===============================================================================
+-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ted Fugunt Heating &amp; Air Conditioning | AC &amp; Furnace Repair | Chattanooga, TN</title>
+<meta name="description" content="Heating and air conditioning repair, installation and duct cleaning in Chattanooga, TN. Rated 4.7 from 109 Google reviews. Call (423) 894-3723, Monday to Friday 8am to 4pm.">
+<style>
+:root{
+  --ink:#0A1A33;
+  --ink-deep:#061020;
+  --blue:#0B3FA0;
+  --blue-dk:#09317D;
+  --cyan:#1890CC;
+  --cyan-dk:#0B5E85;
+  --white:#FFFFFF;
+  --paper:#F4F7FB;
+  --band:#E6EDF7;
+  --body:#27384F;
+  --muted:#C3D2E8;
+  --amber:#F5B434;
+  --amber-dk:#7A5000;
+  --line:#6B7A8F;
+  --line-soft:#7B8794;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color:var(--body);background:var(--white);overflow-x:hidden;
+}
+img,svg{max-width:100%;height:auto;display:block}
+a{color:var(--blue-dk)}
+h1,h2,h3{line-height:1.2;color:var(--ink);font-weight:800}
+h2{font-size:clamp(23px,5vw,33px);margin-bottom:10px;letter-spacing:-.4px}
+h3{font-size:19px;margin-bottom:7px}
+p{margin-bottom:12px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px;width:100%}
+.sec{padding:clamp(40px,7vw,64px) 0}
+.sec.alt{background:var(--paper)}
+.sec.band{background:var(--band)}
+.lede{font-size:17px;max-width:62ch;margin-bottom:22px}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;
+  padding:14px 20px;z-index:200;text-decoration:none;min-height:48px}
+.skip:focus{left:0}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+
+/* ---------- top call bar ---------- */
+.callbar{background:var(--ink-deep);color:var(--white);
+  padding:9px 0;font-size:15px;position:relative;z-index:30}
+.callbar .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;
+  align-items:center;justify-content:center;text-align:center}
+.callbar b{color:var(--white)}
+.callbar .hrs{color:var(--muted);font-size:14px}
+.callbar a{color:var(--white);text-decoration:none;font-weight:800;
+  display:inline-flex;align-items:center;gap:7px;
+  min-height:44px;padding:4px 10px;border-radius:7px}
+.callbar a:hover{background:rgba(255,255,255,.14);text-decoration:underline}
+
+/* ---------- hero ---------- */
+.hero{background:
+   radial-gradient(1100px 420px at 78% -12%, rgba(24,144,204,.30), transparent 62%),
+   linear-gradient(162deg,#0B2A5B 0%, var(--ink) 48%, var(--ink-deep) 100%);
+  color:var(--white);padding:clamp(40px,7vw,70px) 0 clamp(36px,6vw,58px)}
+.hero h1{color:var(--white);font-size:clamp(28px,6.6vw,47px);letter-spacing:-.9px;
+  margin-bottom:14px;max-width:17ch}
+.hero .sub{color:#E4ECF8;font-size:clamp(16px,2.3vw,19px);max-width:52ch;margin-bottom:8px}
+.eyebrow{display:inline-block;background:rgba(24,144,204,.24);
+  border:1px solid rgba(195,210,232,.5);color:#EAF4FB;
+  font-size:13px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;
+  padding:6px 13px;border-radius:999px;margin-bottom:16px}
+.rating{display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+  margin:18px 0 24px;color:#E4ECF8;font-size:15px}
+.stars{color:var(--amber);letter-spacing:2px;font-size:18px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:56px;padding:15px 26px;border-radius:11px;font-size:17px;
+  font-weight:800;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-primary{background:var(--amber);color:#2A1C00;border-color:var(--amber)}
+.btn-primary:hover{background:#FFCB55}
+.btn-ghost{background:transparent;color:var(--white);border-color:#A9BFDC}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-blue{background:var(--blue);color:var(--white);border-color:var(--blue)}
+.btn-blue:hover{background:var(--blue-dk)}
+.hero-note{margin-top:16px;color:var(--muted);font-size:14px}
+
+/* ---------- trust strip ---------- */
+.trust{background:var(--ink-deep);color:var(--white);padding:0 0 4px}
+.trust ul{list-style:none;display:grid;gap:1px;
+  grid-template-columns:1fr;background:rgba(195,210,232,.22)}
+.trust li{background:var(--ink-deep);padding:15px 16px;text-align:center}
+.trust .t{display:block;font-weight:800;font-size:16px;color:var(--white)}
+.trust .d{display:block;font-size:13.5px;color:var(--muted);margin-top:2px}
+
+/* ---------- services ---------- */
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:var(--white);border:1px solid var(--line-soft);
+  border-left:5px solid var(--blue);border-radius:12px;padding:20px 18px}
+.card p{font-size:15.5px;margin-bottom:0;color:var(--body)}
+.card .ic{width:34px;height:34px;margin-bottom:11px;color:var(--blue-dk)}
+
+/* ---------- call panel ---------- */
+.panel{background:var(--ink);color:var(--white);border-radius:14px;
+  padding:clamp(24px,4.5vw,38px);text-align:center}
+.panel h2{color:var(--white)}
+.panel p{color:#E4ECF8;max-width:56ch;margin:0 auto 20px}
+.bignum{display:inline-flex;align-items:center;justify-content:center;gap:11px;
+  font-size:clamp(25px,5.6vw,38px);font-weight:800;color:var(--white);
+  text-decoration:none;min-height:60px;padding:8px 18px;border-radius:12px;
+  letter-spacing:-.5px;word-break:break-word}
+.bignum:hover{background:rgba(255,255,255,.12);text-decoration:underline}
+
+/* ---------- reviews ---------- */
+.rev{background:var(--white);border:1px solid var(--line-soft);
+  border-radius:12px;padding:20px 18px}
+.rev .stars{font-size:16px;margin-bottom:9px;display:block}
+.rev blockquote{font-size:15.5px;color:var(--body);margin-bottom:12px}
+.rev cite{font-style:normal;font-size:13.5px;color:#4A5A72;font-weight:700;display:block}
+.rev .dt{font-size:13px;color:#5A6A82;font-weight:400}
+.src{font-size:13.5px;color:#4A5A72;margin-top:18px}
+
+/* ---------- area ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px;padding:0;list-style:none}
+.chips li{background:var(--white);border:1px solid var(--line);
+  border-radius:999px;padding:9px 15px;font-size:15px;font-weight:600;color:var(--body)}
+
+/* ---------- hours / contact ---------- */
+.two{display:grid;gap:18px;grid-template-columns:1fr}
+.box{background:var(--white);border:1px solid var(--line-soft);border-radius:12px;padding:20px 18px}
+table{border-collapse:collapse;width:100%;font-size:15.5px}
+th,td{text-align:left;padding:9px 6px;border-bottom:1px solid var(--line-soft);color:var(--body)}
+th{font-weight:700;width:52%}
+tr:last-child td,tr:last-child th{border-bottom:0}
+.closed{color:#7A3030;font-weight:700}
+address{font-style:normal;font-size:16px;line-height:1.75}
+.maplink{display:inline-flex;align-items:center;min-height:48px;
+  padding:11px 0;font-weight:700;color:var(--blue-dk)}
+
+/* inline prose links still need a 44px hit area */
+.tap{display:inline-block;min-height:44px;line-height:22px;
+  padding:11px 6px;margin:-11px 0;border-radius:7px;font-weight:700}
+.tap:hover{background:rgba(11,63,160,.10)}
+footer .tap:hover{background:rgba(255,255,255,.14)}
+
+/* ---------- form ---------- */
+label{display:block;font-weight:700;font-size:15px;margin:14px 0 6px;color:var(--ink)}
+input,textarea{width:100%;font:inherit;font-size:16px;padding:13px 14px;
+  border:1px solid var(--line);border-radius:9px;min-height:50px;
+  background:var(--white);color:var(--body)}
+textarea{min-height:110px;resize:vertical}
+.formnote{font-size:13.5px;color:#4A5A72;margin-top:12px}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink-deep);color:var(--muted);
+  padding:34px 0 108px;font-size:14.5px}
+footer a{color:#DCE7F6}
+footer .nm{color:var(--white);font-weight:800;font-size:17px;margin-bottom:8px}
+.disc{margin-top:18px;padding-top:16px;border-top:1px solid rgba(195,210,232,.3);
+  font-size:13.5px;line-height:1.65}
+
+/* ---------- mobile dock ---------- */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:100;
+  background:var(--ink-deep);border-top:1px solid rgba(195,210,232,.34);
+  padding:9px 12px calc(9px + env(safe-area-inset-bottom))}
+.dock a{display:flex;align-items:center;justify-content:center;gap:9px;
+  min-height:54px;background:var(--amber);color:#2A1C00;font-weight:800;
+  font-size:17.5px;border-radius:11px;text-decoration:none}
+.dock a:hover{background:#FFCB55}
+
+@media(min-width:620px){
+  .grid{grid-template-columns:1fr 1fr}
+  .two{grid-template-columns:1fr 1fr}
+  .trust ul{grid-template-columns:1fr 1fr}
+}
+@media(min-width:900px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .trust ul{grid-template-columns:repeat(4,1fr)}
+}
+@media(min-width:760px){
+  footer{padding-bottom:34px}
+  .dock{display:none}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- 1 -->
+<div class="callbar">
+  <div class="wrap">
+    <span class="hrs">Chattanooga, TN &middot; Mon&ndash;Fri 8am&ndash;4pm</span>
+    <a href="tel:4238943723" aria-label="Call Ted Fugunt Heating and Air Conditioning at 4 2 3, 8 9 4, 3 7 2 3">
+      <svg class="ic" width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
+      (423) 894-3723
+    </a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- 2 -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Chattanooga &amp; Hamilton County</span>
+    <h1>Heating and air conditioning, done right the first time.</h1>
+    <p class="sub">Repair, replacement, new installation and duct cleaning for homes and businesses across Chattanooga.</p>
+    <p class="rating">
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span><strong>4.7 out of 5</strong> from <strong>109</strong> Google reviews</span>
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:4238943723">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
+        Call (423) 894-3723
+      </a>
+      <a class="btn btn-ghost" href="#contact">Request a visit</a>
+    </div>
+    <p class="hero-note">Office hours Monday to Friday, 8:00am&ndash;4:00pm. 1105 Mackey Ave, Chattanooga.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="trust" aria-label="Credentials">
+  <div class="wrap">
+    <ul>
+      <li><span class="t">4.7 &#9733; / 109</span><span class="d">Google reviews</span></li>
+      <li><span class="t">Carrier dealer</span><span class="d">Factory Authorized, their claim</span></li>
+      <li><span class="t">NATE certified</span><span class="d">Technicians, their claim</span></li>
+      <li><span class="t">Bonded &amp; insured</span><span class="d">EPA certified, their claim</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="sec" aria-labelledby="svc">
+  <div class="wrap">
+    <h2 id="svc">What we do</h2>
+    <p class="lede">Residential and commercial heating and cooling &mdash; service calls, full replacements and the air quality work in between.</p>
+    <div class="grid">
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a1 1 0 0 1 1 1v3.6l2-2 1.4 1.4L13 9.4v5.2l4.5-2.6.8-3.4 1.9.5-.7 2.7 3.1-1.8 1 1.7-3.1 1.8 2.7.7-.5 1.9-3.4-.9-4.5 2.6 4.5 2.6V21h-2v-2.4L13 17v-2.6l-1 .6-1-.6V17l-2.3 1.6V21h-2v-3.2l4.5-2.6-4.5-2.6-3.4.9-.5-1.9 2.7-.7L2.4 9.2l1-1.7 3.1 1.8-.7-2.7 1.9-.5.8 3.4L13 12.2V9.4L9.6 6 11 4.6l2 2V3a1 1 0 0 1 1-1z"/></svg>
+        <h3>Air conditioning repair</h3>
+        <p>Diagnosis and repair when the cooling quits &mdash; including the ones that only act up in the heat.</p>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.3 1.6c.3 3-1 4.6-2.4 6.1C9.4 9.3 7.9 10.9 7.9 14a6.1 6.1 0 0 0 12.2 0c0-2.6-1-4.4-2.1-6-.3 1-1 1.9-2 2.3.3-2.8-1-5.6-2.7-8.7zM12 22a6 6 0 0 1-6-6c0-1 .2-1.9.5-2.7-1.6 1.4-2.6 3.2-2.6 5.2A6.1 6.1 0 0 0 12 22z"/></svg>
+        <h3>Heating &amp; furnace repair</h3>
+        <p>Furnace and heat pump service through the Chattanooga winter, for homes and light commercial.</p>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3 4h18v12H3V4zm2 2v8h14V6H5zm-3 13h20v2H2v-2zm5-9h10v2H7v-2z"/></svg>
+        <h3>New installation</h3>
+        <p>Complete system replacement and new installs, sized for the house rather than for the invoice.</p>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4 3h16a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v3h14V5H5zm-1 7h16a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1zm1 2v5h14v-5H5zm2 1h4v3H7v-3z"/></svg>
+        <h3>Commercial HVAC</h3>
+        <p>Rooftop units and commercial systems for Chattanooga businesses, shops and rental properties.</p>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a5 5 0 0 1 5 5c0 1.9-1 3-2.3 3.8-.9.6-1.7 1-1.7 2.2h-2c0-2.2 1.3-3.1 2.4-3.8C14.4 8.6 15 8.1 15 7a3 3 0 0 0-6 0H7a5 5 0 0 1 5-5zm-1 14h2v2h-2v-2zM4 20h16v2H4v-2z"/></svg>
+        <h3>Duct cleaning</h3>
+        <p>Duct cleaning for homes where the vents have never been done, or not in a long time.</p>
+      </div>
+      <div class="card">
+        <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/></svg>
+        <h3>Indoor air quality &amp; ductless</h3>
+        <p>Indoor air quality equipment and ductless mini-split systems for additions, shops and problem rooms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="panel">
+      <h2>Not cooling? Not heating? Call.</h2>
+      <p>The fastest way to get on the schedule is the phone. Office hours are Monday to Friday, 8:00am to 4:00pm.</p>
+      <a class="bignum" href="tel:4238943723">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
+        (423) 894-3723
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="sec" aria-labelledby="rv">
+  <div class="wrap">
+    <h2 id="rv">What Chattanooga says</h2>
+    <p class="lede">Three verbatim public Google reviews. Names and dates are exactly as Google shows them.</p>
+    <div class="grid">
+      <div class="rev">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <blockquote>&ldquo;Wonderful experience! Ryan and Jeff did amazing work with the install and duct cleaning. Everyone that I interacted with was very professional and super nice. I would highly recommend Ted Fugunt Heating &amp; Air!!!&rdquo;</blockquote>
+        <cite>Mandi Eggert <span class="dt">&middot; 16 October 2026</span></cite>
+      </div>
+      <div class="rev">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <blockquote>&ldquo;I called needing a non-emergent repair around 8 am and received a service appointment for 9 am. Frank was on time, fixed the problem, and recommended an upgrade to kill some mold on the fins of the interior unit. I trusted them to tell us the truth and I believe they did.&rdquo;</blockquote>
+        <cite>Eric Burnett <span class="dt">&middot; 16 July 2026</span></cite>
+      </div>
+      <div class="rev">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <blockquote>&ldquo;When our renters called and said their HVAC quit blowing cold air, Ted Fugunt Heating &amp; Air Conditioning came out quickly and diagnosed the issue. They provided a temporary fix and a few days later a new unit was installed. Happy Renters, Happy Owners!!&rdquo;</blockquote>
+        <cite>Lyd Mitch B <span class="dt">&middot; 28 May 2026</span></cite>
+      </div>
+    </div>
+    <p class="src">Rating and review count from Google, 3 November 2026: <strong>4.7 out of 5 from 109 reviews</strong>. Reviews are public and quoted verbatim, with two edits in the third review only: the original reads &ldquo;The provided a temporary fix&rdquo; (corrected to &ldquo;They&rdquo;), and a trailing emoticon was removed.</p>
+    <div class="cta-row" style="margin-top:22px">
+      <a class="btn btn-blue" href="tel:4238943723">Call (423) 894-3723</a>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="sec band" aria-labelledby="area">
+  <div class="wrap">
+    <h2 id="area">Where we work</h2>
+    <p class="lede">Chattanooga and the surrounding communities.</p>
+    <ul class="chips">
+      <li>Chattanooga</li><li>Harrison</li><li>Hixson</li><li>Lookout Mountain</li>
+      <li>Ooltewah</li><li>Red Bank</li><li>Signal Mountain</li><li>Soddy-Daisy</li>
+    </ul>
+    <p style="margin-top:20px">Not sure if you are in range? <a class="tap" href="tel:4238943723">Call (423) 894-3723</a> and ask.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="sec" aria-labelledby="hrs">
+  <div class="wrap">
+    <h2 id="hrs">Hours &amp; where to find us</h2>
+    <div class="two">
+      <div class="box">
+        <h3>Office hours</h3>
+        <table>
+          <tbody>
+            <tr><th scope="row">Monday</th><td>8:00am &ndash; 4:00pm</td></tr>
+            <tr><th scope="row">Tuesday</th><td>8:00am &ndash; 4:00pm</td></tr>
+            <tr><th scope="row">Wednesday</th><td>8:00am &ndash; 4:00pm</td></tr>
+            <tr><th scope="row">Thursday</th><td>8:00am &ndash; 4:00pm</td></tr>
+            <tr><th scope="row">Friday</th><td>8:00am &ndash; 4:00pm</td></tr>
+            <tr><th scope="row">Saturday</th><td class="closed">Closed</td></tr>
+            <tr><th scope="row">Sunday</th><td class="closed">Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="box">
+        <h3>Contact</h3>
+        <address>
+          Ted Fugunt Heating &amp; Air Conditioning<br>
+          1105 Mackey Ave<br>
+          Chattanooga, TN 37421<br><br>
+          Phone: <a class="tap" href="tel:4238943723">(423) 894-3723</a><br>
+          Fax: 423-894-3575
+        </address>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=1105+Mackey+Ave+Chattanooga+TN+37421" rel="noopener noreferrer" target="_blank">Open in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="sec alt" id="contact" aria-labelledby="req">
+  <div class="wrap">
+    <h2 id="req">Request a visit</h2>
+    <p class="lede">Calling is faster during office hours. If it is after hours, leave your details and we will pick it up next business morning.</p>
+    <div class="two">
+      <div class="box">
+        <form onsubmit="return false">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name">
+          <label for="f-phone">Phone number</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+          <label for="f-addr">Service address</label>
+          <input id="f-addr" name="address" type="text" autocomplete="street-address">
+          <label for="f-msg">What is going on?</label>
+          <textarea id="f-msg" name="message"></textarea>
+          <div class="cta-row" style="margin-top:18px">
+            <button class="btn btn-blue" type="submit">Send request</button>
+          </div>
+          <p class="formnote">This is a demonstration page. The form is inert &mdash; it does not send, store or transmit anything. Please call instead.</p>
+        </form>
+      </div>
+      <div class="box">
+        <h3>Rather just call?</h3>
+        <p>Most people do. You will get a person during office hours.</p>
+        <a class="btn btn-primary" href="tel:4238943723" style="width:100%">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
+          (423) 894-3723
+        </a>
+        <p style="margin-top:16px;font-size:15px">Monday to Friday, 8:00am&ndash;4:00pm<br>1105 Mackey Ave, Chattanooga, TN 37421</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="nm">Ted Fugunt Heating &amp; Air Conditioning</p>
+    <p>
+      1105 Mackey Ave, Chattanooga, TN 37421<br>
+      <a class="tap" href="tel:4238943723">(423) 894-3723</a> &middot; Mon&ndash;Fri 8:00am&ndash;4:00pm
+    </p>
+    <p class="disc">
+      <strong>This is an unsolicited demonstration page.</strong> It was built by
+      Matt McFarlane as a speculative mobile layout and speed demonstration. It is
+      not affiliated with, endorsed by, or authorised by Ted Fugunt Heating &amp;
+      Air Conditioning, and it is not the company&rsquo;s official website.
+      The official site is
+      <a class="tap" href="https://www.tedfugunt.com/" rel="noopener noreferrer" target="_blank">tedfugunt.com</a>.
+      No photographs belonging to the business are used on this page. Credentials
+      shown are the company&rsquo;s own published self-claims. This page is marked
+      noindex and carries no tracking, no analytics and no cookies.
+    </p>
+  </div>
+</footer>
+
+<div class="dock">
+  <a href="tel:4238943723">
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
+    Call (423) 894-3723
+  </a>
+</div>
+
+</body>
+</html>
