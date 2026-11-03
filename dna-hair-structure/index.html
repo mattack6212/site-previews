@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>DNA Hair Structure &mdash; Fort Oglethorpe, GA | Concept Demo</title>
+<meta name="description" content="Unsolicited concept demo for DNA Hair Structure, 2712 Lafayette Rd, Fort Oglethorpe, GA. Not the official site.">
+<meta name="theme-color" content="#22201D">
+<!--
+================================================================================
+  WHAT THIS PAGE IS, IN PLAIN ENGLISH
+================================================================================
+
+  This is an UNSOLICITED CONCEPT DEMO built by Matt McFarlane, an independent
+  web developer in Chattanooga, Tennessee.
+
+  It is NOT the official website of DNA Hair Structure.
+
+  The salon did not commission this, has not seen it, has not approved it, and
+  is not affiliated with it in any way. Nobody from the salon was contacted
+  before it was built -- no call, no text, no email, no message. There is no
+  business relationship of any kind between Matt McFarlane and DNA Hair
+  Structure.
+
+  WHY IT EXISTS
+  -------------
+  It is a sample. It shows what a fast, single-page site built only from the
+  salon's own public material could look like. It is the entire pitch -- there
+  is no follow-up sequence, no tracking, no retargeting pixel, no analytics of
+  any kind, no cookies, no fonts or scripts loaded from anyone else's server,
+  and no form that collects anything from anybody. The page makes ZERO network
+  requests after it loads.
+
+  IF THE OWNER WANTS IT GONE
+  --------------------------
+  It comes down immediately, no questions asked, no argument. One message is
+  enough. The page is served noindex/nofollow/noarchive precisely so it can
+  never compete with the salon in search results while it is up.
+
+  WHERE EVERY FACT CAME FROM
+  --------------------------
+  Only from the salon's own public Google Business Profile: the name, the
+  address, the phone number, the opening hours, the star rating, the review
+  count, the accessibility and payment attributes, and the customer reviews
+  quoted below. Customer quotes are reproduced as written and attributed to
+  their authors.
+
+  One note worth passing to the owner: several third-party directory sites
+  carry listings for this salon that the salon does not control, and the
+  details on some of them do not match the salon's own Google listing. The
+  specifics are not published here. They belong in a conversation with the
+  owner, not in a file served to the public.
+
+  WHAT WAS DELIBERATELY OMITTED
+  -----------------------------
+  (a) No prices, for any service. The salon publishes none anywhere, so this
+      page invents none.
+  (b) No service menu copied from booking directories. Third-party sites list
+      services for this salon that nothing in the salon's own material
+      supports. Everything in the services section below comes from what
+      customers describe in their own reviews.
+  (c) No owner or staff name is asserted as fact anywhere on this page. Stylist
+      first names appear ONLY inside verbatim customer quotes, as those
+      customers wrote them. No name has been verified against a non-reviewer
+      source, so the page makes no claim of its own about who owns or works at
+      the salon.
+  (d) No claims about years in business, certifications, awards, training,
+      products carried, or guarantees.
+  (e) No booking widget, contact form, email address or map embed. Every action
+      on this page is a phone call to the salon's own published number.
+  (f) No social media links. See (b) above regarding things this page cannot
+      verify.
+
+  PHOTOGRAPHY: NONE
+  -----------------
+  This page contains no photographs. Every visual element is CSS or inline SVG
+  drawn by hand.
+
+  PHOTO PERMISSION GATE RESULT: 0 of 8 passed.
+  The salon's Google listing carries eight photographs. All eight were
+  downloaded and every one was individually reviewed against the gate. All
+  eight were rejected:
+    - 0 of 8 are attributed to the business. Seven are attributed to one Google
+      contributor and one to a customer who also left a review. None of them is
+      the salon's to license, and none of them is mine.
+    - 8 of 8 show identifiable people.
+    - 2 of 8 show children. Those two are disqualified outright.
+    - 2 of 8 show the inside of a customer's vehicle.
+    - 2 of 8 carry third-party branding (a university logo; a school crest).
+  Nothing survived, so nothing was used. If the owner wants her own photographs
+  of the salon and her own finished work on this page, that is entirely her
+  call, and it would improve this page enormously.
+
+  THE WORDMARK IS A PLACEHOLDER
+  -----------------------------
+  No logo for this salon could be found published anywhere -- no storefront
+  photograph, no window decal, no sign, no reachable social profile picture.
+  So none was copied, traced or imitated. The name at the top of this page is
+  simply set in type. The colours are drawn from the one interior photograph
+  that exists of the salon -- warm grey walls, white trim, black styling
+  stations -- and are a stand-in that asserts nothing about the salon's real
+  branding. A photograph of the sign, a business card, a price list or a shirt
+  would replace both immediately.
+
+================================================================================
+-->
+<style>
+  /* ---------------------------------------------------------------------
+     Palette. Every value here is mirrored in contrast.py and every pair in
+     use is verified against WCAG AA BY CALCULATION, not by eye.
+     --------------------------------------------------------------------- */
+  :root{
+    --ink:#22201D; --ink-deep:#171512;
+    --plum:#5B3A53; --plum-dk:#472D41; --plum-dkr:#3A2435; --plum-lt:#D8B7CE;
+    --cream:#F7F4F0; --sand:#EDE6DC; --white:#FFFFFF; --muted:#D6CEC4;
+    --sub:#4A443D; --rvname:#5C554C;
+    --gold:#C9962F; --gold-dk:#7A5A10; --line:#8C8378;
+    --dock-h:0px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    overflow-x:hidden;
+  }
+  img,svg{max-width:100%; height:auto}
+  .wrap{width:100%; max-width:1080px; margin:0 auto; padding:0 20px}
+
+  a{color:var(--plum-dk)}
+  :focus-visible{outline:3px solid var(--gold); outline-offset:2px}
+
+  .skip{
+    position:absolute; left:-9999px; top:0; z-index:100;
+    background:var(--ink-deep); color:var(--cream);
+    padding:14px 18px; text-decoration:none; font-weight:700;
+  }
+  .skip:focus{left:8px; top:8px}
+
+  /* ---------- sticky tap-to-call bar ---------- */
+  .callbar{
+    position:sticky; top:0; z-index:60;
+    background:var(--ink-deep); color:var(--cream);
+    border-bottom:3px solid var(--plum);
+  }
+  .callbar .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:12px; min-height:56px; padding-top:6px; padding-bottom:6px;
+  }
+  .cb-name{font-weight:800; letter-spacing:.02em; font-size:15px; line-height:1.25}
+  .cb-name span{display:block; font-weight:500; font-size:12.5px; color:var(--muted)}
+  .cb-call{
+    display:inline-flex; align-items:center; gap:8px;
+    min-height:44px; padding:10px 16px; border-radius:6px;
+    background:var(--plum); color:var(--white);
+    font-weight:800; font-size:15px; text-decoration:none; white-space:nowrap;
+    box-shadow:inset 0 0 0 2px var(--cream);
+  }
+  .cb-call:hover,.cb-call:focus{background:var(--plum-dkr)}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--ink); color:var(--cream); padding:40px 0 34px}
+  .eyebrow{
+    margin:0 0 12px; color:var(--muted);
+    font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+  }
+  .wordmark{
+    margin:0 0 6px; color:var(--white);
+    font-size:clamp(31px,8.2vw,56px); line-height:1.04;
+    font-weight:800; letter-spacing:-.02em;
+  }
+  .wordmark .thin{display:block; font-weight:300; letter-spacing:.01em; color:var(--plum-lt)}
+  .ph-note{margin:0 0 18px; color:var(--muted); font-size:12.5px; font-style:italic}
+  .hero-lede{
+    margin:0 0 22px; max-width:30em;
+    font-size:clamp(17px,2.4vw,20px); color:var(--cream);
+  }
+  .stars{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:0 0 24px}
+  .stars .glyphs{color:var(--gold); font-size:20px; letter-spacing:2px; line-height:1}
+  .stars .txt{color:var(--muted); font-size:15px}
+  .stars .txt b{color:var(--white)}
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    min-height:56px; padding:14px 26px; border-radius:7px;
+    background:var(--plum); color:var(--white);
+    font-size:19px; font-weight:800; text-decoration:none; white-space:nowrap;
+    box-shadow:inset 0 0 0 2px var(--cream);
+  }
+  .btn:hover,.btn:focus{background:var(--plum-dkr)}
+  .btn.on-light{box-shadow:inset 0 0 0 2px var(--plum-dkr)}
+  .cta-row{display:flex; flex-wrap:wrap; gap:14px; align-items:center}
+  .cta-note{margin:14px 0 0; color:var(--muted); font-size:14.5px}
+
+  /* ---------- numbers strip ---------- */
+  .numbers{background:var(--ink-deep); color:var(--cream); padding:0}
+  .numbers .wrap{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; padding:0 20px}
+  .num{padding:20px 4px}
+  .num b{display:block; color:var(--white); font-size:25px; font-weight:800; line-height:1.15}
+  .num span{display:block; color:var(--muted); font-size:13px; margin-top:3px}
+
+  /* ---------- generic section ---------- */
+  section{padding:44px 0}
+  .alt{background:var(--sand)}
+  .sec-head{margin:0 0 8px; font-size:clamp(23px,4.2vw,31px); line-height:1.2; font-weight:800; letter-spacing:-.01em}
+  .sec-sub{margin:0 0 26px; color:var(--sub); font-size:16px; max-width:40em}
+  .rule{width:64px; height:4px; background:var(--plum); border:0; margin:0 0 18px}
+
+  /* ---------- open-now banner ---------- */
+  .opennow{
+    background:var(--plum); color:var(--white);
+    padding:16px 0; font-size:16px; line-height:1.5;
+  }
+  .opennow .wrap{display:flex; gap:12px; align-items:flex-start}
+  .opennow svg{flex:0 0 auto; margin-top:3px}
+  .opennow b{color:var(--white)}
+
+  /* ---------- reviews ---------- */
+  .reviews{display:grid; gap:18px; grid-template-columns:1fr}
+  .rv{
+    display:flex; flex-direction:column;
+    background:var(--white); border:1px solid var(--line);
+    border-left:5px solid var(--plum); border-radius:7px;
+    padding:20px 20px 16px; margin:0;
+  }
+  .rv .glyphs{color:var(--gold-dk); font-size:15px; letter-spacing:2px; line-height:1; margin-bottom:10px}
+  .rv blockquote{margin:0 0 14px; font-size:16px}
+  .rv blockquote p{margin:0 0 10px}
+  .rv blockquote p:last-child{margin:0}
+  .rv figcaption{margin-top:auto; color:var(--rvname); font-size:13.5px}
+  .rv figcaption b{color:var(--sub); font-weight:700}
+
+  /* ---------- known-for block ---------- */
+  .known{background:var(--white); border:1px solid var(--line); border-radius:8px; padding:24px 22px}
+  .known p{margin:0 0 14px; font-size:16.5px}
+  .known p:last-child{margin:0}
+  .known .q{color:var(--sub)}
+
+  /* ---------- services ---------- */
+  .svc{display:grid; gap:14px; grid-template-columns:1fr}
+  .svc .card{background:var(--white); border:1px solid var(--line); border-radius:7px; padding:18px 18px 16px}
+  .svc h3{margin:0 0 7px; font-size:17px; font-weight:800; display:flex; align-items:center; gap:9px}
+  .svc h3 svg{flex:0 0 auto}
+  .svc p{margin:0; color:var(--sub); font-size:15px}
+
+  /* ---------- hours + contact ---------- */
+  .cols{display:grid; gap:20px; grid-template-columns:1fr}
+  .panel{background:var(--white); border:1px solid var(--line); border-radius:8px; padding:22px 20px}
+  .panel h3{margin:0 0 14px; font-size:18px; font-weight:800}
+  table.hours{width:100%; border-collapse:collapse; font-size:16px}
+  table.hours th,table.hours td{
+    text-align:left; padding:9px 0; border-bottom:1px solid var(--line);
+    color:var(--sub); font-weight:500;
+  }
+  table.hours th{width:46%; color:var(--ink); font-weight:700}
+  table.hours tr:last-child th,table.hours tr:last-child td{border-bottom:0}
+  table.hours td.late{color:var(--plum-dkr); font-weight:700}
+  table.hours td.shut{color:var(--sub)}
+  .hours-note{
+    margin:14px 0 0; padding:12px 14px; border-radius:6px;
+    background:var(--sand); color:var(--plum-dkr);
+    font-size:14.5px; font-weight:700; line-height:1.45;
+  }
+  .addr{margin:0 0 6px; font-size:17px; font-weight:700}
+  .addr-sub{margin:0 0 18px; color:var(--sub); font-size:15px}
+  .plainlink{display:inline-flex; align-items:center; min-height:44px; font-size:19px; font-weight:800; color:var(--plum-dk)}
+  .deets{margin:18px 0 0; padding:0; list-style:none; color:var(--sub); font-size:15px}
+  .deets li{position:relative; padding:5px 0 5px 24px}
+  .deets li::before{
+    content:""; position:absolute; left:4px; top:13px;
+    width:8px; height:8px; border-radius:50%; background:var(--plum);
+  }
+
+  /* ---------- mid-page call band ---------- */
+  .band{background:var(--ink); color:var(--cream); text-align:center; padding:38px 0}
+  .band h2{margin:0 0 10px; font-size:clamp(21px,3.6vw,27px); font-weight:800; color:var(--white)}
+  .band p{margin:0 auto 20px; max-width:34em; color:var(--muted); font-size:16.5px}
+
+  /* ---------- closing CTA ---------- */
+  .close-cta{background:var(--ink); color:var(--cream); text-align:center}
+  .close-cta .sec-head{color:var(--white)}
+  .close-cta p{margin:0 auto 22px; max-width:34em; color:var(--muted); font-size:17px}
+  .close-phone{
+    display:inline-flex; align-items:center; justify-content:center;
+    min-height:56px; color:var(--white);
+    font-size:clamp(26px,6.5vw,38px); font-weight:800;
+    text-decoration:none; letter-spacing:-.01em;
+  }
+  .close-phone:hover,.close-phone:focus{text-decoration:underline}
+
+  /* ---------- footer ---------- */
+  footer.site{background:var(--ink-deep); color:var(--muted); padding:34px 0; font-size:14px}
+  footer.site .wrap>p{margin:0 0 12px; max-width:62em}
+  footer.site a{color:var(--cream)}
+  footer.site .fcall{display:inline-flex; align-items:center; min-height:44px; color:var(--cream); font-weight:800; font-size:17px; text-decoration:none}
+  footer.site .disclaimer{margin-top:18px; padding-top:16px; border-top:1px solid var(--sub); color:var(--muted); font-size:13px}
+
+  /* ---------- mobile dock ---------- */
+  .dock{display:none}
+  @media (max-width:820px){
+    :root{--dock-h:68px}
+    body{padding-bottom:var(--dock-h)}
+    .dock{
+      display:block; position:fixed; left:0; right:0; bottom:0; z-index:70;
+      background:var(--ink-deep); border-top:3px solid var(--plum);
+      padding:9px 14px calc(9px + env(safe-area-inset-bottom,0px));
+    }
+    .dock a{
+      display:flex; align-items:center; justify-content:center; gap:10px;
+      min-height:48px; border-radius:7px;
+      background:var(--plum); color:var(--white);
+      font-size:18px; font-weight:800; text-decoration:none;
+      box-shadow:inset 0 0 0 2px var(--cream);
+    }
+    .callbar .cb-name span{display:none}
+  }
+
+  @media (min-width:620px){
+    .numbers .wrap{grid-template-columns:repeat(4,1fr)}
+    .svc{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (min-width:860px){
+    .reviews{grid-template-columns:repeat(3,1fr)}
+    .svc{grid-template-columns:repeat(3,1fr)}
+    .cols{grid-template-columns:1fr 1fr}
+    section{padding:58px 0}
+    .hero{padding:62px 0 54px}
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- tap-to-call, pinned to the top of every screen : CALL #1 -->
+<div class="callbar">
+  <div class="wrap">
+    <div class="cb-name">DNA Hair Structure<span>Fort Oglethorpe, Georgia</span></div>
+    <a class="cb-call" href="tel:+17068617077" aria-label="Call DNA Hair Structure at 7 0 6, 8 6 1, 7 0 7 7">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg>
+      (706) 861-7077
+    </a>
+  </div>
+</div>
+
+<main id="main">
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Hair salon &middot; Fort Oglethorpe, Georgia</p>
+
+    <!-- PLACEHOLDER WORDMARK: set in type. No logo exists anywhere public. -->
+    <h1 class="wordmark">DNA<span class="thin">Hair Structure</span></h1>
+    <p class="ph-note">Name set in type as a placeholder &mdash; no logo was copied or imitated.</p>
+
+    <p class="hero-lede">
+      An independent salon on Lafayette Road. Cuts, colour, perms and
+      special-occasion styling &mdash; from a team people have been coming back
+      to for years, and driving back into town for.
+    </p>
+
+    <p class="stars">
+      <span class="glyphs" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="txt"><b>4.8 out of 5</b> from <b>72</b> Google reviews</span>
+    </p>
+
+    <div class="cta-row">
+      <!-- CALL #2 -->
+      <a class="btn" href="tel:+17068617077">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg>
+        Call for an appointment
+      </a>
+    </div>
+    <p class="cta-note">2712 Lafayette Rd, Fort Oglethorpe, GA 30742 &middot; Open Tuesday to Friday</p>
+  </div>
+</header>
+
+<!-- the single most useful thing on the page: when they are actually open -->
+<div class="opennow">
+  <div class="wrap">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6V6h-2v7.4l5.2 3.1 1-1.7-4.2-2.2z"/></svg>
+    <p style="margin:0">
+      Open <b>Tuesday to Friday</b>, with <b>late nights until 8:00 pm on Tuesday
+      and Thursday</b>. Closed Saturday, Sunday and Monday.
+    </p>
+  </div>
+</div>
+
+<!-- the numbers, straight off the Google listing -->
+<div class="numbers">
+  <div class="wrap">
+    <div class="num"><b>4.8&#9733;</b><span>Google rating</span></div>
+    <div class="num"><b>72</b><span>Google reviews</span></div>
+    <div class="num"><b>8:00 pm</b><span>Tuesday &amp; Thursday</span></div>
+    <div class="num"><b>Tue&ndash;Fri</b><span>Closed Sat, Sun &amp; Mon</span></div>
+  </div>
+</div>
+
+<!-- SOCIAL PROOF FIRST: the strongest thing this salon has is what people wrote. -->
+<section>
+  <div class="wrap">
+    <hr class="rule">
+    <h2 class="sec-head">What customers actually wrote</h2>
+    <p class="sec-sub">
+      Reproduced as written from the salon&rsquo;s public Google reviews, and
+      attributed to the people who wrote them. Nothing here was solicited,
+      edited for flattery, or made up.
+    </p>
+
+    <div class="reviews">
+      <figure class="rv">
+        <div class="glyphs" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>
+          <p>&ldquo;I went in there with brassy roots and dead ends, but I left
+          looking great and feeling fabulous. Thank you for giving me my
+          confidence back.&rdquo;</p>
+        </blockquote>
+        <figcaption><b>Trish Delaney</b> &middot; Google review, January 2024</figcaption>
+      </figure>
+
+      <figure class="rv">
+        <div class="glyphs" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>
+          <p>&ldquo;I was a cosmetologist for 10 years but it&rsquo;s such a pain
+          in the butt to do my own hair. Tracy fit me in same day, discussed what
+          I was looking for, and executed it flawlessly.&rdquo;</p>
+          <p>&ldquo;She was able to look at the couple of pictures I showed and
+          tweaked a new style that was right for me, my hair type and length, my
+          face shape, and my (very low lol) maintenance level.&rdquo;</p>
+        </blockquote>
+        <figcaption><b>Kay Dee</b> &middot; Google review, May 2022</figcaption>
+      </figure>
+
+      <figure class="rv">
+        <div class="glyphs" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>
+          <p>&ldquo;I&rsquo;m 56 and Tracy is the first beautician I&rsquo;ve let
+          touch my hair in over 20 years. I LOVE her. She is amazing and even
+          though I had long hair and no idea of what I wanted done, it was like
+          she already knew what work would look best.&rdquo;</p>
+        </blockquote>
+        <figcaption><b>Tammy Bartczak</b> &middot; Google review, February 2022</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- the theme that runs through the reviews, in the customers' words -->
+<section class="alt">
+  <div class="wrap">
+    <hr class="rule">
+    <h2 class="sec-head">The thing people keep saying</h2>
+    <p class="sec-sub">
+      Read this salon&rsquo;s reviews end to end and the same two patterns come
+      up again and again: people stay for years, and people arrive after
+      somebody else got it wrong.
+    </p>
+
+    <div class="known">
+      <p>
+        One customer writes that she had been going since high school and still
+        books here <span class="q">&ldquo;even though I don&rsquo;t even live in
+        town anymore.&rdquo;</span> Another says she had been away six years,
+        came home, made an appointment, and
+        <span class="q">&ldquo;I&rsquo;m looking good again.&rdquo;</span>
+      </p>
+      <p>
+        Several describe arriving in a mess made somewhere else &mdash; brassy
+        roots, dead ends, hair that had been breaking off for three years &mdash;
+        and leaving fixed. One woman who had not let anyone touch her hair in
+        two decades left a five-star review.
+      </p>
+      <p>
+        And more than one mentions the room itself:
+        <span class="q">&ldquo;a very comfortable atmosphere&hellip; They make
+        you feel like family.&rdquo;</span>
+      </p>
+      <p>
+        Those are customers&rsquo; words, not the salon&rsquo;s. No price is
+        quoted anywhere on this page, because the salon publishes none and only
+        the salon can tell you what your appointment will cost.
+        <strong>Ask when you ring.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <hr class="rule">
+    <h2 class="sec-head">What people come in for</h2>
+    <p class="sec-sub">
+      Drawn from the work customers describe in their own public reviews. This
+      is not a full price list or a complete menu &mdash; if what you want
+      isn&rsquo;t here, the fastest way to find out is to ring and ask.
+    </p>
+
+    <div class="svc">
+      <div class="card">
+        <h3><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--plum)" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/><path d="M8.2 7.4 20 19M20 5 8.2 16.6"/></svg>Cuts &amp; restyling</h3>
+        <p>Including starting from scratch when you bring pictures and
+        aren&rsquo;t quite sure what you want.</p>
+      </div>
+      <div class="card">
+        <h3><svg width="19" height="19" viewBox="0 0 24 24" fill="var(--plum)" aria-hidden="true"><path d="M12 3c-3.5 4.6-6 7.4-6 10.2a6 6 0 0 0 12 0C18 10.4 15.5 7.6 12 3z"/></svg>Colour &amp; highlights</h3>
+        <p>Named repeatedly in reviews &mdash; &ldquo;any cut or colour I&rsquo;ve
+        got from DNA Hair.&rdquo;</p>
+      </div>
+      <div class="card">
+        <h3><svg width="19" height="19" viewBox="0 0 24 24" fill="var(--plum)" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>Corrective colour</h3>
+        <p>Customers describe coming in with brassy roots and damage from
+        elsewhere, and leaving sorted.</p>
+      </div>
+      <div class="card">
+        <h3><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--plum)" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M7 3.5c3.2 0 3.2 4.2 0 4.2s-3.2 4.2 0 4.2 3.2 4.2 0 4.2 3.2 4.2 0 4.2"/><path d="M16 3.5c-3.2 0-3.2 4.2 0 4.2s3.2 4.2 0 4.2-3.2 4.2 0 4.2-3.2 4.2 0 4.2"/></svg>Perms</h3>
+        <p>Still on the books &mdash; a neighbour mentioned booking one in
+        on a Tuesday.</p>
+      </div>
+      <div class="card">
+        <h3><svg width="19" height="19" viewBox="0 0 24 24" fill="var(--plum)" aria-hidden="true"><path d="M12 2l2.4 5.6L20 9l-4 4.2.9 6.3L12 16.6 7.1 19.5 8 13.2 4 9l5.6-1.4z"/></svg>Up-dos &amp; special occasions</h3>
+        <p>Pinned and braided styling for weddings, dances, pictures and church
+        Sundays.</p>
+      </div>
+      <div class="card">
+        <h3><svg width="19" height="19" viewBox="0 0 24 24" fill="var(--plum)" aria-hidden="true"><path d="M4 7h16v2H4zm0 4h16v2H4zm0 4h11v2H4z"/></svg>Men&rsquo;s hair too</h3>
+        <p>Not a women&rsquo;s-only salon &mdash; men leave reviews here as
+        regulars.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- mid-page call band : CALL #3 -->
+<section class="band">
+  <div class="wrap">
+    <h2>The chair books up</h2>
+    <p>
+      One customer wrote that her stylist&rsquo;s client load had grown so large
+      she was referred to a colleague. Four days a week fills quickly &mdash;
+      ring and get your name in.
+    </p>
+    <a class="btn" href="tel:+17068617077">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg>
+      (706) 861-7077
+    </a>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <hr class="rule">
+    <h2 class="sec-head">Hours, directions and the phone number</h2>
+    <p class="sec-sub">
+      Hours exactly as the salon publishes them on its own Google listing.
+      <strong>Note the two late nights &mdash; Tuesday and Thursday run to
+      8:00 pm</strong> &mdash; and that the salon is closed Saturday, Sunday
+      and Monday.
+    </p>
+
+    <div class="cols">
+      <div class="panel">
+        <h3>Opening hours</h3>
+        <table class="hours">
+          <tbody>
+            <tr><th scope="row">Monday</th><td class="shut">Closed</td></tr>
+            <tr><th scope="row">Tuesday</th><td class="late">9:00 am &ndash; 8:00 pm</td></tr>
+            <tr><th scope="row">Wednesday</th><td>9:00 am &ndash; 5:00 pm</td></tr>
+            <tr><th scope="row">Thursday</th><td class="late">9:00 am &ndash; 8:00 pm</td></tr>
+            <tr><th scope="row">Friday</th><td>9:00 am &ndash; 5:00 pm</td></tr>
+            <tr><th scope="row">Saturday</th><td class="shut">Closed</td></tr>
+            <tr><th scope="row">Sunday</th><td class="shut">Closed</td></tr>
+          </tbody>
+        </table>
+        <p class="hours-note">
+          Tuesday and Thursday run late &mdash; until 8:00 pm &mdash; so an
+          appointment after work is possible twice a week.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Where to find the salon</h3>
+        <p class="addr">2712 Lafayette Rd<br>Fort Oglethorpe, GA 30742</p>
+        <p class="addr-sub">Catoosa County, on Lafayette Road.</p>
+
+        <!-- CALL #4 -->
+        <a class="plainlink" href="tel:+17068617077">(706) 861-7077</a>
+
+        <ul class="deets">
+          <li>Wheelchair-accessible parking, entrance and restroom</li>
+          <li>Credit and debit cards accepted &mdash; not cash-only</li>
+          <li>By appointment &mdash; ring to get in the book</li>
+        </ul>
+
+        <!-- CALL #5 -->
+        <div class="cta-row" style="margin-top:20px">
+          <a class="btn on-light" href="tel:+17068617077">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg>
+            Book an appointment
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close-cta">
+  <div class="wrap">
+    <h2 class="sec-head">Ready for your appointment?</h2>
+    <p>
+      Ring the salon, say what you&rsquo;re after, and ask what it will cost
+      before you come in. On the evidence of 72 reviews, you&rsquo;ll be in
+      good hands.
+    </p>
+    <!-- CALL #6 -->
+    <a class="close-phone" href="tel:+17068617077">(706) 861-7077</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>
+      <strong style="color:var(--cream)">DNA Hair Structure</strong>
+      &mdash; 2712 Lafayette Rd, Fort Oglethorpe, GA 30742 &middot;
+      <!-- CALL #7 -->
+      <a class="fcall" href="tel:+17068617077">(706) 861-7077</a>
+    </p>
+    <p class="disclaimer">
+      <strong>This is not the official website of DNA Hair Structure.</strong>
+      It is an unsolicited concept demo, built by an independent web developer
+      in Chattanooga from the salon&rsquo;s own public Google listing, to show
+      what a simple site could look like. The salon did not ask for it, has not
+      seen it and has not approved it, and there is no business relationship
+      between us. The name above is set in type as a placeholder, not a logo,
+      and the colours are a neutral stand-in. There are no photographs on this
+      page. Every customer quote is reproduced from a public Google review and
+      attributed to its author; stylist first names appear only inside those
+      quotes, as the customers wrote them. No prices are quoted anywhere.
+      Nothing on this page tracks you: no analytics, no cookies, no forms, no
+      third-party requests of any kind. If the owner would like it taken down,
+      one message is enough and it goes immediately.
+    </p>
+  </div>
+</footer>
+
+<!-- mobile-only bottom dock: the call is never more than one tap away : CALL #8 of 8 -->
+<div class="dock">
+  <a href="tel:+17068617077">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg>
+    Call (706) 861-7077
+  </a>
+</div>
+
+</body>
+</html>
