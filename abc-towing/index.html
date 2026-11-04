@@ -344,7 +344,10 @@
 
 <header>
   <div class="wrap hbar">
-    <a class="mark" href="#main" aria-label="ABC Towing and Repair, Ringgold Georgia">
+    <!-- No aria-label here on purpose: an aria-label saying "and" where the
+         visible text shows "&" breaks WCAG 2.5.3 Label in Name. The link
+         text is already descriptive, so it is left to speak for itself. -->
+    <a class="mark" href="#main">
       <!-- PLACEHOLDER WORDMARK - set in type, their real lettering not copied -->
       <span class="m1">ABC Towing &amp; Repair</span>
       <span class="m2">Ringgold, Georgia</span>
