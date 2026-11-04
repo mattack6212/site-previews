@@ -209,7 +209,10 @@ h2{
 .ico svg{width:21px;height:21px;display:block}
 
 /* --------------------------------------------------------- gallery */
-.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px}
+/* align-items:start stops short cards stretching to the tallest in the row;
+   capped at 3 columns so five before/afters sit 3+2 rather than 4+1. */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px;align-items:start}
+@media(min-width:860px){.gal{grid-template-columns:repeat(3,1fr)}}
 .shot{background:#fff;border:1px solid #D9E4EC;border-radius:13px;overflow:hidden}
 .shot img{width:100%}
 .shot p{margin:0;padding:13px 15px;font-size:14px;color:#4A5A68;border-top:1px solid #E8EFF4}
