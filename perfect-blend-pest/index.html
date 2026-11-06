@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Perfect Blend Pest Solutions — Pest Control, Dunlap &amp; Ooltewah TN</title>
+<meta name="description" content="Family-owned pest control serving greater Chattanooga, the Sequatchie Valley and North Georgia. Free inspection. Call (423) 966-2847.">
+<style>
+/* ---------------------------------------------------------------------------
+   PALETTE — MEASURED, NOT CHOSEN.
+   Every brand colour below was sampled programmatically from the business's own
+   logo file (wp-content/uploads/2024/12/Perfect_Blend_Horizontal_RGB_Color-2048x552.png).
+   Measured shares of non-white logo pixels:
+     #1078A0  71.43%  hue 196.7deg   -> --brand   (house mark + "Perfect")
+     #80C0D0  16.48%  hue 192.0deg   -> --brand-lt (leaf/butterfly)
+     #68D090   6.99%  hue 143.1deg   -> --green    ("Blend")
+     #000000   4.61%                 -> wordmark "PEST SOLUTIONS"
+   --brand-dk / --green-dk are darkened members of the SAME hue families, added
+   only because the sampled values do not clear WCAG AA as text on light
+   surfaces. Nothing here was invented. See contrast.py — run it after any edit.
+--------------------------------------------------------------------------- */
+:root{
+  --brand:#1078A0; --brand-dk:#0A5673; --brand-lt:#80C0D0;
+  --green:#68D090; --green-dk:#136B45;
+  --ink:#0B2430; --body:#3A4A55; --body-lt:#CFE2EA;
+  --surf:#EFF5F8; --line:#7D8C95; --white:#fff; --disc:#112C38;
+  --wrap:1120px; --r:14px;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--sans);color:var(--body);background:var(--white);
+  font-size:17px;line-height:1.62;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;height:auto}
+h1,h2,h3,h4{color:var(--ink);line-height:1.18;margin:0 0 .5em;font-weight:800;letter-spacing:-.015em}
+h1{font-size:clamp(1.95rem,6.2vw,3.1rem)}
+h2{font-size:clamp(1.5rem,4.4vw,2.2rem)}
+h3{font-size:1.1rem}
+p{margin:0 0 1em}
+a{color:var(--brand-dk)}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 18px}
+.sec{padding:clamp(44px,7vw,76px) 0}
+.sec--surf{background:var(--surf)}
+.eyebrow{
+  font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  margin:0 0 .75em;color:var(--brand-dk);
+}
+.lead{font-size:1.1rem;max-width:62ch}
+.skip{
+  position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;
+  padding:12px 18px;z-index:200;border-radius:0 0 8px 0;
+}
+.skip:focus{left:0}
+:focus-visible{outline:3px solid var(--brand-dk);outline-offset:3px;border-radius:4px}
+
+/* ---------- buttons: every tap target >= 48px tall ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:54px;padding:14px 26px;border-radius:999px;
+  font-weight:800;font-size:1.03rem;text-decoration:none;border:2px solid transparent;
+  line-height:1.2;text-align:center;
+}
+.btn--primary{background:var(--brand);color:#fff}
+.btn--primary:hover,.btn--primary:focus{background:var(--brand-dk)}
+.btn--ghost{background:transparent;color:#fff;border-color:#fff}
+.btn--ghost:hover,.btn--ghost:focus{background:rgba(255,255,255,.14)}
+.btn--onlight{background:var(--white);color:var(--brand-dk);border-color:var(--brand-dk)}
+.btn--onlight:hover,.btn--onlight:focus{background:var(--surf)}
+.btn svg{flex:none}
+
+/* ---------- header ---------- */
+.hdr{background:var(--ink);color:#fff;padding:12px 0}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.mark{display:flex;align-items:center;gap:11px;text-decoration:none;color:#fff;min-height:48px}
+.mark__badge{flex:none}
+.mark__txt{display:block;font-weight:800;font-size:1.12rem;letter-spacing:-.02em;line-height:1.1}
+.mark__txt i{font-style:normal;color:var(--green)}
+.mark__sub{
+  display:block;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--body-lt);font-weight:700;margin-top:2px;
+}
+.hdr__call{
+  display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:10px 18px;
+  background:var(--brand);color:#fff;border-radius:999px;font-weight:800;
+  text-decoration:none;font-size:1rem;
+}
+.hdr__call:hover,.hdr__call:focus{background:var(--brand-dk)}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;color:#fff;overflow:hidden;
+  background:linear-gradient(152deg,var(--brand-dk) 0%,#0A3F55 46%,var(--ink) 100%);
+  padding:clamp(46px,8vw,86px) 0 clamp(40px,6vw,66px);
+}
+.hero::after{
+  content:"";position:absolute;inset:0;opacity:.17;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='78' height='78' viewBox='0 0 78 78'%3E%3Cpath d='M39 9 L66 31 L66 69 L12 69 L12 31 Z' fill='none' stroke='%2380C0D0' stroke-width='1.3'/%3E%3C/svg%3E");
+}
+.hero__in{position:relative;z-index:1;max-width:760px}
+.hero .eyebrow{color:var(--brand-lt)}
+.hero h1{color:#fff}
+.hero__lead{color:var(--body-lt);font-size:1.13rem;max-width:56ch}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 20px}
+.hero__cta .btn{flex:1 1 236px}
+.rating{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin:0 0 6px}
+.rating__n{font-size:1.5rem;font-weight:800;color:#fff;line-height:1}
+.rating__t{color:var(--body-lt);font-size:.95rem}
+.stars{display:inline-flex;gap:2px;flex:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0;padding:0;list-style:none}
+.chips li{
+  display:flex;align-items:center;gap:7px;font-size:.84rem;font-weight:700;
+  color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);
+  border-radius:999px;padding:7px 14px;
+}
+
+/* ---------- call band ---------- */
+.band{background:var(--brand);color:#fff;padding:clamp(30px,4.6vw,46px) 0;text-align:center}
+.band h2{color:#fff;margin-bottom:.3em}
+.band p{color:#fff;max-width:56ch;margin:0 auto 20px}
+.band__num{
+  display:inline-flex;align-items:center;gap:11px;min-height:60px;padding:14px 30px;
+  background:#fff;color:var(--brand-dk);border-radius:999px;text-decoration:none;
+  font-weight:800;font-size:clamp(1.15rem,3.6vw,1.5rem);letter-spacing:-.01em;
+}
+.band__num:hover,.band__num:focus{background:var(--surf)}
+
+/* ---------- generic grid + cards ---------- */
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+.card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:22px 20px;
+}
+.card--surf{background:var(--surf)}
+.card h3{margin:0 0 .35em;display:flex;align-items:center;gap:10px}
+.card p{margin:0;font-size:.97rem}
+.ico{flex:none;color:var(--brand-dk)}
+
+/* ---------- plans ---------- */
+.plans{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));align-items:start}
+.plan{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:24px 20px;display:flex;flex-direction:column;
+}
+.plan--hero{border:2px solid var(--brand-dk)}
+.plan__tag{
+  display:inline-block;align-self:flex-start;background:var(--brand-dk);color:#fff;
+  font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  padding:5px 11px;border-radius:999px;margin:0 0 12px;
+}
+.plan h3{font-size:1.22rem;margin:0 0 2px}
+.plan__price{font-size:2rem;font-weight:800;color:var(--ink);line-height:1.05;margin:10px 0 2px}
+.plan__price small{font-size:.92rem;font-weight:700;color:var(--body)}
+.plan__from{font-size:.8rem;font-weight:700;color:var(--body);text-transform:uppercase;letter-spacing:.09em}
+.plan__meta{font-size:.87rem;color:var(--body);margin:8px 0 14px}
+.plan ul{list-style:none;margin:0 0 18px;padding:0;font-size:.95rem}
+.plan li{display:flex;gap:9px;align-items:flex-start;padding:5px 0}
+.plan li svg{flex:none;margin-top:4px;color:var(--green-dk)}
+.plan .btn{margin-top:auto;width:100%}
+
+/* ---------- promises ---------- */
+.promise{display:flex;gap:14px;align-items:flex-start}
+.promise__ico{
+  flex:none;width:46px;height:46px;border-radius:12px;background:var(--brand);
+  display:flex;align-items:center;justify-content:center;color:#fff;
+}
+.promise h3{margin:0 0 .25em}
+.promise p{margin:0;font-size:.96rem}
+
+/* ---------- areas ---------- */
+.areas{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0;list-style:none}
+.areas li{
+  border:1px solid var(--line);border-radius:999px;padding:7px 14px;
+  font-size:.86rem;font-weight:700;color:var(--ink);background:var(--white);
+}
+.areas--on-surf li{background:var(--white)}
+
+/* ---------- offices ---------- */
+.office{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:22px 20px}
+.office h3{margin:0 0 .15em}
+.office__tag{
+  font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--brand-dk);display:block;margin-bottom:8px;
+}
+.dl{margin:0;font-size:.96rem}
+.dl div{display:flex;gap:10px;padding:5px 0;align-items:flex-start}
+.dl dt{flex:none;font-weight:800;color:var(--ink);min-width:74px}
+.dl dd{margin:0}
+.dl a{
+  font-weight:800;text-decoration:none;
+  display:inline-flex;align-items:center;min-height:44px;
+}
+.dl a:hover,.dl a:focus{text-decoration:underline}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--ink);color:var(--body-lt);padding:clamp(38px,5.5vw,58px) 0 30px}
+.ftr h3,.ftr .mark__txt{color:#fff}
+.ftr a{color:#fff;text-decoration:none}
+.ftr a:hover,.ftr a:focus{text-decoration:underline}
+.ftr__grid{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.ftr ul{list-style:none;margin:0;padding:0;font-size:.95rem}
+.ftr li{padding:4px 0}
+.ftr li a{display:inline-flex;align-items:center;min-height:44px;font-weight:800}
+.disc{
+  background:var(--disc);border-radius:12px;padding:18px 18px;margin:30px 0 0;
+  font-size:.86rem;color:var(--body-lt);
+}
+.disc strong{color:#fff}
+.ftr__legal{margin:20px 0 0;font-size:.82rem;color:var(--body-lt)}
+
+/* ---------- sticky mobile call bar ---------- */
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:120;background:var(--brand);
+  box-shadow:0 -3px 16px rgba(0,0,0,.26);padding:9px 12px calc(9px + env(safe-area-inset-bottom));
+}
+.sticky a{
+  display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;
+  color:#fff;text-decoration:none;font-weight:800;font-size:1.06rem;
+}
+body{padding-bottom:82px}
+@media(min-width:860px){
+  .sticky{display:none}
+  body{padding-bottom:0}
+}
+@media(max-width:430px){
+  .hdr__in{justify-content:center}
+  .hdr__call{width:100%}
+  .mark{justify-content:center;width:100%}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="mark" href="#main" aria-label="Perfect Blend Pest Solutions, home">
+      <!-- Wordmark set in type. The business's real logo was NOT copied, traced
+           or reproduced; only its colours were sampled. See comment block at end. -->
+      <svg class="mark__badge" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
+        <path d="M17 3 L31 14 L31 31 L3 31 L3 14 Z" fill="none" stroke="#80C0D0" stroke-width="2.2" stroke-linejoin="round"/>
+        <path d="M17 14c3.4 1.6 4.8 4.4 3.4 7-1.4 2.6-4.6 3-6.6 1.2-2-1.8-1.6-5.4 3.2-8.2Z" fill="#68D090"/>
+      </svg>
+      <span>
+        <span class="mark__txt">Perfect<i>Blend</i></span>
+        <span class="mark__sub">Pest Solutions</span>
+      </span>
+    </a>
+    <a class="hdr__call" href="tel:+14239662847">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      (423) 966-2847
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="wrap hero__in">
+      <p class="eyebrow">Woman-owned &middot; Family-operated &middot; Since 2021</p>
+      <h1>Pest control for Chattanooga, the Sequatchie Valley &amp; North Georgia</h1>
+      <p class="hero__lead">Two local offices, licensed in Tennessee and Georgia. Free inspection, no contracts, and we come back between visits at no charge.</p>
+
+      <div class="rating">
+        <span class="stars" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#80C0D0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1Z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#80C0D0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1Z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#80C0D0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1Z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#80C0D0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1Z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#80C0D0"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1Z"/></svg>
+        </span>
+        <span class="rating__n">5.0</span>
+        <span class="rating__t">from 320 Google reviews at the Dunlap office</span>
+      </div>
+
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="tel:+14239662847">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          Call (423) 966-2847
+        </a>
+        <a class="btn btn--ghost" href="tel:+14239662847">Book a free inspection</a>
+      </div>
+
+      <ul class="chips">
+        <li>TN Charter #5604</li>
+        <li>GA Charter #100972</li>
+        <li>No contracts</li>
+        <li>Free re-visits</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== CALL BAND ===================== -->
+  <section class="band">
+    <div class="wrap">
+      <h2>Got something crawling right now?</h2>
+      <p>Inspections are free and there is no obligation. Tell us what you are seeing and we will tell you straight whether you need us.</p>
+      <a class="band__num" href="tel:+14239662847">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        (423) 966-2847
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow">What we handle</p>
+      <h2>Residential and commercial pest control</h2>
+      <p class="lead">Every plan is backed by the Pest-Free Guarantee: if you see a pest between scheduled visits, we come back and re-treat at no extra charge.</p>
+
+      <div class="grid" style="margin-top:26px">
+        <div class="card">
+          <h3><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/></svg>General pest control</h3>
+          <p>Ants, spiders, wasps, roaches and the other common household pests, treated on a bi-monthly exterior schedule.</p>
+        </div>
+        <div class="card">
+          <h3><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V8l8-5 8 5v12"/><path d="M9 20v-6h6v6"/></svg>Termite &amp; wood-destroying insects</h3>
+          <p>Termite and WDI protection, including carpenter ant coverage, available on the Gold Blend plan and above.</p>
+        </div>
+        <div class="card">
+          <h3><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>Mosquito &amp; no-see-um control</h3>
+          <p>Monthly treatments through mosquito season so the yard is usable again, plus exterior flea and tick work.</p>
+        </div>
+        <div class="card">
+          <h3><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 17h13a4 4 0 0 0 0-8H9"/><circle cx="18" cy="7" r="3"/><path d="M3 21v-4"/></svg>Rodent control</h3>
+          <p>Mice and rats: exclusion, trapping and monitoring. Available as an add-on to any plan.</p>
+        </div>
+        <div class="card">
+          <h3><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M7 9h4M7 13h4M7 17h4M15 9h2M15 13h2"/></svg>Commercial</h3>
+          <p>Scheduled pest management for commercial properties across the service area. Call to talk through what your site needs.</p>
+        </div>
+        <div class="card">
+          <h3><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.4 8.6 8 9.8 4.6-1.2 8-4.8 8-9.8V6Z"/><path d="m9 12 2 2 4-4"/></svg>Free inspection</h3>
+          <p>No-obligation inspection before anything is quoted or treated, at either office or at your property.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PLANS ===================== -->
+  <section class="sec sec--surf">
+    <div class="wrap">
+      <p class="eyebrow">Plans &amp; pricing</p>
+      <h2>Simple monthly memberships. No long-term contracts.</h2>
+      <p class="lead">Prices below are the published starting rates. The exact figure depends on your property, which is what the free inspection is for.</p>
+
+      <div class="plans" style="margin-top:26px">
+        <div class="plan">
+          <h3>Silver Blend</h3>
+          <p class="plan__from">From</p>
+          <p class="plan__price">$59<small>/mo</small></p>
+          <p class="plan__meta">Every other month &middot; 6 visits a year<br>Initial service from $159</p>
+          <ul>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Bi-monthly exterior pest control</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Ants, spiders, wasps &amp; common pests</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Unlimited free re-visits</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Rodent add-on available</li>
+          </ul>
+          <a class="btn btn--onlight" href="tel:+14239662847">Call to start</a>
+        </div>
+
+        <div class="plan">
+          <h3>Gold Blend</h3>
+          <p class="plan__from">From</p>
+          <p class="plan__price">$72<small>/mo</small></p>
+          <p class="plan__meta">Every other month &middot; 6 visits a year<br>Initial quoted at inspection</p>
+          <ul>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Everything in Silver Blend</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Termite &amp; wood-destroying insects</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Carpenter ant coverage</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Unlimited free re-visits</li>
+          </ul>
+          <a class="btn btn--onlight" href="tel:+14239662847">Call to start</a>
+        </div>
+
+        <div class="plan plan--hero">
+          <span class="plan__tag">Most popular</span>
+          <h3>Platinum Blend</h3>
+          <p class="plan__from">From</p>
+          <p class="plan__price">$89<small>/mo</small></p>
+          <p class="plan__meta">Monthly in mosquito season<br>Initial service from $249</p>
+          <ul>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Bi-monthly pest control</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Mosquito &amp; no-see-um control</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Flea &amp; tick control</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Unlimited free re-visits</li>
+          </ul>
+          <a class="btn btn--primary" href="tel:+14239662847">Call to start</a>
+        </div>
+
+        <div class="plan">
+          <h3>Perfect Blend</h3>
+          <p class="plan__from">From</p>
+          <p class="plan__price">$119<small>/mo</small></p>
+          <p class="plan__meta">Monthly in mosquito season<br>Initial quoted at inspection</p>
+          <ul>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Pest + termite / wood-destroying insects</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Mosquito &amp; no-see-um control</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Exterior flea &amp; tick</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 5 5L20 7"/></svg>Unlimited free re-visits</li>
+          </ul>
+          <a class="btn btn--onlight" href="tel:+14239662847">Call to start</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROMISES ===================== -->
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow">How we work</p>
+      <h2>Three promises, in the company's own words</h2>
+      <div class="grid" style="margin-top:26px">
+        <div class="promise">
+          <span class="promise__ico" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8 13h8M8 17h5"/><path d="M5 21V5a2 2 0 0 1 2-2h7l5 5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2Z"/></svg></span>
+          <div>
+            <h3>Honesty, not pressure</h3>
+            <p>Every customer deserves the truth about what their home actually needs &mdash; never a hard sell or a service you do not need.</p>
+          </div>
+        </div>
+        <div class="promise">
+          <span class="promise__ico" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/></svg></span>
+          <div>
+            <h3>Care, not a rushed schedule</h3>
+            <p>Every home is treated with attention rather than squeezed into a route. The technician takes the time the property needs.</p>
+          </div>
+        </div>
+        <div class="promise">
+          <span class="promise__ico" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10Z"/></svg></span>
+          <div>
+            <h3>A blended family business</h3>
+            <p>Perfect Blend is named for a blended family, not for chemistry &mdash; a husband-and-wife company that has been doing this in the Chattanooga area since 2021.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICE AREA ===================== -->
+  <section class="sec sec--surf">
+    <div class="wrap">
+      <p class="eyebrow">Where we work</p>
+      <h2>Two states, one phone number</h2>
+      <p class="lead">Greater Chattanooga, the Sequatchie Valley and North Georgia, covered from the Dunlap and Ooltewah offices.</p>
+
+      <h3 style="margin-top:22px">Tennessee</h3>
+      <ul class="areas areas--on-surf">
+        <li>Chattanooga</li><li>Signal Mountain</li><li>Hixson</li><li>Ooltewah</li>
+        <li>Soddy-Daisy</li><li>Collegedale</li><li>Apison</li><li>East Brainerd</li>
+        <li>East Ridge</li><li>Red Bank</li><li>Harrison</li><li>Lookout Mountain</li>
+        <li>Walden</li><li>North Shore</li><li>Cleveland</li><li>Dunlap</li>
+        <li>Pikeville</li><li>Jasper</li><li>Whitwell</li>
+      </ul>
+
+      <h3 style="margin-top:22px">North Georgia</h3>
+      <ul class="areas areas--on-surf">
+        <li>Ringgold</li><li>Fort Oglethorpe</li><li>Rossville</li><li>Chickamauga</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== OFFICES ===================== -->
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Call whichever office is closest</h2>
+      <div class="grid" style="margin-top:26px">
+        <div class="office">
+          <span class="office__tag">Main office</span>
+          <h3>Dunlap</h3>
+          <dl class="dl">
+            <div><dt>Address</dt><dd>1446 Main St, Dunlap, TN 37327</dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+14239662847">(423) 966-2847</a></dd></div>
+            <div><dt>Hours</dt><dd>Mon&ndash;Fri, 8:00 AM &ndash; 5:00 PM<br>Closed Saturday &amp; Sunday</dd></div>
+          </dl>
+        </div>
+        <div class="office">
+          <span class="office__tag">Second office</span>
+          <h3>Ooltewah</h3>
+          <dl class="dl">
+            <div><dt>Address</dt><dd>6104 Ooltewah Georgetown Rd, Ste B, Ooltewah, TN 37363</dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+14239662847">(423) 966-2847</a></dd></div>
+            <div><dt>Hours</dt><dd>Mon&ndash;Fri, 8:00 AM &ndash; 5:00 PM<br>Closed Saturday &amp; Sunday</dd></div>
+          </dl>
+        </div>
+        <div class="office card--surf" style="background:var(--surf)">
+          <span class="office__tag">Licensing</span>
+          <h3>Licensed in both states</h3>
+          <dl class="dl">
+            <div><dt>Tennessee</dt><dd>Charter #5604</dd></div>
+            <div><dt>Georgia</dt><dd>Charter #100972</dd></div>
+            <div><dt>Rating</dt><dd>5.0 from 320 Google reviews (Dunlap)<br>5.0 from 21 Google reviews (Ooltewah)</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL CTA ===================== -->
+  <section class="band">
+    <div class="wrap">
+      <h2>Book the free inspection</h2>
+      <p>One call, no obligation, and an honest answer about whether you need treating at all.</p>
+      <a class="band__num" href="tel:+14239662847">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        (423) 966-2847
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <span class="mark__txt" style="font-size:1.2rem">Perfect<i style="font-style:normal;color:var(--green)">Blend</i></span>
+        <span class="mark__sub" style="display:block;margin:4px 0 12px">Pest Solutions</span>
+        <p style="font-size:.95rem">Family-owned pest control for greater Chattanooga, the Sequatchie Valley and North Georgia.</p>
+      </div>
+      <div>
+        <h3>Offices</h3>
+        <ul>
+          <li>1446 Main St, Dunlap, TN 37327</li>
+          <li>6104 Ooltewah Georgetown Rd, Ste B, Ooltewah, TN 37363</li>
+          <li>Mon&ndash;Fri, 8:00 AM &ndash; 5:00 PM</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+14239662847">(423) 966-2847</a></li>
+          <li>TN Charter #5604</li>
+          <li>GA Charter #100972</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="disc">
+      <strong>This is an unsolicited sample page, not a live website.</strong>
+      It was built from publicly available information only &mdash; the company's own
+      website, its Google Business Profile and other public listings. No photographs
+      of staff, customers or property appear anywhere on this page, and no logo
+      artwork has been copied or reproduced. Nothing here was supplied or approved by
+      Perfect Blend Pest Solutions. Tell us to take it down and it comes down
+      immediately.
+    </div>
+
+    <p class="ftr__legal">Sample page &middot; not affiliated with or endorsed by Perfect Blend Pest Solutions &middot; <span>noindex</span></p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a href="tel:+14239662847">
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+    Call (423) 966-2847
+  </a>
+</div>
+
+<!--
+================================================================================
+  BUILD NOTES  —  perfect-blend-pest  —  built 2026-11-06
+  Unsolicited sample. Public web sources only. Nothing sent to the business.
+================================================================================
+
+PERMISSION GATE
+  * Zero photographs are used on this page. All 20 images attached to the two
+    Google Business Profiles were downloaded and VIEWED individually, and all 20
+    were rejected before anything was laid out. Reasons are itemised in
+    research.md. Rejections included identifiable adults in nine frames, legible
+    Tennessee licence plates on customer vehicles in one, another business's
+    signage dominating two, and four images that are stock or composite artwork.
+  * The business's real logo file was located and its colours were sampled
+    programmatically. The artwork itself was NOT copied, traced or redrawn. The
+    wordmark on this page is set in type, and the small house/leaf badge is an
+    original simplified glyph, not their mark. If this page ever goes live the
+    real logo should replace it, with permission.
+  * No customer review is quoted and no reviewer is named anywhere.
+  * This page carries noindex,nofollow and is removed on request, immediately.
+
+WHAT IS ON THIS PAGE, AND WHERE IT CAME FROM
+  * Phone, hours, both office addresses, both licence numbers, the four plan
+    names and their published starting prices, the service-area list and the
+    three "what we believe" promises: all taken from the company's own website
+    (perfectblendpestsolutions.com, pages /, /contact-us/, /plans-pricing/,
+    /our-story/), fetched 2026-11-06.
+  * 5.0 / 320 reviews (Dunlap) and 5.0 / 21 reviews (Ooltewah): read live from
+    the Google Places API on 2026-11-06. Both figures are stated with the office
+    they belong to so neither is overstated.
+  * "Woman-owned", "family-operated" and "since 2021" are the company's own
+    self-descriptions and are presented as such, not as verified fact.
+
+DELIBERATE OMISSIONS — things that are true but are NOT claimed here
+  * No owner's name appears anywhere on this page, by choice.
+  * No response-time, same-day or appointment-window promise. None is published.
+  * No guarantee wording beyond the "Pest-Free Guarantee" phrase the company
+    itself publishes, and no claim about what it covers in law.
+  * No "$50 off / code SAVE50" offer. It is published on their site but it is a
+    live commercial promotion and is not ours to re-advertise.
+  * No years-in-business figure other than the 2021 founding date they publish.
+    A post on their Facebook page reads "Over 15 Years" — the two cannot both be
+    describing the company, so neither is used as a credential here.
+  * No staff count, no fleet size, no insurance or bonding claim.
+  * No BBB rating. Their BBB profile is unclaimed and publishes different hours
+    from the ones they publish themselves.
+  * No testimonials. Real Google reviews exist, but naming a customer on a page
+    they never agreed to appear on is not something this build does.
+  * No email address and no contact form: the live page would need a real inbox
+    behind it, and every call-to-action here is a tel: link instead.
+
+TECHNICAL
+  * Single self-contained file. No external fonts, no analytics, no third-party
+    scripts, no network requests of any kind beyond the document itself.
+  * 10 tel: links including a sticky mobile call bar; every tap target is at
+    least 48px tall. Verified at 320px with overflow.mjs.
+  * Zero horizontal overflow, 320px through 1280px. Verified with overflow.mjs.
+  * Every text and graphic colour pair verified against WCAG AA by calculation
+    in contrast.py, not by eye.
+================================================================================
+-->
+</body>
+</html>
