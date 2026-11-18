@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="googlebot" content="noindex,nofollow">
+<title>Blanca's Appliances &amp; Furniture — East Ridge, TN</title>
+<meta name="description" content="Furniture, mattresses and appliances on Ringgold Road in East Ridge, Tennessee. Delivery available. Lease-to-own, no credit needed.">
+<meta name="theme-color" content="#14422A">
+<style>
+:root{
+  --ink:#13201A; --ink-soft:#3A4A41;
+  --green-deep:#14422A; --green-mid:#1E6B3C; --green-lt:#59B86B;
+  --red:#B4322C; --red-lt:#F05A52; --gold:#E8B22A;
+  --surface:#FBFAF5; --surface2:#EFF2EA; --white:#FFFFFF;
+  --maxw:1100px; --r:14px;
+  --shadow:0 1px 2px rgba(19,32,26,.06), 0 6px 20px rgba(19,32,26,.08);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--surface); color:var(--ink);
+  font:400 17px/1.62 "Helvetica Neue",Helvetica,Arial,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; height:auto; display:block}
+h1,h2,h3{line-height:1.2; margin:0 0 .5em; letter-spacing:-.01em}
+h1{font-size:clamp(28px,6.2vw,46px); font-weight:800}
+h2{font-size:clamp(23px,4.4vw,32px); font-weight:800; color:var(--green-deep)}
+h3{font-size:clamp(18px,3vw,21px); font-weight:700}
+p{margin:0 0 1em}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+.sec{padding:44px 0}
+.sec--tint{background:var(--surface2)}
+.sec--dark{background:var(--green-deep); color:var(--surface2)}
+.sec--dark h2{color:var(--white)}
+
+/* ---------- tap targets: every interactive element is >=48px tall ---------- */
+.btn{
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  min-height:56px; padding:14px 22px; border-radius:var(--r);
+  font-size:18px; font-weight:800; text-decoration:none; text-align:center;
+  border:2px solid transparent; width:100%;
+}
+.btn--call{background:var(--red); color:var(--white)}
+.btn--call:active{background:#93261F}
+.btn--alt{background:var(--white); color:var(--green-deep); border-color:var(--green-mid)}
+.btn--onDark{background:var(--white); color:var(--green-deep)}
+.btn-row{display:grid; gap:12px; margin:22px 0 0}
+@media(min-width:620px){ .btn-row{grid-template-columns:1fr 1fr} }
+
+/* ---------- sticky header ---------- */
+.hdr{
+  position:sticky; top:0; z-index:50; background:var(--white);
+  border-bottom:3px solid var(--green-mid); box-shadow:var(--shadow);
+}
+.hdr__in{display:flex; align-items:center; gap:12px; min-height:68px; padding:8px 20px; max-width:var(--maxw); margin:0 auto}
+.hdr__logo{width:52px; height:52px; border-radius:10px; object-fit:cover; flex:0 0 auto; border:1px solid var(--surface2)}
+.hdr__txt{flex:1 1 auto; min-width:0}
+.hdr__name{font-weight:800; font-size:16px; color:var(--green-deep); line-height:1.15; overflow-wrap:anywhere}
+.hdr__sub{font-size:13px; color:var(--ink-soft); line-height:1.3}
+.hdr__call{
+  flex:0 0 auto; display:flex; align-items:center; justify-content:center;
+  min-height:48px; min-width:48px; padding:10px 16px; border-radius:11px;
+  background:var(--red); color:var(--white); font-weight:800; font-size:15px; text-decoration:none; white-space:nowrap;
+}
+@media(max-width:430px){ .hdr__call{padding:10px 13px; font-size:14px} .hdr__logo{width:46px;height:46px} }
+
+/* ---------- hero ---------- */
+.hero{background:linear-gradient(180deg,var(--white) 0%, var(--surface) 100%); padding:34px 0 10px}
+.hero__eyebrow{
+  display:inline-block; background:var(--green-deep); color:var(--white);
+  font-size:13px; font-weight:800; letter-spacing:.09em; text-transform:uppercase;
+  padding:7px 13px; border-radius:999px; margin-bottom:16px;
+}
+.hero__lede{font-size:clamp(18px,3.4vw,21px); color:var(--ink-soft); max-width:46ch}
+.hero__rule{height:5px; width:84px; background:var(--gold); border-radius:3px; margin:20px 0}
+
+/* ---------- facts strip ---------- */
+.facts{display:grid; gap:12px; margin-top:26px}
+@media(min-width:560px){ .facts{grid-template-columns:1fr 1fr} }
+@media(min-width:900px){ .facts{grid-template-columns:repeat(4,1fr)} }
+.fact{background:var(--white); border:1px solid #DDE4DA; border-left:5px solid var(--green-mid); border-radius:12px; padding:16px 16px}
+.fact b{display:block; font-size:19px; color:var(--green-deep); line-height:1.25}
+.fact span{display:block; font-size:14.5px; color:var(--ink-soft); margin-top:3px}
+
+/* ---------- generic cards ---------- */
+.grid{display:grid; gap:16px}
+@media(min-width:620px){ .grid--2{grid-template-columns:1fr 1fr} }
+@media(min-width:760px){ .grid--3{grid-template-columns:repeat(3,1fr)} }
+.card{background:var(--white); border:1px solid #DDE4DA; border-radius:var(--r); padding:22px; box-shadow:var(--shadow)}
+.card h3{color:var(--green-deep); margin-bottom:.35em}
+.card p:last-child{margin-bottom:0}
+.card--tinted{background:var(--surface2); border-color:#D6DFD2}
+
+/* ---------- what we carry ---------- */
+.carry{list-style:none; padding:0; margin:0; display:grid; gap:10px}
+@media(min-width:560px){ .carry{grid-template-columns:1fr 1fr} }
+@media(min-width:880px){ .carry{grid-template-columns:repeat(3,1fr)} }
+.carry li{
+  background:var(--white); border:1px solid #DDE4DA; border-radius:12px;
+  padding:15px 16px; font-weight:700; font-size:17.5px; color:var(--green-deep);
+  display:flex; align-items:center; gap:11px; min-height:56px;
+}
+.carry li::before{content:""; width:11px; height:11px; border-radius:3px; background:var(--gold); flex:0 0 auto}
+
+/* ---------- reviews ---------- */
+.q{background:var(--white); border:1px solid #DDE4DA; border-top:5px solid var(--gold); border-radius:12px; padding:20px}
+.q blockquote{margin:0 0 12px; font-size:17.5px; line-height:1.58}
+.q cite{font-style:normal; font-size:14px; color:var(--ink-soft); font-weight:700}
+.scorecard{
+  background:var(--white); border:2px solid var(--green-mid); border-radius:var(--r);
+  padding:20px; text-align:center; margin-bottom:18px;
+}
+.scorecard b{display:block; font-size:clamp(34px,8vw,48px); font-weight:800; color:var(--green-deep); line-height:1.05}
+.scorecard span{display:block; font-size:16px; color:var(--ink-soft); margin-top:6px}
+
+/* ---------- hours ---------- */
+.hours{width:100%; border-collapse:collapse; font-size:17px; background:var(--white); border-radius:12px; overflow:hidden; border:1px solid #DDE4DA}
+.hours th,.hours td{text-align:left; padding:13px 16px; border-bottom:1px solid var(--surface2)}
+.hours tr:last-child td{border-bottom:none}
+.hours th{font-weight:700; color:var(--green-deep); width:48%}
+.hours td{color:var(--ink-soft); font-variant-numeric:tabular-nums}
+.hours tr.closed th,.hours tr.closed td{color:var(--red); font-weight:700}
+
+/* ---------- visit / address ---------- */
+.visit{display:grid; gap:20px}
+@media(min-width:800px){ .visit{grid-template-columns:1.1fr .9fr; align-items:start} }
+.addr{font-size:19px; font-weight:700; color:var(--green-deep); line-height:1.5; margin:0 0 4px}
+.shot{border-radius:var(--r); overflow:hidden; border:1px solid #DDE4DA; box-shadow:var(--shadow)}
+.shot img{width:100%}
+.shot figcaption{font-size:13.5px; color:var(--ink-soft); padding:10px 14px; background:var(--white)}
+
+/* ---------- spanish block ---------- */
+.es{border-left:6px solid var(--gold)}
+.es h3{color:var(--green-deep)}
+.es p:last-child{margin-bottom:0}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--ink); color:#C8D3CB; padding:34px 0; font-size:15px}
+.ftr a{color:var(--green-lt); font-weight:700}
+.ftr .ftr__name{color:var(--white); font-weight:800; font-size:18px; margin-bottom:6px}
+.ftr__call{
+  display:flex; align-items:center; justify-content:center; min-height:56px; margin:18px 0 14px;
+  background:var(--red); color:var(--white)!important; border-radius:var(--r);
+  font-weight:800; font-size:18px; text-decoration:none;
+}
+.note{font-size:13px; color:#95A49A; line-height:1.55; margin-top:16px}
+.note a{color:var(--green-lt)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--gold); outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr__in">
+    <img class="hdr__logo" src="images/logo.jpg" alt="Blanca's Appliances and Furniture logo: a crowned green frog">
+    <div class="hdr__txt">
+      <div class="hdr__name">Blanca's Appliances &amp; Furniture</div>
+      <div class="hdr__sub">Ringgold Rd &middot; East Ridge, TN</div>
+    </div>
+    <a class="hdr__call" href="tel:+14237101289" aria-label="Call Blanca's at 4 2 3, 7 1 0, 1 2 8 9">Call</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="hero__eyebrow">East Ridge, Tennessee</span>
+      <h1>Furniture, mattresses and appliances on Ringgold Road.</h1>
+      <div class="hero__rule"></div>
+      <p class="hero__lede">Living rooms, bedroom sets, dining rooms, mattresses and appliances &mdash; in a showroom you can walk, five minutes off I&#8209;75. Delivery available.</p>
+
+      <div class="btn-row">
+        <a class="btn btn--call" href="tel:+14237101289">Call (423)&nbsp;710&#8209;1289</a>
+        <a class="btn btn--alt" href="#visit">Get directions</a>
+      </div>
+
+      <div class="facts">
+        <div class="fact"><b>6 five&#8209;star reviews</b><span>on their Google listing</span></div>
+        <div class="fact"><b>Delivery available</b><span>listed on their Google profile</span></div>
+        <div class="fact"><b>No credit needed</b><span>lease&#8209;to&#8209;own, 0 down</span></div>
+        <div class="fact"><b>Open 6 days</b><span>Monday through Saturday</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--tint">
+    <div class="wrap">
+      <h2>What's in the showroom</h2>
+      <p style="max-width:58ch; color:var(--ink-soft)">The categories lettered in their own storefront windows:</p>
+      <ul class="carry">
+        <li>Living rooms</li>
+        <li>Bedroom sets</li>
+        <li>Dining rooms</li>
+        <li>Mattresses</li>
+        <li>Appliances</li>
+        <li>Home furnishings</li>
+      </ul>
+      <div class="btn-row" style="max-width:520px">
+        <a class="btn btn--call" href="tel:+14237101289">Ask what's in stock</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <h2>Take it home without perfect credit</h2>
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>0 down &middot; lease purchase</h3>
+          <p>Their storefront advertises <strong>0 down, lease purchase, no credit check</strong>. Lease&#8209;to&#8209;own approval is handled in store &mdash; ask about it when you come in or call ahead.</p>
+          <p style="margin-bottom:0; color:var(--ink-soft); font-size:15.5px">Leasing to own costs more than paying cash. Ask for the total cost to own before you sign anything.</p>
+        </div>
+        <div class="card es">
+          <h3>Tambi&eacute;n en espa&ntilde;ol</h3>
+          <p><strong>No necesita cr&eacute;dito.</strong> La tienda anuncia 0 de enganche y compra con opci&oacute;n a renta, sin revisi&oacute;n de cr&eacute;dito.</p>
+          <p>Muebles de sala, rec&aacute;mara y comedor, colchones y electrodom&eacute;sticos, en Ringgold Road en East Ridge. Hay servicio de entrega.</p>
+          <a class="btn btn--alt" style="margin-top:18px" href="tel:+14237101289">Llame al (423)&nbsp;710&#8209;1289</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--tint">
+    <div class="wrap">
+      <h2>What customers say</h2>
+
+      <div class="scorecard">
+        <b>6 &#9733;&#9733;&#9733;&#9733;&#9733;</b>
+        <span>five&#8209;star reviews on their Google listing</span>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="q">
+          <blockquote>&ldquo;I absolutely love this furniture store. They have a variety of styles for every room in your home. Great customer service.&rdquo;</blockquote>
+          <cite>Google review, May 2024</cite>
+        </div>
+        <div class="q">
+          <blockquote>&ldquo;Staff was very helpful and friendly&hellip; I definitely will be doing more business at Blanca's in the future.&rdquo;</blockquote>
+          <cite>Google review, January 2025</cite>
+        </div>
+        <div class="q">
+          <blockquote>&ldquo;Great deals on furniture.&rdquo;</blockquote>
+          <cite>Google review, November 2023</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit">
+    <div class="wrap">
+      <h2>Come see it</h2>
+      <div class="visit">
+        <div>
+          <p class="addr">5738 Ringgold Rd<br>East Ridge, TN 37412</p>
+          <p style="color:var(--ink-soft)">Free parking in front of the store, with an accessible space and an accessible entrance.</p>
+
+          <table class="hours">
+            <caption class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Opening hours</caption>
+            <tbody>
+              <tr><th scope="row">Monday</th><td>10:00 AM &ndash; 6:00 PM</td></tr>
+              <tr><th scope="row">Tuesday</th><td>10:00 AM &ndash; 6:00 PM</td></tr>
+              <tr><th scope="row">Wednesday</th><td>10:00 AM &ndash; 6:00 PM</td></tr>
+              <tr><th scope="row">Thursday</th><td>10:00 AM &ndash; 6:00 PM</td></tr>
+              <tr><th scope="row">Friday</th><td>10:00 AM &ndash; 6:00 PM</td></tr>
+              <tr><th scope="row">Saturday</th><td>10:00 AM &ndash; 5:00 PM</td></tr>
+              <tr class="closed"><th scope="row">Sunday</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+
+          <div class="btn-row">
+            <a class="btn btn--call" href="tel:+14237101289">Call (423)&nbsp;710&#8209;1289</a>
+            <a class="btn btn--alt" href="https://maps.google.com/?cid=11796673656683559308" rel="noopener nofollow">Open in Google Maps</a>
+          </div>
+        </div>
+
+        <figure class="shot" style="margin:0">
+          <img src="images/storefront.jpg" width="1400" height="601"
+               alt="The Blanca's Appliances and Furniture storefront on Ringgold Road: a long green-roofed building with a white sign reading Blanca's Appliances and Furniture, glass frontage and a parking lot."
+               loading="lazy" decoding="async">
+          <figcaption>Their storefront on Ringgold Road.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--dark">
+    <div class="wrap" style="text-align:center">
+      <h2>Call before you drive out</h2>
+      <p style="max-width:50ch; margin:0 auto 4px; color:var(--surface2)">Stock on a showroom floor moves. One call confirms the piece is still there and what delivery would cost.</p>
+      <div class="btn-row" style="max-width:460px; margin:22px auto 0">
+        <a class="btn btn--onDark" href="tel:+14237101289">Call (423)&nbsp;710&#8209;1289</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__name">Blanca's Appliances &amp; Furniture</div>
+    <div>5738 Ringgold Rd, East Ridge, TN 37412</div>
+    <div>Monday&ndash;Friday 10&ndash;6 &middot; Saturday 10&ndash;5 &middot; Sunday closed</div>
+    <a class="ftr__call" href="tel:+14237101289">Call (423)&nbsp;710&#8209;1289</a>
+    <p class="note">
+      <strong style="color:#D7DED8">This is an unsolicited sample page, not an official website.</strong>
+      It was built by an independent web designer from this business's own public information &mdash;
+      their Google Business Profile, their own storefront signage, and their own Facebook page &mdash;
+      to show the owner what a site could look like. It is not affiliated with, endorsed by, or paid for
+      by the business, it is set to <em>noindex, nofollow</em>, and it will be taken down on request.
+      Hours, stock, delivery and financing terms are not guaranteed &mdash;
+      use the call button above to confirm anything before you rely on it.
+    </p>
+  </div>
+</footer>
+
+<!--
+================================================================================
+BLANCA'S APPLIANCES & FURNITURE  —  demo build notes
+Slug: blancas-appliances   Built: 2026-11-18   Status: UNSOLICITED SAMPLE
+================================================================================
+
+PERMISSION GATE
+  NO CONTACT OF ANY KIND HAS BEEN MADE WITH THIS BUSINESS.
+  No call, no text, no email, no web form, no social DM. Not even a proof-of-life
+  test. Every fact below came from public web sources and public APIs.
+  This page is noindex,nofollow, is not linked from anywhere public, and is to be
+  deleted on request without argument. Nothing here is to be sent to the business
+  until Matt has personally read it and approved it.
+
+WHAT IS ON THIS PAGE AND WHERE IT CAME FROM
+  Business name ............ their own storefront sign + Google listing
+  Phone (423) 710-1289 ..... Google Places (live pull 2026-11-18), their own
+                             printed location card, their own Facebook page
+  Address 5738 Ringgold Rd . Google Places addressComponents; corroborated by
+                             their own printed card and by an Acima lease-to-own
+                             partner-location page. COMMERCIAL STOREFRONT with its
+                             own parking lot — not a home — so the street line is
+                             published deliberately.
+  East Ridge, TN 37412 ..... Google addressComponents: locality East Ridge,
+                             admin_area_2 Hamilton County, admin_area_1 Tennessee.
+  Hours .................... Google regularOpeningHours, live. Corroborated by Yelp.
+  "6 five-star reviews" .... Google's OWN ratings histogram, read over CDP:
+                             5*=6, 4*=1, 3*=0, 2*=1, 1*=0. Totals 8, which equals
+                             userRatingCount, and (30+4+2)/8 = 4.50 exactly, which
+                             equals the rating Google displays. Set proven complete.
+  Three review quotes ...... verbatim from the live Google listing. Dated, NOT
+                             signed (see R4 below). Nothing trimmed to mislead.
+  "Delivery available" ..... Google Places attribute delivery:true.
+  Category list ............ lettered in their OWN storefront windows
+                             (Living Rooms / Bedroom Sets / Dining Rooms /
+                             Mattress / Appliances), and restated in their own
+                             Facebook post: "We have bedroom, living room, dining
+                             room, mattress, and appliances!"
+  "0 down / lease purchase / no credit check" .. lettered on their own storefront.
+                             Independently corroborated by a live Acima
+                             lease-to-own partner page for 5738 Ringgold Rd.
+  Spanish block ............ their own windows carry the matching Spanish sign
+                             "NO NECESITA CREDITO" beside the English "No Credit
+                             Needed". The Spanish here restates this page's own
+                             content; it does NOT claim anything about staffing.
+  Accessible parking ....... Google accessibilityOptions: wheelchairAccessibleParking
+                             true, wheelchairAccessibleEntrance true. Also visible
+                             as a marked accessible bay in their own photo.
+  Both images .............. their own Google listing photos, BOTH owner-attributed
+                             to "Blanca's Appliances & Furniture" (contributor
+                             113573825957214167105), i.e. posted by the business.
+                             Re-encoded onto a fresh canvas: ALL EXIF/GPS stripped
+                             (originals carried Samsung SM-G975U + 2023-02-23 GPS-
+                             capable EXIF). Verified: zero exif/gps/samsung strings.
+  Palette .................. SAMPLED from their own logo, not invented. Hue-classified
+                             means off the corrected logo: green #57B067 (frog),
+                             red #E97B7C (script), gold #F9F851 (crown).
+                             Shipped greens/red/gold are DARKENED versions of those
+                             measurements, changed only as far as WCAG AA required.
+                             All 22 contrast pairs pass (scripts/palette.py → 0 fails).
+
+================================================================================
+DELIBERATELY OMITTED — each one is a decision, not an oversight
+================================================================================
+  THE 4.5 RATING .......... NOT published. 4.5 from 8 means one 2-star review
+                            ("Highly expensive & non negotiable", Apr 2026).
+                            "6 five-star reviews" carries the same proof with none
+                            of the sting. Lockhart/Smith precedent.
+  THE 2-STAR REVIEW ....... not quoted, not alluded to, not answered.
+  ANY PRICE CLAIM ......... NOT made in this page's own voice. Three reviews praise
+                            their prices and one calls them expensive. The page
+                            quotes customers and never asserts "cheap", "low prices",
+                            "great deals" or "affordable" itself.
+  ANY PERSONAL NAME ....... R4 GATE FAILED. No business-written or official source
+                            names a human being. "Blanca" appears only as the trading
+                            name and is used only as the trading name. A personal
+                            email on an UNCLAIMED third-party directory page is NOT a
+                            business-written source and is not used anywhere.
+                            Review quotes are therefore DATED, NOT SIGNED.
+  FOUNDING YEAR / "X YEARS" NOT published. One directory says 15 years, another says
+                            7 for a different branch, nothing authoritative agrees.
+  APPLIANCE REPAIR ........ NOT claimed. The sister store in Dalton GA demonstrably
+                            does repairs; there is NO evidence this East Ridge store
+                            does. Not asserted here.
+  "NEW" OR "USED" ......... NOT claimed either way. The Dalton store is explicitly a
+                            used-appliance store; the East Ridge reviews describe
+                            brand-name furniture. Unresolved, so unstated.
+  ANY BRAND NAME .......... A review names a furniture brand. Omitted — no dealer
+                            relationship is verified and a wordmark is a legal risk.
+  THE OTHER LOCATIONS ..... NOT mentioned. Their own printed card and Facebook bio
+                            still advertise branches that Google now marks
+                            CLOSED_PERMANENTLY. Publishing a closed store would be
+                            worse than publishing nothing. Hold for the call.
+  THE SISTER STORE'S RATING NOT mentioned. It is materially lower and is not this
+                            store's to carry.
+  "SE HABLA ESPANOL" ...... NOT claimed as a staffing fact. Their Spanish SIGNAGE is
+                            verified; whether a Spanish speaker is on the floor is
+                            NOT. Confirm before launch.
+  THE DEAD DOMAIN ......... Not referenced on the page. See pitch.md — it is the
+                            single strongest thing Matt has to say on the call.
+  STOCK, PRICES, DELIVERY FEES, FINANCE TERMS .. none invented. The page routes every
+                            one of them to a phone call.
+  STOCK PHOTOGRAPHY ....... none. Zero. Every pixel on this page is theirs.
+  THIRD-PARTY LOGOS ....... none. The one small financing-partner sign inside their
+                            own storefront photo is illegible at shipped resolution.
+  TRACKING / ANALYTICS / FONTS / CDN .. none. Zero external requests. Two local
+                            images and inline CSS. No JavaScript at all.
+================================================================================
+-->
+</body>
+</html>
