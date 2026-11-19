@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Mike's Mobile Welding &mdash; Mobile Welding &amp; Fabrication, East Ridge TN</title>
+<meta name="description" content="Mobile welding, repair and fabrication in East Ridge, Tennessee. We come to you, or bring it to the shop. Call (423) 653-3587.">
+<style>
+  :root{
+    --navy:#1B3055; --navy-dk:#132340; --navy-lt:#2A4675;
+    --teal:#00C4A0; --teal-dk:#00A086; --teal-ink:#065F50;
+    --amber:#F5A623; --amber-bg:#FFF6E6; --amber-ink:#6B4405; --amber-line:#F3DFB8;
+    --red:#E03B3B;
+    --ink:#16202E; --muted:#51607242; --muted-tx:#4F5E71; --muted-ink:#B6C4D8;
+    --paper:#F7F9FC; --card:#FFFFFF; --line:#E1E7F0;
+    --wrap:1120px; --r:14px;
+    --shadow:0 1px 2px rgba(27,48,85,.06), 0 6px 20px rgba(27,48,85,.08);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px; line-height:1.62; overflow-x:hidden;
+  }
+  img{max-width:100%; height:auto; display:block}
+  h1,h2,h3{line-height:1.18; margin:0; letter-spacing:-.016em; font-weight:800}
+  p{margin:0}
+  a{color:var(--navy)}
+  .wrap{width:100%; max-width:var(--wrap); margin:0 auto; padding:0 20px}
+  .eyebrow{font-size:12px; font-weight:800; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--teal-ink); margin:0 0 14px}
+
+  /* ---- interactive elements: every one >= 48px tall ---- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    min-height:56px; padding:15px 26px; border-radius:999px;
+    font-size:18px; font-weight:800; text-decoration:none; color:#fff;
+    background:var(--navy); border:2px solid var(--navy);
+    box-shadow:var(--shadow); max-width:100%; text-align:center;
+  }
+  .btn:active{background:var(--navy-dk); border-color:var(--navy-dk)}
+  .btn-teal{background:var(--teal-dk); border-color:var(--teal-dk); color:#fff}
+  .btn-teal:active{background:var(--teal-ink); border-color:var(--teal-ink)}
+  .btn-ghost{background:transparent; color:#F2F6FC; border:2px solid rgba(242,246,252,.55); box-shadow:none; font-weight:700}
+  .btn-outline{background:#fff; color:var(--navy); border:2px solid var(--navy); box-shadow:none}
+  .btn-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:26px}
+
+  /* ---- bars ---- */
+  .demo{background:var(--amber-bg); color:var(--amber-ink); border-bottom:1px solid var(--amber-line);
+    padding:11px 0; font-size:14px; font-weight:700; text-align:center}
+  .topbar{background:var(--navy-dk); color:#F2F6FC; padding:10px 0}
+  .topbar-in{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+  .topbar .where{font-size:13.5px; font-weight:700; color:var(--muted-ink); letter-spacing:.04em}
+  .topbar a.tel{display:inline-flex; align-items:center; min-height:48px; padding:6px 14px; border-radius:10px;
+    color:#F2F6FC; text-decoration:none; font-weight:800; font-size:17px; border:1px solid rgba(242,246,252,.3)}
+
+  /* ---- hero ---- */
+  .hero{background:var(--navy); color:#F2F6FC; padding:44px 0 50px; position:relative; overflow:hidden}
+  .hero::after{content:""; position:absolute; inset:0; pointer-events:none;
+    background:
+      radial-gradient(70% 120% at 110% 4%, rgba(0,196,160,.30) 0%, rgba(0,196,160,0) 60%),
+      radial-gradient(60% 100% at -10% 100%, rgba(245,166,35,.22) 0%, rgba(245,166,35,0) 62%)}
+  .hero-in{position:relative; z-index:1; display:grid; grid-template-columns:1.15fr .85fr; gap:38px; align-items:center}
+  .hero-copy{min-width:0}
+  .wordmark{display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap}
+  .wordmark .mark{width:54px; height:54px; border-radius:12px; flex:0 0 54px; background:var(--teal-dk);
+    display:grid; place-items:center; box-shadow:var(--shadow)}
+  .wordmark .mark svg{width:31px; height:31px; display:block}
+  .wordmark .name{font-size:19px; font-weight:800; letter-spacing:-.01em; line-height:1.25}
+  .wordmark .name span{display:block; font-size:12px; font-weight:700; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--muted-ink); margin-top:3px}
+  .hero h1{font-size:clamp(29px,6.1vw,48px)}
+  .hero .lede{margin-top:18px; font-size:clamp(17px,2.2vw,20px); color:var(--muted-ink); max-width:60ch}
+  .hero .lede b{color:#F2F6FC}
+  .hero-shot{min-width:0}
+  .hero-shot img{width:100%; border-radius:var(--r); box-shadow:0 10px 36px rgba(0,0,0,.35)}
+  .hero-shot figcaption{margin-top:10px; font-size:13.5px; color:var(--muted-ink); line-height:1.5}
+  .trust-inline{display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:26px;
+    font-size:14.5px; color:var(--muted-ink); font-weight:600}
+  .trust-inline i{color:#F2F6FC; font-style:normal; font-weight:800}
+
+  /* ---- proof ---- */
+  .proof{background:var(--teal-dk); color:#fff; padding:26px 0}
+  .proof-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; text-align:center}
+  .proof .n{font-size:clamp(25px,4.8vw,36px); font-weight:800; letter-spacing:-.02em; display:block}
+  .proof .l{font-size:13px; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+    opacity:.94; margin-top:4px; display:block; line-height:1.4}
+
+  /* ---- sections ---- */
+  section{padding:54px 0}
+  .alt{background:#EDF1F7; border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+  .sec-head{max-width:70ch; margin-bottom:34px}
+  .sec-head h2{font-size:clamp(24px,4.1vw,35px)}
+  .sec-head p{margin-top:14px; color:var(--muted-tx); font-size:17.5px}
+
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:18px}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+    padding:26px 24px; box-shadow:var(--shadow)}
+  .card .ic{width:42px; height:42px; border-radius:10px; background:var(--amber-bg);
+    display:grid; place-items:center; margin-bottom:16px}
+  .card .ic svg{width:23px; height:23px; display:block}
+  .card h3{font-size:19px; margin-bottom:9px}
+  .card p{color:var(--muted-tx); font-size:16.5px}
+
+  /* ---- two ways ---- */
+  .ways{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+  .way{background:var(--card); border:1px solid var(--line); border-left:5px solid var(--teal-dk);
+    border-radius:var(--r); padding:26px 24px; box-shadow:var(--shadow)}
+  .way.b{border-left-color:var(--amber)}
+  .way h3{font-size:20px; margin-bottom:10px}
+  .way p{color:var(--muted-tx); font-size:16.5px}
+
+  /* ---- gallery ---- */
+  .gal{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; align-items:start}
+  figure.shot{margin:0; background:var(--card); border:1px solid var(--line);
+    border-radius:var(--r); overflow:hidden; box-shadow:var(--shadow)}
+  figure.shot img{width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center}
+  figure.shot img.tall{object-position:50% 38%}
+  figure.shot figcaption{padding:14px 18px; font-size:15px; color:var(--muted-tx); line-height:1.5}
+  .gal-note{margin-top:20px; font-size:15.5px; color:var(--muted-tx)}
+
+  /* ---- quotes ---- */
+  .quotes{display:grid; grid-template-columns:repeat(auto-fit,minmax(285px,1fr)); gap:18px}
+  figure.q{margin:0; background:var(--amber-bg); border:1px solid var(--amber-line);
+    border-radius:var(--r); padding:24px 22px}
+  figure.q blockquote{margin:0; font-size:17px; line-height:1.6}
+  figure.q blockquote::before{content:"\201C"}
+  figure.q blockquote::after{content:"\201D"}
+  figure.q figcaption{margin-top:14px; font-size:13px; font-weight:800; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--amber-ink)}
+  .stars{color:var(--amber-ink); letter-spacing:2px; font-size:15px; margin-bottom:10px}
+
+  /* ---- hours ---- */
+  .hours-wrap{display:grid; grid-template-columns:1.1fr 1fr; gap:28px; align-items:start}
+  table.hours{width:100%; border-collapse:collapse; background:var(--card);
+    border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  table.hours th,table.hours td{padding:13px 18px; text-align:left; font-size:16.5px;
+    border-bottom:1px solid var(--line)}
+  table.hours tr:last-child th,table.hours tr:last-child td{border-bottom:0}
+  table.hours th{font-weight:700; width:54%}
+  table.hours td{text-align:right; font-variant-numeric:tabular-nums; font-weight:700}
+  tr.shut th,tr.shut td{color:#8A2525; background:#FDECEC}
+  .note{background:var(--amber-bg); border:1px solid var(--amber-line); border-left:5px solid var(--amber);
+    border-radius:12px; padding:20px 22px; color:var(--amber-ink); font-size:16.5px}
+
+  /* ---- area ---- */
+  .area{display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start}
+  .panel{background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+    padding:26px 24px; box-shadow:var(--shadow)}
+  .panel .ln{font-size:18px; font-weight:700; line-height:1.5}
+  .panel .sub{color:var(--muted-tx); font-size:16px; margin-top:10px}
+  .pills{display:flex; flex-wrap:wrap; gap:10px; margin-top:4px}
+  .pill{background:var(--card); border:1px solid var(--line); border-radius:999px;
+    padding:9px 16px; font-size:15px; font-weight:700; color:var(--ink)}
+
+  /* ---- badges ---- */
+  .badges{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px}
+  .badge{background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+    padding:22px; box-shadow:var(--shadow)}
+  .badge .t{font-size:18px; font-weight:800}
+  .badge .d{color:var(--muted-tx); font-size:15.5px; margin-top:7px}
+
+  /* ---- closing ---- */
+  .closing{background:var(--navy); color:#F2F6FC; padding:56px 0; text-align:center}
+  .closing h2{font-size:clamp(25px,4.5vw,38px); max-width:26ch; margin:0 auto}
+  .closing p{color:var(--muted-ink); margin-top:16px; font-size:18px}
+  .closing .btn-row{justify-content:center}
+  .bignum{display:inline-flex; align-items:center; justify-content:center; min-height:56px;
+    margin-top:24px; font-size:clamp(24px,5.2vw,34px); font-weight:800; letter-spacing:-.01em;
+    color:#F2F6FC; text-decoration:none; padding:8px 18px; border-radius:12px;
+    border:1px solid rgba(242,246,252,.3)}
+
+  footer{background:#101B2D; color:var(--muted-ink); padding:30px 0; font-size:14.5px}
+  footer .f-in{display:flex; flex-wrap:wrap; gap:12px 26px; justify-content:space-between; align-items:center}
+  footer a{color:#F2F6FC; display:inline-flex; align-items:center; min-height:48px; padding:6px 14px;
+    border-radius:10px; font-weight:800; text-decoration:none; border:1px solid rgba(242,246,252,.3)}
+
+  @media (max-width:900px){
+    .hero-in{grid-template-columns:1fr; gap:28px}
+    .hero-shot{order:-1}
+  }
+  @media (max-width:760px){
+    .hours-wrap,.area,.ways{grid-template-columns:1fr}
+    .proof-grid{grid-template-columns:1fr; gap:22px}
+    section{padding:44px 0}
+    .btn{width:100%}
+    .btn-row{gap:12px}
+  }
+  @media (max-width:360px){
+    body{font-size:16px}
+    .wrap{padding:0 16px}
+    .card,.way,.panel,figure.q{padding:20px 17px}
+    table.hours th,table.hours td{padding:11px 12px; font-size:15.5px}
+    .topbar .where{font-size:12.5px}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo">Sample site &mdash; built as a demonstration. Not published and not indexed.</div>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span class="where">EAST RIDGE &middot; HAMILTON COUNTY, TENNESSEE</span>
+    <a class="tel" href="tel:+14236533587" aria-label="Call 4 2 3, 6 5 3, 3 5 8 7">(423)&nbsp;653-3587</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <div class="wordmark">
+        <span class="mark" aria-hidden="true">
+          <!-- generic spark/torch glyph drawn inline. PLACEHOLDER, not their logo (none exists publicly). -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.5v5M12 16.5v5M2.5 12h5M16.5 12h5"/>
+            <path d="M5.6 5.6l3.2 3.2M15.2 15.2l3.2 3.2M18.4 5.6l-3.2 3.2M8.8 15.2l-3.2 3.2"/>
+            <circle cx="12" cy="12" r="2.6" fill="#fff" stroke="none"/>
+          </svg>
+        </span>
+        <span class="name">Mike's Mobile Welding
+          <span>Welding &middot; Repair &middot; Fabrication</span>
+        </span>
+      </div>
+
+      <p class="eyebrow" style="color:var(--muted-ink)">East Ridge, Tennessee</p>
+      <h1>Broke? We'll come to you and weld it back together.</h1>
+      <p class="lede">Mobile welding, repair and fabrication out of East Ridge &mdash; trailers, mowers,
+        equipment, railings, gates and one-off fabrication. We bring the rig to the job, or you can
+        bring the piece to us. <b>52 reviews on Google, and all 52 of them are five stars.</b></p>
+
+      <div class="btn-row">
+        <a class="btn btn-teal" href="tel:+14236533587">Call (423)&nbsp;653-3587</a>
+        <a class="btn btn-ghost" href="#hours">Today's hours</a>
+      </div>
+
+      <div class="trust-inline">
+        <span><i>5.0</i> from 52 Google reviews</span>
+        <span><i>52 of 52</i> are five stars</span>
+        <span><i>Mon&ndash;Fri</i> 8 to 5</span>
+      </div>
+    </div>
+
+    <figure class="hero-shot" style="margin:0">
+      <img src="images/mobile-rig.jpg" width="880" height="1430"
+           alt="A welder working on a steel gate frame at the roadside, sparks flying, beside a truck-mounted welding rig with gas bottles, leads and a shade umbrella.">
+      <figcaption>The rig goes where the work is.</figcaption>
+    </figure>
+  </div>
+</header>
+
+<div class="proof">
+  <div class="wrap proof-grid">
+    <div><span class="n">5.0&#9733;</span><span class="l">Average of all 52 reviews</span></div>
+    <div><span class="n">52 of 52</span><span class="l">Reviews that are five stars</span></div>
+    <div><span class="n">Zero</span><span class="l">Reviews below five stars</span></div>
+  </div>
+</div>
+
+<section id="what">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What we weld</p>
+      <h2>If it's metal and it's broken, start with a phone call.</h2>
+      <p>Most of what comes in is a repair that somebody has been told to replace instead. The list
+        below is the work our customers describe in their own public reviews &mdash; it isn't everything
+        we do, so if yours isn't on it, ask.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#6B4405" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7.5" width="14" height="7" rx="1.5"/><circle cx="7" cy="17.5" r="2.2"/><circle cx="14" cy="17.5" r="2.2"/><path d="M16.5 10.5h3l2 3v1.5h-5"/></svg></div>
+        <h3>Trailers</h3>
+        <p>Equipment trailers, boat trailers, cargo trailers &mdash; frames, spring hangers, tongues and
+          the cracks that show up after a few thousand hard miles.</p>
+      </div>
+      <div class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#6B4405" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15h18"/><path d="M5.5 15V9.5h7l3 2.5h3V15"/><circle cx="7.5" cy="18" r="2"/><circle cx="16.5" cy="18" r="2"/></svg></div>
+        <h3>Mowers &amp; equipment</h3>
+        <p>Mower decks, broken frames, brackets and tractor parts. Often welded stronger than the
+          factory seam that let go.</p>
+      </div>
+      <div class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#6B4405" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20V9l5-3.5V20M3 20h18M13 20V9l5-3.5V20"/><path d="M3 13h5M13 13h5"/></svg></div>
+        <h3>Railings, steps &amp; gates</h3>
+        <p>Handrails for porches and stairs, modern horizontal rail, cable rail, traditional ironwork,
+          fences and gates &mdash; measured, built and installed.</p>
+      </div>
+      <div class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#6B4405" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0 6 6L15 18.6a3 3 0 0 1-4.2 0l-1.2-1.2"/><path d="M9.3 4.5 4.5 9.3l5.4 5.4 4.8-4.8z"/></svg></div>
+        <h3>Aluminium &amp; stainless</h3>
+        <p>Not every welder takes aluminium work. Spiral stairs, boat transoms, brackets and castings
+          that most shops will turn away.</p>
+      </div>
+      <div class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#6B4405" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17.5h16"/><path d="M6.5 17.5V12l3.5-3 4 2.5 3.5-1.5v7.5"/><circle cx="8.5" cy="20" r="1.6"/><circle cx="16" cy="20" r="1.6"/></svg></div>
+        <h3>Vehicles &amp; machines</h3>
+        <p>Body and chassis frames, motorcycle parts, heavy equipment repairs and the odd job nobody
+          else wanted to look at.</p>
+      </div>
+      <div class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#6B4405" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.5 4.3v9L12 20.8 4.5 16.5v-9z"/><path d="M12 12l7.5-4.3M12 12v8.8M12 12L4.5 7.7"/></svg></div>
+        <h3>Custom fabrication</h3>
+        <p>Racks, frames, brackets, stands &mdash; if you can describe it or sketch it, it can usually
+          be built.</p>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-teal" href="tel:+14236533587">Call about a repair</a>
+      <a class="btn btn-outline" href="tel:+14236533587">Ask about a custom job</a>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Two ways to do it</p>
+      <h2>We come out, or you bring it in.</h2>
+      <p>Whichever is less trouble for you. If the thing is broken enough that it can't be moved, that
+        is exactly what the truck is for.</p>
+    </div>
+    <div class="ways">
+      <div class="way">
+        <h3>We come to you</h3>
+        <p>The truck carries the welder, the bottles, the leads and the cutting gear, so the job gets
+          done where it sits &mdash; your yard, your farm, your shop, the side of the road.</p>
+      </div>
+      <div class="way b">
+        <h3>Or bring it to the shop</h3>
+        <p>Smaller pieces are often quicker and cheaper handled at the shop. Call first, then run it
+          by &mdash; a lot of small repairs get turned around the same day.</p>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-teal" href="tel:+14236533587">Call (423)&nbsp;653-3587</a>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Some of the work</p>
+      <h2>Railings, gates, stairs and repairs.</h2>
+      <p>Every photograph below was posted to our own Google listing by us. No stock pictures.</p>
+    </div>
+    <div class="gal">
+      <figure class="shot">
+        <img src="images/railing-ramp.jpg" width="1100" height="520"
+             alt="A modern horizontal steel railing running along a raised concrete porch and down a ramp beside a dark painted brick house.">
+        <figcaption>Horizontal rail on a raised porch and ramp.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/railing-wall.jpg" width="1000" height="750"
+             alt="A long black horizontal-bar steel railing set into the top of a poured concrete retaining wall beside a driveway.">
+        <figcaption>Railing set into a concrete retaining wall.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/stair-railing.jpg" width="1000" height="750"
+             alt="A black horizontal-bar steel railing fitted to an interior staircase and landing with timber treads.">
+        <figcaption>Interior stair and landing rail.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/cable-railing.jpg" width="1100" height="520"
+             alt="A stone fire pit on a flagstone pad, enclosed by black steel cable railing and matching fence panels beside a pond.">
+        <figcaption>Cable rail and fence around a fire pit.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img class="tall" src="images/iron-handrail.jpg" width="620" height="1310"
+             alt="A traditional wrought-iron handrail with a scrolled decorative panel fitted to concrete steps at a side door.">
+        <figcaption>Traditional ironwork on a set of steps.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/trucks.jpg" width="1100" height="491"
+             alt="A white crew-cab service-body work truck with a utility bed, parked alongside two other work trucks.">
+        <figcaption>The trucks that carry the gear.</figcaption>
+      </figure>
+    </div>
+    <p class="gal-note">Want something similar? Describe it on the phone or send a picture &mdash;
+      that is usually enough to say whether it can be done and roughly what is involved.</p>
+    <div class="btn-row">
+      <a class="btn btn-teal" href="tel:+14236533587">Call (423)&nbsp;653-3587</a>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">In our customers' words</p>
+      <h2>Fifty-two reviews. All fifty-two are five stars.</h2>
+      <p>Everything quoted below is taken from a public Google review, word for word. Dates only
+        &mdash; we have left our customers' names off.</p>
+    </div>
+    <div class="quotes">
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>He will come out to you or you can take the item to him.</blockquote>
+        <figcaption>Google review &middot; June 2026</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Pulling a loaded 24 ' cargo trailer and a spring hanger broke , leaving us stranded
+          on the interstate on a wet and busy saturday. Called Mike and he was there in short order.
+          Friendly, courteous, and talented . Did a quality job. Got us back on the road .</blockquote>
+        <figcaption>Google review &middot; 2019</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>He showed up with an impressive custom rig and professional, well-cared for
+          equipment. He worked in the rain on the side of the road for several hours into the night in
+          order to get us back on the road safely.</blockquote>
+        <figcaption>Google review &middot; 2018</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>He installed a handrail for my front porch that not only will last forever, it adds
+          great curb appeal by the sleek and modern design.</blockquote>
+        <figcaption>Google review &middot; 2019</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>The welding together of my auto body frame is much more solid than before.</blockquote>
+        <figcaption>Google review &middot; 2020</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>The area he worked on is more study then before and the welds look much better then
+          any factory weld on the mower.</blockquote>
+        <figcaption>Google review &middot; 2021</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Quick, clean and dependable at a very competitive price. I maintain 250+ rental
+          properties and am blessed to have had Mike's service.</blockquote>
+        <figcaption>Google review &middot; 2019</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Excellent work. He can weld anything! You think it, Mike can make it happen. Happy
+          to have done business with Mike for 10 years now.</blockquote>
+        <figcaption>Google review &middot; 2025</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>The welds look great. As in all successful businesses, he gave more than he
+          promised. He was prompt, easy to work with and talk to.</blockquote>
+        <figcaption>Google review &middot; June 2026</figcaption>
+      </figure>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-teal" href="tel:+14236533587">Call (423)&nbsp;653-3587</a>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Hours</p>
+      <h2>Monday to Friday, 8 to 5.</h2>
+      <p>Weekends are shut. If it is urgent, call anyway and ask &mdash; it is a short question to put.</p>
+    </div>
+    <div class="hours-wrap">
+      <table class="hours">
+        <tbody>
+          <tr><th scope="row">Monday</th><td>8:00 AM &ndash; 5:00 PM</td></tr>
+          <tr><th scope="row">Tuesday</th><td>8:00 AM &ndash; 5:00 PM</td></tr>
+          <tr><th scope="row">Wednesday</th><td>8:00 AM &ndash; 5:00 PM</td></tr>
+          <tr><th scope="row">Thursday</th><td>8:00 AM &ndash; 5:00 PM</td></tr>
+          <tr><th scope="row">Friday</th><td>8:00 AM &ndash; 5:00 PM</td></tr>
+          <tr class="shut"><th scope="row">Saturday</th><td>Closed</td></tr>
+          <tr class="shut"><th scope="row">Sunday</th><td>Closed</td></tr>
+        </tbody>
+      </table>
+      <div class="note">
+        <p><b>Call before you load it up.</b></p>
+        <p style="margin-top:12px">A phone call saves a wasted trip in both directions. Tell us what
+          the piece is, what it is made of and what it is doing, and we can say whether it is a
+          come-to-you job or a bring-it-in job.</p>
+        <p style="margin-top:16px"><a class="btn btn-outline" href="tel:+14236533587" style="font-size:16.5px">Call (423)&nbsp;653-3587</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="area" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Where we work</p>
+      <h2>East Ridge, and out from there.</h2>
+      <p>We are an East Ridge outfit on the Tennessee side of the state line, a few minutes from
+        downtown Chattanooga.</p>
+    </div>
+    <div class="area">
+      <div class="panel">
+        <p class="ln">Mike's Mobile Welding<br>East Ridge, Tennessee 37412</p>
+        <p class="sub">The shop is on a residential street, so the street address is not printed here.
+          Call and we will give you directions, or we will come out to you instead.</p>
+        <p style="margin-top:20px"><a class="btn btn-teal" href="tel:+14236533587">Call for directions</a></p>
+      </div>
+      <div>
+        <p style="font-weight:800; margin-bottom:14px">Places customers have called us from</p>
+        <div class="pills">
+          <span class="pill">East Ridge</span>
+          <span class="pill">Chattanooga</span>
+          <span class="pill">Harrison</span>
+          <span class="pill">Cleveland</span>
+          <span class="pill">Hamilton County</span>
+          <span class="pill">The Georgia line</span>
+        </div>
+        <p style="color:var(--muted-tx); margin-top:18px; font-size:16.5px">Not sure whether you are too
+          far out? Ask. The answer is usually yes, and it is a quick question to settle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Why people call back</p>
+      <h2>The same four things, over and over.</h2>
+    </div>
+    <div class="badges">
+      <div class="badge">
+        <p class="t">5.0 on Google</p>
+        <p class="d">52 reviews, and every one of the 52 is five stars. Nothing below it.</p>
+      </div>
+      <div class="badge">
+        <p class="t">Shows up when we say</p>
+        <p class="d">The word customers use most in those reviews, after &ldquo;quality&rdquo;, is
+          &ldquo;prompt&rdquo;.</p>
+      </div>
+      <div class="badge">
+        <p class="t">Repair before replace</p>
+        <p class="d">A weld is very often cheaper than a new part, and stronger than the one that
+          broke.</p>
+      </div>
+      <div class="badge">
+        <p class="t">A real mobile rig</p>
+        <p class="d">Welder, bottles, leads and cutting gear on the truck &mdash; not a car with a
+          toolbox in the back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <h2>Tell us what broke. We will tell you if we can fix it.</h2>
+    <p>Monday to Friday, 8:00 to 5:00.</p>
+    <a class="bignum" href="tel:+14236533587">(423)&nbsp;653-3587</a>
+    <div class="btn-row">
+      <a class="btn btn-teal" href="tel:+14236533587">Call now</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap f-in">
+    <span>Mike's Mobile Welding &middot; East Ridge, Tennessee 37412</span>
+    <span><a href="tel:+14236533587">(423)&nbsp;653-3587</a></span>
+  </div>
+</footer>
+
+<!--
+===============================================================================
+ DEMONSTRATION PAGE - Mike's Mobile Welding, East Ridge TN
+ Built 2026-11-19 from PUBLIC INFORMATION ONLY. The business was NOT contacted:
+ no call, no text, no email, no form, no DM, no Facebook message of any kind.
+
+ PERMISSION GATE
+ ---------------
+ This page is an UNSOLICITED sample. It is marked noindex,nofollow, it has not
+ been submitted to any search engine, and it carries a visible "sample site"
+ banner at the top. Nothing here is claimed to be authorised by the business.
+ If the owner does not want it to exist, it comes down on request - immediately,
+ without argument and without a conversation about why.
+
+ WHAT IS VERIFIED (full sources, with URLs, in research.md)
+ ----------------------------------------------------------
+ - Town, county, state: Google Places addressComponents gives locality=East
+   Ridge, admin_area_2=Hamilton County, admin_area_1=TN, postal=37412. This was
+   then corroborated by TWO INDEPENDENT NON-GOOGLE SOURCES: the US Census
+   Bureau geocoder (Incorporated Place = "East Ridge city") and OpenStreetMap /
+   Nominatim ("East Ridge, Hamilton County, Tennessee, 37412").
+   NOTE: the original scan said "Rossville, GA" - wrong town AND wrong state.
+ - Phone (423) 653-3587: Google Places, YellowPages and the localsearch.com
+   microsite all carry the identical number. Every tel: link on this page
+   points at that number and no other.
+ - 5.0 / 52 reviews, and the 52-of-52 figure: read off the live Google listing
+   today. All 52 review cards were enumerated individually AND Google's own
+   star histogram reports 5-star:52, 4-star:0, 3-star:0, 2-star:0, 1-star:0.
+   Weighted mean = 260/52 = 5.000 exactly. The set is provably complete, so
+   "all 52 of them are five stars" is a measured claim, not a rounded one.
+ - Hours Mon-Fri 8:00-17:00, Sat/Sun closed: Google Places regularOpeningHours.
+ - Services and every quotation: public Google reviews, quoted verbatim,
+   including the customers' own spelling and typing.
+ - Photographs: all seven are from the Google listing and ALL TEN of the
+   listing's photos are attributed by Google to the business itself
+   ("Mikes Mobile Welding service"), not to customers or to third parties.
+
+ OMITTED ON PURPOSE - AND WHY
+ ----------------------------
+  1. THE STREET ADDRESS. The listed address is, on the evidence, a RESIDENCE:
+     OpenStreetMap classifies the parcel at those coordinates as a "house" in
+     the Walnut Hills area of East Ridge, and the business's own fleet photo
+     shows the trucks parked in a residential driveway. The street number and
+     the street name therefore appear NOWHERE in this file - not in the text,
+     not in the markup, not in this comment, not in an alt attribute, not in an
+     image filename - and they are absent from the SMS draft too. The page says
+     "East Ridge, Tennessee 37412" and nothing finer, and it says plainly why.
+     The grep that proves the absence is recorded in research.md.
+  2. NO PERSONAL NAMES BEYOND THE TRADING NAME. The owner is referred to only
+     as "Mike", which is the business's own trading name. No surname is used.
+     A second first name appears in one customer review and a third in a
+     directory email address; neither is used anywhere. R4 reasoning is set out
+     in research.md.
+  3. NO LOGO EXISTS PUBLICLY. The small mark beside the wordmark is a generic
+     spark glyph drawn inline here - a PLACEHOLDER, not their logo.
+  4. THE PALETTE IS OURS, CHOSEN NOT SAMPLED. With no logo, no signage and no
+     lettered vehicle anywhere in the public material, there was nothing to
+     sample a colour from. The house palette was used instead.
+  5. NO PRICES, NO RATES, NO CALL-OUT FEE, NO "FREE ESTIMATE". Many reviews
+     praise the pricing and several quote dollar figures. Not one of those
+     numbers is repeated, and no rate is invented or inferred.
+  6. NO CERTIFICATION, LICENCE, BONDING OR INSURANCE CLAIM. No such record was
+     found in public sources, so no such claim is made. Not "certified", not
+     "licensed", not "insured".
+  7. NO FOUNDING YEAR AND NO "YEARS IN BUSINESS". The oldest review is eight
+     years old and one customer says "10 years now", but that is a customer's
+     statement about their own relationship, not a founding date.
+  8. NO CREW SIZE OR FAMILY STRUCTURE. Reviews mention sons, associates and a
+     crew. That is the customers' observation, not a staffing claim, so the
+     page never asserts how many people work here.
+  9. NO THIRD-PARTY BRANDING. One review names an equipment manufacturer and
+     another names a part price from that manufacturer. No brand appears here.
+ 10. NO COMPETITOR IS NAMED OR ALLUDED TO. Two reviews disparage unnamed
+     competitors. None of that is used.
+ 11. NO RELIGIOUS CLAIM. One review describes the owner as a man of faith.
+     That is a customer's characterisation of a person and it stays out.
+ 12. NO CUSTOMER NAMES, NO CUSTOMER CIRCUMSTANCES. Quotations are attributed by
+     date only. Reviews that disclose a customer's disability, medical
+     equipment, age or retirement are excluded entirely - see the ban list in
+     research.md, which is binding on every channel, not just this page.
+ 13. NO SPEED / PAGESPEED / SEO CLAIM. They have no website at all, so there is
+     nothing to measure and no such angle has been manufactured.
+ 14. NO EMAIL ADDRESS. One is published on a third-party directory microsite.
+     It is a personal-looking address, it is not published by the business on
+     its own property, and it is not reproduced here.
+ 15. NO SEASONAL OR URGENCY LANGUAGE anywhere, on the page or in the SMS.
+
+ KNOWN GAPS the owner would have to fill before this were ever a real site:
+ whether he wants the street address shown at all; the true service-area
+ radius; whether there is a call-out charge or minimum; what he will and will
+ not take on (aluminium, stainless, cast, structural, certified work);
+ insurance and any certifications; whether the shop takes walk-ins or
+ appointments only; and which of these photographs he actually wants used.
+===============================================================================
+-->
+</body>
+</html>
