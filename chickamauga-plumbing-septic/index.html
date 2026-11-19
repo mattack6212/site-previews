@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Chickamauga Septic &amp; Sewer &mdash; Septic &amp; Plumbing, Chickamauga GA</title>
+<meta name="description" content="Septic systems and plumbing in Chickamauga, Walker County, Georgia. State-certified septic installer and pumper. Call (706) 375-9572.">
+<style>
+  :root{
+    --navy:#1B3055; --navy-dk:#122038;
+    --teal:#00C4A0; --teal-dk:#009C80; --teal-ink:#00503F;
+    --amber:#F5A623; --amber-bg:#FFF5E3; --amber-tx:#6B4405;
+    --red:#E03B3B; --red-bg:#FDECEC;
+    --ink:#16202F; --muted:#56637A; --muted-ink:#BAC6DA;
+    --paper:#F7F9FC; --card:#FFFFFF; --line:#E1E7F0;
+    --wrap:1120px; --r:14px;
+    --shadow:0 1px 2px rgba(22,32,47,.06), 0 6px 20px rgba(22,32,47,.07);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px; line-height:1.62; overflow-x:hidden;
+  }
+  img,svg{max-width:100%;height:auto}
+  h1,h2,h3{line-height:1.18; margin:0; letter-spacing:-.016em; font-weight:800}
+  p{margin:0}
+  a{color:var(--teal-ink)}
+  .wrap{width:100%; max-width:var(--wrap); margin:0 auto; padding:0 20px}
+  .eyebrow{font-size:12px; font-weight:800; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--teal-ink); margin:0 0 14px}
+
+  /* ---- tap targets: every interactive element >= 48px tall ---- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    min-height:56px; padding:15px 26px; border-radius:999px;
+    font-size:18px; font-weight:800; text-decoration:none; color:#fff;
+    background:var(--teal-dk); border:2px solid var(--teal-dk);
+    box-shadow:var(--shadow); max-width:100%; text-align:center;
+  }
+  .btn:active{background:var(--teal-ink);border-color:var(--teal-ink)}
+  .btn-amber{background:var(--amber); border-color:var(--amber); color:#452D02}
+  .btn-ghost{background:transparent; color:#fff; border:2px solid rgba(255,255,255,.55);
+    box-shadow:none; font-weight:700}
+  .btn-outline{background:#fff; color:var(--teal-ink); border:2px solid var(--teal-dk); box-shadow:none}
+  .btn-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:26px}
+
+  /* ---- top bar ---- */
+  .topbar{background:var(--navy-dk); color:#fff; padding:10px 0}
+  .topbar-in{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+  .topbar .where{font-size:13.5px; font-weight:700; color:var(--muted-ink); letter-spacing:.04em}
+  .topbar a.tel{display:inline-flex; align-items:center; min-height:48px; padding:6px 14px;
+    border-radius:10px; color:#fff; text-decoration:none; font-weight:800; font-size:17px;
+    border:1px solid rgba(255,255,255,.3)}
+
+  /* ---- hero ---- */
+  .hero{background:var(--navy); color:#fff; padding:44px 0 50px; position:relative; overflow:hidden}
+  .hero::after{content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(70% 120% at 108% 6%, rgba(0,196,160,.33) 0%, rgba(0,196,160,0) 62%),
+      radial-gradient(60% 100% at -8% 100%, rgba(245,166,35,.20) 0%, rgba(245,166,35,0) 60%);
+    pointer-events:none}
+  .hero-in{position:relative; z-index:1; max-width:820px}
+  .wordmark{display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap}
+  .wordmark .mark{width:54px; height:54px; border-radius:12px; flex:0 0 54px;
+    background:var(--teal-dk); display:grid; place-items:center; box-shadow:var(--shadow)}
+  .wordmark .mark svg{width:31px;height:31px;display:block}
+  .wordmark .name{font-size:19px; font-weight:800; letter-spacing:-.01em; line-height:1.25}
+  .wordmark .name span{display:block; font-size:12px; font-weight:700; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--muted-ink); margin-top:3px}
+  .hero h1{font-size:clamp(29px,6.2vw,49px)}
+  .hero .lede{margin-top:18px; font-size:clamp(17px,2.3vw,20px); color:var(--muted-ink); max-width:62ch}
+  .hero .lede b{color:#fff}
+  .slogan{margin-top:22px; font-size:clamp(17px,2.4vw,21px); font-weight:800; color:var(--teal);
+    letter-spacing:-.01em}
+  .slogan .attrib{display:block; font-size:13px; font-weight:600; letter-spacing:.04em;
+    color:var(--muted-ink); margin-top:6px; text-transform:none}
+  .trust-inline{display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:26px;
+    font-size:14.5px; color:var(--muted-ink); font-weight:600}
+  .trust-inline i{color:#fff; font-style:normal; font-weight:800}
+
+  /* ---- proof strip ---- */
+  .proof{background:var(--teal-dk); color:#fff; padding:26px 0}
+  .proof-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; text-align:center}
+  .proof .n{font-size:clamp(24px,4.6vw,34px); font-weight:800; letter-spacing:-.02em; display:block}
+  .proof .l{font-size:13px; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+    opacity:.94; margin-top:4px; display:block; line-height:1.4}
+
+  /* ---- sections ---- */
+  section{padding:54px 0}
+  .sec-head{max-width:70ch; margin-bottom:34px}
+  .sec-head h2{font-size:clamp(25px,4.2vw,35px)}
+  .sec-head p{margin-top:14px; color:var(--muted); font-size:17.5px}
+
+  /* ---- the two trades ---- */
+  .trades{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+  .trade{background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+    padding:28px 26px; box-shadow:var(--shadow)}
+  .trade .ic{width:46px;height:46px;border-radius:11px;display:grid;place-items:center;margin-bottom:16px}
+  .trade .ic svg{width:26px;height:26px;display:block}
+  .trade.septic .ic{background:#E2F7F2}
+  .trade.plumb .ic{background:var(--amber-bg)}
+  .trade h3{font-size:22px;margin-bottom:6px}
+  .trade .kicker{font-size:12.5px; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:12px}
+  .trade ul{margin:14px 0 0; padding:0; list-style:none}
+  .trade li{position:relative; padding-left:26px; margin-top:10px; color:var(--ink); font-size:16.5px}
+  .trade li::before{content:""; position:absolute; left:2px; top:.62em; width:9px; height:9px;
+    border-radius:2px; background:var(--teal-dk)}
+  .trade.plumb li::before{background:var(--amber)}
+
+  /* ---- licence callout ---- */
+  .lic{background:var(--card); border:1px solid var(--line); border-left:6px solid var(--teal-dk);
+    border-radius:12px; padding:26px 26px; box-shadow:var(--shadow)}
+  .lic .tag{display:inline-flex; align-items:center; gap:8px; background:#E2F7F2; color:var(--teal-ink);
+    font-size:12.5px; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+    padding:7px 13px; border-radius:999px; margin-bottom:14px}
+  .lic h3{font-size:21px; margin-bottom:10px}
+  .lic p{color:var(--muted); font-size:16.5px; margin-top:10px}
+  .lic .src{font-size:14.5px; margin-top:16px; color:var(--muted)}
+  .lic .src a{
+    display:inline-flex; align-items:center; min-height:48px; margin-top:8px;
+    padding:10px 16px; border-radius:10px; background:#E2F7F2; border:1px solid #BEE9DF;
+    font-weight:700; font-size:15px; line-height:1.35; word-break:break-word; text-decoration:none;
+  }
+
+  /* ---- quotes ---- */
+  .quotes{display:grid; grid-template-columns:repeat(auto-fit,minmax(285px,1fr)); gap:18px}
+  figure.q{margin:0; background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+    padding:24px 22px; box-shadow:var(--shadow)}
+  figure.q blockquote{margin:0; font-size:16.5px; line-height:1.6}
+  figure.q blockquote::before{content:"\201C"}
+  figure.q blockquote::after{content:"\201D"}
+  figure.q figcaption{margin-top:14px; font-size:12.5px; font-weight:800; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--muted)}
+  .stars{color:var(--amber); letter-spacing:2px; font-size:15px; margin-bottom:10px}
+
+  /* ---- hours / area ---- */
+  .split{display:grid; grid-template-columns:1.1fr 1fr; gap:28px; align-items:start}
+  table.hours{width:100%; border-collapse:collapse; background:var(--card);
+    border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  table.hours th,table.hours td{padding:13px 18px; text-align:left; font-size:16.5px;
+    border-bottom:1px solid var(--line)}
+  table.hours tr:last-child th,table.hours tr:last-child td{border-bottom:0}
+  table.hours th{font-weight:700; width:52%}
+  table.hours td{text-align:right; font-variant-numeric:tabular-nums; font-weight:700}
+  tr.shut th,tr.shut td{color:#A32222; background:var(--red-bg)}
+  .note{background:var(--amber-bg); border:1px solid #F3E3C4; border-left:5px solid var(--amber);
+    border-radius:12px; padding:20px 22px; color:var(--amber-tx); font-size:16.5px}
+  .addr{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    padding:26px 24px;box-shadow:var(--shadow)}
+  .addr .ln{font-size:18px; font-weight:700; line-height:1.5}
+  .addr .sub{color:var(--muted); font-size:16px; margin-top:8px}
+  .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+  .pill{background:var(--card); border:1px solid var(--line); border-radius:999px;
+    padding:9px 16px; font-size:15px; font-weight:700; color:var(--ink)}
+
+  /* ---- badges ---- */
+  .badges{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .badge{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    padding:22px;box-shadow:var(--shadow)}
+  .badge .t{font-size:18px;font-weight:800}
+  .badge .d{color:var(--muted);font-size:15.5px;margin-top:7px}
+
+  /* ---- closing ---- */
+  .closing{background:var(--navy); color:#fff; padding:56px 0; text-align:center}
+  .closing h2{font-size:clamp(26px,4.6vw,38px); max-width:24ch; margin:0 auto}
+  .closing p{color:var(--muted-ink); margin-top:16px; font-size:18px}
+  .closing .btn-row{justify-content:center}
+  .bignum{display:inline-flex; align-items:center; justify-content:center; min-height:56px;
+    margin-top:24px; font-size:clamp(24px,5.2vw,34px); font-weight:800; letter-spacing:-.01em;
+    color:#fff; text-decoration:none; padding:8px 18px; border-radius:12px;
+    border:1px solid rgba(255,255,255,.3)}
+
+  footer{background:var(--navy-dk); color:var(--muted-ink); padding:30px 0; font-size:14.5px}
+  footer .f-in{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-between;align-items:center}
+  footer a{color:#fff; display:inline-flex; align-items:center; min-height:48px;
+    padding:6px 14px; border-radius:10px; font-weight:800; text-decoration:none;
+    border:1px solid rgba(255,255,255,.3)}
+  .demo{background:var(--amber-bg); color:var(--amber-tx); border-bottom:1px solid #F3E3C4;
+    padding:11px 0; font-size:14px; font-weight:700; text-align:center}
+
+  @media (max-width:860px){ .trades{grid-template-columns:1fr} }
+  @media (max-width:760px){
+    .split{grid-template-columns:1fr}
+    .proof-grid{grid-template-columns:1fr; gap:22px}
+    section{padding:44px 0}
+    .btn{width:100%}
+    .btn-row{gap:12px}
+  }
+  @media (max-width:360px){
+    body{font-size:16px}
+    .wrap{padding:0 16px}
+    .trade,figure.q,.addr,.lic{padding:20px 17px}
+    table.hours th,table.hours td{padding:11px 13px; font-size:15.5px}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo">Sample site &mdash; built as a demonstration. Not published and not indexed.</div>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span class="where">CHICKAMAUGA &middot; WALKER COUNTY, GEORGIA</span>
+    <a class="tel" href="tel:+17063759572" aria-label="Call 7 0 6, 3 7 5, 9 5 7 2">(706)&nbsp;375-9572</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div class="wordmark">
+      <span class="mark" aria-hidden="true">
+        <!-- generic septic-tank / pipe glyph drawn inline. PLACEHOLDER, not their logo (none published). -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2.5" y="8" width="19" height="10.5" rx="2.6"/>
+          <line x1="7.5" y1="8" x2="7.5" y2="5.2"/><line x1="16.5" y1="8" x2="16.5" y2="5.2"/>
+          <circle cx="7.5" cy="4.4" r="1.5"/><circle cx="16.5" cy="4.4" r="1.5"/>
+          <line x1="12" y1="8" x2="12" y2="18.5"/>
+        </svg>
+      </span>
+      <span class="name">Chickamauga Septic &amp; Sewer
+        <span>Septic systems &amp; plumbing &middot; Walker County</span>
+      </span>
+    </div>
+
+    <p class="eyebrow" style="color:var(--teal)">Septic &amp; plumbing</p>
+    <h1>Septic systems and plumbing, done out of a yard on 341.</h1>
+    <p class="lede">We install septic systems, we pump them, and we do the plumbing that runs to them &mdash;
+      for Chickamauga and the rest of Walker County.
+      <b>Certified by the State of Georgia as both a septic installer and a septic pumper.</b></p>
+
+    <p class="slogan">&ldquo;Won&rsquo;t flush &mdash; don&rsquo;t fuss &mdash; call us!&rdquo;
+      <span class="attrib">Our own words, off the side of our truck.</span></p>
+
+    <div class="btn-row">
+      <a class="btn" href="tel:+17063759572">Call (706)&nbsp;375-9572</a>
+      <a class="btn btn-ghost" href="#what">What we do</a>
+    </div>
+
+    <div class="trust-inline">
+      <span><i>26</i> five-star reviews on Google</span>
+      <span><i>Installer &amp; Pumper</i> certified, Georgia DPH</span>
+      <span><i>A+</i> rated by the BBB</span>
+    </div>
+  </div>
+</header>
+
+<div class="proof">
+  <div class="wrap proof-grid">
+    <div><span class="n">26</span><span class="l">Five-star reviews on Google</span></div>
+    <div><span class="n">Installer &amp; Pumper</span><span class="l">Georgia DPH certified &middot; Walker County</span></div>
+    <div><span class="n">A+</span><span class="l">BBB rating &middot; no complaints in 3 years</span></div>
+  </div>
+</div>
+
+<section id="what">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What we do</p>
+      <h2>Two trades, and they meet in your front yard.</h2>
+      <p>Septic and plumbing are different jobs with different rules, and a lot of outfits only do one of
+        them. We do both, which means one phone call whether the trouble is in the house or out in the
+        field lines.</p>
+    </div>
+
+    <div class="trades">
+      <div class="trade septic">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#009C80" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="8.5" width="19" height="10" rx="2.5"/><line x1="7.5" y1="8.5" x2="7.5" y2="5.6"/><line x1="16.5" y1="8.5" x2="16.5" y2="5.6"/><circle cx="7.5" cy="4.8" r="1.4"/><circle cx="16.5" cy="4.8" r="1.4"/></svg></div>
+        <p class="kicker">State-certified side</p>
+        <h3>Septic systems</h3>
+        <p style="color:var(--muted);font-size:16.5px">Georgia certifies septic work by company, and it
+          certifies installing and pumping separately. We hold both.</p>
+        <ul>
+          <li>New septic system installation</li>
+          <li>Septic tank pumping, with our own tanker</li>
+          <li>Field lines &mdash; repair and replacement</li>
+          <li>Tank and lid repairs</li>
+          <li>Grinder pumps and pump chambers</li>
+        </ul>
+      </div>
+
+      <div class="trade plumb">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#B9780F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v6a4 4 0 0 0 4 4h4"/><path d="M20 20v-6a4 4 0 0 0-4-4h-4"/><rect x="2.2" y="2.2" width="4.6" height="4.6" rx="1"/><rect x="17.2" y="17.2" width="4.6" height="4.6" rx="1"/></svg></div>
+        <p class="kicker">In and under the house</p>
+        <h3>Plumbing</h3>
+        <p style="color:var(--muted);font-size:16.5px">The pipe work either side of the wall &mdash; supply
+          coming in, waste going out.</p>
+        <ul>
+          <li>Water lines and fill lines</li>
+          <li>Sewer lines &mdash; clogs and cleaning</li>
+          <li>Drains that won&rsquo;t clear</li>
+          <li>Water leaks and leak detection</li>
+          <li>Grease traps</li>
+          <li>Sump pumps</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn" href="tel:+17063759572">Call about a septic job</a>
+      <a class="btn btn-outline" href="tel:+17063759572">Call about plumbing</a>
+    </div>
+  </div>
+</section>
+
+<section id="licence" style="background:#EEF3F9;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Licensing</p>
+      <h2>You can check our certification yourself.</h2>
+      <p>Georgia does not let just anyone put in a septic system or pump a tank. The Department of Public
+        Health publishes the list of certified companies, county by county, and anybody can read it.</p>
+    </div>
+    <div class="lic">
+      <span class="tag">Georgia DPH &middot; Walker County</span>
+      <h3>Listed as <em>Installer and Pumper</em></h3>
+      <p>Georgia DPH records three certification types &mdash; <b>Installer</b>, <b>Pumper</b>, and
+        <b>Installer and Pumper</b>. Most companies on the Walker County list hold one of the first two.
+        We are listed under the third, which covers both putting a system in and pumping it out.</p>
+      <p>Pumping a septic tank in Georgia also requires a county septage removal permit, so this is not a
+        slogan &mdash; it is a record you can look up.</p>
+      <p class="src">Read it for yourself on the state&rsquo;s own page &mdash; find Walker County, then
+        our name:<br>
+        <a href="https://dph.georgia.gov/environmental-health/onsite-sewage">dph.georgia.gov/environmental-health/onsite-sewage</a></p>
+      <p style="margin-top:20px"><a class="btn btn-outline" href="tel:+17063759572" style="font-size:16.5px">Call (706)&nbsp;375-9572</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">In our customers&rsquo; words</p>
+      <h2>Twenty-six five-star reviews on Google.</h2>
+      <p>Quoted from public Google reviews, exactly as written. Dates only &mdash; we have left our
+        customers&rsquo; names off.</p>
+    </div>
+    <div class="quotes">
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>They did exactly what they came out to do for 1/3 of the price quoted by another
+          company. You could tell they were not after $$, but instead truly wanted to help us solve our
+          problem.</blockquote>
+        <figcaption>Google review &middot; 2026</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>They came and fixed a problem with our field lines that another company had installed
+          wrong &hellip; The owner would not accept payment UNTIL he knew the problem had been resolved and
+          was working correctly</blockquote>
+        <figcaption>Google review &middot; 2023</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>has completed large and small jobs for me on multiple homes. I&rsquo;ve always been
+          pleased with the service they provided and would happily recommend them</blockquote>
+        <figcaption>Google review &middot; 2026</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Good prices very decent and will fix the problem. I only hire them and very satisfied
+          with their service</blockquote>
+        <figcaption>Google review &middot; 2019</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Good people, good work and fair pricing.</blockquote>
+        <figcaption>Google review &middot; 2025</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Excellent work, fair price &amp; great customer service.</blockquote>
+        <figcaption>Google review &middot; 2020</figcaption>
+      </figure>
+    </div>
+    <div class="btn-row">
+      <a class="btn" href="tel:+17063759572">Call (706)&nbsp;375-9572</a>
+    </div>
+  </div>
+</section>
+
+<section id="hours" style="background:#EEF3F9;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Hours</p>
+      <h2>Monday to Friday, eight to five.</h2>
+      <p>The office keeps weekday hours. Worth knowing before you plan your week.</p>
+    </div>
+    <div class="split">
+      <table class="hours">
+        <tbody>
+          <tr><th scope="row">Monday</th><td>8:00 AM &ndash; 5:00 PM</td></tr>
+          <tr><th scope="row">Tuesday</th><td>8:00 AM &ndash; 5:00 PM</td></tr>
+          <tr><th scope="row">Wednesday</th><td>8:00 AM &ndash; 5:00 PM</td></tr>
+          <tr><th scope="row">Thursday</th><td>8:00 AM &ndash; 5:00 PM</td></tr>
+          <tr><th scope="row">Friday</th><td>8:00 AM &ndash; 5:00 PM</td></tr>
+          <tr class="shut"><th scope="row">Saturday</th><td>Closed</td></tr>
+          <tr class="shut"><th scope="row">Sunday</th><td>Closed</td></tr>
+        </tbody>
+      </table>
+      <div class="note">
+        <p><b>Septic work starts with a look at the system.</b></p>
+        <p style="margin-top:12px">Tell us what it is doing &mdash; backing up, standing water over the
+          field lines, a tank that is due &mdash; and roughly when it was last pumped, if you know. It all
+          helps before anybody comes out.</p>
+        <p style="margin-top:16px"><a class="btn btn-outline" href="tel:+17063759572" style="font-size:16.5px">Call (706)&nbsp;375-9572</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Where we are</p>
+      <h2>A yard on South Highway 341.</h2>
+      <p>Not a call centre and not a franchise &mdash; a Walker County yard with our trucks and our
+        equipment in it.</p>
+    </div>
+    <div class="split">
+      <div class="addr">
+        <p class="ln">Chickamauga Septic &amp; Sewer<br>3610 S Highway 341<br>Chickamauga, GA 30707</p>
+        <p class="sub">On GA-341 south of town, near the Cove Road junction. We take credit and debit
+          cards.</p>
+        <p style="margin-top:20px"><a class="btn btn-amber" href="tel:+17063759572">Call before you come by</a></p>
+      </div>
+      <div>
+        <p style="font-weight:800;margin-bottom:14px">Who we come out to</p>
+        <div class="pills">
+          <span class="pill">Chickamauga</span>
+          <span class="pill">Rock Spring</span>
+          <span class="pill">LaFayette</span>
+          <span class="pill">Rossville</span>
+          <span class="pill">Walker County</span>
+        </div>
+        <p style="color:var(--muted);margin-top:18px;font-size:16.5px">Not sure whether you are in the
+          area? Call and ask, and we will tell you straight.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trust" style="background:#EEF3F9;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Why people call us</p>
+      <h2>What you can check before you dial.</h2>
+    </div>
+    <div class="badges">
+      <div class="badge">
+        <p class="t">26 five-star reviews</p>
+        <p class="d">Twenty-six people have given us five stars on Google, over about nine years.</p>
+      </div>
+      <div class="badge">
+        <p class="t">Certified both ways</p>
+        <p class="d">Georgia DPH lists us under Walker County as <em>Installer and Pumper</em> &mdash; both
+          certifications, not one.</p>
+      </div>
+      <div class="badge">
+        <p class="t">A+ with the BBB</p>
+        <p class="d">No complaints filed in the last three years, per the BBB&rsquo;s own profile.</p>
+      </div>
+      <div class="badge">
+        <p class="t">Our own tanker</p>
+        <p class="d">We pump with our own truck. The work is not handed off to somebody else.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <h2>Tell us what it is doing and we will come look at it.</h2>
+    <p>Monday to Friday &mdash; 8 to 5.</p>
+    <a class="bignum" href="tel:+17063759572">(706)&nbsp;375-9572</a>
+    <div class="btn-row">
+      <a class="btn" href="tel:+17063759572">Call now</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap f-in">
+    <span>Chickamauga Septic &amp; Sewer &middot; 3610 S Highway 341, Chickamauga, GA 30707</span>
+    <span><a href="tel:+17063759572">(706)&nbsp;375-9572</a></span>
+  </div>
+</footer>
+
+<!--
+===============================================================================
+ DEMONSTRATION PAGE - Chickamauga Septic & Sewer, Chickamauga GA
+ Built 2026-11-19 from PUBLIC INFORMATION ONLY. The business was NOT contacted:
+ no call, no text, no email, no form, no DM of any kind.
+
+ PERMISSION GATE
+ ---------------
+ This page is an unsolicited sample. It is marked noindex,nofollow, it is not
+ submitted to any search engine, and it carries a visible "sample site" banner.
+ It is not authorised by the business and does not claim to be. If the owner
+ does not want it to exist, it comes down on request, immediately and without
+ argument. Nothing goes live, gets indexed, or gets pointed at his domain
+ without his say-so.
+
+ WHAT IS VERIFIED (sources and method in research.md)
+ ----------------------------------------------------
+ - Name, phone, address, town, county: Google Places (live pull 2026-11-19),
+   AND two non-Google primary sources that carry the same street address and
+   phone - the Georgia Secretary of State corporate record (control 26146730,
+   "Chickamauga Septic & Sewer, LLC", principal office 3610 S. Hwy 341,
+   Chickamauga, Walker County, Active/Compliance) and the BBB profile
+   (3610 S Highway 341, Chickamauga GA 30707-3917). Georgia DPH independently
+   files the company under Walker County.
+ - The trading name "Chickamauga Septic & Sewer" and the phone are also painted
+   on the company's own tanker truck, legible in a public photo.
+ - "Installer and Pumper": read firsthand off the Georgia DPH onsite-sewage
+   table, row 1978 - Walker | Installer and Pumper | Chickamauga Septic and
+   Sewer LLC | (706) 375-9572. Proven to sit inside the Walker County block by
+   reading its neighbouring rows. 44 Walker County companies are listed; only 6
+   carry "Installer and Pumper".
+ - "26 five-star reviews": Google's own star histogram reports 5*:26, 4*:5,
+   3*:1, 2*:1, 1*:8. Independently re-counted by enumerating all 41 review
+   cards individually. Both methods agree; buckets sum to 41, the published
+   total. ONLY the five-star count is used on this page.
+ - BBB A+ and "no complaints in the last 3 years": read off the BBB profile.
+ - Hours: Google Places regularOpeningHours.
+ - Card payments: Google Places paymentOptions.
+ - The slogan: lettered on their own truck ("WON'T FLUSH - DON'T FUSS - CALL
+   US!") and echoed on their own website. Presented as their own words and
+   labelled as such.
+ - Services: their own website (water lines, fill lines, grease traps), their
+   DPH certification type, and the work described in public reviews.
+
+ OMITTED ON PURPOSE - AND WHY
+ ----------------------------
+  1. THE STAR RATING IS NOT ON THIS PAGE. The aggregate is 4.0 across 41
+     reviews. It is not quoted, not rounded, not alluded to, and no device on
+     this page implies an average. The five-star COUNT is a true, published,
+     separately verifiable number and is the only review figure used.
+  2. NO CLAIM ABOUT ANSWERING THE PHONE, RETURNING CALLS, CALLING BACK,
+     VOICEMAIL, OR BEING EASY TO REACH. This is the single most important
+     omission on the page. It is the dominant theme of the negative reviews,
+     and a website is exactly the kind of thing that gets sold as a fix for it.
+     It is not used as an angle anywhere, in any channel.
+  3. NO CLAIM ABOUT PUNCTUALITY, SHOWING UP, OR RELIABILITY. Also a live
+     negative theme. No "on time", no "we show up when we say".
+  4. NO SPEED CLAIM. No "fast", "same day", "prompt", "quick", "right away".
+  5. NO EMERGENCY OR 24/7 CLAIM - even though the company's own website says
+     "24 hours a day / 7 days a week". That self-claim contradicts the Mon-Fri
+     8-5 hours on their Google listing, and it collides with the negative
+     reviews. It is a question for the owner, not a statement for a web page.
+  6. NO WARRANTY, GUARANTEE, OR "DONE RIGHT THE FIRST TIME". Return visits are
+     a negative theme. The one quotation touching payment is a customer's own
+     account of one job, in quotation marks, and is not restated as a promise.
+  7. NO CLAIM ABOUT FRIENDLINESS, COURTESY OR POLITENESS in the page's voice.
+     One reviewer calls the employees rude. Two customer quotations use the
+     words "good people" and "great customer service"; those stay inside the
+     quotation marks as those customers' words.
+  8. NO PHOTOGRAPHS, AND NO IMAGE FILES AT ALL. Exactly two photos exist on the
+     Google listing. Both were contributed by a customer, not the business;
+     both show a customer's private house and yard; one shows a person. There
+     is no owner-posted image anywhere. There is not one IMG tag and not one
+     external request in this file.
+  9. NO LOGO. None is published. The small mark is a generic glyph drawn inline
+     here - a PLACEHOLDER, labelled as such, not their logo.
+ 10. THE PALETTE IS OURS, CHOSEN NOT SAMPLED. No logo and no legible signage
+     exists to sample from. Their tanker is lettered in green; that was NOT
+     used as a source and these colours are not an attempt to match it.
+ 11. NO PERSONAL NAMES. Not the owner's, not an employee's, not a reviewer's.
+     The name gate actually passes - the BBB profile names the owner and the
+     company's own website names two people - but no name is used, because the
+     website naming them dates from a domain registered in 2013 and the current
+     LLC lists a different person again. Customer quotations are attributed by
+     date only. Grep-verified absent from this file.
+ 12. NO FOUNDING YEAR AND NO "YEARS IN BUSINESS". The BBB profile says the
+     business started in 1985; the Georgia LLC was formed 2026-06-25; the
+     domain dates from 2013. Three different dates, no verified founding year,
+     so none is published. "About nine years" in the reviews section describes
+     the span of the Google reviews themselves, which is measured, not claimed.
+ 13. NO ELECTRICAL WORK. The BBB files this business under "Electrician" and
+     lists an alternate name "Chickamauga Plumbing & Electric", but nothing
+     current supports an electrical offering, so none is advertised.
+ 14. NO PLUMBING LICENCE NUMBER. Searched the Georgia Secretary of State
+     Professional Licensing Boards register (Master & Journeyman Plumbers
+     division) by business name and by the only surname there was any basis
+     for. No match tied to this company. Absence of a hit is NOT evidence of
+     being unlicensed - Georgia issues those licences to individuals - so no
+     claim is made either way.
+ 15. NO PRICES, RATES, TRIP CHARGE OR "FREE ESTIMATE". None is published
+     anywhere by the business and none is invented. The price figures in the
+     reviews are customers' accounts of their own jobs and are not repeated as
+     a rate.
+ 16. NO SERVICE-AREA GUARANTEE. The towns listed are Walker County localities
+     offered as the area served, not a verified list of past jobs, and the page
+     invites the reader to ask.
+ 17. NO COMPETITOR IS NAMED. Two reviews name other companies; those names are
+     not reproduced.
+ 18. NO SPEED / PAGESPEED / SEO CLAIM, and no suggestion that their existing
+     website is deficient.
+
+ KNOWN GAPS the owner would need to fill before this were ever a real site:
+ photographs of the yard and the trucks, a logo if one exists, the real service
+ area, whether there is a diagnostic or trip fee, whether weekend and emergency
+ work is actually offered and on what terms, whether anything is guaranteed and
+ for how long, who currently runs the business, and a plumbing licence number
+ if one applies.
+===============================================================================
+-->
+</body>
+</html>
