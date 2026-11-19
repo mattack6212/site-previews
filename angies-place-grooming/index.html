@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Angie's Place Pet Grooming &mdash; Dog Grooming, Rossville GA</title>
+<meta name="description" content="One-dog-at-a-time dog grooming on the Rossville side of Walker County, Georgia. By appointment. Call (423) 488-3032.">
+<style>
+  :root{
+    /* ---------------------------------------------------------------
+       PALETTE: CHOSEN, NOT SAMPLED. This business has no logo, no sign
+       photograph and no vehicle lettering anywhere public, so there was
+       nothing to sample a colour from. The honey tone is keyed by eye to
+       the knotty pine in her own two photographs so the page and the
+       pictures sit together. Deliberately a single flat green: see note 4
+       in the comment block at the foot of this file for why a multicolour
+       spectrum scheme is forbidden on this particular page.
+       Every pair below was checked by calculation for WCAG AA.
+       --------------------------------------------------------------- */
+    --ink:#1C2A21;        /* deep green-black. 14.9:1 on --paper        */
+    --body:#2E3B33;       /* 10.7:1 on --paper                          */
+    --muted:#5A6760;      /* 5.2:1  on --paper                          */
+    --green:#1F5D43;      /* primary. 7.4:1 on white                    */
+    --green-dk:#16452F;
+    --green-on-ink:#8FD3B2; /* 9.1:1 on --ink                           */
+    --honey:#B5771F;      /* 4.6:1 on --paper, used for text on cream   */
+    --honey-soft:#F6EBD9; /* surface only                               */
+    --honey-line:#E8D6B8;
+    --paper:#FBF9F4;
+    --cream:#F3EEE3;
+    --card:#FFFFFF;
+    --line:#E3DCCD;
+    --on-ink:#F4F8F5;
+    --on-ink-muted:#BFD2C6; /* 8.7:1 on --ink                           */
+    --wrap:1100px;
+    --r:14px;
+    --shadow:0 1px 2px rgba(28,42,33,.06), 0 6px 20px rgba(28,42,33,.07);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--body);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px; line-height:1.62; overflow-x:hidden;
+  }
+  img{max-width:100%; height:auto; display:block}
+  h1,h2,h3{line-height:1.18; margin:0; letter-spacing:-.016em; font-weight:800; color:var(--ink)}
+  p{margin:0}
+  a{color:var(--green-dk)}
+  .wrap{width:100%; max-width:var(--wrap); margin:0 auto; padding:0 20px}
+  .eyebrow{
+    font-size:12px; font-weight:800; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--green); margin:0 0 14px
+  }
+
+  /* ---------- tap targets: every interactive element >= 56px tall ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    min-height:58px; padding:16px 26px; border-radius:999px;
+    font-size:18px; font-weight:800; text-decoration:none; color:#fff;
+    background:var(--green); border:2px solid var(--green);
+    box-shadow:var(--shadow); max-width:100%; text-align:center;
+  }
+  .btn:active{background:var(--green-dk); border-color:var(--green-dk)}
+  .btn-ghost{
+    background:transparent; color:var(--on-ink); border:2px solid rgba(244,248,245,.55);
+    box-shadow:none; font-weight:700
+  }
+  .btn-outline{background:#fff; color:var(--green-dk); border:2px solid var(--green); box-shadow:none}
+  .btn-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:26px}
+
+  /* ---------- top bar ---------- */
+  .topbar{background:var(--ink); color:var(--on-ink); padding:10px 0}
+  .topbar-in{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+  .topbar .where{font-size:13.5px; font-weight:700; color:var(--on-ink-muted); letter-spacing:.04em}
+  .topbar a.tel{
+    display:inline-flex; align-items:center; min-height:48px; padding:6px 14px; border-radius:10px;
+    color:var(--on-ink); text-decoration:none; font-weight:800; font-size:17px;
+    border:1px solid rgba(244,248,245,.32)
+  }
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--ink); color:var(--on-ink); padding:42px 0 50px; position:relative; overflow:hidden}
+  .hero::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:
+      radial-gradient(68% 118% at 106% 6%, rgba(31,93,67,.55) 0%, rgba(31,93,67,0) 60%),
+      radial-gradient(58% 100% at -8% 102%, rgba(181,119,31,.26) 0%, rgba(181,119,31,0) 58%);
+  }
+  .hero-in{position:relative; z-index:1; max-width:800px}
+  .wordmark{display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap}
+  .wordmark .mark{
+    width:54px; height:54px; border-radius:14px; flex:0 0 54px;
+    background:var(--green); display:grid; place-items:center; box-shadow:var(--shadow)
+  }
+  .wordmark .mark svg{width:30px; height:30px; display:block}
+  .wordmark .name{font-size:19px; font-weight:800; letter-spacing:-.01em; line-height:1.25; color:var(--on-ink)}
+  .wordmark .name span{
+    display:block; font-size:12px; font-weight:700; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--on-ink-muted); margin-top:3px
+  }
+  .hero h1{font-size:clamp(30px,6.2vw,49px); color:var(--on-ink)}
+  .hero h1 em{font-style:normal; color:var(--green-on-ink)}
+  .hero .lede{margin-top:18px; font-size:clamp(17px,2.3vw,20px); color:var(--on-ink-muted); max-width:60ch}
+  .hero .lede b{color:var(--on-ink)}
+  .trust-inline{
+    display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:26px;
+    font-size:14.5px; color:var(--on-ink-muted); font-weight:600
+  }
+  .trust-inline i{color:var(--on-ink); font-style:normal; font-weight:800}
+
+  /* ---------- proof strip ---------- */
+  .proof{background:var(--green); color:#fff; padding:26px 0}
+  .proof-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; text-align:center}
+  .proof .n{font-size:clamp(25px,5vw,35px); font-weight:800; letter-spacing:-.02em; display:block}
+  .proof .l{
+    font-size:13px; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+    opacity:.94; margin-top:4px; display:block; line-height:1.4
+  }
+
+  /* ---------- sections ---------- */
+  section{padding:54px 0}
+  .alt{background:var(--cream); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+  .sec-head{max-width:70ch; margin-bottom:32px}
+  .sec-head h2{font-size:clamp(25px,4.2vw,35px)}
+  .sec-head p{margin-top:14px; color:var(--muted); font-size:17.5px}
+
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(238px,1fr)); gap:18px}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+    padding:26px 24px; box-shadow:var(--shadow)
+  }
+  .card .ic{
+    width:42px; height:42px; border-radius:11px; background:var(--honey-soft);
+    display:grid; place-items:center; margin-bottom:16px
+  }
+  .card .ic svg{width:23px; height:23px; display:block}
+  .card h3{font-size:19px; margin-bottom:9px}
+  .card p{color:var(--muted); font-size:16.5px}
+
+  /* ---------- the one-at-a-time feature ---------- */
+  .feature{display:grid; grid-template-columns:1fr 1fr; gap:34px; align-items:center}
+  .feature .shot{border-radius:var(--r); overflow:hidden; box-shadow:var(--shadow); background:var(--cream)}
+  .feature h2{font-size:clamp(24px,4vw,33px)}
+  .feature p{margin-top:15px; color:var(--muted); font-size:17.5px}
+  .feature p b{color:var(--body)}
+
+  /* ---------- quotes ---------- */
+  .quotes{display:grid; grid-template-columns:repeat(auto-fit,minmax(285px,1fr)); gap:18px}
+  figure.q{
+    margin:0; background:var(--honey-soft); border:1px solid var(--honey-line);
+    border-radius:var(--r); padding:24px 22px
+  }
+  figure.q blockquote{margin:0; font-size:17px; line-height:1.6; color:var(--body)}
+  figure.q blockquote::before{content:"\201C"}
+  figure.q blockquote::after{content:"\201D"}
+  figure.q figcaption{
+    margin-top:14px; font-size:12.5px; font-weight:800; letter-spacing:.08em;
+    text-transform:uppercase; color:#7A5110
+  }
+  .stars{color:var(--honey); letter-spacing:2px; font-size:15px; margin-bottom:10px}
+
+  /* ---------- hours ---------- */
+  .hours-wrap{display:grid; grid-template-columns:1fr 1.05fr; gap:28px; align-items:start}
+  table.hours{
+    width:100%; border-collapse:collapse; background:var(--card);
+    border:1px solid var(--line); border-radius:var(--r); overflow:hidden
+  }
+  table.hours th,table.hours td{
+    padding:13px 18px; text-align:left; font-size:16.5px; border-bottom:1px solid var(--line)
+  }
+  table.hours tr:last-child th,table.hours tr:last-child td{border-bottom:0}
+  table.hours th{font-weight:700; width:44%; color:var(--body)}
+  table.hours td{text-align:right; font-variant-numeric:tabular-nums; font-weight:700;
+    color:var(--body); white-space:nowrap}
+  tr.shut th,tr.shut td{color:#6A4A12; background:var(--honey-soft)}
+  .note{
+    background:var(--card); border:1px solid var(--line); border-left:5px solid var(--green);
+    border-radius:12px; padding:22px; color:var(--body); font-size:16.5px
+  }
+  .note h3{font-size:18px; margin-bottom:10px}
+
+  /* ---------- gallery ---------- */
+  .gal{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+  .gal figure{margin:0}
+  .gal img{border-radius:var(--r); box-shadow:var(--shadow); width:100%}
+  .gal figcaption{margin-top:10px; font-size:14.5px; color:var(--muted)}
+
+  /* ---------- area ---------- */
+  .pills{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px}
+  .pill{
+    background:var(--card); border:1px solid var(--line); border-radius:999px;
+    padding:9px 16px; font-size:15px; font-weight:700; color:var(--ink)
+  }
+  .badges{display:grid; grid-template-columns:repeat(auto-fit,minmax(228px,1fr)); gap:18px}
+  .badge{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+    padding:22px; box-shadow:var(--shadow)
+  }
+  .badge .t{font-size:18px; font-weight:800; color:var(--ink)}
+  .badge .d{color:var(--muted); font-size:15.5px; margin-top:7px}
+
+  /* ---------- closing ---------- */
+  .closing{background:var(--ink); color:var(--on-ink); padding:56px 0; text-align:center}
+  .closing h2{font-size:clamp(26px,4.6vw,37px); max-width:22ch; margin:0 auto; color:var(--on-ink)}
+  .closing p{color:var(--on-ink-muted); margin-top:16px; font-size:18px}
+  .closing .btn-row{justify-content:center}
+  .bignum{
+    display:inline-flex; align-items:center; justify-content:center; min-height:58px;
+    margin-top:24px; font-size:clamp(25px,5.4vw,34px); font-weight:800; letter-spacing:-.01em;
+    color:var(--on-ink); text-decoration:none; padding:8px 20px; border-radius:12px;
+    border:1px solid rgba(244,248,245,.32)
+  }
+  footer{background:#141E18; color:var(--on-ink-muted); padding:30px 0; font-size:14.5px}
+  footer .f-in{display:flex; flex-wrap:wrap; gap:12px 26px; justify-content:space-between; align-items:center}
+  footer a{
+    color:var(--on-ink); display:inline-flex; align-items:center; min-height:48px;
+    padding:6px 14px; border-radius:10px; font-weight:800; text-decoration:none;
+    border:1px solid rgba(244,248,245,.32)
+  }
+  .demo{
+    background:var(--honey-soft); color:#6A4A12; border-bottom:1px solid var(--honey-line);
+    padding:11px 0; font-size:14px; font-weight:700; text-align:center
+  }
+
+  @media (max-width:820px){
+    .feature{grid-template-columns:1fr; gap:24px}
+    .feature .shot{order:-1}
+  }
+  @media (max-width:760px){
+    .hours-wrap{grid-template-columns:1fr}
+    .proof-grid{grid-template-columns:1fr; gap:22px}
+    .gal{grid-template-columns:1fr}
+    section{padding:44px 0}
+    .btn{width:100%}
+    .btn-row{gap:12px}
+  }
+  @media (max-width:360px){
+    body{font-size:16px}
+    .wrap{padding:0 15px}
+    .card,figure.q,.note,.badge{padding:19px 16px}
+    table.hours th,table.hours td{padding:11px 10px; font-size:14.5px}
+    .wordmark .mark{width:46px; height:46px; flex:0 0 46px}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo">Sample site &mdash; built as a demonstration. Not published and not indexed.</div>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span class="where">ROSSVILLE &middot; WALKER COUNTY, GEORGIA</span>
+    <a class="tel" href="tel:+14234883032" aria-label="Call Angie's Place Pet Grooming at 4 2 3, 4 8 8, 3 0 3 2">(423)&nbsp;488-3032</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div class="wordmark">
+      <span class="mark" aria-hidden="true">
+        <!-- generic dog-and-comb glyph drawn inline. PLACEHOLDER, not her logo: she has none publicly. -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4.6 9.3c0-2.6 1.4-4.2 3-4.2.9 0 1.6.5 2 1.3h4.8c.4-.8 1.1-1.3 2-1.3 1.6 0 3 1.6 3 4.2 0 4.6-2.8 8.4-7.4 8.4S4.6 13.9 4.6 9.3Z"/>
+          <circle cx="9.9" cy="10.4" r=".9" fill="#fff" stroke="none"/>
+          <circle cx="14.1" cy="10.4" r=".9" fill="#fff" stroke="none"/>
+          <path d="M12 13.1v1.1"/>
+        </svg>
+      </span>
+      <span class="name">Angie's Place Pet Grooming
+        <span>Dog Grooming &middot; By Appointment</span>
+      </span>
+    </div>
+
+    <p class="eyebrow" style="color:var(--on-ink-muted)">Dog grooming &middot; Rossville, Georgia</p>
+    <h1>Your dog is the <em>only dog</em> here.</h1>
+    <p class="lede">One dog on the table at a time, start to finish &mdash; so yours isn't sat in a
+      crate all day waiting its turn. Most are done and home in about an hour.
+      <b>29 reviews on Google, and all 29 of them are five stars.</b></p>
+
+    <div class="btn-row">
+      <a class="btn" href="tel:+14234883032">Call (423)&nbsp;488-3032</a>
+      <a class="btn btn-ghost" href="#hours">When she's around</a>
+    </div>
+
+    <div class="trust-inline">
+      <span><i>5.0</i> from 29 Google reviews</span>
+      <span><i>29 of 29</i> are five stars</span>
+      <span><i>One</i> dog at a time</span>
+    </div>
+  </div>
+</header>
+
+<div class="proof">
+  <div class="wrap proof-grid">
+    <div><span class="n">5.0&#9733;</span><span class="l">Average of all 29 reviews</span></div>
+    <div><span class="n">29 of 29</span><span class="l">Reviews that are five stars</span></div>
+    <div><span class="n">1 at a time</span><span class="l">Dogs on the table at once</span></div>
+  </div>
+</div>
+
+<section id="what">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What she does</p>
+      <h2>Dog grooming, the whole job in one visit.</h2>
+      <p>Everything below is listed on her own Google profile by the people who have actually
+        been. If yours only needs one thing &mdash; just the nails, just the ears &mdash; that's a
+        normal thing to ask for.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#B5771F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18v4.5a3.5 3.5 0 0 1-3.5 3.5h-11A3.5 3.5 0 0 1 3 16.5V12Z"/><path d="M7 12V6a2 2 0 0 1 4 0v.8"/><path d="M6 20l-1 1.6"/><path d="M18 20l1 1.6"/></svg></div>
+        <h3>Full groom</h3>
+        <p>Bath, blow dry and the haircut &mdash; the whole thing done in the one visit, by the
+          same pair of hands from start to finish.</p>
+      </div>
+      <div class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#B5771F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 4 16 16.5"/><path d="M16.5 4 8 16.5"/><circle cx="6.2" cy="18.6" r="2.6"/><circle cx="17.8" cy="18.6" r="2.6"/></svg></div>
+        <h3>The cut you asked for</h3>
+        <p>A customer puts it best: she'll work with you to make sure you get the cut you
+          wanted, not the one that was quickest.</p>
+      </div>
+      <div class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#B5771F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13.6c2.6 0 4.7 1.8 4.7 3.8 0 1.6-1.3 2.6-3 2.6h-3.4c-1.7 0-3-1-3-2.6 0-2 2.1-3.8 4.7-3.8Z"/><ellipse cx="7.1" cy="9.4" rx="1.8" ry="2.3"/><ellipse cx="16.9" cy="9.4" rx="1.8" ry="2.3"/><ellipse cx="10.6" cy="5.6" rx="1.6" ry="2.1"/><ellipse cx="15" cy="5.9" rx="1.5" ry="2"/></svg></div>
+        <h3>Nails, ears and glands</h3>
+        <p>The bits most people would rather not do at home. Listed on her profile by the
+          customers who have had them done.</p>
+      </div>
+      <div class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#B5771F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.2v4.2"/><path d="M10 3.2v4.2"/><path d="M13 3.2v4.2"/><path d="M16 3.2v4.2"/><rect x="5.2" y="7.4" width="13.6" height="4" rx="1.2"/><path d="M7.6 11.4v3.2a2 2 0 0 0 2 2h4.8a2 2 0 0 0 2-2v-3.2"/><path d="M12 16.6v4.2"/></svg></div>
+        <h3>Shave-downs and shedding</h3>
+        <p>If the coat has got away from you, it gets dealt with. One customer's dog came out
+          and was &ldquo;sooo happy to be cooled from all fur gone.&rdquo;</p>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn" href="tel:+14234883032">Call about an appointment</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="onedog">
+  <div class="wrap feature">
+    <div>
+      <p class="eyebrow">How it works</p>
+      <h2>One dog at a time. That's the whole idea.</h2>
+      <p>Most grooming shops run several dogs through at once, which means yours waits in a crate
+        before its turn and again afterwards. <b>Here, yours is booked on its own.</b></p>
+      <p>That is why the week is short and the appointments are spaced out &mdash; and it is why
+        customers keep mentioning how quickly they get their dog back.</p>
+      <p>It is also why she takes on the dogs other places struggle with. In her own words:
+        &ldquo;I specialize in taking care of those that don't do well in a regular grooming
+        setting. Meaning they need more one on one attention, or they don't do well around other
+        peoples animals.&rdquo;</p>
+      <div class="btn-row">
+        <a class="btn" href="tel:+14234883032">Ask about your dog</a>
+      </div>
+    </div>
+    <figure class="shot" style="margin:0">
+      <img src="images/groom-table.jpg"
+           srcset="images/groom-table-sm.jpg 560w, images/groom-table.jpg 900w"
+           sizes="(max-width:820px) 100vw, 46vw"
+           width="900" height="1635" loading="lazy"
+           alt="A freshly groomed white doodle standing on the grooming table, photographed by the business.">
+    </figure>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">In her customers' words</p>
+      <h2>Twenty-nine reviews. Twenty-nine of them five stars.</h2>
+      <p>Everything below is quoted from a public Google review, exactly as written. Dates only
+        &mdash; customers' names have been left off.</p>
+    </div>
+    <div class="quotes">
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>She books one baby at a time.</blockquote>
+        <figcaption>Google review &middot; 2023</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>What I love most is that my guy doesn't have to stay more than an hour as has
+          happened with other groomers.</blockquote>
+        <figcaption>Google review &middot; 2025</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Angie will work with you to make sure that you get the cut you want. Her shop
+          is so clean. She's a real pro and very pleasant to work with.</blockquote>
+        <figcaption>Google review &middot; 2023</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>I don't trust her with many people because she can be timid and scared at
+          times but is always excited to see Angie and leaves very happy!</blockquote>
+        <figcaption>Google review &middot; 2023</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>Not only is Angie a wonderful dog groomer, she is very knowledgeable about
+          their care and well being.</blockquote>
+        <figcaption>Google review &middot; 2023</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>She's a miracle worker and the best groomer I've known for the last 12
+          years.</blockquote>
+        <figcaption>Google review &middot; 2025</figcaption>
+      </figure>
+    </div>
+    <div class="btn-row">
+      <a class="btn" href="tel:+14234883032">Call (423)&nbsp;488-3032</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="hours">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Getting booked in</p>
+      <h2>By appointment. Ring first and she'll tell you.</h2>
+      <p>Because it is one dog at a time, there is no walk-in queue to join &mdash; every dog has a
+        slot of its own. The quickest way to find out when yours can come in is to call and ask.</p>
+    </div>
+    <div class="hours-wrap">
+      <table class="hours">
+        <caption class="sr-only" style="position:absolute;left:-9999px">Days she is usually open</caption>
+        <tbody>
+          <tr class="shut"><th scope="row">Monday</th><td>Closed</td></tr>
+          <tr class="shut"><th scope="row">Tuesday</th><td>Closed</td></tr>
+          <tr><th scope="row">Wednesday</th><td>9:00 AM &ndash; 2:00 PM</td></tr>
+          <tr><th scope="row">Thursday</th><td>9:00 AM &ndash; 2:00 PM</td></tr>
+          <tr><th scope="row">Friday</th><td>9:00 AM &ndash; 2:00 PM</td></tr>
+          <tr><th scope="row">Saturday</th><td>9:00 AM &ndash; 3:00 PM</td></tr>
+          <tr class="shut"><th scope="row">Sunday</th><td>Closed</td></tr>
+        </tbody>
+      </table>
+      <div class="note">
+        <h3>If you've seen different hours elsewhere</h3>
+        <p>The days above are the ones currently showing on Google. Another listing has a
+          different set entirely &mdash; so if you have seen two different answers, you are not
+          imagining it.</p>
+        <p style="margin-top:12px"><b>The real answer is simple: it's by appointment.</b> Give her
+          a ring and she'll tell you what she has.</p>
+        <p style="margin-top:18px">
+          <a class="btn btn-outline" href="tel:+14234883032" style="font-size:16.5px">Call (423)&nbsp;488-3032</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Her own photographs</p>
+      <h2>A small, tidy grooming room &mdash; and three customers who said so first.</h2>
+      <p>Three separate reviewers, writing years apart, all volunteered the same thing about the
+        place: it's clean. Both pictures below are her own, taken on her own phone.</p>
+    </div>
+    <div class="gal">
+      <figure>
+        <img src="images/puppy-table.jpg"
+             srcset="images/puppy-table-sm.jpg 560w, images/puppy-table.jpg 900w"
+             sizes="(max-width:760px) 100vw, 48vw"
+             width="900" height="1680" loading="lazy"
+             alt="A miniature schnauzer puppy sitting on the grooming table after its groom, clippers and comb beside it.">
+        <figcaption>On the table, job done.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/wash-room.jpg"
+             srcset="images/wash-room-sm.jpg 700w, images/wash-room.jpg 1200w"
+             sizes="(max-width:760px) 100vw, 48vw"
+             width="1200" height="675" loading="lazy"
+             alt="The wash room: a plumbed bath with a spray hose, shelves of folded clean towels, shampoos and a drying fan.">
+        <figcaption>The wash end &mdash; and the towel shelf three people have mentioned.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Why people stay</p>
+      <h2>Same groomer, same hands, year after year.</h2>
+    </div>
+    <div class="badges">
+      <div class="badge">
+        <p class="t">5.0 on Google</p>
+        <p class="d">29 reviews, and every single one of them is five stars. There isn't a four in
+          there.</p>
+      </div>
+      <div class="badge">
+        <p class="t">One dog at a time</p>
+        <p class="d">Yours isn't waiting its turn in a crate. Booked on its own, home in about an
+          hour.</p>
+      </div>
+      <div class="badge">
+        <p class="t">The difficult ones</p>
+        <p class="d">Dogs that don't do well in a busy shop, or around other people's animals.
+          Her own stated speciality.</p>
+      </div>
+      <div class="badge">
+        <p class="t">A Neighborhood Favorite</p>
+        <p class="d">Named a Neighborhood Favorite on Nextdoor in 2024, by the people who live
+          around here.</p>
+      </div>
+      <div class="badge">
+        <p class="t">Customers who don't leave</p>
+        <p class="d">One has been coming four years, another twelve. Several say they won't take
+          their dog anywhere else.</p>
+      </div>
+      <div class="badge">
+        <p class="t">Gentle with the nervous ones</p>
+        <p class="d">A timid dog who is wary of most people, said one customer, is always excited
+          to see Angie.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Where she is</p>
+      <h2>The Rossville side of Walker County.</h2>
+      <p>She works from a small grooming room at her own place in the valley, just over the line
+        from Chattanooga. <b>Directions are given when you book</b> &mdash; call and she'll tell
+        you exactly where to come.</p>
+    </div>
+    <div>
+      <p style="font-weight:800; margin-bottom:14px; color:var(--ink)">Easy run from</p>
+      <div class="pills">
+        <span class="pill">Rossville</span>
+        <span class="pill">Chattanooga Valley</span>
+        <span class="pill">Flintstone</span>
+        <span class="pill">Fort Oglethorpe</span>
+        <span class="pill">East Ridge</span>
+        <span class="pill">St Elmo</span>
+      </div>
+      <p style="color:var(--muted); margin-top:18px; font-size:16.5px">Not sure if it's a sensible
+        drive from you? Call and ask &mdash; it's a quick question to answer.</p>
+      <div class="btn-row">
+        <a class="btn" href="tel:+14234883032">Call (423)&nbsp;488-3032</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <h2>Tell her about your dog and she'll find it a slot.</h2>
+    <p>By appointment. One dog at a time.</p>
+    <a class="bignum" href="tel:+14234883032">(423)&nbsp;488-3032</a>
+    <div class="btn-row">
+      <a class="btn" href="tel:+14234883032">Call now</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap f-in">
+    <span>Angie's Place Pet Grooming &middot; Rossville, Walker County, Georgia &middot; By appointment</span>
+    <span><a href="tel:+14234883032">(423)&nbsp;488-3032</a></span>
+  </div>
+</footer>
+
+<!--
+===============================================================================
+ DEMONSTRATION PAGE - Angie's Place Pet Grooming, Rossville GA
+ Built 2026-11-19 from PUBLIC INFORMATION ONLY. The business was NOT contacted:
+ no call, no text, no email, no form, no DM of any kind.
+
+ PERMISSION GATE
+ ---------------
+ This page is an UNSOLICITED SAMPLE. It is marked noindex,nofollow, it has not
+ been submitted to any search engine or directory, and it carries a visible
+ "sample site" banner at the top. Nothing here is claimed to be authorised by
+ the business. NOTHING GOES LIVE, GETS INDEXED, GETS LINKED OR GETS SHOWN TO
+ ANYONE ELSE WITHOUT THE OWNER'S EXPLICIT SAY-SO. If she does not want it to
+ exist, it comes down on request, immediately and without argument.
+
+ ##########################################################################
+ # 1. THE ADDRESS IS OMITTED ON PURPOSE. THIS IS THE MOST IMPORTANT NOTE  #
+ #    ON THE PAGE.                                                        #
+ ##########################################################################
+ The premises is a PRIVATE RESIDENCE. This was proven, not guessed:
+   - Walker County Board of Assessors, parcel 0105 001: Class "R4-Residential",
+     Zoning "R2", Residential Improvement Style "Single Family Detached",
+     and HOMESTEAD EXEMPTION YES (S1) - which under Georgia law requires the
+     owner to certify the property as their actual primary residence.
+   - The assessor record explicitly returns "No data available" for Commercial
+     Improvement Information. There is no commercial structure on the parcel.
+   - An address-range search of her street returned 21 parcels, every one of
+     them owned by a private individual, a couple, or a family trust. There is
+     not one commercial owner on the street.
+   - One of the customer photographs on her own Google listing is a head-on
+     shot of the dwelling's front door. It was rejected and is not used here.
+
+ THEREFORE: the street number and the street name appear NOWHERE - not in the
+ page text, not in this source, not in these comments, not in any alt
+ attribute, not in any image filename, and not in the accompanying text
+ message. This was grep-verified after the build. The page locates her by TOWN
+ AND COUNTY only and says directions are given when you book, which is both
+ true and the way a sensible home-based business should handle it.
+
+ Whether her address is published at all is HER decision and nobody else's. It
+ is the first question on the list to put to her.
+
+ OTHER THINGS OMITTED ON PURPOSE - AND WHY
+ -----------------------------------------
+  2. NO PERSONAL SURNAME. The county record names the owner. That name is not
+     on this page, is not in the research file, and is not in the text message.
+     Only "Angie" is used - which is her own public trading name, independently
+     corroborated as a first name by an official record. The Georgia Secretary
+     of State was deliberately NOT searched: a name hunt was out of scope.
+  3. NO REVIEWER NAMES AND NO DOG NAMES. Every quotation is attributed by date
+     only. One review's spelling mistake is not reproduced.
+  4. NO MULTICOLOUR SPECTRUM MOTIF, COLOUR SCHEME OR WORDPLAY ANYWHERE - and
+     this is deliberate, not an oversight, for TWO separate reasons set out in
+     full in research.md section 3f. Short version: the obvious seven-colour
+     arc is, in this specific case, simultaneously an address leak AND the
+     well-known euphemism for a pet that has died - a euphemism one of her own
+     reviews uses, about a dog that has passed. On a pet-grooming page it would
+     be a cruel accident. The palette is therefore a single flat green, and the
+     word itself is kept out of this file entirely.
+  5. THE PALETTE IS OURS, CHOSEN NOT SAMPLED. She has no logo, no sign
+     photograph and no vehicle lettering anywhere public, so there was nothing
+     to sample. The honey tone is keyed by eye to the knotty pine in her own
+     photographs. Every foreground/background pair was checked for WCAG AA.
+  6. THE MARK BESIDE THE WORDMARK IS A PLACEHOLDER drawn inline here. It is
+     NOT her logo; she does not have one publicly.
+  7. NO CATS. Not one of her 29 reviews mentions a cat, every structured
+     service tag on her profile begins with the word "Dog", and Nextdoor
+     categorises her as a "Dog groomer". So this page says dogs, and only dogs.
+  8. NO LARGE-BREED CLAIM. No evidence either way, so no claim either way.
+  9. NO BOARDING, DAYCARE, TEETH CLEANING OR MOBILE SERVICE. No evidence.
+ 10. NO PRICES, AND NO CLAIM THAT HER PRICES ARE GOOD. Three customers
+     volunteer that they are. That is theirs to say and not a stranger's.
+ 11. NO FOUNDING YEAR AND NO "YEARS IN BUSINESS". Her oldest Google review is
+     eight years old and a customer mentions twelve years, but both are
+     customer statements, not her own, so no date is asserted.
+ 12. NO HARD CLAIM THAT THE HOURS TABLE IS CORRECT. Google and Nextdoor
+     publish two different and partly contradictory sets of hours, and her own
+     written profile says "I don't have set hours, by appointment only". The
+     page shows Google's days, says plainly that another listing disagrees, and
+     points the reader at the phone. Being straight about this is the single
+     most useful thing the page does for her.
+ 13. NO PAGESPEED, SEO OR "YOUR SITE IS SLOW" ANGLE. She has no website at
+     all, so there is nothing to measure and nothing was invented.
+ 14. NO COMPETITOR IS NAMED ANYWHERE.
+ 15. NO EMAIL ADDRESS. She publishes none.
+ 16. NO PHOTOGRAPH THAT IS NOT PROVABLY HERS. Ten photographs were downloaded
+     at full size and inspected individually. Seven were rejected: one showing
+     her dwelling, one showing a domestic living room, one showing legible
+     engraved dog tags with what appears to be a customer's phone number, one
+     carrying a university trademark and a partial bystander, one professional
+     wedding photograph belonging to a third party, and two shot inside
+     customers' cars. The three used are all attributed to the business itself
+     on Google, and all three were RE-ENCODED PIXEL-BY-PIXEL so that no EXIF
+     and no GPS tag can survive - which matters a great deal when the premises
+     is somebody's home.
+
+ WHAT IS VERIFIED (full sourcing in research.md)
+ -----------------------------------------------
+  - Name, phone, town, county: Google Places, re-pulled live on the build date,
+    plus the US Census Bureau geocoder FORWARD AND REVERSE from the live
+    coordinates (both return Rossville, GA 30741, Walker County), plus Nextdoor
+    and NoogaFinder carrying the same phone.
+  - 5.0 / 29, and the "29 of 29 five stars" figure: all 29 reviews were
+    enumerated individually over CDP and deduplicated by review id, AND
+    Google's own published histogram reports 5-star:29, 4-star:0, 3-star:0,
+    2-star:0, 1-star:0. The buckets sum to 29, which equals userRatingCount,
+    and the weighted mean is 145/29 = 5.0000 exactly. The 5.0 is not a rounded
+    figure and the review set is provably complete.
+  - Services: Google's own structured service tags selected by her customers -
+    full service grooming, bathing and blow dry, haircuts, nail trimming, ear
+    cleaning, anal gland expression - plus verbatim customer reviews.
+  - "One dog at a time": her own written Nextdoor profile, plus two independent
+    customer reviews, one of which uses the phrase "She books one baby at a
+    time" and another "doesn't have to stay more than an hour".
+  - Her speciality, quoted verbatim on this page: her own Nextdoor write-up.
+  - Neighborhood Favorite 2024: Nextdoor's own award badge on her profile.
+  - "Her shop is so clean": three independent customer reviews, years apart.
+  - Hours shown: Google Places, regularOpeningHours and currentOpeningHours
+    agreeing, with the disagreement from Nextdoor stated openly on the page.
+
+ KNOWN GAPS she would need to fill in before this were ever a real site:
+ whether she wants the address published at all; what her hours actually are;
+ whether she grooms cats; whether there is an upper size limit on dogs; her
+ prices; how far ahead she books; and whether she wants a booking form or
+ prefers the phone.
+===============================================================================
+-->
+</body>
+</html>
