@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Independent All &rsquo;round Maintenance LLC &mdash; Home Repair &amp; Remodeling, Rossville GA</title>
+<meta name="description" content="One call for repairs, remodeling, painting, flooring, decks and more in Rossville, Georgia. Call (423) 508-7866.">
+<style>
+  :root{
+    /* Palette sampled from the business's OWN assets:
+       --ink / --paper   : their Facebook profile mark, a black line-art "IAM"
+                           monogram on white. Their brand is monochrome.
+       --timber / --sand : the pressure-treated lumber and fresh decking in
+                           their own deck photograph (raw/photos/p2.jpg). */
+    --ink:#141518; --ink-2:#2B2D31; --ink-3:#5A5E66;
+    --paper:#FFFFFF; --paper-2:#F6F4F1; --paper-3:#EDE9E3;
+    --line:#DED8D0; --line-2:#C9C1B6;
+    --timber:#7B5D41; --timber-dk:#554233; --timber-ink:#3D2F23;
+    --sand:#E7D9BF; --sand-bg:#FBF6EC;
+    --wrap:1120px; --r:12px;
+    --shadow:0 1px 2px rgba(20,21,24,.06), 0 6px 22px rgba(20,21,24,.09);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px; line-height:1.62; overflow-x:hidden;
+  }
+  img{max-width:100%; height:auto; display:block}
+  h1,h2,h3{line-height:1.17; margin:0; letter-spacing:-.017em; font-weight:800}
+  p{margin:0}
+  a{color:var(--ink)}
+  .wrap{width:100%; max-width:var(--wrap); margin:0 auto; padding:0 20px}
+  .eyebrow{font-size:12px; font-weight:800; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--timber-ink); margin:0 0 14px}
+  .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0}
+
+  /* ---- every interactive element is >= 56px tall ---- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    min-height:58px; padding:15px 26px; border-radius:999px;
+    font-size:18px; font-weight:800; text-decoration:none; color:var(--paper);
+    background:var(--ink); border:2px solid var(--ink);
+    box-shadow:var(--shadow); max-width:100%; text-align:center;
+  }
+  .btn:active{background:#000; border-color:#000}
+  .btn-timber{background:var(--timber-dk); border-color:var(--timber-dk); color:var(--paper)}
+  .btn-timber:active{background:var(--timber-ink); border-color:var(--timber-ink)}
+  .btn-ghost{background:transparent; color:var(--paper); border:2px solid rgba(255,255,255,.6);
+    box-shadow:none; font-weight:700}
+  .btn-outline{background:var(--paper); color:var(--ink); border:2px solid var(--ink); box-shadow:none}
+  .btn-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:26px}
+
+  /* ---- bars ---- */
+  .demo{background:var(--sand-bg); color:var(--timber-ink); border-bottom:1px solid var(--sand);
+    padding:11px 0; font-size:14px; font-weight:700; text-align:center}
+  .topbar{background:var(--ink); color:var(--paper); padding:10px 0}
+  .topbar-in{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+  .topbar .where{font-size:13.5px; font-weight:700; color:#BFC2C7; letter-spacing:.04em}
+  .topbar a.tel{display:inline-flex; align-items:center; min-height:56px; padding:6px 14px;
+    border-radius:10px; color:var(--paper); text-decoration:none; font-weight:800; font-size:17px;
+    border:1px solid rgba(255,255,255,.32)}
+
+  /* ---- hero ---- */
+  .hero{background:var(--ink); color:var(--paper); padding:40px 0 0}
+  .hero h1{font-size:clamp(30px,6.4vw,54px); color:var(--paper)}
+  .hero .lede{margin-top:18px; font-size:clamp(17px,2.4vw,20px); color:#D7D9DD; max-width:58ch}
+  .hero .mark{display:flex; align-items:center; gap:12px; margin-bottom:22px}
+  .hero .mark .glyph{width:44px; height:44px; flex:0 0 44px; border:2px solid var(--paper);
+    border-radius:9px; display:grid; place-items:center; font-weight:800; font-size:15px;
+    letter-spacing:.04em}
+  .hero .mark .name{font-weight:800; font-size:15px; letter-spacing:.02em; line-height:1.3}
+  .hero .bignum{display:inline-flex; align-items:center; min-height:58px; margin-top:4px;
+    font-size:clamp(26px,5.6vw,38px); font-weight:800; color:var(--paper); text-decoration:none;
+    letter-spacing:-.01em}
+  .stars{display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:24px;
+    font-size:15px; color:#D7D9DD; font-weight:700}
+  .stars .s{color:var(--sand); letter-spacing:.12em; font-size:17px}
+  .hero-img{margin-top:34px}
+  .hero-img img{width:100%; border-top:1px solid rgba(255,255,255,.14)}
+
+  /* ---- sections ---- */
+  section{padding:56px 0}
+  section.alt{background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(24px,4.4vw,36px); max-width:26ch}
+  section .sub{margin-top:16px; color:var(--ink-3); max-width:60ch}
+
+  .grid{display:grid; gap:18px; margin-top:34px; grid-template-columns:1fr}
+  @media(min-width:620px){ .grid{grid-template-columns:1fr 1fr} }
+  @media(min-width:940px){ .grid-3{grid-template-columns:repeat(3,1fr)} }
+  .card{background:var(--paper); border:1px solid var(--line); border-radius:var(--r);
+    padding:22px; box-shadow:var(--shadow)}
+  .card h3{font-size:19px}
+  .card p{margin-top:9px; color:var(--ink-3); font-size:16px}
+  .card .src{margin-top:12px; font-size:13px; color:#6F685E; font-weight:700}
+
+  /* ---- one-call panel ---- */
+  .onecall{background:var(--timber-dk); color:var(--paper)}
+  .onecall h2{color:var(--paper)}
+  .onecall .sub{color:#E6DCCE}
+  .onecall .quote{margin-top:30px; padding:22px 24px; background:rgba(255,255,255,.08);
+    border-left:4px solid var(--sand); border-radius:0 var(--r) var(--r) 0;
+    font-size:clamp(18px,2.6vw,22px); font-weight:700; line-height:1.45}
+  .onecall .attrib{margin-top:12px; font-size:14px; color:#E6DCCE; font-weight:700}
+
+  /* ---- work gallery ---- */
+  .shots{display:grid; gap:16px; margin-top:34px; grid-template-columns:1fr}
+  @media(min-width:620px){ .shots{grid-template-columns:1fr 1fr} }
+  .shot{background:var(--paper); border:1px solid var(--line); border-radius:var(--r);
+    overflow:hidden; box-shadow:var(--shadow)}
+  /* Tall portrait phone photos get a height cap so the gallery reads as a grid
+     instead of a column of giants. object-fit keeps them undistorted. */
+  .shot img{width:100%; max-height:560px; object-fit:cover; object-position:center 28%}
+  .shot .cap{padding:15px 18px; font-size:15px; color:var(--ink-3); font-weight:600}
+  .shot.wide{grid-column:1/-1}
+  .shot.wide img{max-height:620px; object-position:center}
+  /* per-photo focal point, so the height cap never crops the subject out */
+  .shot img.fp-low{object-position:center 62%}
+  .shot img.fp-mid{object-position:center 50%}
+
+  /* ---- reviews ---- */
+  .rev{display:grid; gap:18px; margin-top:34px; grid-template-columns:1fr}
+  @media(min-width:760px){ .rev{grid-template-columns:1fr 1fr} }
+  blockquote{margin:0; background:var(--paper); border:1px solid var(--line);
+    border-radius:var(--r); padding:22px; box-shadow:var(--shadow)}
+  blockquote .s{color:var(--timber); letter-spacing:.1em; font-size:15px}
+  blockquote p{margin-top:12px; font-size:16.5px; line-height:1.6}
+  blockquote footer{margin-top:14px; font-size:13.5px; color:#6F685E; font-weight:700}
+
+  /* ---- hours ---- */
+  .hours{margin-top:30px; border:1px solid var(--line); border-radius:var(--r);
+    overflow:hidden; background:var(--paper); box-shadow:var(--shadow); max-width:510px}
+  .hours div{display:flex; justify-content:space-between; gap:16px; padding:14px 20px;
+    border-bottom:1px solid var(--line); font-size:16px}
+  .hours div:last-child{border-bottom:0}
+  .hours .d{font-weight:700}
+  .hours .shut{color:var(--ink-3)}
+
+  /* ---- badges ---- */
+  .badges{display:grid; gap:18px; margin-top:34px; grid-template-columns:1fr}
+  @media(min-width:620px){ .badges{grid-template-columns:1fr 1fr} }
+  .badge{border:1px solid var(--line); border-radius:var(--r); padding:20px; background:var(--paper)}
+  .badge .t{font-weight:800; font-size:17px}
+  .badge .d{margin-top:8px; color:var(--ink-3); font-size:15.5px}
+
+  /* ---- closing + footer ---- */
+  .closing{background:var(--ink); color:var(--paper); padding:60px 0; text-align:center}
+  .closing h2{color:var(--paper); margin:0 auto; max-width:20ch}
+  .closing p{margin-top:14px; color:#D7D9DD}
+  .closing .bignum{display:inline-flex; align-items:center; justify-content:center; min-height:58px;
+    margin-top:18px; font-size:clamp(28px,6.2vw,42px); font-weight:800; color:var(--paper);
+    text-decoration:none}
+  .closing .btn-row{justify-content:center}
+  footer{background:var(--paper-3); padding:26px 0; font-size:14.5px; color:var(--ink-3)}
+  .f-in{display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center}
+  footer a{font-weight:800; display:inline-flex; align-items:center; min-height:46px;
+    padding:0 12px; margin:0 -12px; border-radius:9px}
+  .f-note{margin-top:14px; font-size:13.5px; color:var(--ink-3); max-width:70ch}
+</style>
+</head>
+<body>
+
+<div class="demo">
+  Sample site &mdash; built as a demonstration, not published or submitted anywhere.
+</div>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span class="where">ROSSVILLE, GEORGIA 30741</span>
+    <a class="tel" href="tel:+14235087866">&#9742;&nbsp; (423)&nbsp;508-7866</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="mark">
+      <span class="glyph" aria-hidden="true">IAM</span>
+      <span class="name">Independent All&nbsp;&rsquo;round<br>Maintenance&nbsp;LLC</span>
+    </div>
+    <h1>When something breaks at home, you shouldn&rsquo;t need five numbers.</h1>
+    <p class="lede">Repairs, remodeling, painting, flooring, decks, drywall, plumbing
+      fixtures and the rest &mdash; Greg and Lee handle the whole list. One call.</p>
+    <a class="bignum" href="tel:+14235087866">(423)&nbsp;508-7866</a>
+    <div class="btn-row">
+      <a class="btn btn-timber" href="tel:+14235087866">Call now</a>
+      <a class="btn btn-ghost" href="#work">See the work</a>
+    </div>
+    <p class="stars"><span class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>5.0 on Google &mdash; and all 13 of those reviews are five stars</span></p>
+  </div>
+  <div class="hero-img">
+    <img src="images/living-room-after.jpg" width="1080" height="721"
+         alt="A finished living room: new plank flooring, repainted walls, a tiled fireplace surround with a new mantel.">
+  </div>
+</header>
+
+<section class="onecall">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--sand)">The whole idea</p>
+    <h2>One crew for the whole to-do list.</h2>
+    <p class="sub">Painting is one trade. Flooring is another. Plumbing is a third. Most
+      homeowners end up chasing three or four people and waiting on all of them. Greg and
+      Lee do the lot themselves, which is the entire point of the name.</p>
+    <p class="quote">&ldquo;There&rsquo;s been nothing I&rsquo;ve asked that they
+      couldn&rsquo;t handle &mdash; from prepping and painting, installing flooring,
+      plumbing, minor electrical, building shelves, hanging doors, you name it.&rdquo;</p>
+    <p class="attrib">Google review, 2023 &mdash; reproduced word for word</p>
+    <div class="btn-row">
+      <a class="btn btn-outline" href="tel:+14235087866">Talk it through &mdash; (423)&nbsp;508-7866</a>
+    </div>
+  </div>
+</section>
+
+<section id="what">
+  <div class="wrap">
+    <p class="eyebrow">What they take on</p>
+    <h2>If it is part of the house, it is probably on this list.</h2>
+    <p class="sub">Every item below comes from the work their own customers describe in
+      public reviews, from the service tags Google attaches to those reviews, or from the
+      photographs the business itself posted.</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Repairs &amp; the honey-do list</h3>
+        <p>The odd jobs that pile up &mdash; a door that sticks, a fixture that leaks,
+          the shelf that never went in.</p>
+        <p class="src">General repairs &middot; home maintenance</p>
+      </div>
+      <div class="card">
+        <h3>Remodeling</h3>
+        <p>Rooms taken back to the studs and put back together: framing, new windows,
+          cabinets, trim, the finish work.</p>
+        <p class="src">Remodeling &middot; general construction</p>
+      </div>
+      <div class="card">
+        <h3>Painting, inside and out</h3>
+        <p>Prep and paint. One customer had every surface in the house painted and the
+          exterior done as well.</p>
+        <p class="src">Interior painting &middot; exterior painting</p>
+      </div>
+      <div class="card">
+        <h3>Flooring</h3>
+        <p>Plank and vinyl plank laid and repaired &mdash; including whole-house runs
+          through kitchen, hall and living room.</p>
+        <p class="src">Install flooring &middot; repair flooring</p>
+      </div>
+      <div class="card">
+        <h3>Plumbing fixtures</h3>
+        <p>Sinks, taps and water fixtures repaired or swapped &mdash; and new water lines
+          run, a fridge line among them.</p>
+        <p class="src">Plumbing fixture installation &middot; repair water fixtures</p>
+      </div>
+      <div class="card">
+        <h3>Light electrical</h3>
+        <p>Switches, fixtures and the smaller electrical work that comes with a remodel.
+          Described by customers as minor electrical.</p>
+        <p class="src">From customer reviews</p>
+      </div>
+      <div class="card">
+        <h3>Drywall</h3>
+        <p>Holes, cracks and damaged board patched and finished ready for paint.</p>
+        <p class="src">Drywall repair</p>
+      </div>
+      <div class="card">
+        <h3>Decks, porches, stairs &amp; rails</h3>
+        <p>New decks and covered porches built from the footings up. Stairs redone,
+          handrails fitted, half walls framed around a stairwell.</p>
+        <p class="src">Customer reviews &amp; the business&rsquo;s own posts</p>
+      </div>
+      <div class="card">
+        <h3>Siding &amp; outside work</h3>
+        <p>Siding re-wrapped and replaced, gutters cleaned, houses pressure washed.</p>
+        <p class="src">Gutter cleaning &middot; customer reviews</p>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn" href="tel:+14235087866">Ask about your job</a>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Their own photographs</p>
+    <h2>Finished rooms, built decks, real job sites.</h2>
+    <p class="sub">Every photograph on this page was posted by the business itself to its
+      own Google listing. None of it is stock.</p>
+    <div class="shots">
+      <div class="shot">
+        <img src="images/deck-and-pad.jpg" class="fp-low" width="860" height="1147"
+             alt="A newly built deck with black metal balusters and a freshly poured concrete landing pad at the steps.">
+        <p class="cap">A new deck with metal balusters, and a concrete landing poured and
+          floated at the foot of the steps &mdash; carpentry and flatwork on the one job.</p>
+      </div>
+      <div class="shot">
+        <img src="images/cabinets-and-floor.jpg" width="720" height="1513"
+             alt="A finished utility room with new white shaker cabinets, a butcher-block counter cut for sinks, and plank flooring.">
+        <p class="cap">New cabinets hung and set, counter cut for the sinks, plank floor
+          laid and trimmed out.</p>
+      </div>
+      <div class="shot">
+        <img src="images/bathroom.jpg" width="720" height="1553"
+             alt="A finished bathroom with a new vanity, a tub and shower surround, and plank flooring.">
+        <p class="cap">A bathroom put back together &mdash; vanity, tub surround, floor.</p>
+      </div>
+      <div class="shot">
+        <img src="images/exterior-paint.jpg" width="800" height="1067"
+             alt="The side of a house with freshly painted siding and soffit, a new white downspout, and a wrought-iron porch rail.">
+        <p class="cap">Siding and soffit painted, a new downspout run, porch rail in place.</p>
+      </div>
+      <div class="shot">
+        <img src="images/framing-windows.jpg" class="fp-mid" width="760" height="1013"
+             alt="A room stripped back to the framing with new double-hung windows installed in the opening.">
+        <p class="cap">Back to the framing, new windows set in. Not every job is cosmetic.</p>
+      </div>
+      <div class="shot">
+        <img src="images/porch-build.jpg" width="1100" height="825"
+             alt="A covered porch roof newly framed and sheathed against the back of a brick house, with fresh lumber on the ground.">
+        <p class="cap">A covered porch framed and sheathed onto the back of a brick ranch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <p class="eyebrow">What customers wrote</p>
+    <h2>Thirteen reviews on Google. All thirteen are five stars.</h2>
+    <p class="sub">That is a small number of reviews and we are not going to dress it up as
+      a big one. What can be said about it is exact: Google&rsquo;s own star breakdown
+      reports thirteen five-star reviews and none at four, three, two or one. Every
+      quotation below is a real public review, copied word for word, with nothing added
+      and nothing trimmed except where marked.</p>
+    <div class="rev">
+      <blockquote>
+        <span class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>&ldquo;Every time I call, they come within a day, or they let me know the
+          soonest they can, and they show up exactly when they say. They are two very
+          hard-working guys who have the utmost integrity.&rdquo;</p>
+        <footer>Google review, 2023</footer>
+      </blockquote>
+      <blockquote>
+        <span class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>&ldquo;There is nothing these guys can&rsquo;t do when it comes to home
+          maintenance. They painted every surface, laid LVP flooring, plumbing, electrical
+          and built a new deck and pressure washed my house.&rdquo;</p>
+        <footer>Google review, 2025</footer>
+      </blockquote>
+      <blockquote>
+        <span class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>&ldquo;They are very professional and courteous. Good honest hard working
+          people. They did various repairs in the home. Very efficient and clean.
+          They&rsquo;ll do right by you.&rdquo;</p>
+        <footer>Google review, 2022</footer>
+      </blockquote>
+      <blockquote>
+        <span class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>&ldquo;We had to have a water line installed for our new fridge and they
+          delivered service quickly as we called last minute.&rdquo;</p>
+        <footer>Google review, 2021</footer>
+      </blockquote>
+      <blockquote>
+        <span class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>&ldquo;Top tier work and professional approach make Greg a cut above the rest.
+          Rest assured, you will be taken care of.&rdquo;</p>
+        <footer>Google review, 2024</footer>
+      </blockquote>
+      <blockquote>
+        <span class="s" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>&ldquo;He takes his time to get the job done right, especially with detail.
+          Definitely recommend for all my home improvement needs.&rdquo;</p>
+        <footer>Google review, 2023</footer>
+      </blockquote>
+    </div>
+    <div class="btn-row">
+      <a class="btn" href="tel:+14235087866">Call (423)&nbsp;508-7866</a>
+    </div>
+  </div>
+</section>
+
+<section id="hours" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">When to ring</p>
+    <h2>Monday to Friday, 8 to 5.</h2>
+    <p class="sub">These are the hours published on the Google listing. The weekend is
+      shown as closed there, so this page says closed &mdash; rather than guessing that a
+      Saturday call would be welcome.</p>
+    <div class="hours">
+      <div><span class="d">Monday</span><span>8:00 AM &ndash; 5:00 PM</span></div>
+      <div><span class="d">Tuesday</span><span>8:00 AM &ndash; 5:00 PM</span></div>
+      <div><span class="d">Wednesday</span><span>8:00 AM &ndash; 5:00 PM</span></div>
+      <div><span class="d">Thursday</span><span>8:00 AM &ndash; 5:00 PM</span></div>
+      <div><span class="d">Friday</span><span>8:00 AM &ndash; 5:00 PM</span></div>
+      <div><span class="d">Saturday</span><span class="shut">Closed</span></div>
+      <div><span class="d">Sunday</span><span class="shut">Closed</span></div>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-outline" href="tel:+14235087866">Call during business hours</a>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <p class="eyebrow">Where they work</p>
+    <h2>Rossville and the Walker County side of the line.</h2>
+    <p class="sub">The business is based in Rossville, Georgia 30741 &mdash; Walker County,
+      right up against the Tennessee state line south of Chattanooga. How far out they
+      travel is a question for Greg or Lee, and this page does not put a radius on it for
+      them.</p>
+    <div class="badges">
+      <div class="badge">
+        <p class="t">Based in Rossville, Georgia</p>
+        <p class="d">Walker County, 30741. The street address is left off this page on
+          purpose &mdash; see the note at the bottom.</p>
+      </div>
+      <div class="badge">
+        <p class="t">A registered Georgia LLC</p>
+        <p class="d">Independent All &rsquo;round Maintenance LLC is registered with the
+          Georgia Secretary of State and its registration is current. That is a company
+          filing, not a trade licence, and no licence, bonding or insurance is claimed
+          here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">What keeps coming up</p>
+    <h2>The same few things, review after review.</h2>
+    <div class="badges">
+      <div class="badge">
+        <p class="t">They turn up when they said</p>
+        <p class="d">&ldquo;They show up exactly when they say&rdquo; &mdash; and where
+          they can&rsquo;t come straight out, customers say they hear back about when they
+          can.</p>
+      </div>
+      <div class="badge">
+        <p class="t">Two men who do the work</p>
+        <p class="d">Customers name Greg and Lee directly. This is not a call centre
+          dispatching a stranger to your house.</p>
+      </div>
+      <div class="badge">
+        <p class="t">They clean up</p>
+        <p class="d">&ldquo;Very efficient and clean&rdquo; is a customer&rsquo;s word for
+          it, which is not something every trade gets said about it.</p>
+      </div>
+      <div class="badge">
+        <p class="t">Straight answers</p>
+        <p class="d">The words customers reach for are honest, blunt and integrity. Make
+          of that what you will &mdash; but they chose those words, not us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <h2>Tell them what needs doing.</h2>
+    <p>Monday to Friday, 8:00 to 5:00 &middot; Rossville, Georgia</p>
+    <a class="bignum" href="tel:+14235087866">(423)&nbsp;508-7866</a>
+    <div class="btn-row">
+      <a class="btn btn-timber" href="tel:+14235087866">Call now</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="f-in">
+      <span>Independent All &rsquo;round Maintenance LLC &middot; Rossville, Georgia 30741</span>
+      <span><a href="tel:+14235087866">(423)&nbsp;508-7866</a></span>
+    </div>
+    <p class="f-note">The street address is deliberately not shown on this page. County
+      records show the listed location is a private home in a residential zone, so it is
+      left off rather than published to the open web.</p>
+  </div>
+</footer>
+
+<!--
+===============================================================================
+ DEMONSTRATION PAGE - Independent All 'round Maintenance LLC, Rossville GA
+ Built 2026-11-23 from PUBLIC INFORMATION ONLY. The business was NOT contacted:
+ no call, no text, no email, no form, no DM, no Facebook message of any kind.
+
+ PERMISSION GATE
+ ---------------
+ This page is an UNSOLICITED sample. It is marked noindex,nofollow, it has not
+ been submitted to any search engine or directory, it is linked from nowhere,
+ and it carries a visible "sample site" banner at the very top. Nothing here is
+ claimed to be authorised by the business. If the owner does not want it to
+ exist, it comes down on request - immediately, without argument and without a
+ conversation about why.
+
+ WHAT IS VERIFIED (full sources, with URLs and timestamps, in research.md)
+ ------------------------------------------------------------------------
+ - Phone (423) 508-7866: Google Places nationalPhoneNumber, live pull
+   2026-11-23 07:07 ET, and the same number on the business's own Facebook
+   page. Every tel: link on this page points at that number and no other.
+ - 5.0 rating on 13 reviews, and the 13-of-13 claim: read off the live Google
+   listing this morning. All 13 review cards were enumerated individually AND
+   Google's own star histogram reports 5-star:13, 4-star:0, 3-star:0,
+   2-star:0, 1-star:0. The set is provably complete, so "all 13 are five
+   stars" is a measured claim and not a rounded one.
+ - Hours Mon-Fri 8:00-17:00, Sat/Sun closed: Google Places
+   regularOpeningHours AND currentOpeningHours, same live pull.
+ - Town / county / state: Google addressComponents gives locality=Rossville,
+   admin_area_2=Walker County, admin_area_1=Georgia, postal=30741. Corroborated
+   by TWO INDEPENDENT NON-GOOGLE SOURCES - the US Census Bureau geocoder
+   (Counties -> Walker County, forward AND reverse) and OpenStreetMap /
+   Nominatim ("Warren Terrace, Fairview, Walker County, Georgia, 30741").
+   The brief's warning that this might be Catoosa County was checked and is
+   NOT the case: three sources agree on Walker.
+ - Georgia LLC: GA Secretary of State eCorp, control number 22129367,
+   "Active/Compliance", formed 2022-06-01, annual registration through 2027,
+   county Walker, state's own classification NAICS Construction / Residential
+   Remodelers. That registry row is what the "registered Georgia LLC" line on
+   this page rests on, and nothing more is claimed from it.
+ - Service list: each item traces to a public Google review, to the service
+   tags Google attaches to those reviews, or to the business's own posts.
+ - Photographs: all seven are from the business's own Google listing and all
+   ten source photos are attributed by Google to "Independent All 'round
+   Maintenance LLC" itself.
+
+ OMITTED ON PURPOSE - AND WHY
+ ----------------------------
+  1. THE STREET ADDRESS AND STREET NAME. The residential-address gate FIRED, on
+     county record, at BOTH addresses this business uses. The Walker County
+     Board of Assessors shows the location Google publishes as class
+     R3-Residential, zoning R2, Single Family Detached, built 1947, WITH a
+     homestead exemption and NO commercial improvement record. The address the
+     LLC registers with the state is a second, separate parcel on the same
+     street - also R3-Residential, also zoning R2, also Single Family Detached,
+     also no commercial improvement record. Both street numbers and the street
+     name therefore appear NOWHERE in this file: not in the text, not in the
+     markup, not in a comment, not in an alt attribute, not in a CSS value, not
+     in an image filename - and they are absent from the SMS draft too. The
+     page says "Rossville, Georgia 30741" and nothing finer, and it says
+     plainly on its face that this was deliberate. The grep that proves the
+     absence against the SERVED bytes is recorded in research.md.
+  2. NO SURNAMES, AND NO PROPERTY-OWNER NAMES. The owners are referred to only
+     as "Greg" and "Lee" - the first names their own customers use in public
+     reviews. The registered agent's full legal name, the names on both parcel
+     records, and a spouse's name are all a matter of public record and NONE of
+     them appear here. Publishing them would tie named private individuals to a
+     home address, which is the whole thing the address gate exists to stop.
+  3. THE LOGO IS NOT REPRODUCED. The business does have a real mark - a
+     black line-art "IAM" monogram, used as its Facebook profile picture and
+     blown up as its cover photo. It sits behind a login wall and could not be
+     downloaded cleanly, so it is NOT traced, copied or approximated. The "IAM"
+     glyph beside the wordmark here is set in plain type and is a PLACEHOLDER,
+     not their logo.
+  4. THE PALETTE IS SAMPLED, NOT INVENTED. Near-black on white is taken from
+     that monogram, which is monochrome. The timber and sand tones are sampled
+     from the pressure-treated lumber and fresh decking in the business's own
+     deck photograph. No house palette was used.
+  5. A PHOTOGRAPH THAT LOOKED LIKE A "BEFORE" WAS DROPPED. One owner photo
+     reads at a glance as the before shot of the finished living room used at
+     the top of this page. Compared side by side it is a DIFFERENT room - a
+     kitchen is visible in the same sightline in one and absent in the other,
+     and the window is a tall side window in one and a wide band window in the
+     other. Shipping them as a before/after pair would have been an invented
+     claim, so neither that pairing nor that photograph appears. Two further
+     owner photos were dropped as well: a dark, blurred commercial corridor,
+     and an interior of a customer's lived-in home showing their personal
+     effects.
+  6. NO PRICES, NO RATES, NO MINIMUM, NO CALL-OUT FEE, NO "FREE ESTIMATE".
+     Several reviews praise the pricing and one states the business beat every
+     price in town. That quotation is deliberately NOT used, because on a page
+     like this it reads as a pricing promise the owner never made. No figure is
+     repeated and none is invented.
+  7. NO LICENCE, BONDING, INSURANCE OR CERTIFICATION CLAIM. No primary registry
+     row for any of those was retrieved. The only registry row that WAS
+     retrieved is the Secretary of State company filing, which is not a trade
+     licence - and the page says so in those words. A third-party lead-gen
+     directory carries self-reported text about this business; that directory's
+     own boilerplate states such claims are self-reported and unverified, so
+     none of it is used.
+  8. NO FOUNDING YEAR AND NO "YEARS OF EXPERIENCE". The same directory profile
+     claims "25 years of experience" in one field and "5 years of experience"
+     in another, in the same profile. It contradicts itself, it is self-
+     reported, and neither figure appears here. The state filing date is a
+     company-formation date, not a trade history, and it is not presented as
+     one.
+  9. NO WARRANTY OR GUARANTEE OF ANY KIND is stated or implied.
+ 10. NO CONTACT FORM, NO ONLINE BOOKING, NO "WE NEVER MISS A CALL", NO
+     "ALWAYS ANSWER". Standing program ban. The only way to make contact from
+     this page is to ring the published number.
+ 11. NO CUSTOMER NAMES AND NO CUSTOMER CIRCUMSTANCES. Quotations are attributed
+     by year only. Nothing identifying a reviewer, their household or their
+     property is reproduced.
+ 12. NO CLAIM OF A PERFECT RECORD EVERYWHERE. The 13-of-13 claim is scoped to
+     Google and said so. The business's Facebook page separately shows "86%
+     recommend" on 5 reviews, so it is NOT unblemished across every surface,
+     and no page-wide perfection claim is made.
+ 13. NO SPEED, PAGESPEED, RANKING OR SEO CLAIM. They have no website at all, so
+     there is nothing to measure and no such angle has been manufactured.
+ 14. NO EMAIL ADDRESS. One is published on their Facebook page. It is a
+     personal-looking free-mail address and it is not reproduced here.
+ 15. NO THIRD-PARTY BRANDING, NO COMPETITOR NAMED OR ALLUDED TO, NO RELIGIOUS
+     CLAIM, NO CREW-SIZE CLAIM BEYOND THE TWO MEN CUSTOMERS THEMSELVES NAME.
+ 16. NO SEASONAL LANGUAGE, NO DEADLINE, NO DISCOUNT, NO URGENCY - on this page
+     or in the SMS draft.
+
+ KNOWN GAPS the owner would have to fill before this were ever a real site:
+ whether he wants the street address shown at all; the true service-area
+ radius; whether there is a call-out charge or minimum; which trades he will
+ and will not take on; whether he carries insurance or any licence and whether
+ he wants that stated; whether weekend or emergency calls are in fact welcome
+ despite the listing saying closed; whether "Greg" and "Lee" are how he wants
+ to be named; and which of these photographs he actually wants used.
+===============================================================================
+-->
+</body>
+</html>
