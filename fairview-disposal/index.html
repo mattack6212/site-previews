@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Fairview Disposal &mdash; Household Garbage Service, Walker County GA</title>
+<meta name="description" content="Household garbage service for Walker County, Georgia. Listed by Walker County as a private household garbage provider. Call (423) 805-8686.">
+<style>
+  :root{
+    --navy:#1B3055; --navy-dk:#122038;
+    --teal:#00C4A0; --teal-dk:#009C80; --teal-ink:#00503F;
+    --amber:#F5A623; --amber-bg:#FFF5E3; --amber-tx:#6B4405;
+    --red:#E03B3B; --red-bg:#FDECEC;
+    --ink:#16202F; --muted:#56637A; --muted-ink:#BAC6DA;
+    --paper:#F7F9FC; --card:#FFFFFF; --line:#E1E7F0;
+    --wrap:1120px; --r:14px;
+    --shadow:0 1px 2px rgba(22,32,47,.06), 0 6px 20px rgba(22,32,47,.07);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px; line-height:1.62; overflow-x:hidden;
+  }
+  img,svg{max-width:100%;height:auto}
+  h1,h2,h3{line-height:1.18; margin:0; letter-spacing:-.016em; font-weight:800}
+  p{margin:0}
+  a{color:var(--teal-ink)}
+  .wrap{width:100%; max-width:var(--wrap); margin:0 auto; padding:0 20px}
+  .eyebrow{font-size:12px; font-weight:800; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--teal-ink); margin:0 0 14px}
+
+  /* ---- tap targets: every interactive element >= 48px tall ---- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    min-height:56px; padding:15px 26px; border-radius:999px;
+    font-size:18px; font-weight:800; text-decoration:none; color:#fff;
+    background:var(--teal-dk); border:2px solid var(--teal-dk);
+    box-shadow:var(--shadow); max-width:100%; text-align:center;
+  }
+  .btn:active{background:var(--teal-ink);border-color:var(--teal-ink)}
+  .btn-amber{background:var(--amber); border-color:var(--amber); color:#452D02}
+  .btn-ghost{background:transparent; color:#fff; border:2px solid rgba(255,255,255,.55);
+    box-shadow:none; font-weight:700}
+  .btn-outline{background:#fff; color:var(--teal-ink); border:2px solid var(--teal-dk); box-shadow:none}
+  .btn-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:26px}
+
+  /* ---- top bar ---- */
+  .topbar{background:var(--navy-dk); color:#fff; padding:10px 0}
+  .topbar-in{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+  .topbar .where{font-size:13.5px; font-weight:700; color:var(--muted-ink); letter-spacing:.04em}
+  .topbar a.tel{display:inline-flex; align-items:center; min-height:48px; padding:6px 14px;
+    border-radius:10px; color:#fff; text-decoration:none; font-weight:800; font-size:17px;
+    border:1px solid rgba(255,255,255,.3)}
+
+  /* ---- hero ---- */
+  .hero{background:var(--navy); color:#fff; padding:44px 0 50px; position:relative; overflow:hidden}
+  .hero::after{content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(70% 120% at 108% 6%, rgba(0,196,160,.33) 0%, rgba(0,196,160,0) 62%),
+      radial-gradient(60% 100% at -8% 100%, rgba(245,166,35,.20) 0%, rgba(245,166,35,0) 60%);
+    pointer-events:none}
+  .hero-in{position:relative; z-index:1; max-width:820px}
+  .wordmark{display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap}
+  .wordmark .mark{width:54px; height:54px; border-radius:12px; flex:0 0 54px;
+    background:var(--teal-dk); display:grid; place-items:center; box-shadow:var(--shadow)}
+  .wordmark .mark svg{width:31px;height:31px;display:block}
+  .wordmark .name{font-size:19px; font-weight:800; letter-spacing:-.01em; line-height:1.25}
+  .wordmark .name span{display:block; font-size:12px; font-weight:700; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--muted-ink); margin-top:3px}
+  .hero h1{font-size:clamp(29px,6.2vw,49px)}
+  .hero .lede{margin-top:18px; font-size:clamp(17px,2.3vw,20px); color:var(--muted-ink); max-width:62ch}
+  .hero .lede b{color:#fff}
+  .trust-inline{display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:26px;
+    font-size:14.5px; color:var(--muted-ink); font-weight:600}
+  .trust-inline i{color:#fff; font-style:normal; font-weight:800}
+
+  /* ---- proof strip ---- */
+  .proof{background:var(--teal-dk); color:#fff; padding:26px 0}
+  .proof-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; text-align:center}
+  .proof .n{font-size:clamp(22px,4.2vw,32px); font-weight:800; letter-spacing:-.02em; display:block}
+  .proof .l{font-size:13px; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+    opacity:.94; margin-top:4px; display:block; line-height:1.4}
+
+  /* ---- sections ---- */
+  section{padding:54px 0}
+  .sec-head{max-width:70ch; margin-bottom:34px}
+  .sec-head h2{font-size:clamp(25px,4.2vw,35px)}
+  .sec-head p{margin-top:14px; color:var(--muted); font-size:17.5px}
+
+  /* ---- cards ---- */
+  .duo{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+    padding:28px 26px; box-shadow:var(--shadow)}
+  .card .ic{width:46px;height:46px;border-radius:11px;display:grid;place-items:center;margin-bottom:16px}
+  .card .ic svg{width:26px;height:26px;display:block}
+  .card.a .ic{background:#E2F7F2}
+  .card.b .ic{background:var(--amber-bg)}
+  .card h3{font-size:22px;margin-bottom:6px}
+  .card .kicker{font-size:12.5px; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:12px}
+  .card ul{margin:14px 0 0; padding:0; list-style:none}
+  .card li{position:relative; padding-left:26px; margin-top:10px; color:var(--ink); font-size:16.5px}
+  .card li::before{content:""; position:absolute; left:2px; top:.62em; width:9px; height:9px;
+    border-radius:2px; background:var(--teal-dk)}
+  .card.b li::before{background:var(--amber)}
+
+  /* ---- county callout ---- */
+  .lic{background:var(--card); border:1px solid var(--line); border-left:6px solid var(--teal-dk);
+    border-radius:12px; padding:26px 26px; box-shadow:var(--shadow)}
+  .lic .tag{display:inline-flex; align-items:center; gap:8px; background:#E2F7F2; color:var(--teal-ink);
+    font-size:12.5px; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+    padding:7px 13px; border-radius:999px; margin-bottom:14px}
+  .lic h3{font-size:21px; margin-bottom:10px}
+  .lic p{color:var(--muted); font-size:16.5px; margin-top:10px}
+  .lic .src{font-size:14.5px; margin-top:16px; color:var(--muted)}
+  .lic .src a{
+    display:inline-flex; align-items:center; min-height:48px; margin-top:8px;
+    padding:10px 16px; border-radius:10px; background:#E2F7F2; border:1px solid #BEE9DF;
+    font-weight:700; font-size:15px; line-height:1.35; word-break:break-word; text-decoration:none;
+  }
+
+  /* ---- quotes ---- */
+  .quotes{display:grid; grid-template-columns:repeat(auto-fit,minmax(285px,1fr)); gap:18px}
+  figure.q{margin:0; background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+    padding:24px 22px; box-shadow:var(--shadow)}
+  figure.q blockquote{margin:0; font-size:16.5px; line-height:1.6}
+  figure.q blockquote::before{content:"\201C"}
+  figure.q blockquote::after{content:"\201D"}
+  figure.q figcaption{margin-top:14px; font-size:12.5px; font-weight:800; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--muted)}
+  .stars{color:var(--amber); letter-spacing:2px; font-size:15px; margin-bottom:10px}
+
+  /* ---- hours / area ---- */
+  .split{display:grid; grid-template-columns:1.1fr 1fr; gap:28px; align-items:start}
+  table.hours{width:100%; border-collapse:collapse; background:var(--card);
+    border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  table.hours th,table.hours td{padding:13px 18px; text-align:left; font-size:16.5px;
+    border-bottom:1px solid var(--line)}
+  table.hours tr:last-child th,table.hours tr:last-child td{border-bottom:0}
+  table.hours th{font-weight:700; width:52%}
+  table.hours td{text-align:right; font-variant-numeric:tabular-nums; font-weight:700}
+  tr.shut th,tr.shut td{color:#A32222; background:var(--red-bg)}
+  .note{background:var(--amber-bg); border:1px solid #F3E3C4; border-left:5px solid var(--amber);
+    border-radius:12px; padding:20px 22px; color:var(--amber-tx); font-size:16.5px}
+  .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+  .pill{background:var(--card); border:1px solid var(--line); border-radius:999px;
+    padding:9px 16px; font-size:15px; font-weight:700; color:var(--ink)}
+
+  /* ---- badges ---- */
+  .badges{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .badge{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    padding:22px;box-shadow:var(--shadow)}
+  .badge .t{font-size:18px;font-weight:800}
+  .badge .d{color:var(--muted);font-size:15.5px;margin-top:7px}
+
+  /* ---- closing ---- */
+  .closing{background:var(--navy); color:#fff; padding:56px 0; text-align:center}
+  .closing h2{font-size:clamp(26px,4.6vw,38px); max-width:26ch; margin:0 auto}
+  .closing p{color:var(--muted-ink); margin-top:16px; font-size:18px}
+  .closing .btn-row{justify-content:center}
+  .bignum{display:inline-flex; align-items:center; justify-content:center; min-height:56px;
+    margin-top:24px; font-size:clamp(23px,5vw,34px); font-weight:800; letter-spacing:-.01em;
+    color:#fff; text-decoration:none; padding:8px 18px; border-radius:12px;
+    border:1px solid rgba(255,255,255,.3)}
+
+  footer{background:var(--navy-dk); color:var(--muted-ink); padding:30px 0; font-size:14.5px}
+  footer .f-in{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-between;align-items:center}
+  footer a{color:#fff; display:inline-flex; align-items:center; min-height:48px;
+    padding:6px 14px; border-radius:10px; font-weight:800; text-decoration:none;
+    border:1px solid rgba(255,255,255,.3)}
+  .demo{background:var(--amber-bg); color:var(--amber-tx); border-bottom:1px solid #F3E3C4;
+    padding:11px 0; font-size:14px; font-weight:700; text-align:center}
+
+  @media (max-width:860px){ .duo{grid-template-columns:1fr} }
+  @media (max-width:760px){
+    .split{grid-template-columns:1fr}
+    .proof-grid{grid-template-columns:1fr; gap:22px}
+    section{padding:44px 0}
+    .btn{width:100%}
+    .btn-row{gap:12px}
+  }
+  @media (max-width:360px){
+    body{font-size:16px}
+    .wrap{padding:0 16px}
+    .card,figure.q,.lic{padding:20px 17px}
+    table.hours th,table.hours td{padding:11px 13px; font-size:15.5px}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo">Sample site &mdash; built as a demonstration. Not published and not indexed.</div>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span class="where">WALKER COUNTY, GEORGIA</span>
+    <a class="tel" href="tel:+14238058686" aria-label="Call 4 2 3, 8 0 5, 8 6 8 6">(423)&nbsp;805-8686</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div class="wordmark">
+      <span class="mark" aria-hidden="true">
+        <!-- Generic roll-cart / bin glyph drawn inline. PLACEHOLDER, not their logo: none is
+             published anywhere, so none could be used or sampled. -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5.4 8h13.2l-1 11.2a1.6 1.6 0 0 1-1.6 1.4H8a1.6 1.6 0 0 1-1.6-1.4Z"/>
+          <line x1="3.8" y1="8" x2="20.2" y2="8"/>
+          <path d="M9.2 8V5.3a1.1 1.1 0 0 1 1.1-1.1h3.4a1.1 1.1 0 0 1 1.1 1.1V8"/>
+          <line x1="10.4" y1="12" x2="10.4" y2="17"/>
+          <line x1="13.6" y1="12" x2="13.6" y2="17"/>
+        </svg>
+      </span>
+      <span class="name">Fairview Disposal
+        <span>Household garbage service &middot; Walker County</span>
+      </span>
+    </div>
+
+    <p class="eyebrow" style="color:var(--teal)">Household garbage service</p>
+    <h1>Your garbage, picked up at the curb.</h1>
+    <p class="lede">We are one of the private companies that provide household garbage service in
+      Walker County, Georgia &mdash; and <b>Walker County says so on its own website.</b>
+      Call and we will tell you straight whether we come down your road.</p>
+
+    <div class="btn-row">
+      <a class="btn" href="tel:+14238058686">Call (423)&nbsp;805-8686</a>
+      <a class="btn btn-ghost" href="#what">What this is</a>
+    </div>
+
+    <div class="trust-inline">
+      <span><i>11</i> five-star reviews on Google</span>
+      <span><i>Listed</i> by Walker County, Georgia</span>
+      <span><i>Mon&ndash;Fri</i> 7:00 AM to 3:30 PM</span>
+    </div>
+  </div>
+</header>
+
+<div class="proof">
+  <div class="wrap proof-grid">
+    <div><span class="n">11</span><span class="l">Five-star reviews on Google</span></div>
+    <div><span class="n">Walker County</span><span class="l">Listed on the county&rsquo;s own provider list</span></div>
+    <div><span class="n">7:00 &ndash; 3:30</span><span class="l">Monday to Friday</span></div>
+  </div>
+</div>
+
+<section id="what">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What this is</p>
+      <h2>Household garbage, collected at your house.</h2>
+      <p>Walker County does not run curbside pickup. If you live out in the county, somebody private
+        has to come get your garbage, and you arrange it yourself. That is what we do.</p>
+    </div>
+
+    <div class="duo">
+      <div class="card a">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#009C80" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5.4 8h13.2l-1 11.2a1.6 1.6 0 0 1-1.6 1.4H8a1.6 1.6 0 0 1-1.6-1.4Z"/><line x1="3.8" y1="8" x2="20.2" y2="8"/><path d="M9.2 8V5.3a1.1 1.1 0 0 1 1.1-1.1h3.4a1.1 1.1 0 0 1 1.1 1.1V8"/></svg></div>
+        <p class="kicker">What we come for</p>
+        <h3>Household garbage</h3>
+        <p style="color:var(--muted);font-size:16.5px">Household garbage service, the kind you set out
+          at the house. Walker County files us under exactly that heading.</p>
+        <ul>
+          <li>Your container, emptied at your place</li>
+          <li>Put back where you had it standing</li>
+          <li>Residential service, not a one-off haul-off</li>
+        </ul>
+      </div>
+
+      <div class="card b">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#B9780F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+        <p class="kicker">Where we come</p>
+        <h3>Walker County</h3>
+        <p style="color:var(--muted);font-size:16.5px">We are on the county&rsquo;s list of private
+          household garbage providers for Walker County.</p>
+        <ul>
+          <li>Walker County, Georgia</li>
+          <li>Call and ask about your road</li>
+          <li>We will tell you straight either way</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:26px">
+      <p><b>The things worth asking us on the phone.</b></p>
+      <p style="margin-top:12px">What day we would come down your road, how we handle your container,
+        and how to get started. None of that is on this page on purpose &mdash; we would rather tell
+        you ourselves than have you read a guess.</p>
+      <p style="margin-top:16px"><a class="btn btn-outline" href="tel:+14238058686" style="font-size:16.5px">Call (423)&nbsp;805-8686</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="county" style="background:#EEF3F9;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">You can check this yourself</p>
+      <h2>Walker County publishes who hauls household garbage.</h2>
+      <p>You do not have to take our word for any of it. The county keeps the list on its landfill
+        page, and anybody can read it.</p>
+    </div>
+    <div class="lic">
+      <span class="tag">Walker County, Georgia &middot; official page</span>
+      <h3>Listed as a household garbage provider</h3>
+      <p>The county&rsquo;s landfill page carries a heading that reads
+        <b>&ldquo;The following private companies provide household garbage service in Walker
+        County&rdquo;</b> &mdash; and then a list of names and phone numbers. We are on it.</p>
+      <p>That list is also the honest reason this page exists. The county gives you a name and a
+        number and nothing else. So here is the rest of it: who we are, what we come for, when we
+        answer the phone, and what our customers have said.</p>
+      <p class="src">Read it on the county&rsquo;s own site, then find our name:<br>
+        <a href="https://www.walkercountyga.gov/departments/landfill/index.php">walkercountyga.gov/departments/landfill</a></p>
+      <p style="margin-top:20px"><a class="btn btn-outline" href="tel:+14238058686" style="font-size:16.5px">Call (423)&nbsp;805-8686</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">In our customers&rsquo; words</p>
+      <h2>Eleven five-star reviews on Google.</h2>
+      <p>Quoted from public Google reviews, in their own words. Dates only &mdash; we have left our
+        customers&rsquo; names off.</p>
+    </div>
+    <div class="quotes">
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>This company has provided great trash service for my aging mother for years. She
+          did not even need to bring her trash can to the pickup area. They did it for her as a
+          kindness.</blockquote>
+        <figcaption>Google review &middot; 2026</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>They don&rsquo;t do the &lsquo;dump &amp; toss&rsquo; like other services
+          I&rsquo;ve had &hellip; After emptying, the fine Fairview Disposal team actually places my
+          container (right side up &amp; even putting the lid back on) in the exact spot I had it
+          sitting in wait.</blockquote>
+        <figcaption>Google review &middot; 2021</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>These are the most conscientious &amp; respectful guys &hellip; they even treat my
+          container with respect.</blockquote>
+        <figcaption>Google review &middot; 2021</figcaption>
+      </figure>
+      <figure class="q">
+        <div class="stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>I&rsquo;m telling you that this company is one of the best I&rsquo;ve ever used. He
+          keeps his truck looking good &hellip; Outstanding service</blockquote>
+        <figcaption>Google review &middot; 2023</figcaption>
+      </figure>
+    </div>
+    <div class="btn-row">
+      <a class="btn" href="tel:+14238058686">Call (423)&nbsp;805-8686</a>
+    </div>
+  </div>
+</section>
+
+<section id="hours" style="background:#EEF3F9;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Hours</p>
+      <h2>Monday to Friday, seven to three thirty.</h2>
+      <p>We start early and we are done in the middle of the afternoon. Worth knowing before you
+        plan when to ring.</p>
+    </div>
+    <div class="split">
+      <table class="hours">
+        <tbody>
+          <tr><th scope="row">Monday</th><td>7:00 AM &ndash; 3:30 PM</td></tr>
+          <tr><th scope="row">Tuesday</th><td>7:00 AM &ndash; 3:30 PM</td></tr>
+          <tr><th scope="row">Wednesday</th><td>7:00 AM &ndash; 3:30 PM</td></tr>
+          <tr><th scope="row">Thursday</th><td>7:00 AM &ndash; 3:30 PM</td></tr>
+          <tr><th scope="row">Friday</th><td>7:00 AM &ndash; 3:30 PM</td></tr>
+          <tr class="shut"><th scope="row">Saturday</th><td>Closed</td></tr>
+          <tr class="shut"><th scope="row">Sunday</th><td>Closed</td></tr>
+        </tbody>
+      </table>
+      <div class="note">
+        <p><b>Starting service starts with a phone call.</b></p>
+        <p style="margin-top:12px">Tell us where you are &mdash; the road, and roughly whereabouts on
+          it. That is the first thing we need to know, and it decides the rest.</p>
+        <p style="margin-top:16px"><a class="btn btn-outline" href="tel:+14238058686" style="font-size:16.5px">Call (423)&nbsp;805-8686</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Where we come</p>
+      <h2>Walker County, Georgia.</h2>
+      <p>Not a national hauler and not a call centre &mdash; a Georgia company on the county&rsquo;s
+        own list, and the phone rings through to us.</p>
+    </div>
+    <div class="split">
+      <div>
+        <p style="font-weight:800;margin-bottom:14px">The county we are listed for</p>
+        <div class="pills">
+          <span class="pill">Walker County</span>
+          <span class="pill">Georgia</span>
+        </div>
+        <p style="color:var(--muted);margin-top:18px;font-size:16.5px">We have deliberately not drawn
+          a map on this page. Roads are the kind of thing you get wrong in print and right on the
+          phone. Call and ask about yours.</p>
+        <p style="margin-top:20px"><a class="btn btn-amber" href="tel:+14238058686">Call and ask about your road</a></p>
+      </div>
+      <div class="note">
+        <p><b>Walker County does not do this part for you.</b></p>
+        <p style="margin-top:12px">The county runs the landfill &mdash; open Monday to Saturday, 8:00
+          to 4:00, closed Sunday &mdash; and household garbage has to be bagged if you haul it there
+          yourself. Curbside collection out in the county is left to private companies like us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trust" style="background:#EEF3F9;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Why people call us</p>
+      <h2>What you can check before you dial.</h2>
+    </div>
+    <div class="badges">
+      <div class="badge">
+        <p class="t">11 five-star reviews</p>
+        <p class="d">Eleven people have given us five stars on Google, over about five years.</p>
+      </div>
+      <div class="badge">
+        <p class="t">On the county&rsquo;s list</p>
+        <p class="d">Walker County names us on its own website as a private household garbage
+          provider. Not our claim &mdash; theirs.</p>
+      </div>
+      <div class="badge">
+        <p class="t">A Georgia company</p>
+        <p class="d">Registered in Georgia and running inside the state. Not a franchise of a national
+          hauler.</p>
+      </div>
+      <div class="badge">
+        <p class="t">Your container, handled</p>
+        <p class="d">Our customers keep writing about the same thing &mdash; the can goes back where
+          it was standing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <h2>Tell us your road and we will tell you straight.</h2>
+    <p>Monday to Friday &mdash; 7:00 AM to 3:30 PM.</p>
+    <a class="bignum" href="tel:+14238058686">(423)&nbsp;805-8686</a>
+    <div class="btn-row">
+      <a class="btn" href="tel:+14238058686">Call now</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap f-in">
+    <span>Fairview Disposal &middot; Household garbage service &middot; Walker County, Georgia</span>
+    <span><a href="tel:+14238058686">(423)&nbsp;805-8686</a></span>
+  </div>
+</footer>
+
+<!--
+===============================================================================
+ DEMONSTRATION PAGE - Fairview Disposal, Chickamauga GA / Walker County
+ Built 2026-11-24 from PUBLIC INFORMATION ONLY. The business was NOT contacted:
+ no call, no text, no email, no form, no DM of any kind.
+
+ PERMISSION GATE
+ ---------------
+ This page is an unsolicited sample. It is marked noindex,nofollow, it is not
+ submitted to any search engine, and it carries a visible "sample site" banner.
+ It is not authorised by the business and does not claim to be. If the owner
+ does not want it to exist, it comes down on request, immediately and without
+ argument. Nothing goes live, gets indexed, or gets pointed at any domain
+ without his say-so.
+
+ WHAT IS VERIFIED (sources and method in research.md)
+ ----------------------------------------------------
+ - Name, phone, town, county, hours, review figures: Google Places (New), live
+   pull 2026-11-24, re-pulled again after this page was written with zero drift.
+ - The phone number and the PO-box mailing address are independently carried by
+   the FMCSA SAFER Company Snapshot for USDOT 3357706 (legal name MCH
+   INTEGRATED ENTERPRISES LLC, DBA FAIRVIEW DISPOSAL), USDOT status ACTIVE, no
+   out-of-service date, FMCSA data as of 11/22/2026.
+ - County and town were confirmed a third way, by reverse-geocoding the
+   listing's coordinates through the US Census geocoder: Chickamauga city,
+   Walker County, Georgia.
+ - "Listed by Walker County" / "household garbage service" / the quoted county
+   heading: read firsthand off the county's own live page,
+   www.walkercountyga.gov/departments/landfill/index.php (HTTP 200, 162,776 B).
+   The old indexed URL (walkercountyga.gov/residents/landfill/) now 404s; the
+   live page was found through the county homepage's own link graph. The county
+   lists eleven private household-garbage companies, with a name and a phone
+   number each and NO website link for any of them.
+ - Landfill hours (Mon-Sat 8-4, closed Sunday) and the bagging requirement:
+   same county page. Presented as the county's, never as ours.
+ - "Not a franchise of a national hauler" / "registered in Georgia and running
+   inside the state": the FMCSA record classes the carrier as Private
+   (Property), Intrastate, a single Georgia LLC.
+ - "11 five-star reviews": PROVED, not scraped. Google displays 4.7 across 12
+   reviews, so the true mean is in [4.65, 4.75) and the star total must be 56 -
+   a deficit of exactly 4 from a perfect 60. The API returns an actual 1-star
+   review, and a 1-star accounts for a deficit of 4 on its own. Therefore the
+   remaining eleven reviews are all 5-star. (A truncating convention would
+   force a total of 57, which makes a 1-star impossible - and we observe one -
+   so truncation is ruled out.) Full derivation in research.md.
+ - "over about five years": measured from the publish dates of the reviews
+   themselves (2021 to 2026), not a claim about how long the business has run.
+
+ OMITTED ON PURPOSE - AND WHY
+ ----------------------------
+  1. NO ADDRESS OF ANY KIND, ANYWHERE ON THIS PAGE. The Google listing gives
+     only a PO box, and the Google map pin sits 713 FEET from the Chickamauga
+     post office - it is the post office that holds the box, not a business
+     location. A street address does exist in the federal carrier record; it is
+     deliberately not used, not shown, not hinted at, and no parcel check was
+     possible to establish whether it is a home. Neither address appears in this
+     file. Not the street, not the box, not the town as a location claim.
+  2. NO YARD, SHOP, GARAGE, LOT, BASE OR LOCATION CLAIM. There is nothing to
+     photograph and nothing to verify, so nothing is asserted.
+  3. NO FLEET AND NO TRUCK COUNT. The FMCSA record says 1 power unit and 2
+     drivers, but its MCS-150 is dated 2019 and may be stale either way. One
+     customer quotation mentions "his truck"; that stays inside the quotation
+     marks as that customer's words and is never restated as a capability.
+  4. THE STAR RATING IS NOT ON THIS PAGE. The aggregate is 4.7 across 12 and
+     would clear the quotable floor, but it is not used - not quoted, not
+     rounded, not alluded to, and no device here implies an average. The
+     five-star COUNT is separately provable and is the only review figure used.
+     It is NOT claimed that all 12 are five stars. Exactly one is not.
+  5. NO PRICE, RATE, FEE, "AFFORDABLE", "FAIR PRICE" OR FREE-ESTIMATE CLAIM.
+     Price is the core theme of the one negative review. One five-star
+     quotation originally ended "Personal service at a great price!" - that
+     clause was CUT from the quote used here rather than reproduced.
+  6. NO CLAIM ABOUT WHAT OR HOW MUCH GETS PICKED UP. No volume, no limits, no
+     extra bags, no bulk items, no "we take anything". The negative review's
+     specific complaint is changing rules on what and how much, so the whole
+     subject is left to the phone call.
+  7. NO CLAIM ABOUT SPILLS, MESS, CLEANLINESS OR TIDINESS IN THE PAGE'S VOICE.
+     Also a live negative theme.
+  8. NO CUSTOMER-SERVICE, COMPLAINT-HANDLING, SATISFACTION OR "WE'LL MAKE IT
+     RIGHT" CLAIM. Named twice in the negative review.
+  9. NO REFERENCE TO REVIEWS AS A CHANNEL, and no suggestion of managing them.
+     The negative review states that the business cancelled a customer's
+     service after she posted it. The five-star count is cited; the subject of
+     reviews is otherwise untouched in every channel.
+ 10. NO PUNCTUALITY, RELIABILITY OR "NEVER MISS A PICKUP" CLAIM in the page's
+     own voice. "He always on time" appears only inside a customer's quotation.
+ 11. NO SCHEDULE, PICKUP DAY OR FREQUENCY. Nothing is published. A 2021 review
+     mentions twice a week for that customer; that is her account of her own
+     service, not a published term, and it is not reproduced.
+ 12. NO SPEED, SAME-DAY, EMERGENCY OR 24/7 CLAIM. No guarantee and no warranty.
+ 13. NO ROLL-OFF, DUMPSTER RENTAL, CONSTRUCTION DEBRIS, JUNK REMOVAL OR
+     RECYCLING OFFER. The county files this business under household garbage;
+     two of the OTHER companies on the county list are the roll-off outfits.
+     Nothing outside household collection is advertised.
+ 14. NO COMMERCIAL OR BUSINESS-ACCOUNT OFFER. The county's heading says
+     household, and nothing found supports commercial work.
+ 15. NO PERSONAL NAMES. Not the owner's, not an employee's, not a reviewer's.
+     Two reviews name a first name and one names a surname; the Georgia
+     Secretary of State register is Cloudflare-blocked (HTTP 403), so the
+     ownership was never verified at a primary source and no name is used.
+     Customer quotations are attributed by date only and had names edited out.
+ 16. NO FOUNDING YEAR AND NO "YEARS IN BUSINESS". No verified date exists.
+     "Over about five years" describes the span of the Google reviews, which is
+     measured.
+ 17. NO LICENCE, BOND OR INSURANCE CLAIM, in either direction. The Georgia SOS
+     register could not be read, and absence of a hit is not evidence.
+ 18. THE BUSINESS NAME IS NOT PRESENTED AS UNIQUE. A second, also-ACTIVE
+     Georgia carrier trades as "Fairview Disposal" about five miles away under a
+     different phone number. This page therefore never says "the only", never
+     says "of Rossville", and carries this business's own number and nothing
+     else. Its own trading name and county are the only identifiers used.
+ 19. NO LOGO. None is published anywhere - no website, no registered domain, no
+     social page found. The small mark is a generic bin glyph drawn inline here,
+     a PLACEHOLDER, labelled as such.
+ 20. THE PALETTE IS OURS, CHOSEN NOT SAMPLED. No logo and no legible signage
+     exists to sample a brand colour from, and no attempt is made to imply one.
+ 21. NO PHOTOGRAPHS AND NO IMAGE FILES AT ALL. The Google listing carries ZERO
+     photos - confirmed twice, through searchText and through Place Details. No
+     social page was found. No stock imagery was used and none was considered
+     acceptable: a generic dumpster or truck photo would be a picture of
+     somebody else's equipment. There is not one IMG tag and not one external
+     request in this file.
+ 22. NO SERVICE-AREA MAP OR TOWN LIST. The map pin is unreliable (see 1), so
+     only the county is named - and that comes from the county's own list. The
+     page asks the reader to call and ask about their road.
+ 23. NO COMPETITOR IS NAMED, and no neighbouring business is referenced.
+
+ KNOWN GAPS the owner would need to fill before this were ever a real site:
+ which roads and communities he actually runs, what day each area is collected,
+ how often, whether he supplies the container, what the service costs and how
+ billing works, what is and is not included, how a new customer signs up,
+ whether he takes card, whether he does any commercial or bulk work, who runs
+ the business, any licence or insurance he wants shown, and photographs of the
+ truck and the crew if he wants them.
+===============================================================================
+-->
+</body>
+</html>
