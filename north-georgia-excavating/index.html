@@ -82,6 +82,14 @@ img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* inline links are real tap targets: >=44px tall, never smaller */
+a.tl{
+  display:inline-block;min-height:44px;line-height:44px;padding:0 3px;
+  color:var(--red);font-weight:800;text-decoration:none;vertical-align:middle;
+}
+a.tl:hover{text-decoration:underline}
+footer a.tl{color:#D9DEE4;font-weight:700}
+footer a.tl.ph{color:#fff;font-weight:900}
 
 /* ---------- top bar ---------- */
 .top{background:var(--ink);color:#fff;position:relative;z-index:30}
@@ -307,7 +315,7 @@ footer h4{color:#fff;font-size:15px;font-weight:800;margin-bottom:9px;letter-spa
       <div class="svc"><h3>Rock, gravel, fill dirt &amp; topsoil</h3><p>Material supplied and hauled in &mdash; crushed stone, gravel, fill dirt and topsoil, delivered and placed.</p></div>
       <div class="svc"><h3>Demolition &amp; debris removal</h3><p>Structures taken down and hauled off, including fire-damaged buildings, and sites cleaned back to grade.</p></div>
       <div class="svc"><h3>Storm shelter installation</h3><p>Excavation and installation of residential storm shelters.</p></div>
-      <div class="svc"><h3>Not sure what you need?</h3><p>Describe the problem and we will tell you straight whether it is our kind of job. <a href="tel:+17064635653" style="color:var(--red);font-weight:800;text-decoration:none">Call (706) 463-5653</a>.</p></div>
+      <div class="svc"><h3>Not sure what you need?</h3><p>Describe the problem and we will tell you straight whether it is our kind of job. <a class="tl" href="tel:+17064635653">Call (706) 463-5653</a>.</p></div>
     </div>
   </div>
 </section>
@@ -382,7 +390,7 @@ footer h4{color:#fff;font-size:15px;font-weight:800;margin-bottom:9px;letter-spa
     </div>
 
     <p class="revnote">Rating and review count pulled from Google on 24 November 2026.
-      <a href="https://maps.google.com/?cid=6714914761572718289" rel="nofollow noopener noreferrer" target="_blank" style="color:var(--red);font-weight:700">See the reviews on Google</a>.</p>
+      <a class="tl" href="https://maps.google.com/?cid=6714914761572718289" rel="nofollow noopener noreferrer" target="_blank">See the reviews on Google</a>.</p>
   </div>
 </section>
 
@@ -392,7 +400,7 @@ footer h4{color:#fff;font-size:15px;font-weight:800;margin-bottom:9px;letter-spa
     <div class="eyebrow">How it works</div>
     <h2>Four steps, no runaround</h2>
     <div class="steps">
-      <div class="step"><div class="num">1</div><div><h3>Call or text</h3><p><a href="tel:+17064635653" style="color:var(--red);font-weight:800;text-decoration:none">(706) 463-5653</a> &mdash; tell us what the ground is doing and what you need it to do instead.</p></div></div>
+      <div class="step"><div class="num">1</div><div><h3>Call or text</h3><p><a class="tl" href="tel:+17064635653">(706) 463-5653</a> &mdash; tell us what the ground is doing and what you need it to do instead.</p></div></div>
       <div class="step"><div class="num">2</div><div><h3>Free estimate</h3><p>We come look at the site and price the job. The estimate costs nothing.</p></div></div>
       <div class="step"><div class="num">3</div><div><h3>Schedule</h3><p>We agree a window and keep you posted &mdash; dirt work moves with the weather.</p></div></div>
       <div class="step"><div class="num">4</div><div><h3>Done and cleaned up</h3><p>Job finished, site left tidy, water going where it is supposed to go.</p></div></div>
@@ -407,7 +415,7 @@ footer h4{color:#fff;font-size:15px;font-weight:800;margin-bottom:9px;letter-spa
       <div>
         <div class="eyebrow">Service area</div>
         <h2>Murray County and north Georgia</h2>
-        <p class="lead">Based in Murray County, Georgia, and working across the surrounding north Georgia counties. If you are not sure whether you are in range, <a href="tel:+17064635653" style="color:var(--red);font-weight:800;text-decoration:none">call (706) 463-5653</a> and ask &mdash; it is a short conversation.</p>
+        <p class="lead">Based in Murray County, Georgia, and working across the surrounding north Georgia counties. If you are not sure whether you are in range, <a class="tl" href="tel:+17064635653">call (706) 463-5653</a> and ask &mdash; it is a short conversation.</p>
         <div class="arealist">
           <span>Murray County</span><span>Crandall</span><span>Chatsworth</span>
           <span>Eton</span><span>Cisco</span><span>Spring Place</span><span>North Georgia</span>
@@ -454,9 +462,9 @@ footer h4{color:#fff;font-size:15px;font-weight:800;margin-bottom:9px;letter-spa
       </div>
       <div>
         <h4>Contact</h4>
-        <p><a href="tel:+17064635653" style="font-weight:800">(706) 463-5653</a><br>
-        <a href="sms:+17064635653">Text the same number</a><br>
-        <a href="mailto:salesngadig@gmail.com">salesngadig@gmail.com</a></p>
+        <p><a class="tl ph" href="tel:+17064635653">(706) 463-5653</a><br>
+        <a class="tl" href="sms:+17064635653">Text the same number</a><br>
+        <a class="tl" href="mailto:salesngadig@gmail.com">salesngadig@gmail.com</a></p>
       </div>
       <div>
         <h4>Hours</h4>
@@ -465,7 +473,7 @@ footer h4{color:#fff;font-size:15px;font-weight:800;margin-bottom:9px;letter-spa
     </div>
     <p class="fnote">
       &copy; 2026 North Georgia Excavating &amp; Grading. Free estimates.
-      &nbsp;&middot;&nbsp; <a href="tel:+17064635653">(706) 463-5653</a><br>
+      &nbsp;&middot;&nbsp; <a class="tl" href="tel:+17064635653">(706) 463-5653</a><br>
       Unpublished demonstration page &mdash; not indexed, not an advertisement, and not authorised for publication.
     </p>
   </div>
