@@ -118,10 +118,11 @@ h1 .hl{color:#FF6B6B}
 .stars{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:24px}
 .stars .n{font-weight:900;font-size:20px}
 .stars .g{font-size:14px;color:#C9CFD6}
-.ctas{display:flex;flex-direction:column;gap:12px;max-width:420px}
+.ctas{display:flex;flex-direction:column;gap:12px;max-width:440px}
 .btn{
   display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;
-  font-weight:800;border-radius:8px;min-height:56px;padding:14px 20px;font-size:18px;text-align:center;
+  font-weight:800;border-radius:8px;min-height:56px;padding:14px 18px;font-size:18px;text-align:center;
+  white-space:nowrap;
 }
 .btn-pri{background:var(--red);color:#fff}
 .btn-pri:hover{background:var(--red-dk)}
@@ -215,7 +216,7 @@ footer h4{color:#fff;font-size:15px;font-weight:800;margin-bottom:9px;letter-spa
 @media (min-width:600px){
   h1{font-size:42px}
   .trust .wrap{grid-template-columns:repeat(4,1fr)}
-  .ctas{flex-direction:row}
+  .ctas{flex-direction:row;max-width:520px}
   .btn{flex:1}
   .svcs{grid-template-columns:1fr 1fr}
   .revs{grid-template-columns:1fr 1fr}
