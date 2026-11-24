@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Boyd Hartline Welding, LLC &mdash; Mobile Welding, Repair &amp; Fabrication</title>
+<meta name="description" content="Mobile welding and repair in northwest Georgia. Heavy equipment, trucks and trailers, aluminium in the field, and custom fabrication. He comes to you. Call (423) 762-6058.">
+<style>
+  :root{
+    --steel:#15181D; --steel-2:#1E232B; --steel-3:#2B323D; --steel-line:#39414E;
+    --green:#8CC152; --green-dk:#6E9C3E; --green-ink:#2E4318; --green-bg:#F1F7E9; --green-line:#D5E7BE;
+    --amber:#E8A33D; --amber-bg:#FFF7EA; --amber-ink:#6A4408; --amber-line:#F2DDB6;
+    --ink:#14181E; --tx:#4C5663; --tx-dim:#B9C2CE;
+    --paper:#F6F8FA; --card:#FFFFFF; --line:#E3E8EE;
+    --wrap:1120px; --r:14px;
+    --shadow:0 1px 2px rgba(21,24,29,.06), 0 6px 20px rgba(21,24,29,.09);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px; line-height:1.62; overflow-x:hidden;
+  }
+  img{max-width:100%; height:auto; display:block}
+  h1,h2,h3{line-height:1.18; margin:0; letter-spacing:-.016em; font-weight:800}
+  p{margin:0}
+  a{color:var(--green-ink)}
+  .wrap{width:100%; max-width:var(--wrap); margin:0 auto; padding:0 20px}
+  .eyebrow{font-size:12px; font-weight:800; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--green-ink); margin:0 0 14px}
+
+  /* ---- interactive elements: every one >= 48px tall ---- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    min-height:58px; padding:15px 26px; border-radius:999px;
+    font-size:18px; font-weight:800; text-decoration:none; color:#fff;
+    background:var(--green-dk); border:2px solid var(--green-dk);
+    box-shadow:var(--shadow); max-width:100%; text-align:center;
+  }
+  .btn:active{background:var(--green-ink); border-color:var(--green-ink)}
+  .btn-dark{background:var(--steel-2); border-color:var(--steel-2); color:#fff}
+  .btn-dark:active{background:var(--steel); border-color:var(--steel)}
+  .btn-ghost{background:transparent; color:#F2F5F8; border:2px solid rgba(242,245,248,.5); box-shadow:none; font-weight:700}
+  .btn-outline{background:#fff; color:var(--steel-2); border:2px solid var(--steel-3); box-shadow:none}
+  .btn-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:26px}
+
+  /* ---- bars ---- */
+  .demo{background:var(--amber-bg); color:var(--amber-ink); border-bottom:1px solid var(--amber-line);
+    padding:11px 0; font-size:14px; font-weight:700; text-align:center; line-height:1.5}
+  .topbar{background:var(--steel); color:#F2F5F8; padding:10px 0}
+  .topbar-in{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+  .topbar .where{font-size:13.5px; font-weight:700; color:var(--tx-dim); letter-spacing:.04em}
+  .topbar a.tel{display:inline-flex; align-items:center; min-height:48px; padding:6px 14px; border-radius:10px;
+    color:#F2F5F8; text-decoration:none; font-weight:800; font-size:17px; border:1px solid rgba(242,245,248,.28)}
+
+  /* ---- hero ---- */
+  .hero{background:var(--steel-2); color:#fff; padding:52px 0 56px; position:relative; overflow:hidden}
+  .hero::after{content:""; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(1000px 420px at 82% -8%, rgba(140,193,82,.20), transparent 62%)}
+  .hero-in{position:relative; z-index:1; display:grid; grid-template-columns:1fr; gap:34px; align-items:center}
+  .brand{display:flex; align-items:center; gap:13px; margin-bottom:24px}
+  .brand .mark{flex:0 0 auto}
+  .brand .wordmark{font-weight:900; font-size:20px; letter-spacing:-.02em; line-height:1.2}
+  .brand .wordmark small{display:block; font-size:11.5px; font-weight:800; letter-spacing:.17em;
+    text-transform:uppercase; color:var(--green); margin-top:3px}
+  .hero h1{font-size:39px; letter-spacing:-.025em}
+  .hero .lede{margin-top:18px; font-size:19px; color:#D9E0E8; max-width:40em}
+  .hero-img{border-radius:var(--r); overflow:hidden; box-shadow:0 18px 50px rgba(0,0,0,.42); background:var(--steel)}
+  .chips{display:flex; flex-wrap:wrap; gap:9px; margin-top:26px; padding:0; list-style:none}
+  .chips li{display:inline-flex; align-items:center; gap:7px; background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.17); color:#E7ECF2; border-radius:999px;
+    padding:9px 15px; font-size:14.5px; font-weight:700}
+
+  /* ---- sections ---- */
+  section{padding:62px 0}
+  section.alt{background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+  .sec-head{max-width:46em; margin-bottom:34px}
+  .sec-head h2{font-size:30px}
+  .sec-head p{margin-top:14px; color:var(--tx); font-size:18px}
+
+  .grid{display:grid; grid-template-columns:1fr; gap:18px}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+    padding:24px; box-shadow:var(--shadow)}
+  section.alt .card{background:var(--paper)}
+  .card h3{font-size:19px; margin-bottom:9px}
+  .card p{color:var(--tx); font-size:16.5px}
+  .card .ic{width:40px; height:40px; border-radius:11px; background:var(--green-bg);
+    border:1px solid var(--green-line); display:flex; align-items:center; justify-content:center; margin-bottom:15px}
+
+  /* ---- steps ---- */
+  .steps{display:grid; grid-template-columns:1fr; gap:16px; counter-reset:s}
+  .step{background:var(--card); border:1px solid var(--line); border-radius:var(--r); padding:23px 23px 23px 70px;
+    position:relative; box-shadow:var(--shadow)}
+  section.alt .step{background:var(--paper)}
+  .step::before{counter-increment:s; content:counter(s); position:absolute; left:20px; top:22px;
+    width:34px; height:34px; border-radius:999px; background:var(--steel-2); color:#fff;
+    font-weight:900; font-size:16px; display:flex; align-items:center; justify-content:center}
+  .step h3{font-size:18px; margin-bottom:7px}
+  .step p{color:var(--tx); font-size:16.5px}
+
+  /* ---- gallery ---- */
+  .gal{display:grid; grid-template-columns:1fr; gap:16px}
+  .shot{background:var(--card); border:1px solid var(--line); border-radius:var(--r); overflow:hidden;
+    box-shadow:var(--shadow)}
+  section.alt .shot{background:var(--paper)}
+  .shot{display:flex; flex-direction:column}
+  .shot img{width:100%; aspect-ratio:4/3; object-fit:cover}
+  .shot figcaption{padding:14px 18px 17px; font-size:15.5px; color:var(--tx); font-weight:600; flex:1}
+
+  /* ---- reviews ---- */
+  .stars{color:var(--amber); font-size:17px; letter-spacing:2px; font-weight:800}
+  .rev{background:var(--card); border:1px solid var(--line); border-radius:var(--r); padding:24px;
+    box-shadow:var(--shadow)}
+  section.alt .rev{background:var(--paper)}
+  .rev blockquote{margin:11px 0 0; font-size:16.5px; color:var(--ink)}
+  .rev .when{margin-top:13px; font-size:13.5px; color:var(--tx); font-weight:700; letter-spacing:.03em}
+  .scorecard{background:var(--steel-2); color:#fff; border-radius:var(--r); padding:30px 26px; text-align:center;
+    box-shadow:var(--shadow)}
+  .scorecard .big{font-size:52px; font-weight:900; line-height:1; letter-spacing:-.03em}
+  .scorecard .sub{margin-top:11px; color:#D4DCE5; font-size:16px}
+  .scorecard .stars{display:block; margin-top:13px; font-size:21px}
+
+  /* ---- plain lists ---- */
+  .ticks{list-style:none; padding:0; margin:0; display:grid; gap:12px}
+  .ticks li{display:flex; gap:12px; align-items:flex-start; font-size:16.5px; color:var(--tx)}
+  .ticks .tk{flex:0 0 auto; margin-top:3px}
+
+  /* ---- callout ---- */
+  .callout{background:var(--green-bg); border:1px solid var(--green-line); border-radius:var(--r);
+    padding:24px; color:var(--green-ink)}
+  .callout h3{font-size:18px; margin-bottom:8px}
+  .callout p{font-size:16.5px; color:#3C5622}
+
+  /* ---- final cta ---- */
+  .cta{background:var(--steel); color:#fff; padding:62px 0}
+  .cta h2{font-size:31px; max-width:17em}
+  .cta p{margin-top:15px; color:#D4DCE5; font-size:18px; max-width:38em}
+  .cta .num{display:inline-flex; align-items:center; justify-content:center; min-height:58px;
+    margin-top:8px; font-size:27px; font-weight:900; color:#fff; text-decoration:none; letter-spacing:-.01em}
+
+  /* ---- footer ---- */
+  footer{background:var(--steel); color:var(--tx-dim); padding:34px 0 46px;
+    border-top:1px solid var(--steel-line); font-size:14.5px}
+  footer a{color:#E7ECF2; font-weight:700}
+  footer a.tel-f{display:inline-flex; align-items:center; min-height:48px; padding:6px 16px;
+    border-radius:10px; border:1px solid rgba(242,245,248,.28); text-decoration:none;
+    font-size:18px; font-weight:800}
+  footer .fnote{margin-top:14px; color:#8A96A5; font-size:13.5px; max-width:52em; line-height:1.6}
+
+  @media (min-width:720px){
+    .grid{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .gal{grid-template-columns:1fr 1fr}
+    .revs{grid-template-columns:1fr 1fr}
+    .hero h1{font-size:50px}
+  }
+  @media (min-width:1000px){
+    .hero-in{grid-template-columns:1.05fr .95fr; gap:46px}
+    .grid-3{grid-template-columns:1fr 1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr 1fr}
+    .gal{grid-template-columns:1fr 1fr 1fr}
+  }
+  .revs{display:grid; grid-template-columns:1fr; gap:18px}
+  @media (min-width:720px){ .revs{grid-template-columns:1fr 1fr} }
+  .sr{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+    clip:rect(0,0,0,0); white-space:nowrap; border:0}
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <div class="wrap">
+    Sample site built for Boyd Hartline Welding, LLC &mdash; not published, not indexed, nothing live.
+  </div>
+</div>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span class="where">Mobile welding &amp; repair &middot; Northwest Georgia</span>
+    <a class="tel" href="tel:+14237626058" aria-label="Call 4 2 3, 7 6 2, 6 0 5 8">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      (423) 762-6058
+    </a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <div class="brand">
+        <span class="mark" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 44 44" fill="none">
+            <rect x="1.5" y="1.5" width="41" height="41" rx="11" stroke="#8CC152" stroke-width="2.4"/>
+            <path d="M13 29.5 24.5 12l-2 9.5h7L18 39l2-9.5h-7z" fill="#E8A33D"/>
+            <path d="M12.5 33.5h19" stroke="#8CC152" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="wordmark">
+          Boyd Hartline Welding, LLC
+          <small>Mobile welding &amp; fabrication</small>
+        </span>
+      </div>
+
+      <h1>If it is steel and it is broken, he brings the shop to it.</h1>
+      <p class="lede">
+        Mobile welding and repair across northwest Georgia and over the state line &mdash;
+        heavy equipment, trucks and trailers, aluminium in the field, and custom
+        fabrication made to order. One phone call, and a truck that turns up with
+        everything needed on the back of it.
+      </p>
+
+      <ul class="chips">
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#E8A33D" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          12 Google reviews &mdash; all 12 are five stars
+        </li>
+        <li>He comes to you</li>
+        <li>Equipment &middot; trucks &middot; trailers</li>
+        <li>Steel &amp; aluminium</li>
+      </ul>
+
+      <div class="btn-row">
+        <a class="btn" href="tel:+14237626058">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call (423) 762-6058
+        </a>
+        <a class="btn btn-ghost" href="#work">See the work</a>
+      </div>
+    </div>
+
+    <figure class="hero-img" style="margin:0">
+      <img src="images/hero-arc.jpg" width="825" height="1100"
+           alt="Striking an arc on a curved steel plate, sparks throwing off the weld.">
+    </figure>
+  </div>
+</header>
+
+<!-- ============================ WHAT HE FIXES ============================ -->
+<section id="what">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What he takes on</p>
+      <h2>Broken equipment, cracked frames, and things that need making.</h2>
+      <p>
+        Most of it is repair work on machines that have to go back to work the same day.
+        The rest is fabrication &mdash; parts and pieces built to fit, because nobody sells
+        the thing you actually need.
+      </p>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <span class="ic" aria-hidden="true">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2E4318" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="m5 21 1-9 5-2 4 3 4-1 1 9"/><path d="m11 10-1-5 4-2 2 5"/></svg>
+        </span>
+        <h3>Heavy equipment</h3>
+        <p>
+          Excavator buckets rebuilt with new wear bars and teeth, cracked booms welded up,
+          pins and bushings sorted out. Machines that crack because they get used hard.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="ic" aria-hidden="true">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2E4318" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16V7h11v9"/><path d="M13 10h4l4 3.5V16"/><circle cx="6.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg>
+        </span>
+        <h3>Trucks &amp; trailers</h3>
+        <p>
+          Axles, hitch plates, pintle hooks and receivers, frame rails, and whole trailer
+          decks laid back down in steel. Including the kind of thing that stops a rig
+          at the roadside.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="ic" aria-hidden="true">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2E4318" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5 20.5 9.5"/><path d="M3 21s1-4 4-7l7-7 3 3-7 7c-3 3-7 4-7 4z"/></svg>
+        </span>
+        <h3>Aluminium, in the field</h3>
+        <p>
+          Not every mobile welder will touch aluminium away from a shop. This one does it
+          on site, which is usually the whole reason somebody is calling.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="ic" aria-hidden="true">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2E4318" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M5 20V9l7-5 7 5v11"/><path d="M9 20v-6h6v6"/></svg>
+        </span>
+        <h3>Custom fabrication</h3>
+        <p>
+          Made and fitted to the job: handrails, brackets, plates, frames, guards. If you
+          can describe it or sketch it, it is worth a phone call.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="ic" aria-hidden="true">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2E4318" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M12 16v6"/><circle cx="12" cy="12" r="4"/><path d="m4.9 4.9 3 3"/><path d="m16.1 16.1 3 3"/><path d="m19.1 4.9-3 3"/><path d="m7.9 16.1-3 3"/></svg>
+        </span>
+        <h3>Structural &amp; pipe</h3>
+        <p>
+          Beams, box tubing and pipe &mdash; including steel welded back into the chassis
+          under something that has started to sag.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="ic" aria-hidden="true">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2E4318" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 5.6a5 5 0 0 0-7 0L12 7.3l-1.7-1.7a5 5 0 1 0-7 7l8.7 8.7 8.8-8.7a5 5 0 0 0 0-7z"/></svg>
+        </span>
+        <h3>Fleets and yards</h3>
+        <p>
+          Standing work for outfits that run equipment hard and need the same person back
+          each time, rather than whoever picks up the phone.
+        </p>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn" href="tel:+14237626058">Call and describe it &mdash; (423) 762-6058</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HOW IT WORKS ============================ -->
+<section id="how" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">How it works</p>
+      <h2>He travels to the machine. That is the whole idea.</h2>
+      <p>
+        The truck carries the welder, the reels, the bottles and the tools. What would
+        normally mean loading a broken machine onto a trailer and hauling it somewhere
+        instead means somebody turning up where it already is.
+      </p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <h3>Call and say what broke</h3>
+        <p>
+          What it is, what it is made of, and where it is sitting. That is usually enough
+          to say yes or no on the phone.
+        </p>
+      </div>
+      <div class="step">
+        <h3>He comes out to it</h3>
+        <p>
+          Jobsite, yard, shoulder of the road, back of a farm. One customer had him come
+          two hours out to a trailer that had let go.
+        </p>
+      </div>
+      <div class="step">
+        <h3>It goes back to work</h3>
+        <p>
+          Most of this work exists so a machine or a rig can finish the day it was already
+          in the middle of.
+        </p>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn btn-dark" href="tel:+14237626058">Talk it through &mdash; (423) 762-6058</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== THE WORK =============================== -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The work</p>
+      <h2>Every photograph here is his own work.</h2>
+      <p>
+        No stock pictures, nothing borrowed. These came off the business's own listing and
+        from customers who posted them after the job.
+      </p>
+    </div>
+
+    <div class="gal">
+      <figure class="shot">
+        <img src="images/mobile-rig.jpg" width="683" height="820"
+             alt="The welding rig on the back of the service truck: engine-drive welder, hose reels and gas bottles.">
+        <figcaption>The rig that shows up &mdash; welder, reels and bottles, all on the truck.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="images/field-bucket.jpg" width="632" height="820"
+             alt="An excavator bucket rebuilt with new wear bars welded across the base, sitting on the ground at a jobsite.">
+        <figcaption>Bucket rebuilt with fresh wear bars &mdash; done where the machine was working.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="images/trailer-deck.jpg" width="615" height="820"
+             alt="Welding new steel deck plates onto a trailer bed, chain and winch alongside.">
+        <figcaption>New steel going down on a trailer deck, out on the gravel.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="images/buckets-rebuilt.jpg" width="1000" height="562"
+             alt="Two excavator buckets side by side, one with new wear bars and one with a new set of teeth.">
+        <figcaption>Two buckets back in service &mdash; new wear bars, new teeth.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="images/frame-repair.jpg" width="900" height="675"
+             alt="Heavy steel sections welded into a chassis frame underneath a trailer, with a stabiliser jack fitted.">
+        <figcaption>Structural steel welded back into a chassis that had started to give.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="images/frame-bracket.jpg" width="900" height="675"
+             alt="Close-up of a bracket welded back onto a frame rail, bead ground and dressed.">
+        <figcaption>A bracket put back on a frame rail &mdash; posted by the customer afterwards.</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="images/weld-bead.jpg" width="393" height="700"
+             alt="Close-up of a finished weld bead running along a curved steel seam.">
+        <figcaption>The part most people never look at.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== REVIEWS =============================== -->
+<section id="reviews" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What customers said</p>
+      <h2>Twelve reviews on Google. All twelve are five stars.</h2>
+      <p>
+        Not an average that rounds up &mdash; twelve out of twelve. The quotes below are
+        reproduced as they were written, identified by date only.
+      </p>
+    </div>
+
+    <div style="display:grid; gap:18px; grid-template-columns:1fr; margin-bottom:24px">
+      <div class="scorecard">
+        <span class="big">12 / 12</span>
+        <span class="stars" aria-hidden="true">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+        <p class="sub">Twelve Google reviews, every one of them five stars.</p>
+      </div>
+    </div>
+
+    <div class="revs">
+      <div class="rev">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="sr">Five out of five stars.</span>
+        <blockquote>
+          &ldquo;Had an axle flex issue on my 48&nbsp;ft trailer and he came out and welded up
+          some angle on the axles for me. Welds look great and I&rsquo;m very happy with the
+          service I received. Will absolutely call him again.&rdquo;
+          <br><br>
+          &ldquo;Update: had a second job done. Came out and welded up a hitch plate for my semi
+          with a 50&nbsp;ton pintle hook and 3&nbsp;inch hitch receiver. His work is top notch
+          and it turned out even better than I had hoped. I&rsquo;m a DIY&rsquo;er but that was a
+          task I needed a professional for, and that&rsquo;s exactly what I got.&rdquo;
+        </blockquote>
+        <p class="when">Google review &middot; November 2024</p>
+      </div>
+
+      <div class="rev">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="sr">Five out of five stars.</span>
+        <blockquote>
+          &ldquo;I am the supervisor of a local municipal garage and have been using Boyd Hartline
+          Welding over the past several months to repair our equipment that gets heavily used
+          and develop cracks in the booms from stress. These guys are always available in a
+          reasonable manner of time and do professional work. I am glad I found them!!&rdquo;
+        </blockquote>
+        <p class="when">Google review &middot; June 2020</p>
+      </div>
+
+      <div class="rev">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="sr">Five out of five stars.</span>
+        <blockquote>
+          &ldquo;Brilliant work. Pictures before and after &mdash; our trailer took a hit, these
+          guys came out two hours away, welder, and he&rsquo;s back on the road. Thank you guys
+          for great service.&rdquo;
+        </blockquote>
+        <p class="when">Google review &middot; June 2025</p>
+      </div>
+
+      <div class="rev">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="sr">Five out of five stars.</span>
+        <blockquote>
+          &ldquo;Made and installed sturdy, beautiful handrails that really improved the look of
+          our back porch. Easy to work with from start to finish. Great guys! Highly
+          recommend!&rdquo;
+        </blockquote>
+        <p class="when">Google review &middot; August 2021</p>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn" href="tel:+14237626058">Call (423) 762-6058</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SERVICE AREA ============================ -->
+<section id="area">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Where he goes</p>
+      <h2>Northwest Georgia, and a good way past it.</h2>
+      <p>
+        This is a mobile operation, so the question is never &ldquo;where is the shop&rdquo;
+        &mdash; it is how far the truck will travel for the job in front of it.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Dade County and the surrounding area</h3>
+        <p>
+          The home ground: Trenton, the mountain, the valley, and the roads either side
+          of the Georgia&ndash;Tennessee line.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Further out, when the job is worth the drive</h3>
+        <p>
+          One customer wrote that he came out two hours away to a trailer that had let go.
+          How far is worth travelling depends on the work &mdash; ask on the phone.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:20px">
+      <h3>Calling is the only way in, and that is deliberate</h3>
+      <p>
+        There is no booking form here and no address to turn up at. This is mobile work, so
+        the phone is the way in &mdash; a short call settles what the job is, what it is made
+        of, and whether it is one he takes on.
+      </p>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn" href="tel:+14237626058">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        (423) 762-6058
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== WHY HIM =============================== -->
+<section id="why" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Why people call back</p>
+      <h2>The same few things, over and over.</h2>
+    </div>
+
+    <ul class="ticks">
+      <li>
+        <span class="tk" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6E9C3E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg></span>
+        <span><strong>He turns up where the machine is.</strong> No loading it, no hauling it, no waiting for a slot in somebody&rsquo;s shop queue.</span>
+      </li>
+      <li>
+        <span class="tk" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6E9C3E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg></span>
+        <span><strong>Repair and fabrication from the same person.</strong> If the broken part cannot be saved, the replacement can be made rather than ordered.</span>
+      </li>
+      <li>
+        <span class="tk" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6E9C3E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg></span>
+        <span><strong>A repeat customer wrote the longest review.</strong> He came back for a second job and then edited his review to add it.</span>
+      </li>
+      <li>
+        <span class="tk" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6E9C3E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg></span>
+        <span><strong>Twelve reviews, twelve five-star ratings.</strong> There is no bad one to go looking for.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================== FINAL CTA ============================== -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Tell him what broke. He will tell you if he can fix it.</h2>
+    <p>
+      Worst case you lose two minutes on the phone and find out it is not his kind of job.
+      Best case the machine is working again before the day is out.
+    </p>
+    <div class="btn-row">
+      <a class="btn" href="tel:+14237626058">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call (423) 762-6058
+      </a>
+      <a class="btn btn-ghost" href="#what">What he takes on</a>
+    </div>
+    <div><a class="num" href="tel:+14237626058">(423) 762-6058</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#fff">Boyd Hartline Welding, LLC</strong> &middot; Mobile welding, repair and fabrication &middot; Northwest Georgia</p>
+    <p style="margin-top:10px"><a class="tel-f" href="tel:+14237626058">(423) 762-6058</a></p>
+    <p class="fnote">
+      This is an unpublished sample page, put together from public information so the owner
+      can see what a site would look like. It is not indexed and it is not live anywhere
+      the public can reach it. Nothing on it should be treated as a quote, a guarantee, a
+      certification, or a commitment to be available at any particular time &mdash; all of
+      that is the owner&rsquo;s to confirm before anything goes live.
+    </p>
+  </div>
+</footer>
+
+<!--
+===============================================================================
+ BOYD HARTLINE WELDING, LLC - UNPUBLISHED SAMPLE PAGE
+ Built 2026-11-24 from public sources only. No contact has been made with this
+ business. Not indexed (noindex, nofollow), not linked from anywhere, zero
+ external requests - no fonts, no analytics, no trackers, no third-party assets.
+ Every image is local and every icon is inline SVG.
+
+ PERMISSION GATE
+ ---------------
+ Nothing here may be published, indexed, advertised, printed or handed to a
+ third party until the owner has seen it and said yes. The photographs are his
+ own work and his customers'; the review text belongs to the people who wrote
+ it. This file exists to be shown to the owner, once, and then either adopted
+ by him or deleted. It is not a live website and must not be treated as one.
+
+ OMITTED ON PURPOSE - AND WHY
+ ----------------------------
+  1. THE STREET ADDRESS. On the evidence the listed address is a RESIDENCE:
+     OpenStreetMap classifies the point as a "house"; satellite imagery shows a
+     dwelling and a small outbuilding on a wooded lot with a gravel drive and
+     no commercial yard, shop, parking or signage; the cross streets are
+     residential subdivision streets; the federal carrier record gives the same
+     address as both physical and mailing address; and the business is listed
+     as having one employee. The street number and the street name therefore
+     appear NOWHERE in this file - not in the text, not in the markup, not in
+     this comment, not in an alt attribute, not in an image filename - and they
+     are absent from the SMS draft too. The page names no finer location than
+     the county and the region, and it says plainly that there is no address to
+     turn up at. The grep proving the absence is recorded in research.md.
+  2. NO INVITATION TO VISIT, DROP OFF OR COME BY. Directly downstream of (1).
+     There is no map, no directions, no "stop in", no opening-hours table that
+     would imply a counter. Unlike some mobile welders there is no public
+     evidence he takes drop-off work, so the page never suggests it.
+  3. NO PUBLISHED HOURS. Google, the BBB and Facebook all show this business as
+     open 24 hours a day, 7 days a week. That is not a finding - it is an unset
+     default. Google's own hours payload contains a single period beginning
+     Sunday 00:00 with no closing time, which is how the "open 24 hours" toggle
+     is represented, and Facebook's equivalent is a single "Always open" switch.
+     A one-person operation cannot staff 24/7. Rather than publish hours that
+     are probably wrong, or invent plausible ones, the page publishes none and
+     says to call. REAL HOURS ARE A BLANK THE OWNER MUST FILL.
+  4. NO PERSONAL NAME IS USED TO ADDRESS ANYONE. The registered company name is
+     used as the company name, because that is what the business is called and
+     it is on his own public listings. But nobody is addressed, greeted or
+     referred to by a personal name anywhere on this page, and no personal name
+     at all appears in the SMS draft. There is a specific and serious reason
+     for this which is set out in research.md; it is not a style preference.
+  5. NO FOUNDING YEAR, NO "YEARS IN BUSINESS", NO ORIGIN STORY, NO FAMILY
+     FRAMING. Public records give a formation date. It is not used, it is not
+     referred to obliquely, and no anniversary or longevity claim is made.
+     Again - see research.md. This one matters.
+  6. NO LOGO EXISTS PUBLICLY. The small mark beside the wordmark is a generic
+     spark-and-bar glyph drawn inline here - a PLACEHOLDER, not their logo.
+  7. THE PALETTE WAS SAMPLED, NOT INVENTED. The green is taken from the
+     hand-painted lettering on his own welding rig in one of his photographs,
+     brightened for screen legibility because the photograph is overcast. The
+     amber is sampled from the sparks in the arc photograph.
+  8. NO PRICES, NO RATES, NO CALL-OUT FEE, NO MINIMUM, NO "FREE ESTIMATE".
+     No figure is published anywhere in public, so none is repeated, inferred,
+     or substituted from an industry benchmark.
+  9. NO CERTIFICATION, LICENCE, BONDING OR INSURANCE CLAIM. No such record was
+     retrieved from any primary registry, so no such claim is made. Not
+     "certified", not "licensed", not "insured", not "qualified".
+ 10. NO CREW SIZE. Public records say one employee and one driver. Several
+     customers write "these guys", which is their wording and is quoted only
+     inside their own quotation marks. The page makes no staffing claim of its
+     own and never says "our team".
+ 11. NO RESPONSE-TIME OR AVAILABILITY PROMISE. No "24/7", no "emergency
+     call-out", no "we never miss a call", no "always reachable", and no
+     contact form or online booking that would imply any of those. One review
+     praises availability; that is quoted as the customer's experience and is
+     never converted into a commitment.
+ 12. THE MUNICIPAL CUSTOMER IS NOT NAMED OR CHARACTERISED. One review is from a
+     public-sector fleet supervisor. The quote is used; the employer is not
+     identified and no "trusted by local government" claim is built on it.
+ 13. NO THIRD-PARTY BRANDING. Reviews and photographs show equipment makes and
+     a trailer manufacturer. None is named.
+ 14. NO EMAIL ADDRESS. One is published on the business's own social page. It
+     is a personal-looking address and it is not reproduced here.
+ 15. NO SPEED, PAGESPEED OR SEO CLAIM. There is no working site to measure, so
+     no such angle has been manufactured.
+ 16. NO SEASONAL LINE AND NO URGENCY LANGUAGE anywhere, on the page or in the
+     SMS. No deadline, no scarcity, no "limited slots", no "book before".
+ 17. ONE CUSTOMER PHOTOGRAPH WAS REJECTED OUTRIGHT and two others were cropped,
+     because they showed a legible vehicle registration plate and identifiable
+     faces. All metadata is stripped from every image that ships.
+ 18. NO REVIEW FIGURE FROM ANY PLATFORM BUT GOOGLE. The social page carries a
+     different recommendation count on a different basis; it is not used, and
+     the only figures on this page are twelve reviews and twelve five-star
+     ratings, which are consistent with each other and with the live listing.
+
+ KNOWN GAPS the owner would have to fill before this were ever a real site:
+ his real working hours and whether he wants any published at all; whether the
+ address should appear; how far he will actually travel and whether there is a
+ call-out charge or minimum; what he will and will not take on (aluminium,
+ stainless, cast, structural, certified or coded work); insurance and any
+ certifications; whether he wants a contact form or phone only; and which of
+ these photographs he actually wants used.
+===============================================================================
+-->
+
+</body>
+</html>
