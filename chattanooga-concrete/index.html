@@ -18,153 +18,20 @@
 <!-- DEMO SITE — prepared for Chattanooga Concrete Co., Chattanooga TN. Not affiliated, not live, not linked. -->
 <!-- Website by [MATT — YOUR NAME / COMPANY HERE] -->
 <!--
-  ====================================================================
-  BUILD NOTES — Chattanooga Concrete Co. demo, v2, 2026-10-27
-  Single self-contained page. System fonts, inline CSS/JS, zero external
-  requests: every image is a local file in images/ served alongside this
-  page. No analytics, no font CDN, no trackers, no chat widget, no
-  reCAPTCHA, no Cloudflare challenge. Page is noindex.
+  SAMPLE PAGE - not authorised by the business, and not claiming to be.
 
-  Full sourcing for every claim below is in research.md.
-  --------------------------------------------------------------------
+  Built from publicly available information only. The business was NOT
+  contacted in any way: no call, no text, no email, no form, no DM.
 
-  THE ANGLE IS ALIVE. Google PageSpeed mobile, sampled SIX times on
-  2026-10-27 against https://chattanoogaconcreteco.com/:
+  Marked noindex,nofollow. Not submitted to any search engine. Carries a
+  visible "sample site" banner. Nothing goes live, gets indexed, or gets
+  pointed at any domain without the owner's say-so.
 
-      53, 49, 54, 51, 49, 39     (min 39 · max 54 · median 50 · mean 49)
+  If the owner does not want this page to exist, it comes down on request,
+  immediately and without argument.
 
-  Not one run reached 70, so the brief's kill-switch does not fire. The
-  September scan's 48 sits inside that band, so "it got worse" is NOT
-  supportable. The honest line is "unchanged and still failing."
-
-  DO NOT LEAD WITH THE SCORE. Lead with the numbers that barely move:
-
-    - Largest Contentful Paint 20.4 s - 21.5 s in five of six runs
-      (the sixth, 11.0 s, is still four times Google's 2.5 s target).
-      NEVER ONCE under 11 s.
-    - First Contentful Paint 5.8 - 6.0 s in five of six runs. Identical
-      to one decimal. Six seconds of nothing before anything paints.
-    - 9.5 MB over the wire (9,490 - 9,624 KiB in five runs; one outlier
-      at 11,313). Rock solid, and roughly 2x the next-worst site this
-      program has measured.
-    - Accessibility 74, Best Practices 69, SEO 92 — byte-identical in
-      all six runs. Their SEO is genuinely good. Say so.
-
-  THE DESKTOP / MOBILE SPLIT IS THE WHOLE PITCH:
-      Desktop  82/100, FCP 0.8 s, LCP 2.4 s   <- this PASSES
-      Mobile   50/100, FCP 5.9 s, LCP 21.5 s  <- this does not
-  Same 9.5 MB either way. Desktop fibre swallows it; a phone on LTE does
-  not. The owner checks his site at the office, sees a fast, good-looking
-  page, and is RIGHT about what he sees. He is looking at the one device
-  where the problem hides. That is the opening — it explains why a sharp
-  operator with an A+ BBB rating has not already fixed this.
-
-  WHERE THE 9.5 MB GOES — AND HERE IT *IS* THE PHOTOS:
-      Image        33 req   5,880 KiB   <- 62% of the page
-      Script       92 req   2,176 KiB
-      Other        30 req     679 KiB
-      Font          7 req     307 KiB
-      Document      4 req     264 KiB
-      Stylesheet   23 req     183 KiB
-      (third-party: 140 of 189 requests, 3,438 KiB)
-  Single worst offenders, all their own uploads, all PNGs used as photos:
-      Concrete-Slabs-for-structures.png              1,134 KiB
-      Concrete-Driveway-Replacement-and-Expansion.png  801 KiB
-      Driveway-Concrete-Expansion-3.jpg                737 KiB
-      challenges.cloudflare.com (bot challenge)        657 KiB
-      DJI_0187-scaled.jpg                              578 KiB
-      DJI_0262-scaled.jpg                              551 KiB
-      chattanooga-concrete-1.png                       482 KiB
-  Three photographs saved as PNG instead of JPEG account for 2.4 MB on
-  their own. THIS IS A COMPLIMENT WAITING TO HAPPEN: the photography is
-  excellent and nobody ever compressed it. Frame it as "nobody ran these
-  through a compressor," never as "your photos are bad." Also note the
-  GoHighLevel CRM widget (leadconnectorhq.com) is loaded TWICE, 263 KiB
-  each time.
-
-  --------------------------------------------------------------------
-  SCAN CORRECTIONS BAKED INTO THIS PAGE
-
-  1. TOWN. The September scan filed them under Rossville, GA. They are
-     at 522 LYTLE ST, CHATTANOOGA, TN 37405 — North Chattanooga, right
-     off Cherokee Blvd. Live Places pull 2026-10-27 confirms. (Sixth
-     wrong town in ten scans.) They do keep a second address at
-     801 E Walnut Ave A106, Dalton, GA 30721, which is probably what
-     dragged the scan south.
-
-  2. NOT Chattanooga Floor Care. Different company, different owners,
-     different trade, already pitched 2026-10-27. CCC POURS concrete;
-     CFC COATS existing slabs. Do not cross the wires.
-
-  3. Reviews confirmed exactly: 4.8 stars, 100 reviews, live 2026-10-27.
-     The scan was right on both.
-
-  4. HOURS ARE IN CONFLICT AND THAT IS THE FREE GIVEAWAY.
-       Google Business Profile: Mon-Sat 9:00 AM - 5:00 PM, Sun closed
-       Their own /contact-us/ page: "Monday-Friday 9am-6pm"
-     Saturday and the closing hour both disagree. This page prints the
-     GOOGLE hours, because that is what a customer searching on a phone
-     actually sees. Matt should ask which is right rather than assume.
-
-  5. PHONE. Their site and Google both publish (423) 708-2372, which is
-     what this page dials. Their BBB profile lists (423) 313-2583 as the
-     primary and 708-2372 as "other phone." Worth confirming; not worth
-     guessing at.
-
-  --------------------------------------------------------------------
-  THINGS ON THEIR LIVE SITE THAT ARE SIMPLY BROKEN (free giveaways)
-
-  a. NO TAP-TO-CALL ANYWHERE. Zero tel: links across all seven pages
-     fetched. The number is plain text — on the contact page it is even
-     typed "(423) - 708 - 2372" with spaces, which some phones will not
-     linkify at all. Every number on THIS page is a tel: link.
-
-  b. PINCH-ZOOM IS DISABLED SITE-WIDE. Their viewport tag carries
-     user-scalable=no AND maximum-scale=1. Lighthouse flags it. Anyone
-     who needs to enlarge text cannot. This page allows zoom.
-
-  c. THE "Faqs" LINK IN THEIR OWN FOOTER IS DEAD. /faq/ 301s straight
-     back to the homepage — verified, identical md5 to the homepage.
-     Same for /projects/.
-
-  d. THE "Check out our leadership team" BUTTON ON /about/ IS href=""
-     — it reloads the page it is already on. (The identical button on
-     the homepage works and points at /about/.)
-
-  e. /about/family-of-businesses/ renders the RoofingCo paragraph twice
-     and Pool Service Co. once — a template loop misfiring.
-
-  --------------------------------------------------------------------
-  CLAIMS AND THEIR SOURCES — nothing here is invented
-
-  "Chattanooga's premier concrete contractor"  their own site header
-  "750+ projects completed" / "13 team members" / "50+ years"
-                                               their own About page
-                                               (SELF-CLAIMS, labelled)
-  4.8 stars / 100 reviews                      Google Places, live
-  BBB A+, accredited since 3/11/2019, 0 complaints in 3 years
-                                               bbb.org profile
-  TN licence #72723, expires 12/31/2026        bbb.org profile
-  Founded by Jason Finnell + Chase Marsh       their own About page
-  Service list                                 their own nav
-  Service areas                                their own About page
-  Testimonials                                 VERBATIM from their own
-                                               homepage, attributed as
-                                               they attribute them.
-                                               NOTHING INVENTED.
-
-  Principals checked for obituary / closure before drafting, per program
-  rule: no obituary for either name, business OPERATIONAL in live Places
-  pull, TN licence current through 12/31/2026. Clear to proceed.
-
-  --------------------------------------------------------------------
-  IMAGES: every photograph is theirs — their Google Business Profile
-  (business-posted only) or their own WordPress uploads. Provenance and
-  the exclusions that protect people are documented in build_assets.py.
-  Two of their Google photos are deliberately unused: one is a stock
-  photo that is not their work, one shows five identifiable faces, a
-  readable licence plate and another company's branding.
-  ====================================================================
+  Sourcing, verification method and the full list of deliberate omissions are
+  kept in the internal research file and are not published here.
 -->
 <style>
 *{box-sizing:border-box;margin:0;padding:0}

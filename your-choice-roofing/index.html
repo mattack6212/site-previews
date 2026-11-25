@@ -18,124 +18,20 @@
 <!-- DEMO SITE — prepared for Your Choice Roofing & Remodeling, Chattanooga TN. Not affiliated, not live, not linked. -->
 <!-- Website by [MATT — YOUR NAME / COMPANY HERE] -->
 <!--
-  ====================================================================
-  BUILD NOTES — Your Choice Roofing & Remodeling demo, v2, 2026-10-25
-  Single self-contained page. System fonts, inline CSS/JS, zero external
-  requests: every image is a local file in images/ served alongside this
-  page. No analytics, no fonts CDN, no trackers, no reCAPTCHA, no video
-  player. Page is noindex.
+  SAMPLE PAGE - not authorised by the business, and not claiming to be.
 
-  Full sourcing for every claim below is in research.md.
-  --------------------------------------------------------------------
+  Built from publicly available information only. The business was NOT
+  contacted in any way: no call, no text, no email, no form, no DM.
 
-  *** THIS LEAD IS THE INVERSE OF EVERY OTHER ONE IN THIS RUN. ***
+  Marked noindex,nofollow. Not submitted to any search engine. Carries a
+  visible "sample site" banner. Nothing goes live, gets indexed, or gets
+  pointed at any domain without the owner's say-so.
 
-  THEY ALREADY HAVE A GOOD WEBSITE. yourchoiceroofingchatt.com is a real,
-  professionally built, actively hosted WordPress site on WP Engine behind
-  Cloudflare, with a paid Enfold theme, Yoast SEO and a live sitemap. Its
-  Lighthouse SEO score is 100 and its accessibility score is 96.
+  If the owner does not want this page to exist, it comes down on request,
+  immediately and without argument.
 
-  DO NOT TELL THIS MAN HE NEEDS A WEBSITE. He has one and he paid for it.
-
-  The pitch is WEIGHT. Google PageSpeed mobile, sampled SIX times on
-  2026-10-25: 29, 31, 32, 44, 49, 63. Median 38. It never reached 70, so the
-  angle holds — but DO NOT QUOTE A SINGLE SCORE, it is a dice roll. The lead
-  scan's 47 sits inside that band, so "it got worse" is NOT supportable either.
-  Quote the spread and the structural numbers, which barely move:
-    - 5,338 KiB over 82 requests (5,335-5,514 across runs, 3.4% spread)
-    - Largest Contentful Paint 13-22 s typical (median 14.5 s)
-    - Best Practices 54/100, identical every run
-    - reCAPTCHA downloaded FIVE TIMES = 1,738 KiB, a third of the page
-    - a Vimeo player + HLS engine + 686 KiB poster = ~1,151 KiB
-    - three analytics containers = 493 KiB
-    - their hero image alone = 787 KiB, straight off Facebook's CDN
-
-  This page exists to be the other half of that sentence. It must load
-  instantly on a phone or the whole pitch collapses. Keep it that way:
-  NO webfonts, NO libraries, NO third-party anything, ever.
-
-  --------------------------------------------------------------------
-  SCAN CORRECTIONS BAKED INTO THIS PAGE
-
-  1. THE TOWN IS CHATTANOOGA, TENNESSEE — not Rossville, Georgia.
-     Live Places pull: 2108 E 14th St, Chattanooga, TN 37404.
-     Their own domain is "...chatt.com". Do not say Rossville.
-  2. 41 Google reviews at 4.9, not the 35 in the scan. Verified live.
-  3. The business is OPERATIONAL. Site last modified 2026-04-09.
-
-  --------------------------------------------------------------------
-  TWO THINGS ON THEIR OWN SITE THAT THIS PAGE QUIETLY FIXES
-
-  a) THEIR CLOSING CALL-TO-ACTION PRINTS A DIFFERENT PHONE NUMBER.
-     Hero button + footer:  (423) 760-1837   <- also the Google number
-     Closing CTA body copy: (423) 370-0689   <- appears nowhere else
-     I have NOT called either. One of them is wrong on the page that is
-     supposed to make the phone ring. THIS DEMO USES (423) 760-1837
-     EVERYWHERE because that is the number Google has. Ask him which is
-     right before launch.
-
-  b) ONLY ONE tel: LINK EXISTS ON THEIR ENTIRE HOMEPAGE — the hero
-     button. Their footer number and their closing-CTA number are plain
-     text, untappable on a phone. On THIS page every single printed
-     instance of the number is a tel: link.
-
-  --------------------------------------------------------------------
-  HOURS CONFLICT — UNRESOLVED, ASK HIM
-     Their website footer:    Mon-Fri 7:00 am - 6:00 pm
-     Their Google profile:    Mon-Fri 8:00 AM - 5:00 PM
-  Both are their own published material. THIS PAGE USES THEIR WEBSITE'S
-  7-6, because this page replaces their website and carries its claims.
-  Both sources agree on closed Saturday and Sunday.
-
-  --------------------------------------------------------------------
-  THE OWNER'S NAME IS NOT ON THIS PAGE, DELIBERATELY.
-  Eleven customer reviews name him and they disagree on the spelling:
-  "Fabio" x4 (incl. 3 on Google) vs "Favio" x3. His own website and his
-  own Google profile never name him. Do not guess it in writing.
-
-  --------------------------------------------------------------------
-  EVERY CLAIM ON THIS PAGE IS THEIR OWN PUBLISHED COPY
-
-  Services, the four "Why Choose Us" claims, the service-area list and
-  the headline are lifted from yourchoiceroofingchatt.com verbatim or
-  near-verbatim. NOTHING HAS BEEN ADDED. In particular this page does
-  NOT claim: a founding year, years in business, a warranty, financing,
-  a manufacturer certification (GAF/Owens Corning/etc), 24-7 availability,
-  free inspections, or that he is licensed in Georgia as well as
-  Tennessee. He advertises in three Georgia towns but no licence was
-  verified against either state board. "Licensed & Insured" appears ONLY
-  as his own claim, worded as his own claim.
-
-  --------------------------------------------------------------------
-  PHOTOS — THE CLEANEST SOURCING IN THIS PROGRAM SO FAR
-
-  All ten photos on their Google Business Profile are OWNER-ATTRIBUTED
-  (authorAttribution = "Your Choice Roofing & Remodeling"). The business
-  posted every one itself. Not one visitor upload. The logo and favicon
-  are their REAL artwork pulled from their own server.
-
-  PROTECTIVE CROPS — DO NOT LOOSEN (see build_assets.py):
-    * hero (g5) is cropped ABOVE a worker on a ladder.
-    * storm (g6) is cropped BELOW two pickups, a dump trailer and two
-      neighbouring houses.
-    * g7 is not used at all — a worker, plus four ladders of clutter.
-
-  !! PERMISSION GATE FOR LAUNCH: "publicly posted by the business" is
-  !! not "licensed to a third party". Confirm with him before this goes
-  !! live anywhere. Expected to be a formality — he posted all ten.
-
-  --------------------------------------------------------------------
-  BRAND COLOURS ARE MEASURED FROM THEIR REAL LOGO, NOT INVENTED
-  Over opaque pixels their logo.png is 71.5% pure white and 27.9%
-  rgb(0,74,172) = #004AAC. That blue is the only chromatic colour the
-  brand owns. --brand-deep is the same hue darkened to clear 4.5:1 on
-  white. Amber is used for ONE thing only: the storm/emergency band.
-
-  --------------------------------------------------------------------
-  THE FORM DOES NOT SUBMIT ANYWHERE. It is intentionally inert and says
-  so on submit. Wire it to his inbox on launch. Note it is THREE fields;
-  theirs is six required fields sitting above the fold on mobile.
-  ====================================================================
+  Sourcing, verification method and the full list of deliberate omissions are
+  kept in the internal research file and are not published here.
 -->
 <style>
 *,*::before,*::after{box-sizing:border-box}
@@ -351,7 +247,7 @@ footer a{color:#fff;font-weight:700}
       <a class="btn btn-ghost" href="#estimate">Get a free estimate</a>
     </div>
 
-    <!-- all four are THEIR OWN published claims; see research.md -->
+    
     <div class="badges">
       <div class="badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="#8ED08E" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span>Licensed &amp; Insured</span></div>
       <div class="badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="#8ED08E" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg><span>Free Estimates</span></div>
@@ -507,7 +403,7 @@ footer a{color:#fff;font-weight:700}
         </div>
         <div class="c-row">
           <svg width="21" height="21" viewBox="0 0 24 24" fill="#004AAC" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6V6h-2v7.4l5.2 3.1 1-1.7-4.2-2.2z"/></svg>
-          <!-- THEIR WEBSITE's hours (7-6). Their Google profile says 8-5. Unresolved - see research.md -->
+          
           <div><b>Hours</b><span style="font-weight:700;font-size:1.05rem">Mon–Fri 7:00 am – 6:00 pm<br><span style="font-weight:600;color:var(--muted);font-size:.95rem">Saturday &amp; Sunday closed</span></span></div>
         </div>
         <div class="c-row">

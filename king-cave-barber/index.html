@@ -16,131 +16,20 @@
 <!-- DEMO SITE — prepared for King Cave Beards & Shears Shop, Fort Oglethorpe GA. Not affiliated, not live, not linked. -->
 <!-- Website by [MATT — YOUR NAME / COMPANY HERE] -->
 <!--
-  ====================================================================
-  BUILD NOTES — King Cave Beards & Shears demo, v2, 2026-10-24
-  Single self-contained page. System fonts, inline CSS/JS, zero external
-  requests: every image is a local file in images/ served alongside this
-  page. No analytics, no fonts CDN, no trackers. Page is noindex.
+  SAMPLE PAGE - not authorised by the business, and not claiming to be.
 
-  Full sourcing for every claim below is in research.md.
-  --------------------------------------------------------------------
+  Built from publicly available information only. The business was NOT
+  contacted in any way: no call, no text, no email, no form, no DM.
 
-  *** THE SCAN WAS WRONG ABOUT TWO THINGS. READ BOTH. ***
+  Marked noindex,nofollow. Not submitted to any search engine. Carries a
+  visible "sample site" banner. Nothing goes live, gets indexed, or gets
+  pointed at any domain without the owner's say-so.
 
-  1. THE TOWN IS FORT OGLETHORPE, NOT ROSSVILLE.
-     1891 Lafayette Rd, Fort Oglethorpe, GA 30742. The street number is
-     visible on their own building in images/hero.jpg. Say "Fort
-     Oglethorpe" or "Lafayette Road". NEVER say Rossville — that is the
-     next town over, and it is the wrong town on a stale MapQuest blurb.
+  If the owner does not want this page to exist, it comes down on request,
+  immediately and without argument.
 
-  2. THEY ARE NOT "SOCIAL ONLY". THEY RUN A LIVE SQUARE BOOKING SITE:
-     https://king-cave-beards-shears-shop.square.site/
-     Verified live 2026-10-24: HTTP 200, eleven priced services, a staff
-     picker and a working Book button. Every price on this page comes
-     from that menu, not from a directory and not from a guess.
-
-     This page LINKS to that booking site rather than replacing it. They
-     already solved booking. What they do not have is anywhere that
-     explains who they are, what they charge, or how to walk in.
-
-  --- NO DEATH, NO CLOSURE ON THIS LEAD ----------------------------
-  Checked before any outreach copy was written: no obituary for any
-  named principal, Google businessStatus OPERATIONAL, Square booking
-  live, Facebook posting within the last week, most recent Google
-  review 2026-04-15. This is an ordinary healthy business — unlike the
-  two previous leads in this run. See research.md.
-
-  --- THE REBRAND: DO NOT GUESS AT IT ------------------------------
-  This shop was MAN CAVE Beards & Shears. It is now KING CAVE. The
-  rebrand was done by riveting a plate reading "KING" over the word
-  "MAN" on the existing signs — visible on BOTH signs in
-  images/hero.jpg, and the old name still sits on the old premises in
-  raw/g7.jpg under street number 113.
-
-  WHY the name changed is NOT established. The obvious guess (the
-  owner's surname is King) is an inference from a company filing, not a
-  stated fact — it could as easily have been a trademark problem.
-  NOTHING ON THIS PAGE REFERENCES THE RENAME. Ask them; don't assert.
-
-  --- WHAT IS DELIBERATELY NOT ON THIS PAGE ------------------------
-   - NO OWNER NAME IN ANY HEADING OR OPENER. Two barbers are named in
-     the Barbers section ONLY because they are publicly bookable by name
-     on the shop's own Square site today. Confirm the roster before
-     launch. "Danielle" and "Kristy" appear in reviews but are NOT on
-     the current booking page, so neither is named here.
-   - NO STRAIGHT-RAZOR SHAVES, no waxing, no hot-towel shampoo, no
-     retail. All are on their wall board; none are on their live booking
-     menu; the board's prices are provably stale (see below). Ask first.
-   - NO PRICE FROM THEIR WALL BOARD. Their board undercharges their own
-     standard haircut by $5 against their live Square menu (board says
-     25, Square says 30). Every price here is the Square figure. The
-     board photo is NOT shown anywhere, because it would contradict the
-     page. TELL THEM ABOUT THIS — it is free value and it proves a human
-     looked. See pitch.md.
-   - NO "LICENSED". Georgia licenses barbers, but no current licence
-     number was verified.
-   - NO AWARD, NO BADGE, NO GUARANTEE, NO NO-SHOW FEE, no founding
-     anecdote, no service-area towns beyond Fort Oglethorpe.
-   - NO HUMAN FACES ANYWHERE. See the permission note below.
-
-  *** PERMISSION — GOOD ON THIS BUILD, BUT READ IT ***
-
-  SIX of the ten photos on their Google listing are attributed to the
-  BUSINESS ITSELF, including both frames used here. That settles
-  copyright for a live site, which is better than the previous two
-  builds managed.
-
-  Four owner-attributed photos were still REJECTED because they show
-  identifiable customers' faces — including one of a child (raw/g4) —
-  and owner attribution does not mean the person in the chair agreed to
-  appear in advertising. No face appears on this page at all.
-
-  The interior crop deliberately excludes a "GUN CONTROL" poster, a
-  "JESUS Heartbeat of the World" sign, the legible CRAFTSMAN wordmarks
-  on the tool chests, an NHRA-branded bag, and the ceiling pennant line
-  with its third-party motorsport logos. See build_assets.py.
-
-  --- ASSET PROVENANCE ---------------------------------------------
-  Photos came from the Google Business Profile at
-  maps.google.com/?cid=9071008194566166698
-  (place ChIJg1reU-lnYIgRqhjGh-Sx4n0), via Places API (New).
-  raw/README.md maps every source frame to every output file;
-  build_assets.py rebuilds images/ from raw/ reproducibly.
-
-   - images/logo-light.png, logo-dark.png, favicon.png
-       THEIR REAL LOGO. raw/logo-square-site.jpg, downloaded from their
-       own Square site where it is served as alt="King Cave Beards &
-       Shears Shop logo" under the uploaded filename "King Cave sign
-       art.jpg". Same mark as their Facebook profile picture, their
-       window, their door sign and their roof banner. Keyed to alpha and
-       recoloured — never redrawn.
-   - images/hero.jpg, hero-mobile.jpg
-       raw/g2.jpg — OWNER-ATTRIBUTED. Their building at 1891 Lafayette
-       Rd: roof banner, door sign, both window decals, both barber
-       poles, street number.
-   - images/interior.jpg
-       raw/g1.jpg — OWNER-ATTRIBUTED. Their own floor and chairs.
-
-  --- COLOUR ---------------------------------------------------------
-  Their logo is flat black (measured #060606). The only colour that
-  belongs to the shop is the OXBLOOD OF THEIR OWN BARBER CHAIRS, median
-  #532728-#853D3E across three chairs in two photographs.
-   --accent    #8E2F32  their chair oxblood, light surfaces
-   --accent-dk #C8453C  same hue lifted toward their barber-pole red,
-                        used ONLY on dark surfaces where the darker
-                        oxblood cannot carry a 3:1 UI boundary
-  Accent is used on call-to-action buttons and links and NOTHING else.
-  WCAG AA verified by calculation on 21 pairs, zero failures —
-  reproduce with: python3 probe/contrast.py
-
-  --- BEFORE THIS GOES LIVE ------------------------------------------
-  1. Confirm the service list, the prices and the bookable staff.
-  2. Decide whether straight-razor shaves, waxing and retail go on.
-  3. The call-back form is a DEMO STUB — it validates and then says
-     nothing was sent. It needs a real destination (their Gmail,
-     kingcave.bss@gmail.com, or a forward to a phone).
-  4. Remove the noindex meta and set the footer credit.
-  ====================================================================
+  Sourcing, verification method and the full list of deliberate omissions are
+  kept in the internal research file and are not published here.
 -->
 
 <style>

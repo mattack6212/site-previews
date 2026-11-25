@@ -16,147 +16,20 @@
 <!-- DEMO SITE — prepared for Bella Mi Salon, Chickamauga GA. Not affiliated, not live, not linked. -->
 <!-- Website by [MATT — YOUR NAME / COMPANY HERE] -->
 <!--
-  ====================================================================
-  BUILD NOTES — Bella Mi Salon demo, v2, 2026-10-26
-  Single self-contained page. System fonts, inline CSS/JS, zero external
-  requests: every image is a local file in images/ served alongside this
-  page. No analytics, no font CDN, no trackers, no embedded map iframe.
-  Page is noindex, nofollow.
+  SAMPLE PAGE - not authorised by the business, and not claiming to be.
 
-  Full sourcing for every claim below is in research.md.
-  --------------------------------------------------------------------
+  Built from publicly available information only. The business was NOT
+  contacted in any way: no call, no text, no email, no form, no DM.
 
-  *** THE SCAN WAS WRONG ABOUT THE TOWN AND ABOUT THE WEBSITE. ***
+  Marked noindex,nofollow. Not submitted to any search engine. Carries a
+  visible "sample site" banner. Nothing goes live, gets indexed, or gets
+  pointed at any domain without the owner's say-so.
 
-  1. THE TOWN IS CHICKAMAUGA, NOT ROSSVILLE.
-     13311 US-27 #2, Chickamauga, GA 30707 — Walker County. Verified live
-     against the Places API, Yelp, the BBB and the salon's own archived
-     website, all of which agree. Rossville is a different town ~8 miles
-     north. NEVER say Rossville to these people.
+  If the owner does not want this page to exist, it comes down on request,
+  immediately and without argument.
 
-  2. "NO WEBSITE" IS TRUE TODAY BUT BADLY UNDERSTATES IT.
-     They own bellamisalon.com. They registered it in 2017 and they are
-     STILL RENEWING IT (whois updated 2025-12-11, registrar Squarespace).
-     Their Instagram bio — 1,186 followers — points at it right now.
-
-     It serves a blank Google 404. Has done since mid-2024.
-
-     WHY: the old site was a free "website made with Google Business
-     Profile". Google turned those off in March 2024 and ran a redirect
-     until 10 June 2024, after which they 404. The Wayback Machine's last
-     good capture of bellamisalon.com is 11 June 2024 — the day after —
-     and every capture since (Aug/Oct/Nov/Dec 2024, Feb/Mar/Jul 2025) is
-     a 404. Confirmed still 404 on 2026-10-26.
-
-     So this is NOT a business that never got around to a website. It is
-     a business that HAD one for ~14 years and had it switched off by
-     Google without replacing it. That is the entire pitch. See pitch.md.
-
-  --- NO DEATH, NO CLOSURE ON THE BUSINESS -------------------------
-  Checked before any outreach copy was written: Google businessStatus
-  OPERATIONAL, 111 reviews, Instagram posting into Feb 2026, TikTok
-  active (890 followers, a pinned video at 1.1M views), Yelp page
-  updated Oct 2026. No obituary for the owner.
-
-  ONE SENSITIVE FAMILY FINDING EXISTS and is recorded in research.md
-  under "SENSITIVE". It concerns a 2019 death in the owner's family, the
-  relationship is NOT established, and it is NOT referenced here, on the
-  page, or in the SMS. Matt must never raise it.
-
-  --- WHAT IS DELIBERATELY NOT ON THIS PAGE ------------------------
-   - NO PRICES. Not one price for any service is published anywhere by
-     this business. Everything here is service names only.
-   - NO NAILS AND NO MASSAGE. Google's category tags for this listing
-     include massage_spa, massage and spa. NOTHING first-party supports
-     any of the three — not their own archived site, not their
-     Instagram, not a single review. Salon service menus vary wildly and
-     this one is hair + esthetics. Do not claim nails. Do not claim
-     massage.
-   - NO STAFF ROSTER AND NO STYLIST NAMES OF OUR OWN. Eight first names
-     turn up across reviews, Instagram highlights and TikTok. The roster
-     is not verifiable and people move chairs. Names appear on this page
-     ONLY inside verbatim customer reviews, quoted as the customer wrote
-     them. See the launch gate in pitch.md.
-   - NO "VOTED BEST OF THE BEST". They claim it on their Instagram bio,
-     on a 2018 banner and on two framed certificates on their wall — but
-     no issuing publication and no year could be verified for the
-     current claim, so it is off the page. It is free upside; ask them.
-     (pitch.md)
-   - NO "17 YEARS IN BUSINESS". That is their Instagram bio, written in
-     2025 and now stale. The page says "since 2008", which is what their
-     own two signs say.
-   - NO ONLINE BOOKING WIDGET, and NO LINK TO FRESHA. A Fresha page
-     exists for them at /lvp/bella-mi-salon-... but it is an
-     auto-generated directory listing — no rating, no prices, no team,
-     no Book button — not an account they run. Linking it would send
-     their customers somewhere the salon does not control. They book by
-     phone, by their own instruction, so the page books by phone.
-   - NO FACEBOOK LINK. facebook.com/bellamisalon is the address their
-     own old website and their own Yelp page both advertise, and it now
-     returns "This content isn't available right now". Unresolved
-     whether deleted, renamed or merely gated — so it is not linked.
-   - NO STOCK PHOTOGRAPHY. Not one pixel.
-
-  *** PERMISSION — THE BEST OF THIS RUN, BUT READ IT ***
-
-  ALL TEN photos on their Google listing are attributed to "Bella Mi
-  Salon" — the business's own Google account, contributor id
-  101581238754615817005. Not one is a visitor upload. Copyright for a
-  live site is as clean as it gets without asking.
-
-  FOUR are still rejected (see build_assets.py and raw/README.md):
-  the staff trip to Universal Studios; the OLD storefront; the 2018
-  team photo at the old building; and a hair-colour swatch collage that
-  has the hallmarks of borrowed inspiration art.
-
-  THE TWO TEAM PHOTOGRAPHS ARE THE EXCEPTION THAT NEEDS A YES.
-  images/hero.jpg and images/team.jpg are professional group portraits
-  of ten women. The salon published both itself and one of them is the
-  cover image of its own Google listing — so these are the business's
-  own marketing photographs, not snapshots of customers. But they are
-  undated, and nothing proves all ten people still work there.
-  CONFIRM THE ROSTER BEFORE ANYTHING GOES LIVE. See pitch.md item 1.
-
-  A photographer's reflection was cropped out of the reception shot;
-  see build_assets.py. No customer appears anywhere on this page.
-
-  --- ASSET PROVENANCE ---------------------------------------------
-  Photos came from the Google Business Profile at
-  maps.google.com/?cid=14147424878987888636
-  (place ChIJw-12LeBpYIgR_MeYnvi_VcQ), via Places API (New) on
-  2026-10-26. raw/README.md maps every source frame to every output
-  file; build_assets.py rebuilds images/ from raw/ reproducibly.
-
-   - images/logo.png, images/favicon.png
-       THEIR REAL BADGE: the oval "ESTABLISHED 2008 / Bella Mi / SALON"
-       mark with the scissors device. Keyed to alpha from
-       raw/ig_avatar.jpg, which is the profile picture on their live
-       Instagram today — so it is current branding, not a relic. The
-       same badge is etched on the door in raw/g6.jpg. Recoloured to
-       their sign cream; never redrawn.
-   - images/hero.jpg, hero-mobile.jpg  <- raw/g2.jpg  (team, indoors)
-   - images/team.jpg                   <- raw/g0.jpg  (listing cover)
-   - images/reception.jpg, sign.jpg    <- raw/g3.jpg  (desk + their
-       hand-made string-art "Bella Mi Salon / EST. 2008" board)
-   - images/lounge.jpg                 <- raw/g4.jpg
-   - images/floor.jpg                  <- raw/g9.jpg  (styling stations)
-   - images/storefront.jpg             <- raw/g5.jpg  (the CURRENT
-       building; the baked-in "WE ARE MOVING MAY 2020" overlay is
-       cropped off — that frame is the announcement of the move TO this
-       address, so the building is right and the caption is history)
-
-  --- BRAND ---------------------------------------------------------
-  Every colour is measured off their own property, white-balanced, and
-  listed with its source and its WCAG ratio in research.md.
-    ink   #1E2230  their sign board
-    mint  #CEF1F0  the painted wall of their styling floor
-    blush #DAACA1  the velvet chairs in their waiting lounge
-    rose  #8A5C69  the rose of their sign's lettering, darkened until
-                   white text clears 4.5:1 (it lands at 5.50:1)
-  The rose is used ONLY on call-to-action buttons and links, per brief.
-  build_assets.py recomputes all 17 contrast pairs on every run and
-  exits non-zero if any drops below AA.
-  ====================================================================
+  Sourcing, verification method and the full list of deliberate omissions are
+  kept in the internal research file and are not published here.
 -->
 <style>
 :root{

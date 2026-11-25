@@ -15,174 +15,20 @@
 <!-- DEMO SITE — prepared for I&G Septic Tank Cleaning Service LLC. Not affiliated, not live. -->
 <!-- Website by [MATT — YOUR NAME / COMPANY HERE] -->
 <!--
-  ====================================================================
-  v2 build — 2026-10-23. Single self-contained file: system fonts,
-  inline CSS/JS, zero external requests. Every image is a local file
-  in images/ served alongside this page. Page is noindex,nofollow.
+  SAMPLE PAGE - not authorised by the business, and not claiming to be.
 
-  Every fact on this page traces to research.md. Nothing is invented.
+  Built from publicly available information only. The business was NOT
+  contacted in any way: no call, no text, no email, no form, no DM.
 
-  ====== LAUNCH GATE — DO NOT PUBLISH WITHOUT THESE ==================
-  1. OWNER PERMISSION. This is an unsolicited demo built from public
-     information. Ignacio Guijon has not been contacted.
-  2. PHOTO PERMISSION — THE HERO IS A CUSTOMER'S PHOTOGRAPH.
-     images/hero*.jpg and images/truck-lettering.jpg are crops of a
-     photo of his truck uploaded to his Google listing by a CUSTOMER,
-     Brian Gober. images/svc-locate.jpg is Kathy Crowley's and
-     images/svc-riser.jpg is Ciro Silva's. They are publicly visible
-     on his listing, but he does not own their copyright. Before
-     launch he should either re-shoot the truck himself (five minutes
-     with a phone, and he'd get a better frame in daylight) or get
-     those customers' OK. The other four photos are his own uploads.
-  3. CONFIRM THE SERVICE AREA. The page says only "Dalton and
-     Whitfield County" because that is all that is verifiable. See
-     the omissions list below.
-  4. CONFIRM HOURS (7am-9pm, 7 days) and the 2-YEAR REMINDER PROGRAMME
-     — the latter comes from a 2021 review and is a promise to
-     customers.
-  5. The callback form is a DEMO STUB. It validates and shows a
-     confirmation; it sends nothing. Wire it to a real inbox or SMS
-     before launch, or delete it and leave the page phone-only.
+  Marked noindex,nofollow. Not submitted to any search engine. Carries a
+  visible "sample site" banner. Nothing goes live, gets indexed, or gets
+  pointed at any domain without the owner's say-so.
 
-  ====== ASSET SOURCING ==============================================
-  All imagery is from the business's own Google Business Profile
-  (place ChIJpz2nQmALYIgR_wYa0rgqxLo, cid 13457928559777154815),
-  pulled via the Places API (New) Photos endpoint at maxWidthPx=1600.
-  Originals in raw/, build script build_assets.py.
-  NO STOCK PHOTOGRAPHY. NO THIRD-PARTY BRANDING. NO AI IMAGERY.
+  If the owner does not want this page to exist, it comes down on request,
+  immediately and without argument.
 
-    hero.jpg / hero-mobile.jpg / truck-lettering.jpg
-        <- raw/p2.jpg, attributed by Google to customer "Brian Gober".
-           His vacuum truck, lettered in red: "WE CLEAN SEPTIC TANKS
-           AND GREASE TRAPS / 706-229-2347". Brightness +10%,
-           contrast +8% (shot at dusk); cropped; nothing added,
-           removed or retouched. The rear bumper also carries the
-           706 number and the 762-209-9058 number.
-    svc-filter.jpg   <- raw/p1.jpg  (owner upload) effluent filter wash
-    svc-pumping.jpg  <- raw/p6.jpg  (owner upload) hose into tank baffle
-    svc-onsite.jpg   <- raw/p7.jpg  (owner upload) yard job, truck at road
-    svc-rinse.jpg    <- raw/p8.jpg  (owner upload) rinsing tank interior
-    svc-locate.jpg   <- raw/p4.jpg  (customer Kathy Crowley) lid levered open
-    svc-riser.jpg    <- raw/p5.jpg  (customer Ciro Silva) riser set in concrete
-
-  THERE IS NO LOGO, AND NONE WAS INVENTED.
-    Checked and empty: the Google photo set (one generic grayscale
-    clipart truck, no business name - REJECTED, see below), the
-    Facebook profile picture (graph.facebook.com/100087311592912/
-    picture returns Facebook's DEFAULT GREY SILHOUETTE - he never
-    uploaded one), the retired business.site page (404), and every
-    directory found. So the wordmark on this page is simply the
-    business name set in type. No emblem, monogram or mark has been
-    fabricated for him. The identity work is carried by his own truck
-    photograph and his own truck tagline.
-
-    raw/p0.jpg was REJECTED even though he uploaded it himself: it is
-    a stock clipart vector of a generic septic truck with two
-    silhouetted figures, carrying no business name, no number and no
-    distinguishing mark. Not a logo, and almost certainly not licensed
-    to him. Unlicensed clipart on a live commercial site is a
-    liability, so it is not used anywhere.
-
-  ====== BRAND COLOURS — SAMPLED FROM THE TRUCK, NOT INVENTED ========
-    Red lettering and frame, measured across ~69,000 matching pixels
-    in raw/p2.jpg: mean #6E2236, bright quartile #8A444A — a
-    weathered, dusk-lit maroon-red.
-    Aluminum tank, mean of ~202,000 low-saturation pixels: #909396.
-
-    --accent #B0202E is a SATURATED, CONTRAST-CORRECTED reading of
-    that truck red, not the literal sampled hex: #6E2236 fails
-    contrast and reads muddy on a screen. Said plainly so the choice
-    is auditable rather than passed off as a measurement.
-    --steel #909396 is the sampled aluminum, used literally.
-    The greys are the tank; the red is the lettering. That is the
-    whole palette, and it is his.
-
-    Accent appears ONLY on call-to-action buttons and the live-rating
-    chip. It is never body text, never a heading, never a border.
-    WCAG AA verified (computed, not eyeballed):
-      body text on paper        16.4:1
-      muted text on paper        7.3:1
-      white label on #B0202E     6.8:1
-      white label on #C83743     5.1:1   (button variant on dark)
-      #C83743 button vs dark bg  3.4:1   (>3:1 required for UI surface)
-      light text on dark ink    15.6:1
-      muted light on dark ink    9.6:1
-
-  ====== DELIBERATELY NOT CLAIMED ====================================
-  Ask Ignacio before adding any of these. Each was considered and cut.
-
-  - SERVICE AREA BEYOND DALTON / WHITFIELD COUNTY. The biggest gap.
-    Georgia's pumper list is explicitly "by County of Business
-    Location", which says nothing about how far he drives. FORT
-    OGLETHORPE — the town the lead scan wrongly recorded as his
-    location — is NOT verified and appears nowhere on this page.
-    Neither do Ringgold, Chattanooga, Catoosa County or "North
-    Georgia". Get his real radius.
-  - "LICENSED & INSURED." No public evidence of general liability or
-    workers' comp. The page cites the Georgia DPH pumper approval
-    precisely, by issuing authority, and implies nothing further.
-  - ANY INSTALLATION WORK. Georgia DPH uses three certification
-    types — Installer, Pumper, and Installer and Pumper. I&G is
-    listed as PUMPER ONLY; eleven other Whitfield firms on that same
-    page hold installer types and he does not. So: no new systems, no
-    drain-field replacement, no system repair, no perc testing.
-    "Clearing" a blocked line is said; "repairing" one is not.
-  - REAL-ESTATE / POINT-OF-SALE SEPTIC INSPECTIONS. Common revenue
-    line for pumpers; nothing public says he does them.
-  - PORTABLE TOILETS. He is NOT on Georgia DPH's certified Portable
-    Sanitation Provider list (the only two Whitfield entries are Elite
-    Portable Services and Nature's Way Sanitation).
-  - 24/7 OR EMERGENCY SERVICE. The page states his posted hours
-    (7am-9pm, 7 days, from Google) and the one Saturday call a review
-    describes. It does not promise 24/7 or same-day.
-  - FOUNDING YEAR / "X YEARS IN BUSINESS". BBB says started 7/1/2020,
-    incorporated 7/11/2020, "Years in Business: 6". True, but six
-    years reads thin against competitors claiming decades, and the
-    5.0-from-44 is the stronger number. Omitted on judgement, not for
-    lack of a source. His call.
-  - ANY PRICE, RANGE, OR THE WORD "AFFORDABLE". One review says
-    "great price". That is not a pricing claim.
-  - THE BBB A+ RATING AND ANY BBB BADGE. He is rated A+ but is NOT
-    BBB Accredited, so no badge. (Note for the call: his BBB profile
-    links to his dead business.site URL, so BBB is currently sending
-    him traffic that lands on a 404.)
-  - USDOT 3481088 AS A "LICENSE". BBB files it under "Licensing
-    Information", but a DOT number is a vehicle registration, not a
-    trade credential. It is used on this page only as the source for
-    "one truck, one driver" — which is what the federal record
-    literally says (Power Units: 1, Drivers: 1, Cargo: Sewage Waste,
-    Intrastate Only, status ACTIVE).
-  - GREASE TRAP SPECIFICS. Confirmed only from the truck's own
-    lettering. Nothing public says what size traps he handles, whether
-    he runs scheduled restaurant routes, or whether he supplies the
-    pump records a health inspector asks for. The section is
-    deliberately short. THIS IS PROBABLY HIS BIGGEST UNTAPPED LINE —
-    ask about it first.
-  - SPANISH-LANGUAGE SERVICE. Likely, given the owner's name and
-    Dalton's demographics, and it would be a real advantage here. Pure
-    inference, so it is not on the page. Worth asking — it may justify
-    a Spanish version.
-  - CREW SIZE / NAMES BEYOND IGNACIO AND BRYAN. Reviews also name a
-    "Carlos"; whether he is family, an employee or a helper is
-    unknown, so he is not named.
-  - EMAIL ADDRESS. None published anywhere. The page is phone-first
-    by necessity, not by design.
-  - INVENTED TESTIMONIALS. The two quotes on this page are verbatim
-    from the Google Places API with the reviewer's displayed name,
-    both publicly readable on his listing. Nothing was edited,
-    shortened mid-sentence, or re-attributed.
-
-  ADDRESS NOTE: 1910 Valley Brook Dr, Dalton, GA 30720 is confirmed
-  identically by Google, BBB and FMCSA. It looks residential, so it is
-  shown in the footer as his business address, and the page does not
-  invite anyone to visit a shop.
-
-  PHONE NOTE: both (706) 229-2347 and (762) 209-9058 are real and both
-  are painted on the truck. Google and BBB lead with the 706; FMCSA
-  and the state list lead with the 762. This page uses the 706
-  everywhere, because that is the one on his Google listing and in
-  foot-high letters on the tank. Confirm which he actually answers.
-  ====================================================================
+  Sourcing, verification method and the full list of deliberate omissions are
+  kept in the internal research file and are not published here.
 -->
 
 <script type="application/ld+json">

@@ -15,148 +15,20 @@
 <!-- DEMO SITE — prepared for iTech Repair, Fort Oglethorpe, GA. Not affiliated, not live. -->
 <!-- Website by [MATT — YOUR NAME / COMPANY HERE] -->
 <!--
-  v2 build — 2026-10-23. Single self-contained file: system fonts, inline CSS/JS,
-  zero external requests. Every image is a local file in images/ served alongside
-  this page. Page is noindex,nofollow.
+  SAMPLE PAGE - not authorised by the business, and not claiming to be.
 
-  ====================================================================
-  THE LOGO AND EVERY PHOTO ON THIS PAGE ARE THE BUSINESS'S OWN, TAKEN
-  FROM ITS OWN PUBLIC GOOGLE BUSINESS PROFILE, FOR THIS PITCH DEMO ONLY.
-  OWNER PERMISSION IS REQUIRED BEFORE ANY REAL PUBLIC LAUNCH.
-  (research.md UNKNOWN #15 / pitch.md confirm-list item 7.)
-  ====================================================================
+  Built from publicly available information only. The business was NOT
+  contacted in any way: no call, no text, no email, no form, no DM.
 
-  --- ASSET PROVENANCE ---------------------------------------------
-  Source: the Google Business Profile at
-  maps.google.com/?cid=150538998301764320 (place ChIJy_VxQYRnYIgR4Kqe3mvSFgI),
-  pulled through the Places API (New) on 2026-10-23. The listing carries
-  10 photos and ALL TEN carry the author attribution "iTech Repair" —
-  i.e. every one is the profile owner's own upload, not a customer photo.
-  Raw originals are kept in raw/ alongside the API response
-  (raw/places_details.json). build_assets.py rebuilds images/ from them.
+  Marked noindex,nofollow. Not submitted to any search engine. Carries a
+  visible "sample site" banner. Nothing goes live, gets indexed, or gets
+  pointed at any domain without the owner's say-so.
 
-   - images/logo.png, images/favicon.png
-     Their real logo. Source is the owner-uploaded storefront photo
-     (raw/g3.jpg, 1600x2133) cropped to the physical sign above the
-     door, with the stucco wall flood-filled to transparent from the
-     border inward so the sign's white outer stroke survives intact.
-     Shapes, colours and proportions are unaltered — this is their sign,
-     not a redraw. favicon.png is the phone mascot from the same lockup.
+  If the owner does not want this page to exist, it comes down on request,
+  immediately and without argument.
 
-     CROSS-VERIFIED before use. The identical lockup — mascot, "iTech
-     Repair" wordmark, and the "CELLPHONE • ACCESSORIES • GADGETS" bar —
-     appears on SIX separate owner-uploaded photos: the exterior sign
-     (g0, g3), the window decal (g3), the in-store TV (g1), the photo
-     watermark on g2/g5/g6/g7/g9, and their printed business card (g8).
-     It is unambiguously theirs.
-
-     NOT taken from Facebook: their Facebook profile picture is NOT SET.
-     graph.facebook.com/61558916155018/picture?width=1000&height=1000
-     returns Facebook's default grey silhouette, not a logo. That is a
-     talking point, not an asset. (pitch.md point 2.)
-
-   - images/storefront.jpg — hero. Their own storefront photo (g3).
-     THE CROP DELIBERATELY EXCLUDES the neighbouring Pizza Hut and
-     Citizens Savings & Loan units so no third-party brand appears on
-     this page. What stays is all theirs: the sign, the "WE FIX PHONES"
-     window neon, the "OPEN / NOW OPEN" decal, and the door number 1915.
-   - images/screen-before-after.jpg — their own before/after cracked
-     iPhone screen graphic (g2), logo-watermarked by them.
-   - images/counter.jpg — their sales counter and accessory wall (g1).
-   - images/accessories.jpg — their charger / cable / power bank / car
-     mount / Apple Watch band wall (g4).
-   - images/tablet-cases.jpg — their tablet case and tempered-glass
-     wall (g9).
-   - images/audio.jpg — their speaker and earbud display (g6).
-
-   NOT USED, and why:
-    - raw/g8.jpg, their business card. It is the SOURCE for the hours
-      and phone printed on this page (it independently confirms both
-      against Google), but it also carries Instagram and TikTok QR
-      codes whose handles could not be verified on-platform. Kept in
-      raw/ as evidence; not shown.
-    - raw/g5.jpg, raw/g7.jpg, raw/g0.jpg — redundant with what is used.
-    - Facebook photos — the page is login-walled beyond the public
-      description; nothing was scraped from it.
-    - No stock photography anywhere on this page. None.
-
-  --- BRAND COLOURS — sampled from their real sign, not invented ------
-   measure.py locates the sign in raw/g3.jpg and samples it:
-     sign yellow #F5D50D (dominant bucket #F0D800)
-     sign black  #1C1A18 (dominant bucket #181818)
-     mascot blue #78AADC / #AAD2E6, from the extracted logo
-   --ink #1B1A17 is their sign black, used for large dark surfaces.
-   --accent #F5D50D is their sign yellow, UNMODIFIED, and it appears
-   ONLY on call-to-action buttons and the rating stars — nowhere else.
-   This mirrors their own sign: black is the field, yellow is the thing
-   your eye lands on.
-   WCAG AA verified: button label #16140A on accent yellow 12.5:1;
-   white on --ink 17.9:1; accent yellow on --ink 11.9:1; body --muted
-   on --paper 7.4:1. Yellow is never used as text on white (1.5:1).
-
-  ====================================================================
-  DELIBERATELY NOT CLAIMED (unverified — ask the owner before adding):
-  - THE OWNER'S NAME. Facebook search snippets show "Randy Smith and
-    Lisa Acree" beside the page description, but that slot is as often
-    followers as page managers and neither could be confirmed as the
-    owner. No name appears on this page. (research.md UNKNOWN #1.)
-  - Any turnaround time. No "30 minutes", no "same day", no "while you
-    wait". Reviews describe about an hour for a screen, but the business
-    has published no promise and this page makes none. This is the
-    single biggest conversion upgrade available if he will commit to one.
-  - Any warranty. The ONLY public mention of a warranty period is a
-    hostile 1-star review referring to a "2 Week Warranty". A 5-star
-    review separately describes a free out-of-policy screen replacement.
-    Neither is the business speaking. NO WARRANTY IS CLAIMED HERE.
-  - Any price. No price list exists publicly. No "starting at", nothing.
-  - Water damage repair, data recovery, game consoles, laptops, Macs,
-    drones, buy/sell of used or refurbished phones. None are supported
-    by any source the business controls, so none appear.
-  - GoPros/action cameras — a review confirms these are OUTSIDE their
-    normal scope (they helped anyway, once). Not listed as a service.
-  - Years in business / founding year. Their window still says "NOW
-    OPEN" and the Facebook page ID is in Meta's 2024 range, so ~2 years
-    is a guess. A guess is not a fact. No year is printed.
-  - Licensed / insured / certified / "factory trained". No public proof
-    of any licence, registration, insurance or certification. No Georgia
-    Secretary of State entity found. No BBB profile. None claimed.
-  - Service-area towns. Only Fort Oglethorpe is verified as their
-    location. Rossville (which the lead scan wrongly labelled them),
-    Chattanooga and Ringgold are NOT named anywhere on this page even
-    though all three are within ~10 miles. Ask which to add.
-  - Social links. Instagram @itechrepair1915 is read off the QR label on
-    their own business card but could not be confirmed on-platform, and
-    the TikTok handle is not legible. Neither is linked. The footer links
-    only the Facebook page (the link on their Google listing) and the
-    Google listing itself — both verified live.
-  - The Bitcoin ATM. CoinATMRadar lists a General Bytes crypto ATM hosted
-    at this address. Single third-party source, nothing the business
-    publishes mentions it, page 403s on fetch. Not on this page. Worth
-    one question on the call. (research.md UNKNOWN #14.)
-  - Acima financing terms. The Acima poster is in their own window and is
-    quoted as such — "as advertised in their window" — with no approval
-    amount, rate or term asserted by this page. Confirm it is current.
-  - Email / contact form. No public email address exists. This page has
-    no form and no email: phone and in-store only, which is what the
-    evidence supports.
-
-  REVIEW QUOTES: the three quotes in the Reviews section are verbatim
-  public Google reviews with their real author names, returned by the
-  Google Places API Details call (raw/places_details.json), trimmed only
-  with ellipses and linked to the live listing so a visitor can check
-  them. Nothing is paraphrased, rewritten or invented, and there are no
-  fabricated testimonials anywhere on this page.
-
-  NOT PUT ON THE PAGE, BUT MATT MUST READ IT: the same API call returns
-  a 1-star review alleging the shop is "a scam" and the owner is
-  "extremely defensive". See research.md, "The 1-star review". Do not be
-  blindsided by it on the call.
-
-  VERTICAL CORRECTION: the 2026-09-11 lead scan filed this business as
-  "Appliance repair". It is not. It is a cell phone / tablet /
-  electronics repair shop — per their own sign, their own window neon,
-  their own Facebook description, Yelp, Manta and MapQuest. The scan
-  also said Rossville, GA; the address is Fort Oglethorpe, GA.
+  Sourcing, verification method and the full list of deliberate omissions are
+  kept in the internal research file and are not published here.
 -->
 
 <script type="application/ld+json">

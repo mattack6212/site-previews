@@ -13,151 +13,20 @@
 <meta property="og:type" content="website">
 
 <!--
-  ============================================================================
-  DEMO SITE — prepared for TAPP A/C & HEATING (Rossville, GA).
-  NOT AFFILIATED. NOT LIVE. NOT AUTHORISED BY THE OWNER. noindex,nofollow.
-  Website by [MATT — YOUR NAME / COMPANY HERE]
-  Built 2026-11-20. Full sourcing in research.md in this folder.
-  ============================================================================
+  SAMPLE PAGE - not authorised by the business, and not claiming to be.
 
-  Single self-contained page: inline CSS, inline JS, system font stack,
-  ZERO third-party requests. Every image is a local file in images/ served
-  alongside this page. Total image payload ~880 KB.
+  Built from publicly available information only. The business was NOT
+  contacted in any way: no call, no text, no email, no form, no DM.
 
-  --------------------------------------------------------------------------
-  THE ONE THING TO KNOW BEFORE PITCHING THIS
-  --------------------------------------------------------------------------
-  They DO have a domain. It is painted on their van: tapphvac.com.
-  It is LIVE (HTTP 200) and it serves a GoDaddy "Launching Soon" placeholder
-  that does NOT contain their phone number anywhere. Domain registered
-  2007-03-07, renewed 2026-03-08, expires 2027-03-07.
+  Marked noindex,nofollow. Not submitted to any search engine. Carries a
+  visible "sample site" banner. Nothing goes live, gets indexed, or gets
+  pointed at any domain without the owner's say-so.
 
-  So "you don't have a website" is FALSE and must never be said. The honest
-  line is that the address on the van lands on a Launching Soon page.
-  (research.md §1)
+  If the owner does not want this page to exist, it comes down on request,
+  immediately and without argument.
 
-  --------------------------------------------------------------------------
-  ASSET PROVENANCE
-  --------------------------------------------------------------------------
-  Everything visual here came from Tapp's OWN Google Business Profile
-  (place ChIJYTYJX-tnYIgRyjeRFsfHp08), pulled via the Places API. All ten
-  photos on that listing carry the author attribution "Tapp Air Conditioning
-  & Heating Co" — i.e. they are the profile owner's own uploads, not
-  customer photos. All ten were viewed individually before use.
-  THESE ARE THE BUSINESS'S OWN PHOTOS, USED FOR THIS PITCH DEMO ONLY.
-  OWNER PERMISSION IS REQUIRED BEFORE ANY REAL PUBLIC LAUNCH.
-
-   - images/logo-mark.png, images/favicon.png
-     Their logo: a red arrow pointing right over a blue arrow pointing left
-     (heating and cooling). The mark exists in exactly ONE public place —
-     the side of their van in photo 01. There is no website artwork (the
-     domain is a blank placeholder), no Facebook page and no sign photo.
-     build_assets.py keys the mark off the van panel ON SATURATION (the
-     panel is white/grey, the arrows are saturated vinyl), so the arrow
-     SHAPES ARE UNALTERED and only the background and the photographic
-     lighting gradient are removed. Verified by eye on white and on navy.
-
-   - images/hero-van.jpg      their van + equipment trailer (photo 01)
-   - images/commercial-rtu.jpg flat commercial roof, Carrier RTUs (photo 10)
-   - images/minisplit.jpg      Mitsubishi Electric ductless outdoor unit (04)
-   - images/packaged-unit.jpg  new Bryant packaged unit on a pad (02)
-   - images/furnace.jpg        Goodman gas furnace in a basement (03)
-   - images/failed-coil.jpg    rusted-through coil, return bends split (09)
-   - images/service-call.jpg   manifold gauges on a condenser (05, CROPPED)
-   - images/changeout.jpg      changeout under a pop-up canopy (08)
-   - images/minisplit-brick.jpg GREE mini-split on brick (06)
-
-  REDACTION — two real hazards were found and handled:
-   * photo05 had a GE I-210 electric meter with a LEGIBLE SERIAL ("671207",
-     "54 673 389") identifying a specific customer's service. CROPPED OUT
-     and re-viewed after cropping to confirm it is gone.
-   * photo07 had a bass boat with a LEGIBLE Georgia registration
-     "GA 0065 GU". REJECTED ENTIRELY — not cropped, not used.
-   No faces appear in any photo used. No house number is legible in any
-   photo (the porch behind the van was zoomed and checked). No licence
-   plate is visible on any vehicle.
-
-  --------------------------------------------------------------------------
-  BRAND COLOURS — measured from the real logo, not invented
-  --------------------------------------------------------------------------
-  Sampled from the van vinyl (top-20%-saturation core pixels, so the
-  overcast lighting does not wash the reading):
-     logo red  #CF5355   (HSL 359, 56%, 57%)
-     logo blue #0F5EB2   (HSL 211, 84%, 38%)
-     wordmark  #3E3C39
-  --ink #0D2440 is the logo blue's own hue taken down to a large-surface navy.
-  --red #C3272F is the logo red darkened just enough to carry white text, and
-  it appears ONLY on call buttons — nowhere else. That mirrors the logo's own
-  logic: blue is structure, red is the thing you tap.
-  WCAG AA verified by computation: body on paper 12.62:1 - ink headings on
-  paper 15.63:1 - muted on paper 5.85:1 - light text on navy 13.58:1 - white
-  on the red CTA 5.75:1 - white on blue 6.43:1 - red vs paper 5.75:1.
-  NOTE: red sitting directly on the navy band is only 2.72:1, under the 3:1 a
-  UI surface needs, so those buttons carry an explicit light ring.
-
-  --------------------------------------------------------------------------
-  THE ADDRESS IS DELIBERATELY ABSENT — DO NOT ADD IT
-  --------------------------------------------------------------------------
-  Catoosa County's own zoning layer (ZoningFeatureLayer_withDescriptions_Feb2026)
-  returns, for this business's exact coordinates:
-      Parcel_No 0002A082 | zoningcode R-1
-      "Single-Family Residential District (22,000 sq. ft.)"
-  and its house-number and street fields match the listing exactly.
-  It is a HOME. The street address appears ZERO times on this page — not in
-  the body, not in the footer, not in the JSON-LD, not in a map embed, and
-  not in this source comment either. The house number and street name are
-  deliberately withheld even from the page source; they are in research.md.
-  (A Movoto snippet calls it "commercial"; the county overrules it.)
-  The SMS tells him the address was left off on purpose.
-
-  --------------------------------------------------------------------------
-  DELIBERATELY NOT CLAIMED — ask the owner before adding ANY of these
-  --------------------------------------------------------------------------
-  - "Licensed", "bonded", "insured", "certified" — no public record found.
-  - Any Georgia conditioned-air licence number — none found.
-  - "X years in business" — the GA Secretary of State portal is behind a
-    Cloudflare 403 and could not be read. The 2007 domain and a review
-    saying "since around 2008" are suggestive, NOT proof of a founding date.
-  - 24/7, emergency, same-day, fast, rapid, or ANY speed promise. Their hours
-    are Mon-Fri 7:30-4:00, CLOSED both weekend days, and their own happiest
-    customer wrote "It's a small business ... so I didn't expect a same day
-    service." Promising speed would misrepresent them to their own customers.
-    THIS IS THE MOST IMPORTANT OMISSION ON THE PAGE.
-  - Any manufacturer endorsement or authorised-dealer status.
-  - Any price, service-call fee, warranty or guarantee — none published.
-  - Any staff name. Customer reviews overwhelmingly name "David" as the
-    technician, but the only NON-reviewer source (LinkedIn) names "Ken Tapp"
-    as President. The sources do not settle who to address. No first name
-    appears on this page or in the SMS. Confirm on the call.
-  - Free estimates, financing, maintenance plans — not advertised anywhere.
-
-  --------------------------------------------------------------------------
-  UNVERIFIED ITEMS CARRIED ON THE PAGE, FLAGGED
-  --------------------------------------------------------------------------
-  - The equipment-brand line (Bryant, Goodman, Carrier, Mitsubishi Electric,
-    GREE) is derived ENTIRELY from what is visible in their own job photos.
-    It says what they have worked on, not that they are a dealer for anyone.
-    CONFIRM THE LIST BEFORE LAUNCH.
-  - The service-area town list (Rossville, Fort Oglethorpe, Lakeview,
-    Chickamauga, Ringgold, Chattanooga) is INFERRED from their location and
-    the geography. They publish no service radius anywhere. CONFIRM.
-  - Review quotes are verbatim from their public Google reviews and are
-    attributed as such. The page says "4.9 from 17 Google reviews" and
-    deliberately NOT "all 17 are five stars" — only 5 of the 17 are
-    published, so the count and the average are what was measured.
-
-  --------------------------------------------------------------------------
-  PERMISSION GATE — what Matt must confirm with the owner before launch
-  --------------------------------------------------------------------------
-  1. Permission to use his photos and his logo at all.
-  2. Whether he wants the street address shown (default: NO — it is his home).
-  3. Who the page should name, if anyone.
-  4. Licence / insurance status, and whether to state it.
-  5. The real service area and whether there is a trip-charge boundary.
-  6. The real equipment list and any dealer relationships.
-  7. Whether after-hours calls are answered at all, and what to say about it.
-  8. Whether he wants tapphvac.com pointed at this page — he already owns it.
-  ============================================================================
+  Sourcing, verification method and the full list of deliberate omissions are
+  kept in the internal research file and are not published here.
 -->
 
 <style>
@@ -734,12 +603,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue-lift); outline
 })();
 </script>
 
-<!--
-  JSON-LD intentionally carries NO street address and NO person name.
-  The business operates from an R-1 single-family residential parcel
-  (Catoosa County zoning, parcel 0002A082) and the name of the person to
-  address is not settled by the sources. See research.md §4 and §6.
--->
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

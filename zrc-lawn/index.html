@@ -16,127 +16,20 @@
 <!-- DEMO SITE — prepared for ZRC Lawn Service, Rossville GA. Not affiliated, not live, not linked. -->
 <!-- Website by [MATT — YOUR NAME / COMPANY HERE] -->
 <!--
-  ====================================================================
-  BUILD NOTES — ZRC Lawn Service demo, v2, 2026-10-25
-  Single self-contained page. System fonts, inline CSS/JS, zero external
-  requests: every image is a local file in images/ served alongside this
-  page. No analytics, no fonts CDN, no trackers. Page is noindex.
+  SAMPLE PAGE - not authorised by the business, and not claiming to be.
 
-  Full sourcing for every claim below is in research.md.
-  --------------------------------------------------------------------
+  Built from publicly available information only. The business was NOT
+  contacted in any way: no call, no text, no email, no form, no DM.
 
-  *** THE HOOK: GOOGLE'S "WEBSITE" BUTTON POINTS AT A LOGIN WALL ***
+  Marked noindex,nofollow. Not submitted to any search engine. Carries a
+  visible "sample site" banner. Nothing goes live, gets indexed, or gets
+  pointed at any domain without the owner's say-so.
 
-  Their Google Business Profile does NOT have an empty website field.
-  It has this one:
-      websiteUri = https://www.facebook.com/p/ZRC-Lawn-Service-100094040054436/
+  If the owner does not want this page to exist, it comes down on request,
+  immediately and without argument.
 
-  So Google sends every customer who clicks "Website" to Facebook. And
-  a plain HTTP fetch of that Facebook page returns 200 OK with a body
-  TWENTY-EIGHT CHARACTERS LONG - the string "ZRC Lawn Service" and
-  nothing else. In a real browser it renders, then throws a "See more
-  from ZRC Lawn Service" LOGIN MODAL over the top. The mobile URL hands
-  straight off to Facebook's XLoginController.
-
-  It gets better (worse): that Facebook page reads "Not yet rated
-  (3 reviews)" while Google reads 5.0 FROM 42. The website button takes
-  a customer from his best reputation to his weakest one, behind a
-  login. Last post there: April 19, over six months ago.
-
-  DO NOT open with "you don't have a website." Open with: the 42 people
-  who vouched for you are on Google, and the button marked Website
-  sends new customers somewhere they have to log in. See pitch.md.
-
-  *** TWO OF HIS OWN GOOGLE PHOTOS ARE FACEBOOK SCREENSHOTS ***
-
-  raw/g7.jpg and raw/g8.jpg are phone screenshots of the Facebook ADMIN
-  view of his own page - "ZRC Lawn Service / Oct 28, 2023" with the
-  "Boost post" button still in frame. The "Boost post" control is only
-  visible to a page administrator, which is independent proof he
-  uploaded this material himself. His work portfolio on Google is, in
-  part, a photograph of a phone screen. Neither is used on this page.
-  Both are a pitch item.
-
-  *** CLOSURE / PRINCIPAL CHECKS: RUN, AND ALL CLEAR ***
-
-  businessStatus OPERATIONAL. Newest Google review 2026-08-29 (eight
-  weeks before this build). Facebook posted 2026-04-19. Nextdoor shows
-  him replying to neighbours in February and April. Obituary
-  aggregators and the local funeral homes (W. L. Wilson & Sons, Lane
-  South Crest, Heritage Battlefield) were searched across Rossville /
-  Fort Oglethorpe / Catoosa County for 2026: the deaths in the window
-  are Hulsey (82), Drew (55), Rosenbaum (68), Smith (61), Pollard (79)
-  and Sturgill. NONE is a lawn-service operator and none is connected
-  to this business. No bereavement signal anywhere.
-
-  *** NO FIRST NAME ON THIS PAGE. THIS IS DELIBERATE. ***
-
-  Four of five reviewers name him and THEY DISAGREE ON THE SPELLING:
-  "Zack" (Jim Brewer, twice) vs "Zach" (Kareena Allen, Amy Massey,
-  steven Catherman). Nextdoor masks him to "Z. C." No surname is
-  published anywhere. Three out of four is not good enough to print,
-  and a misspelled first name in a cold text is worse than no name.
-  DO NOT ADD IT. Ask him how he spells it, and what the R stands for.
-
-  *** PHOTO PERMISSION: CLEAN, FOR ONCE ***
-
-  All ten photos on the Google listing carry authorAttribution
-  "ZRC Lawn Service" - every one an OWNER upload. There is no
-  third-party photographer and no permission problem. He also has a
-  REAL LOGO: his Facebook profile picture is "ZRC" over "LAWN SERVICE"
-  in white condensed caps on a photograph of a striped mown lawn. The
-  wordmark on this page is keyed straight out of it by luminance;
-  nothing was drawn or invented. The palette is his logo green
-  (measured: hue exactly 90.0 deg) at various lightnesses and NO other
-  hue appears anywhere.
-
-  Still cropped out of every image on this page:
-    - a customer's "PROTECTED BY ADS" ALARM COMPANY yard sign (g2 is
-      rejected outright over it; fb-post.jpg is used instead)
-    - a "Southern Living plant collection" nursery pot label (g9)
-    - parked vehicles, wheelie bins and a flagpole (g0, g1)
-  No face appears on this page. No house number is legible on this
-  page. No third-party brand is named or shown anywhere.
-
-  *** SEASONAL: IT IS LATE OCTOBER. NO MOWING-SEASON URGENCY. ***
-
-  Mowing season in north Georgia is ENDING. There is no "book before
-  the season fills" line on this page or in the SMS, because it would
-  be false. The off-season framing used here is NOT invented - it is
-  his, in his own words:
-    - Nextdoor "Our story": "Spring/fall cleanups" and "Leaf cleanups"
-    - Facebook Intro: "Brush Removal", "Small Tree Trimming",
-      "Light Landscaping"
-    - His own Facebook post dated Oct 28 2023 shows shrub work done in
-      late October, over dormant brown turf.
-  No turnaround, price, availability or "book by" date is claimed.
-
-  *** WHAT IS DELIBERATELY NOT CLAIMED ***
-
-  No snow/ice. No aeration. No overseeding. No fertilisation. No
-  weed-control or any chemical programme (Georgia licenses pesticide
-  application - that is a different conversation). No irrigation. No
-  gutters. No hauling. No tree REMOVAL (only "small tree trimming",
-  his phrase). No hardscaping. No sod. No commercial work. No crew,
-  team or fleet - everything public says one man. No founding year.
-  No price, no minimum, no "starting at". No turnaround promise.
-  No street address (it is his house - see research.md).
-  No BBB badge (he has no profile). No award. No licence number.
-  No Facebook link - linking a login wall from a working site would
-  undo the entire point of the site.
-
-  "Licensed and insured" and "Free estimates" DO appear, because they
-  are his own words on his own Facebook Intro, and he repeated
-  "Insured" in a Nextdoor reply. They are reproduced as his claim with
-  no number, carrier or certificate attached. CONFIRM BEFORE LAUNCH.
-
-  *** THE FORM IS NOT WIRED. ***
-
-  It posts nowhere and validates client-side only. For a one-man
-  operation a form he forgets to check is worse than a phone number,
-  so tap-to-call is the primary action in every section. If he wants
-  the form live it needs a real endpoint and a destination he reads.
-  ====================================================================
+  Sourcing, verification method and the full list of deliberate omissions are
+  kept in the internal research file and are not published here.
 -->
 <style>
 *,*::before,*::after{box-sizing:border-box}

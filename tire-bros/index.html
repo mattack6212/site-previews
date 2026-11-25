@@ -16,143 +16,20 @@
 <!-- DEMO SITE — prepared for Tire Bros, Rossville GA. Not affiliated, not live, not linked. -->
 <!-- Website by [MATT — YOUR NAME / COMPANY HERE] -->
 <!--
-  ====================================================================
-  BUILD NOTES — Tire Bros demo, v2, 2026-10-23
-  Single self-contained page. System fonts, inline CSS/JS, zero external
-  requests: every image is a local file in images/ served alongside this
-  page. No analytics, no fonts CDN, no trackers. Page is noindex.
+  SAMPLE PAGE - not authorised by the business, and not claiming to be.
 
-  Full sourcing for every claim below is in research.md.
-  --------------------------------------------------------------------
+  Built from publicly available information only. The business was NOT
+  contacted in any way: no call, no text, no email, no form, no DM.
 
-  *** PERMISSION GATE — THE BIGGEST ISSUE ON THIS BUILD ***
+  Marked noindex,nofollow. Not submitted to any search engine. Carries a
+  visible "sample site" banner. Nothing goes live, gets indexed, or gets
+  pointed at any domain without the owner's say-so.
 
-  ALL TEN PHOTOS ON THEIR GOOGLE LISTING ARE **VISITOR** UPLOADS.
-  NOT ONE IS OWNER-ATTRIBUTED. The Google authorAttribution on the five
-  frames used here reads "Yordan Yordan" (hero, alignment), "Yordan
-  Santos" (bays) and "Hot Rod" (work) — customers, not the business.
+  If the owner does not want this page to exist, it comes down on request,
+  immediately and without argument.
 
-  That is a different situation from the Gartman and Assured Comfort
-  demos, where the business owned its photos. Using customer photos in
-  an unlisted, noindex, not-linked pitch demo is fair use for a pitch.
-  PUTTING THEM ON A LIVE COMMERCIAL SITE IS NOT SOMETHING TIRE BROS CAN
-  AUTHORISE BY ITSELF. Before launch: either the shop shoots its own
-  photos — ten minutes with a phone, and that storefront is genuinely
-  photogenic — or the uploaders are asked. See research.md "PHOTOS" and
-  pitch.md item 1. DO NOT LAUNCH THIS PAGE AS-IS.
-
-  --- ASSET PROVENANCE ---------------------------------------------
-  Everything came from the Google Business Profile at
-  maps.google.com/?cid=13635564192032231019
-  (place ChIJw-CQuO1nYIgRaw4eamNBO70), via Places API (New).
-  raw/README.md maps every source frame to every output file;
-  build_assets.py rebuilds images/ from raw/ reproducibly.
-
-   - images/logo-light.png, logo-dark.png, favicon.png
-     THE WORDMARK IS THEIR OWN PAINTED SIGN. There is no logo file
-     anywhere public — the only brand asset Tire Bros has is the serif
-     "TIRE BROS" painted across the front of their building. It was
-     keyed out of the red roof panel in raw/g8.jpg (a flat, straight-on
-     storefront frame) at box (700,150,1095,220): letters only, shapes
-     unaltered, the dusk colour cast normalised off the paint.
-     logo-dark.png is the same artwork in their signage red, shipped for
-     light surfaces / print; this page loads logo-light.png only.
-     favicon.png is their own painted "T" glyph from that same sign,
-     on their own sampled signage red. Nothing was drawn or invented.
-
-   - images/hero.jpg, hero-mobile.jpg  (raw/g8.jpg)
-     The storefront straight on: both bays open, the painted "TIRE BROS"
-     and "NEW & USED TIRES", the "USED TIRES" placard and the outdoor
-     tire racks all in one frame. Shot at dusk, so it carries a modest
-     levels/warmth correction. No content added, removed or moved.
-     hero-mobile is a tighter crop so the name stays legible at 390px.
-
-   - images/align.jpg (raw/g7.jpg) — a 4Runner up on their Hunter
-     alignment rack with the heads clamped to the wheels.
-   - images/bays.jpg (raw/g0.jpg) — the open bays, a Jeep Gladiator
-     mid suspension job, and their own yellow banner reading
-     BRAKE(S) / OIL CHANGE / ALIGNMENT. That banner is the source for
-     three of the six services listed on this page.
-   - images/work.jpg (raw/g9.jpg) — somebody actually working: jacking
-     a customer's classic at the bay door, "BRAKES" sign visible inside.
-   - images/used-tires.jpg (raw/g5.jpg) — the used-tire racks out front
-     under their own "NEW & USED TIRES" and "USED TIRES" signs.
-
-   NOT USED, and why:
-    - raw/g6.jpg — same alignment capability as g7, but the equipment
-      maker's name is the largest object in the frame.
-    - raw/g2.jpg — a U.S. Marines recruiting billboard on the next lot
-      dominates a third of the frame.
-    - The Coca-Cola machine on their lot: used-tires.jpg is cropped to
-      its left so an unrelated third-party logo doesn't ride along.
-    - NO TIRE-MANUFACTURER LOGO IS USED AS ARTWORK and no brand is named
-      in the copy. Falken display stands and a Falken bay banner are
-      physically on their own lot and appear small and incidental inside
-      their own storefront frames; nothing was cut out and used as a mark.
-    - No stock photography anywhere on this page.
-
-  --- BRAND COLOURS — sampled off their building, not invented --------
-   Measured from their own storefront frames:
-     signage red  #68232B (shade) → #8C3746 (median) → #AA4F5C (sunlit)
-     grey wall    #383C3F
-     dark base    #191D21
-     lettering    #D2CFDB (white, dusk-tinted)
-   --ink #14181C is their dark base course. --ink-2 #1F262B is their
-   grey wall. --accent #C0303A is their barn red lifted just far enough
-   to clear contrast, and it appears ON CALL BUTTONS AND NOWHERE ELSE.
-   The page is their building: charcoal and white, with red for the one
-   thing you're meant to touch.
-   WCAG AA verified by calculation (research.md):
-     white on accent      5.64:1
-     accent vs ink        3.16:1   accent vs paper  5.21:1  (UI needs 3:1)
-     body text on paper  16.33:1   body text on ink 15.59:1
-     muted text on paper  7.05:1   muted on ink      9.9:1
-  ====================================================================
-
-  DELIBERATELY NOT CLAIMED — unverified. Ask the owner before adding any of these:
-  - THE OWNER'S NAME. Not findable publicly: Georgia's ecorp.sos.ga.gov registry is
-    behind a Cloudflare challenge, the D&B profile lists no officer, the Nextdoor and
-    Yahoo listings are unclaimed, Facebook is login-walled. No name appears on this page.
-  - "Se habla español" / any Spanish copy. Asked for specifically, and the honest answer
-    is NOT VERIFIED — no Spanish text on any readable public page, and all five Google
-    reviews are languageCode "en". Several photo uploaders and reviewers have Hispanic
-    names, which says who walks in, not who speaks what. Nothing in Spanish is on this page.
-  - Years in business, founding year, "family owned", "since 19xx" — no source gives one.
-  - "Licensed & insured" — Georgia doesn't license tire shops like trades, and there is no
-    public record of liability or garage-keeper's coverage.
-  - Any tire brand name, or "we carry all brands" — not verified, and no brand is named.
-  - Any price, "starting at", or price list. The only figure on the page is inside a quoted
-    customer review ("under 400"), in that customer's words, attributed, linked to Google.
-  - Warranty, road hazard coverage, or any guarantee on used tires — nothing public.
-    This is the #1 unanswered question for people searching "used tires Rossville".
-  - Engine work, transmissions, diagnostics, A/C, tyres for commercial fleets, bodywork.
-    Google's primary type is tire_shop; car_repair is secondary. Suspension work appears in
-    one photo but is NOT listed as a service — one photo isn't a service line.
-  - Appointments or online booking. Everything public reads walk-in; the only CTA is the phone.
-  - Same-day / while-you-wait / any turnaround promise. The speed language on this page is
-    all inside attributed customer quotes, never asserted by the business.
-  - Service-area towns. Only Rossville is verified. Fort Oglethorpe, Chickamauga, East Ridge
-    and Chattanooga are minutes away and almost certainly customers — NONE are claimed here.
-  - Any county name. Google says Catoosa, but Rossville 30741 largely sits in Walker County.
-  - A second phone, text line or email — only (706) 944-4980 was found anywhere.
-
-  HOURS NOTE: Google says Mon–Fri 9–6, Sat 9–5, Sun closed, and that is what's on the page
-  because it's what customers actually see. MapQuest's unclaimed listing says Mon–Fri 8–6.
-  If he really opens at 8, a stale listing is costing him the before-work crowd. Confirm.
-
-  REVIEW NOTE: the three testimonials are REAL and VERIFIABLE — pulled from the Google
-  Places API with the reviewers' own names, and every one links to the live listing so a
-  visitor can check them. Nothing is paraphrased, trimmed mid-sentence or invented.
-  NOT on the page, but in research.md and pitch.md: a 1-star from 2026-07-02 (Shanna Davis,
-  a lost regular, wheel weight came off after a balance). Matt should not be blindsided.
-
-  COUNT NOTE: 202 reviews, not the 198 in the 09-11 lead scan. Live Places pull 2026-10-23.
-
-  STAR NOTE: the hero rating draws 4.5 as FOUR FULL STARS AND A HALF, not five solid ones.
-  Five gold stars beside the number "4.5" is the standard small lie on sites like this and
-  it isn't here. The three testimonial rows do show five, because all three of those reviews
-  genuinely are 5-star — verified against reviews[].rating in the Places response
-  (Tyler Johnson 5, Sharon Upshaw 5, Bridgette Lecroy 5).
+  Sourcing, verification method and the full list of deliberate omissions are
+  kept in the internal research file and are not published here.
 -->
 
 <script type="application/ld+json">
