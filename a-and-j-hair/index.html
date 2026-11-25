@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>A&amp;J Hair Company &mdash; Hair Salon in Rossville, Georgia</title>
+<meta name="description" content="A&amp;J Hair Company is a hair salon in Rossville, Georgia. Cuts, colour, highlights and balayage from a team of five stylists. Call (423) 364-1592 to book.">
+<style>
+  :root{
+    --ink:#1F1D1B; --ink-dk:#14120F; --ink-soft:#3A362F;
+    --brass:#B08D57; --brass-dk:#8E6F3F; --brass-ink:#5B4420; --brass-bg:#F6EEE0;
+    --taupe:#A79880; --taupe-bg:#EFE9DE;
+    --sage:#76846B; --sage-bg:#E8EDE4; --sage-ink:#3F4A38;
+    --cream:#F5F1EA; --card:#FFFFFF; --line:#E4DED2;
+    --muted:#6B6358; --muted-ink:#CFC6B6;
+    --shut:#9A2F2F; --shut-bg:#FBEDEA;
+    --wrap:1120px; --r:14px;
+    --shadow:0 1px 2px rgba(31,29,27,.06), 0 6px 20px rgba(31,29,27,.08);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px; line-height:1.62; overflow-x:hidden;
+  }
+  img,svg{max-width:100%;height:auto}
+  img{display:block}
+  h1,h2,h3{line-height:1.18; margin:0; letter-spacing:-.016em; font-weight:800}
+  p{margin:0}
+  a{color:var(--brass-ink)}
+  .wrap{width:100%; max-width:var(--wrap); margin:0 auto; padding:0 20px}
+  .eyebrow{font-size:12px; font-weight:800; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--brass-ink); margin:0 0 14px}
+
+  /* ---- tap targets: every interactive element >= 48px tall ---- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    min-height:56px; padding:15px 26px; border-radius:999px;
+    font-size:18px; font-weight:800; text-decoration:none; color:#fff;
+    background:var(--brass-dk); border:2px solid var(--brass-dk);
+    box-shadow:var(--shadow); max-width:100%; text-align:center;
+  }
+  .btn:active{background:var(--brass-ink);border-color:var(--brass-ink)}
+  .btn-ghost{background:transparent; color:#fff; border:2px solid rgba(255,255,255,.55);
+    box-shadow:none; font-weight:700}
+  .btn-outline{background:#fff; color:var(--brass-ink); border:2px solid var(--brass-dk); box-shadow:none}
+  .btn-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:26px}
+
+  /* ---- top bar ---- */
+  .topbar{background:var(--ink-dk); color:#fff; padding:10px 0}
+  .topbar-in{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+  .topbar .where{font-size:13.5px; font-weight:700; color:var(--muted-ink); letter-spacing:.04em}
+  .topbar a.tel{display:inline-flex; align-items:center; min-height:48px; padding:6px 14px;
+    border-radius:10px; color:#fff; text-decoration:none; font-weight:800; font-size:17px;
+    border:1px solid rgba(255,255,255,.3)}
+
+  /* ---- hero ---- */
+  .hero{background:var(--ink); color:#fff; padding:44px 0 50px; position:relative; overflow:hidden}
+  .hero::after{content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(70% 120% at 108% 4%, rgba(176,141,87,.34) 0%, rgba(176,141,87,0) 62%),
+      radial-gradient(60% 100% at -8% 100%, rgba(118,132,107,.24) 0%, rgba(118,132,107,0) 60%);
+    pointer-events:none}
+  .hero-in{position:relative; z-index:1; max-width:830px}
+  .wordmark{display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap}
+  .wordmark .mark{width:54px; height:54px; border-radius:12px; flex:0 0 54px;
+    background:var(--brass-dk); display:grid; place-items:center; box-shadow:var(--shadow)}
+  .wordmark .mark svg{width:30px;height:30px;display:block}
+  .wordmark .name{font-size:19px; font-weight:800; letter-spacing:-.01em; line-height:1.25}
+  .wordmark .name span{display:block; font-size:12px; font-weight:700; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--muted-ink); margin-top:3px}
+  .hero h1{font-size:clamp(29px,6.2vw,49px)}
+  .hero .lede{margin-top:18px; font-size:clamp(17px,2.3vw,20px); color:var(--muted-ink); max-width:62ch}
+  .hero .lede b{color:#fff}
+  .trust-inline{display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:26px;
+    font-size:14.5px; color:var(--muted-ink); font-weight:600}
+  .trust-inline i{color:#fff; font-style:normal; font-weight:800}
+
+  /* ---- proof strip ---- */
+  .proof{background:var(--brass-dk); color:#fff; padding:26px 0}
+  .proof-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; text-align:center}
+  .proof .n{font-size:clamp(22px,4.2vw,32px); font-weight:800; letter-spacing:-.02em; display:block}
+  .proof .l{font-size:13px; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+    opacity:.95; margin-top:4px; display:block; line-height:1.4}
+
+  /* ---- sections ---- */
+  section{padding:54px 0}
+  .sec-head{max-width:70ch; margin-bottom:34px}
+  .sec-head h2{font-size:clamp(25px,4.2vw,35px)}
+  .sec-head p{margin-top:14px; color:var(--muted); font-size:17.5px}
+  .alt{background:var(--taupe-bg)}
+
+  /* ---- services ---- */
+  .svc{display:grid; grid-template-columns:repeat(auto-fit,minmax(292px,1fr)); gap:20px}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:var(--r);
+    padding:26px 24px; box-shadow:var(--shadow)}
+  .card .ic{width:46px;height:46px;border-radius:11px;display:grid;place-items:center;
+    margin-bottom:15px; background:var(--brass-bg)}
+  .card .ic svg{width:25px;height:25px;display:block}
+  .card.g .ic{background:var(--sage-bg)}
+  .card h3{font-size:20px;margin-bottom:8px}
+  .card p{color:var(--muted); font-size:16.5px}
+
+  /* ---- image blocks ---- */
+  .shot{border-radius:var(--r); overflow:hidden; border:1px solid var(--line);
+    box-shadow:var(--shadow); background:var(--card)}
+  .shot img{width:100%}
+  .shot .cap{padding:13px 18px; font-size:14px; color:var(--muted); font-weight:600;
+    border-top:1px solid var(--line); background:var(--card)}
+  .split{display:grid; grid-template-columns:1.05fr 1fr; gap:28px; align-items:start}
+  .gal{display:grid; grid-template-columns:1fr 1fr; gap:20px}
+
+  /* ---- hours ---- */
+  table.hours{width:100%; border-collapse:collapse; background:var(--card);
+    border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  table.hours th,table.hours td{padding:13px 18px; text-align:left; font-size:16.5px;
+    border-bottom:1px solid var(--line)}
+  table.hours tr:last-child th,table.hours tr:last-child td{border-bottom:0}
+  table.hours th{font-weight:700; width:50%}
+  table.hours td{text-align:right; font-variant-numeric:tabular-nums; font-weight:700}
+  tr.shut th,tr.shut td{color:var(--shut); background:var(--shut-bg)}
+  .note{background:var(--brass-bg); border:1px solid #EADCC4; border-left:5px solid var(--brass);
+    border-radius:12px; padding:20px 22px; color:var(--brass-ink); font-size:16.5px}
+  .note + .note{margin-top:16px}
+
+  /* ---- visit ---- */
+  .visit{background:var(--card); border:1px solid var(--line); border-left:6px solid var(--brass-dk);
+    border-radius:12px; padding:26px; box-shadow:var(--shadow)}
+  .visit h3{font-size:21px; margin-bottom:10px}
+  .visit .addr{font-size:18px; font-weight:700; margin-top:10px; line-height:1.5}
+  .visit p{color:var(--muted); font-size:16.5px; margin-top:12px}
+  .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .pill{background:var(--sage-bg); border:1px solid #D4DCCC; border-radius:999px;
+    padding:9px 16px; font-size:15px; font-weight:700; color:var(--sage-ink)}
+
+  /* ---- expect ---- */
+  .steps{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    padding:24px;box-shadow:var(--shadow)}
+  .step .k{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:999px;
+    background:var(--ink);color:#fff;font-weight:800;font-size:15px;margin-bottom:13px}
+  .step .t{font-size:18px;font-weight:800}
+  .step .d{color:var(--muted);font-size:16px;margin-top:7px}
+
+  /* ---- closing ---- */
+  .closing{background:var(--ink); color:#fff; padding:56px 0; text-align:center}
+  .closing h2{font-size:clamp(26px,4.6vw,38px); max-width:26ch; margin:0 auto}
+  .closing p{color:var(--muted-ink); margin-top:16px; font-size:18px; max-width:54ch;
+    margin-left:auto; margin-right:auto}
+  .closing .btn-row{justify-content:center}
+  .bignum{display:inline-flex; align-items:center; justify-content:center; min-height:56px;
+    margin-top:24px; font-size:clamp(23px,5vw,34px); font-weight:800; letter-spacing:-.01em;
+    color:#fff; text-decoration:none; padding:8px 18px; border-radius:12px;
+    border:1px solid rgba(255,255,255,.3)}
+
+  footer{background:var(--ink-dk); color:var(--muted-ink); padding:30px 0; font-size:14.5px}
+  footer .f-in{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-between;align-items:center}
+  footer a{color:#fff; display:inline-flex; align-items:center; min-height:48px;
+    padding:6px 14px; border-radius:10px; font-weight:800; text-decoration:none;
+    border:1px solid rgba(255,255,255,.3)}
+  .fnote{margin-top:16px; font-size:13px; line-height:1.6; color:#9A9183; max-width:78ch}
+  .demo{background:var(--brass-bg); color:var(--brass-ink); border-bottom:1px solid #EADCC4;
+    padding:11px 0; font-size:14px; font-weight:700; text-align:center}
+  .demo span{display:block; font-weight:600; font-size:13px; margin-top:3px; opacity:.85}
+
+  @media (max-width:860px){ .split{grid-template-columns:1fr} }
+  @media (max-width:760px){
+    .proof-grid{grid-template-columns:1fr; gap:22px}
+    .gal{grid-template-columns:1fr}
+    section{padding:44px 0}
+    .btn{width:100%}
+    .btn-row{gap:12px}
+  }
+  @media (max-width:360px){
+    body{font-size:16px}
+    .wrap{padding:0 16px}
+    .card,.visit,.step{padding:20px 17px}
+    table.hours th,table.hours td{padding:11px 13px; font-size:15.5px}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo">
+  Sample site &mdash; built as a demonstration. Not published and not indexed.
+  <span>Colours and layout here are the designer&rsquo;s placeholder, not A&amp;J&rsquo;s brand.</span>
+</div>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span class="where">ROSSVILLE, GEORGIA &middot; WALKER COUNTY</span>
+    <a class="tel" href="tel:+14233641592" aria-label="Call 4 2 3, 3 6 4, 1 5 9 2">(423)&nbsp;364-1592</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div class="wordmark">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="6" cy="7" r="2.3"/>
+          <circle cx="6" cy="17" r="2.3"/>
+          <line x1="8" y1="8.4" x2="19" y2="16.6"/>
+          <line x1="8" y1="15.6" x2="19" y2="7.4"/>
+        </svg>
+      </span>
+      <span class="name">A&amp;J Hair Company<span>Hair Salon &middot; Rossville, GA</span></span>
+    </div>
+
+    <h1>Cut, colour and highlights, by a team you can actually get in with.</h1>
+
+    <p class="lede">
+      A&amp;J Hair Company is a hair salon on Lafayette Road in Rossville, Georgia.
+      <b>Five stylists</b> under one roof &mdash; so there is usually a chair and a time that
+      works for you. Booking is a phone call, not an app.
+    </p>
+
+    <div class="btn-row">
+      <a class="btn" href="tel:+14233641592">Call (423)&nbsp;364-1592</a>
+      <a class="btn btn-ghost" href="#hours">See this week&rsquo;s hours</a>
+    </div>
+
+    <div class="trust-inline">
+      <span><i>4.7</i> out of 5 on Google</span>
+      <span><i>89</i> reviews</span>
+      <span><i>5</i> stylists</span>
+    </div>
+  </div>
+</header>
+
+<div class="proof">
+  <div class="wrap proof-grid">
+    <div><span class="n">4.7 &#9733;</span><span class="l">Google rating</span></div>
+    <div><span class="n">89</span><span class="l">Google reviews</span></div>
+    <div><span class="n">5</span><span class="l">Stylists on the floor</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What we do</p>
+      <h2>A full-service hair salon &mdash; not just a trim.</h2>
+      <p>
+        In their own words, A&amp;J &ldquo;offers a wide variety of hair services.&rdquo;
+        In practice that means the colour work most small shops send you elsewhere for
+        gets done here, in the chair, by the person who cut it.
+      </p>
+    </div>
+
+    <div class="svc">
+      <div class="card">
+        <span class="ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#5B4420" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6" cy="7" r="2.2"/><circle cx="6" cy="17" r="2.2"/>
+            <line x1="8" y1="8.3" x2="19" y2="16.7"/><line x1="8" y1="15.7" x2="19" y2="7.3"/>
+          </svg>
+        </span>
+        <h3>Cuts, trims &amp; restyles</h3>
+        <p>Everyday cuts, clean-ups between appointments, and bigger changes when you are
+           ready for one.</p>
+      </div>
+
+      <div class="card g">
+        <span class="ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3F4A38" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3.2s5.6 5.3 5.6 9.1a5.6 5.6 0 0 1-11.2 0C6.4 8.5 12 3.2 12 3.2Z"/>
+          </svg>
+        </span>
+        <h3>Colour</h3>
+        <p>All-over colour, grey coverage, root touch-ups, and bold shades when that is
+           what you are after.</p>
+      </div>
+
+      <div class="card">
+        <span class="ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#5B4420" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 18c3-1.5 4.5-4.5 4.5-8"/><path d="M9.8 18c3-1.5 4.5-4.5 4.5-8"/>
+            <path d="M15.6 18c3-1.5 4.5-4.5 4.5-8"/>
+          </svg>
+        </span>
+        <h3>Highlights &amp; balayage</h3>
+        <p>Dimension and lift, from a few brightening pieces through to a full
+           hand-painted blend.</p>
+      </div>
+
+      <div class="card g">
+        <span class="ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3F4A38" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 20V9.5a5 5 0 0 1 10 0V20"/><line x1="4.5" y1="20" x2="19.5" y2="20"/>
+            <line x1="12" y1="4.5" x2="12" y2="2.6"/>
+          </svg>
+        </span>
+        <h3>Styling &amp; blowouts</h3>
+        <p>Curls, waves and a proper finish &mdash; for an event, or just to walk out feeling
+           put together.</p>
+      </div>
+
+      <div class="card">
+        <span class="ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#5B4420" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3.2" y="4.6" width="17.6" height="12.6" rx="2.2"/>
+            <path d="M8.4 21l3.6-3.8 3.6 3.8"/>
+          </svg>
+        </span>
+        <h3>Bring your inspiration photos</h3>
+        <p>Customers describe showing a picture and being told honestly what will work with
+           the hair they actually have.</p>
+      </div>
+
+      <div class="card g">
+        <span class="ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3F4A38" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.5 12.5A8.5 8.5 0 1 1 11.5 4"/><polyline points="21 4.6 21 9.4 16.2 9.4"/>
+          </svg>
+        </span>
+        <h3>Five stylists, one shop</h3>
+        <p>A bigger team means more openings in the book &mdash; and a second opinion in the
+           room when you want one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Their work, their shop</p>
+      <h2>Photographs from A&amp;J&rsquo;s own listing.</h2>
+      <p>
+        Nothing here is a stock photo. These are pictures customers have posted of the salon
+        and of work done in it.
+      </p>
+    </div>
+
+    <div class="gal">
+      <figure class="shot" style="margin:0">
+        <img src="images/work-balayage.jpg" width="900" height="1075"
+             alt="Long hair finished in loose curls with blonde highlights blended through, photographed from behind in the salon.">
+        <figcaption class="cap">Highlights and a curled finish.</figcaption>
+      </figure>
+      <figure class="shot" style="margin:0">
+        <img src="images/work-color.jpg" width="800" height="980"
+             alt="A deep burgundy all-over colour with soft waves, photographed from behind.">
+        <figcaption class="cap">All-over colour in a deep burgundy.</figcaption>
+      </figure>
+    </div>
+
+    <div class="split" style="margin-top:28px">
+      <figure class="shot" style="margin:0">
+        <img src="images/salon-wide.jpg" width="1280" height="1262"
+             alt="Two styling stations against a grey panelled wall, with mirrors, black chairs and a dark rug.">
+        <figcaption class="cap">The floor &mdash; stations side by side.</figcaption>
+      </figure>
+      <figure class="shot" style="margin:0">
+        <img src="images/salon-station.jpg" width="1080" height="1073"
+             alt="A styling chair beside a shelf of hair products, with a framed sign reading Be Our Guest.">
+        <figcaption class="cap">Products on the shelf, chair ready.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">When we&rsquo;re open</p>
+      <h2>Closed Thursdays and Sundays.</h2>
+      <p>Worth knowing before you drive over &mdash; A&amp;J takes Thursday off, and Saturday is a
+         short day that finishes at 2.</p>
+    </div>
+
+    <div class="split">
+      <table class="hours">
+        <tbody>
+          <tr><th scope="row">Monday</th><td>10:00 AM &ndash; 6:00 PM</td></tr>
+          <tr><th scope="row">Tuesday</th><td>11:00 AM &ndash; 4:00 PM</td></tr>
+          <tr><th scope="row">Wednesday</th><td>10:00 AM &ndash; 6:00 PM</td></tr>
+          <tr class="shut"><th scope="row">Thursday</th><td>Closed</td></tr>
+          <tr><th scope="row">Friday</th><td>10:00 AM &ndash; 6:00 PM</td></tr>
+          <tr><th scope="row">Saturday</th><td>8:00 AM &ndash; 2:00 PM</td></tr>
+          <tr class="shut"><th scope="row">Sunday</th><td>Closed</td></tr>
+        </tbody>
+      </table>
+
+      <div>
+        <div class="note">
+          <b>Tuesday is a shorter day</b> &mdash; 11:00 AM to 4:00 PM. If you need a longer
+          appointment such as colour or highlights, Monday, Wednesday or Friday gives the
+          stylist more room.
+        </div>
+        <div class="note">
+          <b>Hours can change around holidays.</b> These are the hours currently published
+          on the salon&rsquo;s Google listing. A quick call confirms it before you set out.
+        </div>
+        <div class="btn-row">
+          <a class="btn" href="tel:+14233641592">Call to book</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Finding us</p>
+      <h2>On Lafayette Road, Rossville.</h2>
+    </div>
+
+    <div class="split">
+      <div class="visit">
+        <h3>A&amp;J Hair Company</h3>
+        <p class="addr">1211 Lafayette Rd<br>Rossville, GA 30741</p>
+        <p>
+          On the Lafayette Road business strip in Walker County, a short run south of the
+          Tennessee state line. There is parking at the door.
+        </p>
+        <div class="pills">
+          <span class="pill">Step-free entrance</span>
+          <span class="pill">Accessible parking</span>
+          <span class="pill">Accessible restroom</span>
+          <span class="pill">Cards accepted</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn" href="tel:+14233641592">Call (423)&nbsp;364-1592</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="note">
+          <b>Booking is by phone.</b> A&amp;J asks you to get in touch to arrange an
+          appointment &mdash; there is no online booking system to wrestle with, and no
+          account to create. One call and you are in the book.
+        </div>
+        <div class="note">
+          <b>Not sure what you want yet?</b> That is a normal reason to call. Describe the
+          hair you have and the result you are after, and the stylist will tell you what is
+          realistic and roughly how long to set aside.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="expect">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What happens</p>
+      <h2>Three steps, no surprises.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="k">1</span>
+        <div class="t">You call</div>
+        <div class="d">Say what you are after and which days suit you. With five stylists
+          there is usually more than one option.</div>
+      </div>
+      <div class="step">
+        <span class="k">2</span>
+        <div class="t">You talk it through</div>
+        <div class="d">Bring photos if you have them. The stylist will say plainly what will
+          and will not work with your hair.</div>
+      </div>
+      <div class="step">
+        <span class="k">3</span>
+        <div class="t">You leave knowing how to keep it</div>
+        <div class="d">Customers mention being shown how to style it again at home, rather
+          than it only looking right in the chair.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <h2>Book a chair at A&amp;J Hair Company.</h2>
+    <p>
+      Rossville, Georgia. Open Monday, Tuesday, Wednesday, Friday and Saturday morning.
+      One phone call and you are booked.
+    </p>
+    <a class="bignum" href="tel:+14233641592" aria-label="Call 4 2 3, 3 6 4, 1 5 9 2">(423)&nbsp;364-1592</a>
+    <div class="btn-row">
+      <a class="btn" href="tel:+14233641592">Call now</a>
+      <a class="btn btn-ghost" href="#hours">Check the hours first</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="f-in">
+      <span>A&amp;J Hair Company &middot; Hair salon &middot; 1211 Lafayette Rd, Rossville, GA 30741</span>
+      <a href="tel:+14233641592">(423)&nbsp;364-1592</a>
+    </div>
+    <p class="fnote">
+      Sample page, built as a demonstration and not authorised by the business. The colour
+      scheme, icons and layout are the designer&rsquo;s placeholder &mdash; A&amp;J Hair Company
+      publishes no logo, so none has been copied or imitated. Photographs are from the
+      salon&rsquo;s public listing. The &ldquo;wide variety of hair services&rdquo; wording is the
+      salon&rsquo;s own. Hours and rating shown were taken from the public Google listing and
+      can change &mdash; please call to confirm.
+    </p>
+  </div>
+</footer>
+
+<!--
+  SAMPLE PAGE - not authorised by the business, and not claiming to be.
+
+  Built from publicly available information only. The business was NOT
+  contacted in any way: no call, no text, no email, no form, no DM.
+
+  Marked noindex,nofollow. Not submitted to any search engine. Carries a
+  visible "sample site" banner. Nothing goes live, gets indexed, or gets
+  pointed at any domain without the owner's say-so.
+
+  If the owner does not want this page to exist, it comes down on request,
+  immediately and without argument.
+
+  Sourcing, verification method and the full list of deliberate omissions are
+  kept in the internal research file and are not published here.
+-->
+</body>
+</html>
